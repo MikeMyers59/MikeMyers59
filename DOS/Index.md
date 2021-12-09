@@ -10,9 +10,10 @@
 | %PATH% | System Search Path - comma separated folder paths |
 
 ## Special Characters
-| Character | Description |
-| ---- | ---- | 
-| < | Input from |
-| > | Output to | 
-| Pipe \| | Pass to, Chain commands|
-| @ | Ignore console repeat |
+| Character | Description | Example |
+| ---- | ---- | ---- |
+| < | Input from | |
+| > | Output to | |
+| >> | Route to | ```SET logfile=<FilePathName>.log```<BR>```ECHO + DATE: %DATE%	+>>%logfile%```<BR>```ECHO + TIME: %TIME%	+>>%logfile%  ``` |
+| Pipe \| | Pass to, Chain commands| |
+| @ | Ignore console repeat | |
