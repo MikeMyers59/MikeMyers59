@@ -16,6 +16,16 @@ Resorces:
 
 ## Common Constants & Variables
 
+#### Common Objects
+| Data | Usage |
+|  ---- | ----|
+| document | ```d = window.document``` <BR> ```doc = window.document``` |
+| location | ```l = window.location ```<BR> ```loc = window.location``` |
+| navigator | ```n = window.navigator``` <BR> ```nav = window.navigator``` |
+| window | ```w = window``` <BR> ```win = window``` |
+| jQuery | ```window.jQuery = jQuery``` <BR> ```window.$ = jQuery``` |
+
+
 #### Regular Expresions
 ```javascript
   var Regex = {
