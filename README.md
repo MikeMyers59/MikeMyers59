@@ -13,3 +13,6 @@ You can click the Preview link to take a look at your changes.
 GitHub Markdown is different and requires some changes from standard md files. Check out their own Markdown description.
 
 Popular git repositories: [GitHub](https://github.com/) and [BitBucket](https://bitbucket.org/). 
+
+Other Code Storage Sites:
+- https://www.CodePlex.com 
