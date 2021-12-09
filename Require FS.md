@@ -1,7 +1,9 @@
-# Research What does this do?
+# Research What does these do?
 ```javascript
   [ var | let ] fs = require('./lib/fs.js')
+  const fs = require('fs');
 ```
+
 ### Calls to fs
 ```javascript
   fs.existsSync(configFile)
@@ -9,6 +11,7 @@
   fs.emptydirSync(path.resolve(folder.output.path));
   fs.ensureDirSync(path.resolve(folder.output.path));
   fs.outputJsonSync(configFile, config);
+  var buffer = fs.readFileSync("template/test.hta");
 ```
 
 ### Module Fs.js Example of Overloading
