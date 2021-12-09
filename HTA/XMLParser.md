@@ -8,7 +8,21 @@
 6.	Export to file as TSV, CSV (after fixing authors & publishers) or JSON?
 7.	Let user select input file and output file.
 
+Do I Need these:
+```html
+    <meta name="app-name" content="<APPName>">
+    <meta name="csrf-token" content="hK8wkEcK6m3DDeIJOhWvy2s+5zeIvBYZXawsMXrohFqmAAAAAGGn748AAAAB">
+```
+
 # Notes:
+
+## Sorting Options Pulling from Kindle Cloud Reader
+| Sort By | Options |
+| ---- | ----|
+| sortType | recency <BR> title <BR> author <BR> acquisition_desc (Purchase Order) <BR> acquisition_asc (Reverse Purchase Order) |
+| originType | COMICS#library <BR> EBOOK#library <BR> EBOOK_SAMPLE#library |
+| Other Search Keys? | Author – how are these stored?  |
+
 
 ## Kindle Books XML Format (Modified)
 Root Node:	```<add_update_list>```
