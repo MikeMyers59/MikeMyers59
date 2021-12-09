@@ -1,4 +1,19 @@
-# Ntework Command Shell (NETSH)
+# IP Configuration & Status (IPCONFIG)
+| Action | Example | 
+| ---- | ---- | 
+| Display DNS | ```ipconfig /displaydns ``` | 
+| Display All | ```ipconfig /all ```|
+
+# NBTStat
+- nbtstat -c
+- nbtstat -n
+
+# NET
+- net config rdr
+- net config srv
+- net share
+
+# Network Command Shell (NETSH)
 
 | Action | Example | 
 | ---- | ---- | 
@@ -32,3 +47,10 @@ netsh mbn show profile name=* interface=*
 netsh mbn show readyinfo interface=*
 netsh mbn show capability interface=*
 ```
+
+# PING
+| Action | Example | 
+| ---- | ---- | 
+| Test Loopback | ```ping 127.0.0.1 -n 15 [ > NUL ]``` | 
+  
+# Trace the Route (TRACRT)
