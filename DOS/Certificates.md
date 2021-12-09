@@ -19,3 +19,13 @@ uses:
 ```dos
   CertMgr [/add|/del|/put] [Switches] [/s [/r RegistryLocation ] ] SourceName [/s [/r RegistryLocation] ] [DestinationName]
 ```
+
+## Certificate Utility
+| Action | Example | 
+| ---- | ---- | 
+| Machine certificates | ```certutil -v -store -silent My ``` | 
+| User certificates | ```certutil -v -store -silent -user My ``` | 
+| Root certificates (machine store) | ```certutil -v -store -silent root ``` | 
+| Root certificates (enterprise store) | ```certutil -v -enterprise -store -silent NTAuth ``` | 
+| Root certificates (user store) | ```certutil -v -user -store -silent root ``` | 
+
