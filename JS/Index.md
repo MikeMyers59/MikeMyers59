@@ -21,6 +21,7 @@ Resorces:
   var Regex = {
       COMMA       : /(,)(?=(?:[^"]|"[^"]*")*$)/g,
       FILENAME    : /.*\./g,
+      IMAGEFILE   : /\.(bmp|jpe?g|png|gif|webP)$/i,
       LINEBREAK   : /\r\n?|\n/g,
       QUOTATION   : /(^")(.*)("$)/g,
       TWO_QUOTES  : /""/g
