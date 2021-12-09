@@ -7,3 +7,9 @@
 MikeMyers59/MikeMyers59 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
+
+# Notes
+
+GitHub Markdown is differnet and requires some changes from standard md files. Check out their own Markdown description.
+
+Popular git repositories: [GitHub](https://github.com/) and [BitBucket](https://bitbucket.org/). 
