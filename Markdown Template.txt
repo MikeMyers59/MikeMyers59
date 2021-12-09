@@ -1,0 +1,15 @@
+# These are templates for creating a markdown page
+
+## Links
+[]()
+
+## Source Code Blocks
+
+```html
+```
+
+```javascript
+```
+
+```vbscript
+```
