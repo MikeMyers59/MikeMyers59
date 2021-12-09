@@ -1,5 +1,12 @@
 # String Objects
 
+## Compare String
+```javascript
+  function isEqual(str1, str2, ignoreCase) {
+    return ignoreCase ? str1.toLowerCase() == str2.toLowerCase() : str1 == str2;
+  }
+```
+
 ## Template Strings (ES6)
 Template String replacement elements are indicated by the Dollar sign and curly braces with a normal string that is contained in apostrophe (AKA backtick) delimiters.
 ```javascript
