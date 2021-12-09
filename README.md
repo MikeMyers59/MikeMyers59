@@ -21,7 +21,7 @@ Other Code Storage Sites:
 
 ### Information Resources
 - [TABLES]( https://github.com/MikeMyers59/MikeMyers59/tree/main/Tables) 
-- 
+
 ### Programming 
 - [DOS](https://github.com/MikeMyers59/MikeMyers59/tree/main/DOS)
 - [HTA](https://github.com/MikeMyers59/MikeMyers59/tree/main/HTA)
