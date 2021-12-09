@@ -14,6 +14,6 @@ This folder contains HTML notes, snippets ans examples.
 Use ```console.log()``` to add output data to the console to check process steps.
 
 For XML try these checks to compare output:
-- console.log(xml.toXMLString())
-- console.log(xml.toString()) 
+- ```console.log(xml.toXMLString())```
+- ```console.log(xml.toString())```
 
