@@ -14,4 +14,7 @@ function popWindow(url, name){
   if(wndPopup) wndPopup.focus();
 }
 
-
+// String Functions
+function isEqual(str1, str2, ignoreCase) {
+  return ignoreCase ? str1.toLowerCase() == str2.toLowerCase() : str1 == str2;
+}
