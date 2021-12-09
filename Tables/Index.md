@@ -1,1 +1,3 @@
-This folder contains tables of data related to my prohrject/research.
+# Index of Tables
+
+This folder contains tables of data related to my project/research.
