@@ -2,6 +2,13 @@
 
 1. This folder contains DOS Command Line Interface (CLI) notes, snippets and examples.
 
+## Comments & Screen Displays (REM & ECHO)
+| Action | Description |
+| ---- | ---- | 
+| Comment | ```REM <Put Comments Here> ```| 
+| Turn Off Common Screen Output | ```@ECHO off ```| 
+| Comment on Screen to User | ```ECHO <Put Status to User Here> ```| 
+
 ## Log to a File
 ```dos
   SET logfile=<FilePathName>.log
