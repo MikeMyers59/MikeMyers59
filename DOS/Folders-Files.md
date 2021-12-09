@@ -4,6 +4,11 @@
 ```dos
   CD /d C:\Users\Public\Documents
 ```
+## Change File/folder attributes
+Attributes include: Hidden (H), Archive (A), Read-Only (R) & System (S)
+```dos
+  attrib +H <FolderPathName>
+```
 
 ## Delete/Remove a Directory (RD & RMDIR)
 ```dos
