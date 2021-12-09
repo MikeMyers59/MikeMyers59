@@ -1,4 +1,6 @@
-Constants and Variable Identification (DataIDs)
+# Constants and Variable Identification (DataIDs)
+
+These are conventional lead ins to constant and variable names that signify their usage and/or source.
 
 | Lead In | Type | Notes |
 | ---- | ---- | ---- |
