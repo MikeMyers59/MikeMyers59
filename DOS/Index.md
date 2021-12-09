@@ -32,6 +32,8 @@
 ## Special Characters
 | Character | Description | Example |
 | ---- | ---- | ---- |
+| . | Current Directory | |
+| .. | Parent Directory | |
 | < | Input from | |
 | > | Output to | |
 | >> | Route to | ```SET logfile=<FilePathName>.log```<BR>```ECHO + DATE: %DATE%	+>>%logfile%```<BR>```ECHO + TIME: %TIME%	+>>%logfile%  ``` |
