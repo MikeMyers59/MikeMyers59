@@ -4,6 +4,6 @@
 
 ### VBScript Enclosure in HTML
 ```html
-  <SCRIPT type="text\VBScript">
+  <SCRIPT type="text/VBScript">
   </SCRIPT>
 ```
