@@ -48,6 +48,11 @@ netsh mbn show readyinfo interface=*
 netsh mbn show capability interface=*
 ```
 
+# Network Configuration (NETCFG)
+| Action | Example | 
+| ---- | ---- | 
+| Create Binding Map | ```netcfg -m``` |   
+
 # PING
 | Action | Example | 
 | ---- | ---- | 
