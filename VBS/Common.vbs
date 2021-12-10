@@ -79,6 +79,15 @@ Sub OpenNotepad()
 End Sub
 
 ' Subroutines for Windows OS
+Sub EjectCDTray()
+  CONST CDROM = 4
+  For each d in CreatObject (“Scripting.FileSystemObject”).Drives
+    If d.DriveType = CDROM then
+      CreateObject(“shell.Application”).Namespace(17).Parsename(d.DriveLetter & “:\”.invokeVerb(“E&ject”)
+    End If
+  Next
+End Sub
+
 Sub Shutdown()
   CreateObject("WScript.Shell").Run "cmd /c shutdown /s /t 30"
 End Sub
