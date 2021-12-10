@@ -1,6 +1,9 @@
 # Mike's Magic Menu (3M)
 
-
+### Requires:
+- BlueSpotty.gif
+- rolleyes.gif
+- common.vbs
 
 ### Mike’s Magic Menu Ideas:
 ' Log event every time a link is activated       onClick= "LogEntry(<strLinkName>)"
