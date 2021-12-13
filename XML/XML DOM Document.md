@@ -126,3 +126,30 @@ Now that we have a hang of our XML document. Let’s work on a simple example. B
   </List>
 </DistributionLists>
 ```
+
+## Typical Usage:
+```javascript
+if (Web.Application.get_type() == Web.ApplicationType.InternetExplorer) {
+  var progIDs = [ 'Msxml2.DOMDocument.6.0', 'Msxml2.DOMDocument.3.0' ]; 
+‘ MSXML5.0, MSXML4.0 and Msxml2.DOMDocument all have issues - be careful when using.  Details below.
+  for (var i = 0; i < progIDs.length; i++)
+  {
+    try {
+          var xmlDOM = new ActiveXObject(progIDs[i]);
+           return xmlDOM;
+        }
+    catch (ex) {}
+  }
+  return null;
+}
+```
+Additional Usage:
+```
+var xmlDOM = new ActiveXObject('Msxml2.DOMDocument.3.0'); ' JavScript or JScript
+var xmlDOM = CreateObject('Msxml2.DOMDocument.3.0') ' VBScript
+```
+or
+```
+var xmlDOM = new ActiveXObject('Msxml2.DOMDocument.6.0'); ' JavScript or JScript
+var xmlDOM = CreateObject('Msxml2.DOMDocument.6.0') ' VBScript
+```
