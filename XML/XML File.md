@@ -142,3 +142,33 @@ This code is available in the [Books.hta](https://github.com/MikeMyers59/MikeMye
     </part>
   </parts>
 ```
+
+#### List the Parts in a Document
+```html
+  <H3>List of Parts:</H3>
+  <p id="demo">
+  <!-- Script for Playing with XML -->
+  <script language=VBScript>
+  ' Load the XML Data File
+    Set xmlDoc = CreateObject("msxml2.DOMDocument.6.0")
+    xmlDoc.async = false
+    xmlDoc.load ".\parts.xml"
+  ' Set the Root for the Record Set
+    Set xmlDocList = xmlDoc.getElementsByTagName("part")
+    count = 0
+    txtOutput = ""
+    for each Elem in xmlDocList
+      count = count + 1
+      txtOutput = txtOutput & "<B>Part(" & count & "): </B>" & Elem.childNodes(0).text & " - "
+      txtOutput = txtOutput & Elem.childNodes(1).text & "<BR>"
+      txtOutput = txtOutput & "Quantity Available: " & Elem.childNodes(2).text & "<BR><HR>"
+    next
+    document.write txtOutput  ' Outputs directly to the HTML document
+  '  MsgBox txtOutput  
+  </script>
+  </p>
+```
+
+Results displayed:    
+![Parts List in a HTA or HTML Document](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Parts/Parts%20List%20in%20a%20Document.png)
+
