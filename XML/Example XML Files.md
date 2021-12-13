@@ -1,4 +1,4 @@
-# XML File
+# Example XML Files
 
 ## Books Example
 
