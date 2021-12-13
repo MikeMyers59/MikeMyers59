@@ -121,7 +121,7 @@ This code is available in the [Books.hta](https://github.com/MikeMyers59/MikeMye
 
 ## Parts Example
   
-#### The [Part.xml]() File (Excerpt shown)
+#### The [Part.xml](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Parts/Parts.xml) File (Excerpt shown)
 ```xml
   <?xml version="1.0"?>  
   <parts>
