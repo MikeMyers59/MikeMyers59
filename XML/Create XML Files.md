@@ -17,7 +17,7 @@
 </config>
 ```
 
-### Script to Create XML File from the Template ( Available in file [Create_XML_File_with_Template.vbs]() )
+### Script to Create XML File from the Template ( Available in file [Create_XML_File_with_Template.vbs](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Create_XML_File_with_Template.vbs) )
 ```vbscript
 Function fnRepl(sM, nP, sS)
   fnRepl = gdX(sM)
