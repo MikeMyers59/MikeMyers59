@@ -114,6 +114,8 @@ Results Displayed:
   </script>
   </p>
 ```
-Results display in the browser:  
-  ![Books Displayed in an HTA/HTML Document](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Books/Book%20List%20in%20HTA%20Document.png)  
+Results display in the browser as:  
+  ![Books Displayed in an HTA or HTML Document](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Books/Book%20List%20in%20HTA%20Document.png)  
+
+This code is available in the [Books.hta]() for you to try.
 
