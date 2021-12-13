@@ -119,3 +119,26 @@ Results display in the browser as:
 
 This code is available in the [Books.hta](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Books/Books.hta) for you to try.
 
+## Parts Example
+  
+#### The [Part.xml]() File (Excerpt shown)
+```xml
+  <?xml version="1.0"?>  
+  <parts>
+    <part>
+      <partnumber>A1000</partnumber>
+      <description>Flat washer</description>
+      <quantity>1000</quantity>
+    </part>
+    <part>
+      <partnumber>S2300</partnumber>
+      <description>Machine screw</description>
+      <quantity>1000</quantity>
+    </part>
+    <part>
+      <partnumber>M2400</partnumber>
+      <description>Nail</description>
+      <quantity>500</quantity>
+    </part>
+  </parts>
+```
