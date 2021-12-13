@@ -1,5 +1,5 @@
 # My Music XML Example
-**Source:** [Building an XML Application](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Music/Building%20an%20XML%20application%20-%20TechRepublic.pdf) from TechRepublic.
+**Source:** [Building an XML Application](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Music/Building%20an%20XML%20application%20-%20TechRepublic.pdf) from TechRepublic.  
 This folder contains the Music XML Examples Files
 
 The XSL file is where the true power of XML starts to make itself obvious. XSL uses the concept of templates to output XML elements. The main template, identified by `<xsl:template match="/">`, matches all elements in the document node passed into the style sheet. This main template starts with standard HTML for a table row of album information. A special XSL method is used to loop through all the album elements within the music collection node. The `<xsl:for-each.../>` construct loops over the items matched against the select attribute which, in this case, is given the value “music collection/album”. For each album, the `<xsl:value-of…/>` construct outputs the desired data for the current album. This XSL file uses multiple templates to break up the code and make it easier to perform modifications.
