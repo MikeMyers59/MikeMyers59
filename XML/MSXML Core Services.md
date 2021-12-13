@@ -80,7 +80,7 @@ if (Web.Application.get_type() == Web.ApplicationType.InternetExplorer) {
 
 To switch **MSXML3** to the standard **XPath 1.0** query language set the second-level DOM property Selection Language like this - `xmlDoc.setProperty("SelectionLanguage", "XPath");` see our SDK for more details.
 
-##  CLASS_IDs, GUIDs, and ProgIds
+## CLASS_IDs, GUIDs, and ProgIds
                                      
 - ProgIDs: http://windowssdk.msdn.microsoft.com/en-gb/library/ms764622.aspx 
 
@@ -137,7 +137,7 @@ After the file is loaded, you can start processing it in a way you need.
 | SAXXMLReader |  | CLSID_SAXXMLReader60 |  
 | XMLHTTP | CLSID_XMLHTTP<br> CLSID_XMLHTTP30 | CLSID_XMLHTTP60
 | ServerXMLHTTP |  | CLSID_ServerXMLHTTP60 | 
-                                                                        
+
 ## MSXML Windows SDK
 The overview section provides information on MSXML versions 3.0 through 6.0. All other sections are specific to MSXML 3.0 and 6.0 which are release in box with Windows.
 
