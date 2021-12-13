@@ -78,4 +78,42 @@ Results in `Records in set: 2` being displayed in the message box.
   next
   MsgBox txtOutput
 ```
+Results Displayed:  
+  ![Books in Message](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Books/Book%20List%20Message.png)
+
+### Display the Books inside an HTA/HTML Document
+```vbscript
+  <H3>List of Books: </H3>
+  <p id="demo">
+  <script language=VBScript>
+  ' Load the XML Data File
+    Set xmlDoc = CreateObject("msxml2.DOMDocument.6.0")
+    xmlDoc.async = false
+    xmlDoc.load ".\books.xml"
+  ' Select the Node list
+    Set xmlDocList = xmlDoc.getElementsByTagName("book")
+  ' Loop through the list and present information to the web 
+  ' page
+    count = 0
+    txtOutput = ""
+    for each Elem in xmlDocList
+      count = count + 1
+      txtOutput = txtOutput & "<B>Book(" & count & "): </B>"_
+                  & Elem.childNodes(1).text & " - "
+      txtOutput = txtOutput & "By: " & Elem.childNodes(0).text_
+                  & "<br>"
+      txtOutput = txtOutput & "Genre: " & _
+                  Elem.childNodes(2).text & " - "
+      txtOutput = txtOutput & "Price: " & _
+                  Elem.childNodes(3).text & "<br>"
+      txtOutput = txtOutput & "Review: " & _
+                  Elem.childNodes(4).text & "<br><br>"
+    next
+  ' Outputs directly to the HTML document
+    document.write txtOutput
+  </script>
+  </p>
+```
+Results display in the browser:  
+  ![Books Displayed in an HTA/HTML Document](https://github.com/MikeMyers59/MikeMyers59/blob/main/XML/Books/Book%20List%20in%20HTA%20Document.png)  
 
