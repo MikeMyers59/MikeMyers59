@@ -50,4 +50,32 @@
 | `Set xmlDocRoot = xmlDoc.childNodes(1)` <br> `Set xmlDocRecord = xmlDocRoot.childNodes(1)` <BR> `xmlDocRecord.childNodes(0).text` | Poet | This sets a new root within the document and then sets an individual Record. This also displays the second book **Author**. <BR> `<author>Poet</author>` <br> This method can be used with a loop to process each record using the chlidNodes(<Index>) to set each record within the loop. |  
 | `Set xmlDocRoot = xmlDoc.childNodes(1)` <br> `Set xmlDocRecord = xmlDocRoot.childNodes(1)` <BR> `xmlDocRecord.author.text` | Undefined | This method sets a root and record as above, but uses **author** to attempt to access the node. Using 'xmlDocRecord.childNodes(author).text' is the proper usage. |    
 
+##### Count the Number of Books
+```vbscript
+  ' Set the Root (List) for the Record Set and loops through the set
+  Set xmlDocList = xmlDoc.getElementsByTagName("book")     Count = 0
+  for each Elem in xmlDocList
+    count = count + 1 
+  next
+  MsgBox "Records in set: " & count
+```
+Results in `Records in set: 2` being displayed in the message box.
+
+##### Display to Book List
+```vbscript
+  ' Set the Root for the Record Set (Make a list of element 
+  ' book within books)
+  Set xmlDocList = xmlDoc.getElementsByTagName("book") 
+  count = 0
+  txtOutput = ""
+  for each Elem in xmlDocList
+  count = count + 1
+    txtOutput = txtOutput & "Book(" & count & "): " & Elem.childNodes(1).text & vbCrLfElem.childNodes(1).text & vbCrLf              
+    txtOutput = txtOutput & "By: " & Elem.childNodes(0).text & vbCrLf               
+    txtOutput = txtOutput & "Genre: " & Elem.childNodes(2).text & vbCrLf
+    txtOutput = txtOutput & "Price: " & Elem.childNodes(3).text & vbCrLf
+    txtOutput = txtOutput & "Review: " & Elem.childNodes(4).text & vbCrLf & vbCrLf
+  next
+  MsgBox txtOutput
+```
 
