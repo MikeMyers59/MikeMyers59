@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+var xmlParse = new ActiveXObject("msxml2.DOMDocument.3.0");
+xmlParse.async = false;
+xmlParse.load("mymusic.xml");
+var xmlFormat = new ActiveXObject("msxml2.DOMDocument.3.0");
+xmlFormat.async = false;
+xmlFormat.load("mymusic.xsl");
+function produceXML() {
+var tempHTML;
+tempHTML = "<TABLE BORDER=1><TR><TD>Juke Box</TD><TD>Category</TD>";
+tempHTML += "<TD>Artist</TD><TD>Album</TD><TD>Tracks</TD></TR>";
+tempHTML += xmlParse.transformNode(xmlFormat) + "</TABLE>";
+document.all.item("xmlData").innerHTML = tempHTML;
+}
+</SCRIPT>
+</HEAD>
+<BODY onload="produceXML();">
+<div id="xmlData"></div>
+</BODY>
+</HTML>

@@ -1,0 +1,47 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<SCRIPT LANGUAGE="JavaScript">
+var xmlParse = new ActiveXObject("Microsoft.xmldom");
+xmlParse.async = false;
+xmlParse.load("mymusic.xml");
+var xmlFormat = new ActiveXObject("Microsoft.xmldom");
+xmlFormat.async = false;
+xmlFormat.load("mymusic2.xsl");
+function produceXML() {
+var tempHTML;
+var currentNode;
+var qryText;
+if (document.searchForm.searchText.value.length > 0) {
+qryText = "//album[track/title $ieq$ '" + document.searchForm.searchText.value + "']";
+}
+else {
+qryText = "//album"
+}
+var qry = xmlParse.selectNodes(qryText);
+tempHTML = "<TABLE BORDER=1><TR><TD>Juke Box</TD><TD>Category</TD>";
+tempHTML += "<TD>Artist</TD><TD>Album</TD><TD>Tracks</TD></TR>";
+for ( currentNode = qry.nextNode(); currentNode != null; currentNode = qry.nextNode() ) {
+tempHTML += currentNode.transformNode(xmlFormat);
+}
+tempHTML += "</TABLE>";
+document.all.item("xmlData").innerHTML = tempHTML;
+return false;
+}
+function resetMe() {
+document.searchForm.searchText.value = "";
+produceXML();
+}
+</SCRIPT>
+</HEAD>
+<BODY onload="produceXML();">
+<form name="searchForm" method="post" onSubmit="return produceXML();"
+onReset="resetMe()">
+<input name="searchText" type="text" size="30">
+<input type="submit" value="Query Song Titles">
+<input type="reset" value="Clear Search">
+</form>
+<hr />
+<div id="xmlData"></div>
+</BODY>
+</HTML>
