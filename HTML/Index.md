@@ -225,3 +225,21 @@ Table Format![[Table Format](MikeMyers59/MikeMyers59/00Pics/Table Format.png)
 </TABLE>
 ```
 
+## HTML DOM
+
+#### Read from/Write to a DOM Element
+```html
+<SPAN id="shData">HTML Text Data</SPAN>
+<SCRIPT language="VBScript">
+ Set strData = document.getElementById("shData")
+ MsgBox strData.innerHTML
+ strNewData = "HTML New Text Data!"
+ Set htmLocation = document.getElementById("shData")
+ htmLocation.innerHTML = strNewData
+</SCRIPT>
+```
+Results
+| Read | Write |  
+| :---: | :---: |  
+| ![HTML DOM Read](MikeMyers59/MikeMyers59/00Pics/HTML DOM Read.png) | ![HTML DOM Write](MikeMyers59/MikeMyers59/00Pics/HTML DOM Write.png) |  
+
