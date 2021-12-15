@@ -9,7 +9,7 @@ This folder contains JavaScript snippets and examples.
   </SCRIPT>
 ```
 
-Resorces:
+Resources:
 - [Simple-Excel.js](https://github.com/faisalman/simple-excel-js) - Client-side script to easily parse / convert / write any Microsoft Excel XLSX / XML / CSV / TSV / HTML / JSON / etc formats
 
 # Hold Area

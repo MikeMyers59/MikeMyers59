@@ -23,7 +23,8 @@
 | --- | --- | :---: |
 | onAbort|Specifies JavaScript code to execute when the user cancels the loading of an image|Y |   
 | onBlur|Event handler for a blur event (password, selection list, text, text area)|Y |   
-| onChange|Event handler for when the value of a field changes (password, selection list, text, text area)|Y |   
+| onChange|Event handler for when the value of a field changes (password, selection list, text, text area)|Y |  
+| onClick|Event handler for a click event (button, checkbox, radio button, reset, submit)|Y |  
 | onError|Specifies JavaScript code to execute when the loading of a document or image generates an error|Y |   
 | onFocus|Event handler for a focus event (password, selection list, text, text area)|Y |   
 | onLoad|Specifies JavaScript code to execute when a page finishes loading|Y |   
