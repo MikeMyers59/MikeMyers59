@@ -1,5 +1,18 @@
 # Events in HTML
 
+## On Click
+
+#### Disable Right Click
+```javascript
+function click(){
+  if (event.button==2){
+    alert('Stop using right-click menu!');
+  }
+}
+document.onmousedown=click;
+<body oncontextmenu="return false;" >
+```
+
 ## On Load
 Place these functions in the HEAD Section; no need to reference the funtion as Browsers look for the onload function when loading.
 
