@@ -4,7 +4,14 @@ CDATA sections provide a way to tell the parser that there is no markup in the c
 
 CDATA sections are used to escape blocks of text containing characters which would otherwise be recognized as markup. CDATA sections begin with the string `<![CDATA[ and end with the string ]]>`. The string ]]> must not occur inside CDATA section.
 
+#### CDATA Block
 A CDATA section starts with `<![CDATA[" and ends with "]]>`:
+
+```xml
+<![CDATA[
+  <PlainTextData>
+]]>
+```
 
 The CDATA section in the document map uses the following syntax.
 ```HTML
