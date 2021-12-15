@@ -19,4 +19,8 @@
 | ==|Comparison operator|Evaluates to true if the operands are equal | Y |  
 | >|Comparison operator|Evaluates to true if the left operand is greater than the right operand | Y |  
 | >=|Comparison operator|Evaluates to true if the left operand is greater than or equal to the right operand | Y |  
+| !|Logical operator|Evaluates to true if the operand is false and to false if the operand is true| Y |   
+| &&|Logical operator|Evaluates to true when both operands are true| Y |   
+| |||Logical operator|Evaluates to true when either operand is true| Y |   
+| +|String operator|Combines the operands into a single string| Y |   
 
