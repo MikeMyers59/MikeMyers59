@@ -1,4 +1,7 @@
-﻿## Lists
+﻿# Markdown
+ ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+ 
+ ## Lists
 - Unordered lists use * for list beginning and white space nesting for nesting such as:
   - Sub list  
     - Sub list  
@@ -16,13 +19,10 @@
 ## Links
 - [I'm an inline-style link](https://www.google.com)
 
-
 ## Images
 - Images are converted to png/jpg and linked as local image files.
 - Every image is stored in the same folder as its page.
-- Sample images:
-- Inline-style: 
-- ![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+- Inline-style: `![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")`
 
 
 ## Tables
