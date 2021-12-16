@@ -68,6 +68,20 @@ Example of Usage:
 | if|Executes a command or command block if a condition is true |  
 | var|Declares a variable |  
 
+#### It It OKAY to Delete?
+```javascript
+function okayToDelete() {
+  return confirm("Are you sure you wish to delete?");
+}
+```
 
-  
+#### Find a Photo
+```javascript
+function findPhoto() {
+  if(document.images)
+    for(i=0;i<document.images.length;i++)
+document.images[i].onmousedown = stopCopying;
+}
+```
+
   
