@@ -1,14 +1,17 @@
 # Window Object
 
 ## Window Properties & Methods
-defaultView 
-dialogArguments
-event
-frameElement
-navigator
-ownerDocument
-parentWindow
-top
+| Method | Description |
+| --- | --- | 
+| defaultView   | --- | 
+| dialogArguments  | --- | 
+| event   | --- | 
+| frameElement   | --- | 
+| navigator   | --- | 
+| open() | Opens a URL in a named window or frame |
+| ownerDocument   | --- | 
+| parentWindow   | --- | 
+| top   | --- | 
 
 ## Window Code Examples
 
