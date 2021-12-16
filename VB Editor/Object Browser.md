@@ -12,7 +12,7 @@ Note   Some objects show up in the Object Browser automatically when you start M
 
 For example, if you click Access in the Project/Library box, all the objects in the Microsoft Access object library are displayed in the Classes box. If you then click an object in the Classes box, you can view the object's members: the methods, properties, events, and constants associated with that object in the Members Of box. A class definition includes all of an object's members. For example, if you click Control in the Classes box, you see the methods and properties of that Control object displayed in the Members Of box.  
   
-Th Object Browser ![The Object Browser](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/Object%20Browser.jpg)  
+The Object Browser ![The Object Browser](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/Object%20Browser.jpg)  
 
 From the Object Browser, you can get help on a particular object, method, property, or event. Just click the item you're interested in and then click the Help button 
   
