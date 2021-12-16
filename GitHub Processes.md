@@ -1,10 +1,10 @@
 # Processes used within GitHub Website
 
 ### Sitewide Keyboard Shortcuts
-![Sitewide Shortcuts](MikeMyers59/MikeMyers59/00Pics/GitHub Sitewide Shortcuts.png)
+![Sitewide Shortcuts](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/GitHub%20Sitewide%20Shortcuts.png)
 
 ### Repository Shortcuts
-![Repository Shortcuts](MikeMyers59/MikeMyers59/00Pics/GitHub Repository Shortcuts.png)
+![Repository Shortcuts](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/GitHub%20Repository%20Shortcuts.png)
 
 ### Create a Folder in GitHub
 1. Click on Create new File.
