@@ -1,7 +1,7 @@
 # Operators
 
 | Operator | Type | Description | JS |
-| --- | --- | --- | :---: |
+| :---: | --- | --- | :---: |
 |-|Arithmetic operator|Subtracts the right from the left operand | Y |   Y |  
 | %|Arithmetic operator|Divides the left by the right operand and calculates the remainder | Y |  
 | *|Arithmetic operator|Multiplies the operands | Y |  
