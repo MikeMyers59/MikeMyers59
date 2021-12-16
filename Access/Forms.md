@@ -22,6 +22,22 @@ Access Forms Object ![Access Forms Object](https://github.com/MikeMyers59/MikeMy
 
 ## Examples
 
+#### Basic Form Closing
+```VBA
+Private Sub btnCloseForm_Click()
+On Error GoTo Err_btnCloseForm_Click_Click
+' Close Form, Return to calling form
+    DoCmd.Close
+' Make calling form Visible again
+    Forms!frmMain.Visible = True
+Exit_btnCloseForm_Click_Click:
+    Exit Sub
+Err_btnCloseForm_Click_Click:
+    MsgBox Err.Description
+    Resume Exit_btnCloseForm_Click_Click
+End Sub
+```
+
 #### Hide the Access Window
 Use a blank form as a block for the Access Window. The **DoCmd.Maximum** makes it cover the entire screen – and blocks the task bar view (a 2nd screen allows it to be accessed, as may virtual monitors!) The bypass key is operational to make any changes that may be necessary. The Main form is Modal to prevent access to the Start (blank) form. Navigation & Windows controls are removed to prevent any other access method! This effectively blocks access to the database objects except through the Main form.  
 
@@ -38,4 +54,11 @@ The menu/start form
 Property Settings:  
 ![frmMain Properties 1](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/frmMain%20Properties%201.png)  
 ![frmMain Properties 2](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/frmMain%20Properties%202.png)  
+
+#### Requery when Selected
+```vba
+Private Sub <frmControlName>_GotFocus()
+   DoCmd.Requery
+End Sub
+```
 
