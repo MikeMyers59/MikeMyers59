@@ -21,5 +21,9 @@ Failing hard drives can be a problem, too: Speccy can provide you with basic inf
 5. Run Memory Checks: MemTest86 or Windows Memory Diagnostic
 
 
+## Keyboard Shortcuts
+| Keys | Action |  
+| --- | --- | 
+| [CTRL] + [WINDOWS] + Q | Opens Windows Quick Assist (Remote Support) |  
 
   
