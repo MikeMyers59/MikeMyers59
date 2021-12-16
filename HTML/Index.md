@@ -241,5 +241,5 @@ Table Format![[Table Format](MikeMyers59/MikeMyers59/00Pics/Table Format.png)
 Results
 | Read | Write |  
 | :---: | :---: |  
-| ![HTML DOM Read](MikeMyers59/MikeMyers59/00Pics/HTML DOM Read.png) | ![HTML DOM Write](MikeMyers59/MikeMyers59/00Pics/HTML DOM Write.png) |  
+| ![HTML DOM Read](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/HTML%20DOM%20Read.png) | ![HTML DOM Write](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/HTML%20DOM%20Write.png) |  
 
