@@ -1,5 +1,19 @@
 # String Objects
 
+## String Properties
+| Property | Description |  
+| --- | --- |  
+| length | number of characters assigned to string | 
+
+## String Methods
+| Methods | Description |  
+| --- | --- |  
+| escape() | Encodes a string using URL encoding |  
+| indexOf() | A method of the string object that returns the index of the next occurrence of a substring in a string |  
+| split() | Separates a string into compnents by delimiter into an array |
+| substring() | Returns a portion of the string based on being passed the indexes of the first and last character as arguments |  
+| unescape() | Decodes a string encoded using URL encoding |  
+
 ## Compare String
 ```javascript
   function isEqual(str1, str2, ignoreCase) {
