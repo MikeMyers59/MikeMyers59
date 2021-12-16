@@ -35,7 +35,7 @@ Style can be implemented in three ways: Internal, Inline and External.
 
 #### CSS Rules
 
-CSS Rule for a Paragraph![CSS P Rule](MikeMyers59/MikeMyers59/00Pics/CSS Rule Example.png)
+CSS Rule for a Paragraph![CSS P Rule](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/CSS%20Rule%20Example.png)
 ```css
 <STYLE type="text/css"> 
 p {
@@ -54,7 +54,7 @@ p {
 ```
 
 #### The Box Model
-The Box![The CSS Box Model(MikeMyers59/MikeMyers59/00Pics/CSS Box Model.png)
+The Box![The CSS Box Model](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/CSS%20Box%20Model.png)  
 **Note**: The visible width of the box is determined by adding together the content width, the padding and the border.
 
 
@@ -120,7 +120,7 @@ The Box![The CSS Box Model(MikeMyers59/MikeMyers59/00Pics/CSS Box Model.png)
 
 ## CSS Selectors
 | Selector | Description | Example |  
-| --- | --- | --- | --- |  
+| --- | --- | --- | 
 | Universal |  | `*` |
 | Single Element |  | `H1` |
 | List of Elements | comma separated list | `H1, H2, H3` |
