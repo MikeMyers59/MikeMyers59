@@ -55,3 +55,19 @@ Example of Usage:
       TAB             : '\t',
   };
 ```
+
+## Keywords
+| Keyword | Description |  
+| --- | --- |  
+| /* ... */|JavaScript multiline comments start with /* and end with */. |  
+| //|Start of a single-line comment. Comment starts with // and ends at the end of the line. |  
+| else|Executes a command or command block if the condition of an associated if statement is false |  
+| function|Declares a function |  
+| new|Creates a new instance of an object |  
+| this|Refers to the current object |  
+| if|Executes a command or command block if a condition is true |  
+| var|Declares a variable |  
+
+
+  
+  
