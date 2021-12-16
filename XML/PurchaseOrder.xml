@@ -1,0 +1,13 @@
+<?xml version=“1.0”>
+<PurchaseOrder>
+ <PONumber>123456</PONumber>
+ <PODate>12/3/1998</PODate>
+ <Vendor>ABC Supply Company</Vendor>
+ <Line>
+  <Quantity>10</Quantity>
+  <UnitOfMeasure>BX</UnitOfMeasure>
+  <Description>Computer Paper</Description>
+  <UnitCost>10.00</UnitCost>
+  <ExtendedCost>100.00</ExtendedCost>
+ </Line>
+</PurchaseOrder>
