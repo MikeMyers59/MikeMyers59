@@ -41,7 +41,7 @@ Requires:
 Sets window.BROWSER
 Values:
 |Value|Browser|
-| --- | --- | 
+| :---: | --- | 
 |C|Chrome |   
 | F|FireFox |   
 | I|Internet Explorer |   
