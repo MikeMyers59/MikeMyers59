@@ -22,6 +22,7 @@ on the Object Browser's toolbar. You can also copy a particular item to the Clip
   
 The OB Copy Button ![OB Help Button](https://github.com/MikeMyers59/MikeMyers59/blob/main/00Pics/OB%20Copy%20Icon.gif)
   
-on the Object Browser's toolbar. 
+on the Object Browser's toolbar.  
+  
 You can also view procedures that you've created yourself in Microsoft Access in the Object Browser. The Project/Library box displays the name of the current database and any other referenced databases, in addition to the other referenced object libraries. If you click a referenced database in the Project/Library box, the Classes box displays all standard modules in the database and their public procedures. If you select the current database, it also displays any class modules and their methods and properties. 
 
