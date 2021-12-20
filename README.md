@@ -18,14 +18,3 @@ Other Code Storage Sites:
 - [CodePlex](https://www.CodePlex.com/)
 - [SourceForge](http://www.sourceforge.net/)
 
-# Contents
-
-### Information Resources
-- [TABLES]( https://github.com/MikeMyers59/MikeMyers59/tree/main/Tables) 
-
-### Programming 
-- [DOS](https://github.com/MikeMyers59/MikeMyers59/tree/main/DOS)
-- [HTA](https://github.com/MikeMyers59/MikeMyers59/tree/main/HTA)
-- [JS](https://github.com/MikeMyers59/MikeMyers59/tree/main/JS)
-- [VBS](https://github.com/MikeMyers59/MikeMyers59/tree/main/VBS)
-
