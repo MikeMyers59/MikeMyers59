@@ -1,4 +1,4 @@
-# HyperText markup Language (HTML)
+# HyperText Markup Language (HTML)
 HTML is an application of ISO Standard 8879:1986 ‑‑ Standard Generalized Markup Language (SGML). SGML is a system for defining structured document types, and markup languages to represent instances of those document types. HTML is one such markup language. Its syntax follows the syntax of SGML. An HTML file is an file of text whose character set includes [ISO‑8859‑1] and agrees with [ISO‑10646]. This is often commonly referred to as an ASCII file of text. This document text also includes instructions to a user agent (often called a browser) mostly about displaying the text. To formally identify the file as containing HTML elements, the beginning of the file should contain a line in SGML syntax identifying the version of HTML being used.
 
 Developed by Tim Bernier-Lee of CERN as a method for sharing documents via the Internet. Without a doubt, HTML has become one of the most widely used technologies in the world today. HTML uses a fixed set of tags - approximately 100 tags in HTML 4.0.
