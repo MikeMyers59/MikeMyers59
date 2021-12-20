@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title>Countdown Timer</title>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin Countdown Timer
+function getTime() {
+now = new Date();
+y2k = new Date("Jan 1 2005 14:00:00");
+days = (y2k - now) / 1000 / 60 / 60 / 24;
+daysRound = Math.floor(days);
+hours = (y2k - now) / 1000 / 60 / 60 - (24 * daysRound);
+hoursRound = Math.floor(hours);
+minutes = (y2k - now) / 1000 /60 - (24 * 60 * daysRound) - (60 * hoursRound);
+minutesRound = Math.floor(minutes);
+seconds = (y2k - now) / 1000 - (24 * 60 * 60 * daysRound) - (60 * 60 * hoursRound) - (60 * minutesRound);
+secondsRound = Math.round(seconds);
+sec = (secondsRound == 1) ? " second." : " seconds.";
+min = (minutesRound == 1) ? " minute" : " minutes, ";
+hr = (hoursRound == 1) ? " hour" : " hours, ";
+dy = (daysRound == 1)  ? " day" : " days, "
+document.timeForm.input1.value = "Time remaining: " + daysRound  + dy + hoursRound + hr + minutesRound + min + secondsRound + sec;
+newtime = window.setTimeout("getTime();", 1000);
+}
+//  End of Countdown Timer-->
+</script>
+
+</head>
+
+<body onLoad="getTime()">
+
+<h2 align=center>Countdown Timer</h2>
+
+<center>
+Date:  Jan 1, 2005 2:00:00 p.m.
+<form name=timeForm>
+<input type=text name=input1 size=55 border-style="none">
+</form>
+</center>
+
+<!- This is the credit and Legal statement section -->
+  <HR><SMALL><CENTER>
+   <ADDRESS>This page is updated by FTC(SS) Michael R. Myers, USS NEVADA SSBN 733.<br>
+    Last updated on
+    <SCRIPT LANGUAGE="JavaScript">
+      <!--Begin hide [Example of an inline use of JavaScript]
+      document.write(document.lastModified + ".");
+      //--- end hide -->
+    </SCRIPT>
+   </ADDRESS><br>
+  </CENTER></SMALL>
+
+</body>
+</html>
+
