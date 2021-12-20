@@ -15,7 +15,7 @@ This script demonstrates how to save information to a xml file with the use of M
 - [SGML/XML Web Page](http://xml.coverpages.org/xml.html)  
 - [XML Organization](www.xml.org)  
 - [W3 XML Specification](https://www.w3.org/TR/REC-xml/)  
-- [Peter Flynn's XML FAQs](http://xml.silmaril.ie/) (see XML FAQs.pdf)
+- [Peter Flynn's XML FAQs](http://xml.silmaril.ie/)
 - [Simple API for XML (SAX) (JAVA based)](http://www.saxproject.org/)
 - [XML Path Reference](https://www.w3.org/TR/2017/REC-xpath-31-20170321/)
 
