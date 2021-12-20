@@ -9,3 +9,54 @@ Requires images for digits 0-9, blank, colon, am & pm. The digit & blank images 
 
 **Note**: Image names may need to be changed, either in the script or the file name.
 
+#### Get HKU Registry Value
+```html
+Function GetHKURegistryValue(entryName)
+  Dim strKeyPath
+  Dim strEntryName, strReadValue
+  Dim strLocalDC
+  Dim subKey, arrSubKeys
+  Dim volatileKey
+  strKeyPath = ""
+  objReg.EnumKey HKU, strKeyPath, arrSubKeys
+  For Each subkey In arrSubKeys
+    volatileKey = subKey & "\Volatile Environment"
+    objReg.GetStringValue HKU, volatileKey, "USERNAME", strReadValue
+    If (strReadValue <> "") Then
+      If (strReadValue = UserName) Then
+        objReg.GetStringValue HKU, volatileKey, entryName, strReadValue
+        MsgBox "Read current value of " & entryName & " = " & strReadValue, True
+        GetHKURegistryValue = strReadValue
+        Exit For
+      End If
+    End If
+  Next
+End Function
+```
+
+#### Get User Log Folder
+```html
+Function GetUserLogFolder(strUserName)
+  Dim strKeyPath
+  Dim strEntryName, strReadValue
+  Dim subKey, arrSubKeys
+  Dim volatileKey
+  strKeyPath = ""
+  objReg.EnumKey HKU, strKeyPath, arrSubKeys
+'go through all user
+  For Each subkey In arrSubKeys
+    volatileKey = subKey & "\Volatile Environment"
+    objReg.GetStringValue HKU, volatileKey, "USERNAME", strReadValue
+'subkey exits
+    If (strReadValue <> "") Then
+'Set log folder and exit if found matched name
+      If (strReadValue = strUserName) Then
+        objReg.GetStringValue HKU, volatileKey, "LOCALAPPDATA", strReadValue
+        GetUserLogFolder = strReadValue
+        Exit For
+      End If
+    End If
+  Next
+End Function
+```
+
