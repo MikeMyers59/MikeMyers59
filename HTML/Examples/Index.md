@@ -10,7 +10,7 @@ Requires images for digits 0-9, blank, colon, am & pm. The digit & blank images 
 **Note**: Image names may need to be changed, either in the script or the file name.
 
 #### Get HKU Registry Value
-```html
+```JavaScript
 Function GetHKURegistryValue(entryName)
   Dim strKeyPath
   Dim strEntryName, strReadValue
@@ -35,7 +35,7 @@ End Function
 ```
 
 #### Get User Log Folder
-```html
+```JavaScript
 Function GetUserLogFolder(strUserName)
   Dim strKeyPath
   Dim strEntryName, strReadValue
@@ -58,5 +58,22 @@ Function GetUserLogFolder(strUserName)
     End If
   Next
 End Function
+```
+
+### Link to Exit Page
+```JavaScript
+var Testing = true;
+function Exit() {
+  if !Testing {
+    window.open("ThankYouForVisiting.html");
+  }
+}
+```
+
+#### Got to URL
+```javascript
+function go(url) {
+  opener.location.href = url;
+}
 ```
 
