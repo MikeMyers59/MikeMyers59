@@ -7,6 +7,11 @@
 - .bat
 - .cmd
 
+| Command | Description |  
+| --- | --- |  
+| REM | Comment line, ignored by processor. |
+
+
 ## Commandlets
 
 #### MSHTML
