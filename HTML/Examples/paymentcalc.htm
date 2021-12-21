@@ -1,0 +1,214 @@
+<HTML>
+<HEAD>
+ <TITLE> </title> 
+
+ <script LANGUAGE="JavaScript">
+ <!-- Hide
+ <!-- /* calculateLoanAmount() - Invoked after pushbutton press.        */ -->
+ <!-- /* Ensure that all fields are in a valid format, and that term,   */ -->
+ <!-- /* interest rate, and monthly payment are filled prior to doing   */ -->
+ <!-- /* calculation.                                                   */ -->
+ function calculateLoanAmount()
+ {
+    var form = document.fincalc;
+ 
+    if (fieldsValid(form, true)) {
+       if (form.loanterm.selectedIndex == 0) {
+          alert("Term of loan must be completed.");
+          form.loanterm.focus();
+       }
+       else if (form.loaninterest.value.length == 0) {
+          alert("Interest rate of loan must be completed.");
+          form.loaninterest.focus();
+       }
+       else if (form.loanpayment.value.length == 0) {
+          alert("Monthly payment of loan must be filled prior to calculating the loan.");
+          form.loanpayment.focus();
+       }
+       else {
+          doCalculateLoanAmount(form);
+       }
+    }
+ }
+ 
+ <!-- /* calculateMonthlyPayment() - Invoked after pushbutton press.    */ -->
+ <!-- /* Ensure that all fields are in a valid format, and that term,   */ -->
+ <!-- /* interest rate, and loan amount are filled prior to doing       */ -->
+ <!-- /* calculation.                                                   */ -->
+ function calculateMonthlyPayment()
+ {
+    var form = document.fincalc;
+ 
+    if (fieldsValid(form, false)) {
+       if (form.loanamount.value.length == 0) {
+          alert("Amount of loan must be completed prior to calculating the monthly payment.");
+          form.loanamount.focus();
+       }
+       else if (form.loanterm.selectedIndex == 0) {
+          alert("Term of loan must be completed.");
+          form.loanterm.focus();
+       }
+       else if (form.loaninterest.value.length == 0) {
+          alert("Interest rate of loan must be completed.");
+          form.loaninterest.focus();
+       }
+       else {
+          doCalculateMonthlyPayment(form);
+       }
+    }
+ }
+ 
+ <!-- /* doCalculateLoanAmount() - Calculates total amount of the loan  */ -->
+ <!-- /* based on the term, interest, and monthly payment.  For the     */ -->
+ <!-- /* calculation, I will convert the yearly interest rate into a    */ -->
+ <!-- /* monthly amount, then use the annuity formula to figure out     */ -->
+ <!-- /* the total amount.                                              */ -->
+ function doCalculateLoanAmount(form)
+ {
+    var dMonthlyInterest = parseFloat(form.loaninterest.value) / (12*100);
+    var dTerm = parseInt(form.loanterm.selectedIndex * 12);
+    var dMoPmt = parseFloat(form.loanpayment.value);
+ 
+    var dLoanAmount = dMoPmt * ((1/dMonthlyInterest) - 
+                               (1/(dMonthlyInterest * 
+                               Math.pow(dMonthlyInterest+1, dTerm))));
+    
+    // Round it to nearest cent...
+    dLoanAmount = roundToCents(dLoanAmount);
+    form.loanamount.value = "" + dLoanAmount;
+ } 
+ 
+ <!-- /* doCalculateMonthlyPayment() - Calculates mon. pmt. of the loan */ -->
+ <!-- /* based on the term, interest, and amount of loan.  For the      */ -->
+ <!-- /* calculation, I will convert the yearly interest rate into a    */ -->
+ <!-- /* monthly amount, then divide the loan amount by the PV of $1    */ -->
+ <!-- /* using the annuity formula to figure out the monthly payment.   */ -->
+ function doCalculateMonthlyPayment(form)
+ {
+    var dMonthlyInterest = parseFloat(form.loaninterest.value) / (12*100);
+    var dTerm = parseInt(form.loanterm.selectedIndex * 12);
+    var dLoanAmount = parseFloat(form.loanamount.value);
+ 
+    var dMoPmt = dLoanAmount / ((1/dMonthlyInterest) - 
+                               (1/(dMonthlyInterest * 
+                               Math.pow(dMonthlyInterest+1, dTerm))));
+    
+    // Round it to nearest cent...
+    dMoPmt = roundToCents(dMoPmt);
+    form.loanpayment.value = "" + dMoPmt;
+ } 
+ 
+<!-- /* roundToCents() - Rounds a float to the nearest penny.          */ -->
+ function roundToCents(dFloat)
+ {  
+    dFloat *= 100;
+    dFloat = Math.round(dFloat);
+    return (dFloat / 100);
+ }
+ 
+<!-- /* fieldsValid() - Ensure that fields are in a valid format.      */ -->
+ function fieldsValid(form, bLoanAmountCalculation)
+ {
+    var bReturn = true;
+ 
+    if (form.loanamount.value.length > 0 &&
+        isNaN(form.loanamount.value)     &&
+        bLoanAmountCalculation == false) {
+        alert("Loan Amount must be a valid decimal number.  Also, please enter the amount with no commas."); 
+        form.loanamount.focus();
+        bReturn = false;
+    }
+    else if (form.loaninterest.value.length > 0 &&
+        isNaN(form.loaninterest.value)) {
+        alert("Loan Interest Rate must be a valid decimal number.");
+        form.loaninterest.focus();
+        bReturn = false;
+    }
+ 
+    else if (form.loanpayment.value.length > 0 &&
+             isNaN(form.loanpayment.value)     &&
+             bLoanAmountCalculation == true) {
+      alert("Monthly Payment Amount must be a valid decimal number.  Also, please enter the amount with no commas.");
+      form.loanpayment.focus();
+       bReturn = false;
+    }
+ 
+    return bReturn;
+ }
+  
+ <!-- /* fieldsFilled() - Checks to see that 3 items are filled.        */ -->
+ function fieldsFilled(form)
+ {
+    var iFieldsFilled = 0;
+ 
+    if (form.loanamount.value.length > 0)
+       iFieldsFilled++;
+    if (parseInt(form.loanterm.selectedIndex) > 0) 
+       iFieldsFilled++;
+    if (form.loaninterest.value.length > 0)
+       iFieldsFilled++;
+    if (form.loanpayment.value.length > 0)
+       iFieldsFilled++;
+ 
+    if (iFieldsFilled == 3) 
+       return true;
+    else
+       alert("Must fill in three out of the four data items for calculation.");
+ 
+    return false;
+ }
+ // -->
+ 
+ </script>
+ 
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF" TEXT="#000000" LINK="#800080" VLINK="#800000" ALINK="#000080" marginheight="0" marginwidth="0" leftmargin="0" topmargin="0">
+
+<form NAME="fincalc">
+  <table BORDER="1" CELLPADDING="3" width="375">
+    <tr>
+      <td>Loan Amount ($):</td>
+      <td><input TYPE="text" NAME="loanamount" SIZE="10" MAXLENGTH="9"></td>
+    </tr>
+    <tr>
+      <td>Term of Loan (in months):></td>
+      <td>
+        <select NAME="loanterm" SIZE="1">
+          <option VALUE="0" SELECTED="SELECTED">&nbsp; </option>
+          <option VALUE="12">12 </option>
+          <option VALUE="24">24 </option>
+          <option VALUE="36">36 </option>
+          <option VALUE="48">48 </option>
+          <option VALUE="60">60 </option>
+          <option VALUE="72">72 </option>
+        </select></span>
+      </td>
+    </tr>
+    <tr>
+      <td>Interest Rate (%):</td>
+      <td><input TYPE="text" NAME="loaninterest" SIZE="5" MAXLENGTH="4"></td>
+    </tr>
+    <tr>
+      <td>Monthly Payment ($):</td>
+      <td><input TYPE="text" NAME="loanpayment" SIZE="9" MAXLENGTH="8"></td>
+    </tr>
+  </table>
+  <table CELLPADDING="0" width="375" cellspacing="0">
+    <tr>
+      <td width="134" align="center">
+        <input TYPE="button" VALUE="Compute Loan" NAME="btcalcloan" ONCLICK="calculateLoanAmount()">
+      </td>
+      <td align="center">
+        <input TYPE="button" VALUE="Compute Payment" NAME="btcalcmopmt" ONCLICK="calculateMonthlyPayment()">
+      </td>
+      <td width="169" align="center">
+        <input TYPE="button" VALUE="Clear All" NAME="btclear" ONCLICK="reset()">
+      </td>
+    </tr>
+  </table>
+           
+ </BODY>
+ </HTML>
+ 
+ 

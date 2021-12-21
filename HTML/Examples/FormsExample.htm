@@ -1,0 +1,135 @@
+<html>
+<head>
+  <title>Forms Examples</title>
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!-- Update
+function check(form)
+ {
+   alert("Are you sure?");
+   window.status="Make up your mind or get it changed!!!";
+   form.text1.value="Change it now!!";
+   form.checkbox4.checked=true; // Does not work properly.....
+   window.status="Make up your mind or get it changed!!!";
+ }
+function update(form)
+ {
+   alert("Form being updated");
+   window.status="Oops, nothing happened, except the Title is changed!!!";
+   document.title='The Form is Updated';
+   form.text.value="Change it now!!";
+ }
+function MakeNewWindow()
+ {
+   Window2=window.open('./FormTest2.htm','Window2', 'resizable=no,width=200,height=200');
+
+ }
+function CloseNewWindow()
+ {
+   Window2.close();
+ }
+// End of Functions -->
+</SCRIPT>
+</head>
+
+<body>
+
+<H2 align=center>Forms Examples</h2>
+
+<hr>
+<FORM NAME="myform" ACTION="foo.cgi" METHOD="get" >
+  Enter a value:<INPUT TYPE="text" NAME="text1" VALUE="blahblah" SIZE=20><br>
+  Check options you want:<br>
+   <INPUT TYPE="checkbox" NAME="Check1" Checked>Option #1<br>
+   <INPUT TYPE="checkbox" NAME="Check2">Option #2<br>
+   <INPUT TYPE="checkbox" NAME="Check3">Option #3<br>
+   <INPUT TYPE="checkbox" NAME="Check4" Checked onClick="check(this.form)">Option #4<br>
+   <INPUT TYPE="button" NAME="button1" VALUE="Press Me" onClick="update(this.form)">
+   <INPUT TYPE="reset" NAME="button3")">
+   <INPUT TYPE="submit" NAME="button3")"><br><br>
+   <INPUT TYPE="button" VALUE="Open Second Window" onClick=MakeNewWindow()>
+   <INPUT TYPE="button" VALUE="Close Second Window" onClick=CloseNewWindow()>
+</FORM>
+<hr>
+<form method="GET" action="FormTest3.htm" name="Test3Button" target="_top">
+<!-- Drop Down Box -->
+  <SELECT NAME="vacations" SIZE=7>
+     <OPTION>Tahiti</OPTION>
+     <OPTION>Mexico</OPTION>
+     <OPTION>Canada</OPTION>
+     <OPTION>Eqypt</OPTION>
+     <OPTION>Hawaii</OPTION>
+     <OPTION>London</OPTION>
+     <OPTION>Timbuktu</OPTION>
+     <OPTION>Haiti</OPTION>
+     <OPTION>France</OPTION>
+   </SELECT>
+<HR>
+<!-- Radio Buttons -->
+   <INPUT TYPE="RADIO" NAME="somename" VALUE="moon" CHECKED>Moon<BR>
+   <INPUT TYPE="RADIO" NAME="somename" VALUE="sun">Sun<BR>
+   <INPUT TYPE="RADIO" NAME="somename" VALUE="stars">Stars
+<HR>
+<!-Textbox  -->
+  Name: <INPUT TYPE="TEXT" NAME="name" SIZE=30><BR>
+  Zip Code: <INPUT TYPE="TEXT" NAME="zip" SIZE=10><BR>
+  Email: <INPUT TYPE="TEXT" NAME="email" SIZE=20><BR>
+<!-- Textarea  -->
+  Comments:<br>
+  <TEXTAREA NAME="mytextarea" ROWS=5 COLS=28 WRAP>Default text appears here.</TEXTAREA>
+  <HR>
+<!-- Submit Button Tool -->
+  <INPUT TYPE="SUBMIT" VALUE="Submit">
+<!-- Reset Button -->
+  <INPUT TYPE="RESET" VALUE="Clear Form">
+
+<table>
+<tr>
+  <td>
+<select name="Month" size=1>
+  <option value="1">January
+  <option value="2">February
+  <option value="3">March
+  <option value="4">April
+  <option value="5">May
+  <option value="6">June
+  <option value="7">July
+  <option value="8">August
+  <option value="9">September
+  <option value="10">October
+  <option value="11">November
+  <option value="12">December
+</select>
+  </td>
+  <td>
+<select name="Day" size=1>
+  <option value="1">Monday
+  <option value="2">Tuesday
+  <option value="3">Wednesday
+  <option value="4">Thursday
+  <option value="5">Friday
+  <option value="6">Saturday
+  <option value="7">Sunday
+</select>
+  </td>
+  <td>
+<select name="Year" size=1>
+  <option value="1999">1999
+  <option value="">-------
+  <option value="1998">1998
+  <option value="1999">1999
+  <option value="2000">2000
+  <option value="2001">2001
+  <option value="2002">2002
+  <option value="2003">2003
+</select>
+  </td>
+</tr>
+</table>
+</FORM>
+
+<form method="GET" action="FormTest2.htm" name="Test2Button" target="_top">
+<input type="submit" value="Dare you to push this!" name="B1">
+</form>
+
+</body>
+</html>

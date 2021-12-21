@@ -1,0 +1,55 @@
+
+<html>
+<head>
+
+  <title>Fun with the Mouse</title>
+
+  <STYLE> <!- Move to .css file -->
+address { FONT-SIZE: 8 pt; text-align: center }
+body { BACKGROUND-IMAGE: url(../Background.gif);
+           FONT-FAMILY: Arial, Helvetica, Univers, 'Zurich BT'; } 
+a {font-family: Arial, Helvetica, Univers, 'Zurich BT';
+   font-size: 12 pt;
+   font-weight: normal; 
+   letter-spacing: 0.1em;
+   text-decoration: underline;}
+a:link {   color: blue; }
+a:visited {   color: purple; }
+a:active {    color: red; }
+a:hover {   color: orange}
+H2 { font:16pt verdana; color: blue; text-align: center; }
+
+</STYLE>
+
+</head>
+
+<body>
+
+  <A name=topOfPage></A>
+  <H2>Fun with the Mouse Page</H2>
+
+<hr>
+<a href="index.html"
+onMouseOver="window.status='Your Mouse is over the Link!';return true" onMouseOut="window.status='';return true">Try this Mouseover Event Changes the browser Status Message.</a>
+
+<br><hr>
+<a href="index.html"
+onMouseOver="window.status='Official Member Site of the HTML Amateurs Network!';return true"
+onMouseOut="window.status='HTML Amatuers Rule!';return true" target="_blank">Try this Mouseover and Mouseout Event changes the browser Status Message twice.</a>
+
+<br><hr>
+<a href="index.html"
+onMouseOver="window.status='';return true"onMouseOut="window.status='';return true" target="_blank">Try this Mouseover and Mouseout Event that clears the browser Status Message.</a>
+
+  <HR>
+  <!-- Credits and Copywrite statements go at the end of the page -->
+  <address>
+  ©2002 Michael R. Myers, a Private Citizen of the United States of America.
+    <SCRIPT LANGUAGE="JavaScript">
+      document.write("Last modified " + document.lastModified)
+    </SCRIPT>
+  </address>
+
+</body>
+
+</html>
