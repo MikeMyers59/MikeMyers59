@@ -107,16 +107,6 @@ You can run your coded files through an HTML validation service that will tell y
 - .html
 - .mhtml
 
-## Resources
-
-- [Beginner's Guide to writing HTML](www.ncsa.uiuc.edu/demoweb/html-primer.html)
-- [The Web Designer, N Laviolette. Many references](www.kosone.com/people/nelsonl/nl.htm)
-- [Thoughts on style from Jorn Barger](www.mcs.net/~jorn/html/hyper.html)
-- http://goforit.unk.edu/ma200/tutors.htm
-- [HTML Development SkillDrill](http://skilldrill.brainbuzz.com/TestDescr.asp?htxtTestID=3)
-- [Form Tutor](http://junior.apk.net/~jbarta/tutor/forms/index.html)
-- [Table Tutor](http://junior.apk.net/~jbarta/tutor/tables/index.html)
-
 ## HTML Documents
 An HTML document is composed of a single element:
 	`<HTML> . . . </HTML>`
