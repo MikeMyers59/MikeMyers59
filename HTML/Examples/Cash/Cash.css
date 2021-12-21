@@ -1,0 +1,5 @@
+	.Cash
+	{
+	    BEHAVIOR: url(cash.htc);
+	    -moz-binding: url(cash.xml#cash);
+	}
