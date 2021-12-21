@@ -9,9 +9,9 @@ The HyperText Markup Language (HTML) is composed of  tag elements that define a 
 
 This guide assumes that you:
 
-	· are able to use some Web browser
-	· have a general understanding of how Web servers and client browsers work
-	· have access to a Web server (or that you want to produce HTML documents for personal use in local‑viewing mode)
+· are able to use some Web browser
+· have a general understanding of how Web servers and client browsers work
+· have access to a Web server (or that you want to produce HTML documents for personal use in local‑viewing mode)
   
 Users should be aware that HTML is an evolving language, and different World Wide Web browsers may recognize slightly different sets of HTML elements. The HTML specification is still under development and is controlled by the World Wide Web Consortium (W3C). Not all Web browsers will recognize the extension sets of HTML. 
 
@@ -54,37 +54,37 @@ You must include the exclamation mark and the hyphens as shown.
   
 HTML protocol allows you to embed links within other HTML tags:
 ```html
-	<H1><A HREF="Destination.html">My heading</A></H1>
+<H1><A HREF="Destination.html">My heading</A></H1>
 Do not embed HTML tags within an anchor:
-	<A HREF="Destination.html">
-	<H1>My heading</H1>
-	</A>
+<A HREF="Destination.html">
+<H1>My heading</H1>
+</A>
 ```
   
 Although most browsers currently handle this second example, the official HTML specifications do not support this construct and your file will probably not work with future browsers. Remember that browsers can be forgiving when displaying improperly coded files. But that forgiveness may not last to the next version of the software! When in doubt, code your files according to the HTML specifications.
   
 Character tags modify the appearance of the text within other elements:
 ```html
-	<UL>
-	<LI><B>A bold list item</B>
-	<LI><I>An italic list item</I>
-	</UL>
+<UL>
+<LI><B>A bold list item</B>
+<LI><I>An italic list item</I>
+</UL>
 ```
 Avoid embedding other types of HTML element tags. For example, you might be tempted to embed a heading within a list in order to make the font size larger:
 ```html
-  <UL>
-	<LI><H1>A large heading</H1>
-	<LI><H2>Something slightly smaller</H2>
-	</UL>
+<UL>
+<LI><H1>A large heading</H1>
+<LI><H2>Something slightly smaller</H2>
+</UL>
 ```
     
-Although some browsers handle this quite nicely, formatting of such coding is unpredictable. For compatibility with all browsers, avoid these kinds of constructs. The Netscape <FONT> tag, which lets you specify how large individual characters will be displayed in your window, is not currently part of the official HTML specifications.
+Although some browsers handle this quite nicely, formatting of such coding is unpredictable. For compatibility with all browsers, avoid these kinds of constructs. The Netscape `<FONT>` tag, which lets you specify how large individual characters will be displayed in your window, is not currently part of the official HTML specifications.
     
-What's the difference between embedding a <B> within a <LI> tag as opposed to embedding a <H1> within a <LI>? Within HTML the semantic meaning of <H1> is that it's the main heading of a document and that it should be followed by the content of the document. Therefore it doesn't make sense to find a <H1> within a list.
+What's the difference between embedding a `<B>` within a `<LI>` tag as opposed to embedding a `<H1>` within a `<LI>`? Within HTML the semantic meaning of `<H1>` is that it's the main heading of a document and that it should be followed by the content of the document. Therefore it doesn't make sense to find a `<H1>` within a list.
     
 Character formatting tags also are generally not additive. For example, you might expect that:
 ```html
-  <B><I>some text</I></B>
+<B><I>some text</I></B>
 ```
 would produce bold‑italic text. On some browsers it does; other browsers interpret only the innermost tag.
 
@@ -125,20 +125,106 @@ that is, in turn, composed of head and body elements:
 and
 	`<BODY> . . . </BODY>`
 or 
-  1<FRAMESET>…</FRAMESET>!
+  `<FRAMESET>…</FRAMESET>`
 
 ## HTML Sections
 
 #### HEAD Section 
 The head element identifies the first part of your HTML‑coded document that contains the title. The title is shown as part of your browser's window. Elements usually placed in the head element: 
 ```html
-	<ISINDEX>
-	<TITLE> . . . </TITLE>
-	<BASE href="URL">
-	<LINK rev="RELATIONSHIP" rel="RELATIONSHIP" href="URL">
+<ISINDEX>
+<TITLE> . . . </TITLE>
+<BASE href="URL">
+<LINK rev="RELATIONSHIP" rel="RELATIONSHIP" href="URL">
 ```
 #### BODY Section
 
 The second‑‑and largest‑‑part of your HTML document is the body, which contains the content of your document (displayed within the text area of your browser window). The tags explained below are used within the body of your HTML document.
 
+## Converting HTML Files in a Particular Order
+In order to convert a collection of HTML Files in a specific order, you have to create a table of contents file. That is, another HTML file that contains links to all the other files in the desired order. Such a file looks like:
+```html
+<html>
+  <body>
+    <h1>Table of Contents</h1>
+    <p style="text-indent:0pt">
+    <a href="file1.html">First File</a><br/>
+    <a href="file2.html">Second File</a><br/>
+      .
+      .
+      .
+    </p>
+  </body>
+</html>
+```
+Then just add this HTML file to the GUI and use the convert button to create your ebook.
+
+## Create a Favorites Icon For your Web Page
+Several of the pages on my Microsoft Internet Explorer Favorites menu have customized icons associated with them. How can I create such an icon so that visitors who bookmark my site will see that icon in their own Favorites menus? 
+    
+It's easy. All you need is an icon of the cor­rect size and a place to store it on your Web server with the rest of the files for your site. Your visitor needs IE 5.0 or higher.
+    
+The first step is to create the icon. Using an icon editor, design whatever you want to display as an icon. The icon must be precisely 16 by 16 pixels; any variation from this size will cause IE to ignore the icon. Experiment with the number of colors you give the icon. If you can get away with using 256 colors or even 16 colors, you should do so, because some Web users still configure their systems to those limitations.
+    
+Save the file with the name Favicon.ico, then upload the icon to the root directory of your Web site. Whenever a visitor book­marks a page, IE then automatically checks the site's root directory for the Favicon.ico file. If it does not find one, IE sends an error message to your server, but the visitor will not receive such a message.
+    
+**Note**: On a user's machine, the icon is stored in the Temporary Internet Files folder. If the user empties the cache, the icon for the Favorites menu item disappears. To get it back, the user will have to delete that partic­ular Favorites item and then add it again. Alternatively, you can give the file a different name and provide a hyperlink to it inside the HEAD container. This hyperlink must be inside a LINK tag with a REL attri­bute, and the attribute's value must be set to "SHORTCUT ICON". The following HTML code results in a Favorites icon appearing exactly as if it were a Favicon.ico file:
+```html
+<HEAD>
+<LINK REL="SHORTCUT ICON" HREF="http://www.mysite.com/bookmark.ico">
+</HEAD>
+```
+In your own code, of course, the URL and filename will be different, and your HEAD container will likely contain additional code.
+    
+A visitor to your site will see the shortcut icon when he adds your home page to his Favorites menu. When he does, the icon will appear in the Favorites menu beside your site's name, and it will also appear in IE's Address bar when the visitor accesses your site via that menu.
+
+## Disadvantages of HTML include
+    
+Link tracking:
+    
+• Web pages move constantly and Webmasters can’t keep up with changing URLs.  There are automatic link checkers that tell when a link is broken but the real problem is that HTML does not have the concept of a control link repository.
+    
+Syntax checking:
+    
+• HTML obstructs validation because it is not a rigid specification.  Rather than checking documents for validity, HTML browsers specifically ignore syntax violations to make the display process more robust.
+    
+Extensibility:
+    
+• Because HTML is not extensible, developers cannot create their own tags to reflect their content’s semantic relationships.
+• HTML extensions are either proprietary features of the client or require approval by a committee.
+• There is currently a W3C proposal for XHTML - extensible HTML which is an attempt to address this limitation.
+    
+Structure:
+    
+• HTML lacks support for structure such as nested information hierarchies.  Documents are relatively flat, which limits searching to full-text searches which makes navigation cumbersome.
+    
+Content awareness:
+
+• HTML searches have to look at all the content of every page which causes it to come up with too many pages.  This is because HTML jumbles information and meta-information.  Style and logic are hard-coded inside the document.  Different views and presentations of the information have to be generated by the server. 
+• Cascading Style Sheets (CSS) are an approach to solving this problem.
+    
+Data interchange:
+    
+• HTML does not help with automatic, reliable data interchange.  Its markup controls the appearance of a document but does not provide for tagged data fields.
+    
+Internationalization:
+    
+• support for special and international characters with two or more bytes and mathematical formulae is lacking or, at best, inconsistent in HTML.  Where provided, it sometimes breaks when changing platforms.
+    
+Reuse of data:
+    
+• HTML makes it difficult to reuse information.  For the same data to be published on the Web, printed as a catalog, and maintained in a database, conversion and sometimes manual reformatting is necessary.  This has to be repeated each time the information changes.
+Dynamic content
+• Today’s HTML-created pages do not let you refresh the look of a Web page - attributes like its color, font properties, font size, or background images - without loading a new page or invoking a program.
+    
+Object orientation:
+    
+• Today’s HTML tags do not map into an object model that would allow any part of a Web page to be treated as an object.
+
+## Enhancing a Web Site's Accessibility 
+  
+1. Here are a couple of tips to keep in mind while making your Web pages that will help the visually impaired Web browsers do their job and give users a better online experience. 
+2. Set the "alt" attribute for the important <img>, <input>, and <applet> elements in your page. 
+3. Setting the "lang" attribute aids the pronunciation of speech Web applications that are written to speak in different languages. 
+Mark abbreviations or acronyms with the <abbr> and <acronym> elements and use the "title" attribute to define them. 
 
