@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<bindings xmlns=http://www.mozilla.org/xbl
+          xmlns:html="http://www.w3.org/1999/xhtml">
+<binding id="cash">
+  <handlers>
+    <handler event="blur">
+       var AbsoluteValue = Math.abs(this.value);
+       var sNumber = String(AbsoluteValue);
+       if (AbsoluteValue > 999) {
+         var sTemp = ""; j=3;
+         for (var i=sNumber.length-1; i >=0 ; i--){
+             if (j==0){
+                 sTemp = "," + sTemp
+                 j=3;
+             }
+             j--;
+             if (sNumber.charAt(i) == '.'){
+                   j=3;
+             }
+             sTemp = sNumber.charAt(i) + sTemp
+            }
+              this.value = sTemp;
+            }
+     </handler>
+   </handlers>
+</binding>
+</bindings> 
