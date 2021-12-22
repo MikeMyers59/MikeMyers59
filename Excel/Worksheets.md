@@ -38,6 +38,23 @@ Resize the picture and reposition it as you like.
 
 Here's the same slide as the one in the last tip, but with a box at the upper right illustrating yet another tip. How did I get two sheets from the same worksheet to appear on the same screen? Simple. On the View tab, I clicked New Window, then View Side by Side. By default, the Synchronous Scrolling option is turned on, so that you can scroll through both pages by dragging the slider bar in one of them. But you can turn off Synchronous Scrolling if you prefer to scroll through each sheet separately.
 
+#### Manipulating Page Breaks  
+
+There are two ways of creating page breaks:  
+
+• Insert them manually, from the Page Layout tab  
+• Using Page Break Preview  
+
+To insert a page break manually, select the row or column header where you want the page to break, then from the Page Layout tab of the ribbon, click the Breaks drop-down and select Insert Page Break.  
+
+Insert page break [Worksheet 10]  
+
+To adjust page breaks, use Page Break Preview.   
+
+Click the Page Break Preview icon in the lower-right corner, then drag the lines. Dotted lines are automatic page breaks, and if you insert page breaks, those lines will be solid.  
+
+Adjust page breaks. [Worksheet 11]  
+
 #### Reverse and Transpose data with these powerful but simple solutions  
 
 Reversing and transposing an Excel data set doesn't have to be a complicated process. Susan Harkins explains how to cut to the chase.   
