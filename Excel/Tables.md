@@ -1,5 +1,34 @@
 # Excel Tables
 
+Manage information by using Excel tables, which make it easy to format data, sort, filter, add totals, and use formulas.   
+
+The purpose behind tables is to make managing and analyzing related data easier. Learn how to put this new feature to work for you!   
+
+One of my favorite additions to Excel 2007 is the table feature, which you might be tempted to ignore. I mean, isn't a spreadsheet really just a table? What's to improve, right? A lot—by formatting a spreadsheet as a table, Excel 2007 extends functionality, almost magically! Things that use to take a few clicks, now require no effort at all.  
+
+Perhaps the easiest task is creating the table in the first place! To create a table, select any cell in the spreadsheet (with or without data) and press [CTRL]+T. When Excel displays the Create Table dialog box, click OK. If your spreadsheet contains header cells, you might need to check the My Table Has Headers option.
+
+[TABLES 01] & [Tables 02]  
+
+Excel adds a green bar format to the table and enables an AutoFilter for each column. If you don't like the default format, choose a new one (there are 60). To do so, simply choose a new one from the Table Styles gallery on the Design tab in the Table Tools ribbon. As you hover over each option, Excel updates the actual table, accordingly, so there's less experimentation and reformatting.  
+
+[TABLES 03] & [Tables 04]  
+
+Adding data couldn't be easier.  Select any cell in the row below the last row of data and enter a value—Excel will extend the table format to include the new row. In addition, any formulas that refer to the table will include the new row.  
+
+Want totals? Click the Total Row option in the Table Style Options group on the Design tab (on the Table Tables ribbon). This is a toggle option that displays and hides a row of formulas at the bottom of the table. Notice that as you scroll down, the heading labels are still visible, without a single keystroke from you!  
+
+[TABLES 05] & [Tables 06]  
+
+The total row sums values in the last column only, but you can quickly add more formulas. Each column in the total row has a dropdown. Simply choose a function—and Excel does the rest!
+If you add a formula to the first empty column to the right, the table extends to include this formula and copies the new formula to the remaining rows! (Be sure to update the temporary heading label.) Below, you can see what happens when Excel encounters a simple expression in cell H2. Excel knows you're working in a table and assumes that you want a consistent formula.  
+
+[TABLES 07] & [Tables 08] & [Tables 09]   
+
+If the table assumes too much, simply undo its work by choosing an option from the AutoCorrect dropdown.  
+
+I've barely scratched the surface, but these are the features that I think most users will put to use the most. Many common spreadsheet tasks are now easier to implement and more intuitive. I'm in favor of anything that means less work for me!  
+
 ## Table Processes
  
 #### Change table format  
