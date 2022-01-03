@@ -116,20 +116,22 @@ vsc-extension-quickstart.md
 | Switch Panel Menu | `CTRL + Q` |  
 | Close Window | `CTRL + W` |  
 | Switch Window Menu | `CTRL + TAB` |  
-| Show all commands | CTRL + SHIFT + P | 
-| Open folder | CTRL + K, CTRL + O | 
-| Toggle terminal | CTRL + ` | 
-| Preview Markdown | CTRL + SHIFT + V | 
-| Open keyboard shortcuts | CTRL + K, CTRL + S | 
-| Switch groups (also Ctl + 1, Ctl + 2, etc.) | CTRL + K, CTRL + LEFT/RIGHT ARROW | 
-| Merge file group | CTRL + SHIFT + LEFT ARROW | 
-| Jump to matching bracket | CTRL + SIFT + \ | 
-| Super replace | CTRL + D | 
-| Go to file | CTRL + P |  
-| Open Comand Palette | F1 | 
-| Start Debugging session | F5 | 
-| Run Build Task | CTRL + SHIFT + B | 
-| Auto Completion | CTRL + SPACE | 
+| Show all commands | `CTRL + SHIFT + P` | 
+| Open folder | `CTRL + K, CTRL + O` | 
+| Toggle terminal | `CTRL + \`` | 
+| Preview Markdown | `CTRL + SHIFT + V` | 
+| Open keyboard shortcuts | `CTRL + K, CTRL + S` | 
+| Switch groups (also `Ctl + 1`, `Ctl + 2`, etc.) | `CTRL + K, CTRL + LEFT/RIGHT ARROW` | 
+| Merge file group | `CTRL + SHIFT + LEFT ARROW` | 
+| Jump to matching bracket | `CTRL + SHIFT + \` | 
+| Super replace | `CTRL + D` | 
+| Go to file | `CTRL + P` |  
+| Open Comand Palette | `F1` | 
+| Start Debugging session | `F5` | 
+| Run Build Task | `CTRL + SHIFT + B` | 
+| Auto Completion | `CTRL + SPACE` | 
+| Open CLI in VSCode | `CTRL + ~` |  
+| Copy <BR> Cut <BR> Paste | `CTRL + C` <BR> `CTRL + X` <BR> `CTRL + P` |  
 
 ## Resources
 
