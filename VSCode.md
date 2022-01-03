@@ -3,12 +3,13 @@
 ## Common Extensions  
 
 - [Extensions for the Visual Studio](https://marketplace.visualstudio.com/)  
-- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
+- [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)  
-- [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
-- [Prettier Standard](https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode)
-- [Rainbow Brackets](https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets)
-- [Rainbow Highlighter](https://marketplace.visualstudio.com/items?itemName=cobaltblu27.rainbow-highlighter)
+- [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)  
+- [Markdown Shortcuts](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts)  
+- [Prettier Standard](https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode)  
+- [Rainbow Brackets](https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets)  
+- [Rainbow Highlighter](https://marketplace.visualstudio.com/items?itemName=cobaltblu27.rainbow-highlighter)  
 
 ## Configuration: `.vscodeignore`, `/.vscode/settings.json`, & `/.vscode/extensions.json`
 
