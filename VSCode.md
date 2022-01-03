@@ -5,6 +5,7 @@
 - [Extensions for the Visual Studio](https://marketplace.visualstudio.com/)  
 - [ESLint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)  
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)  
+- [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 - [Markdown Lint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)  
 - [Markdown Shortcuts](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts)  
 - [Prettier Standard](https://marketplace.visualstudio.com/items?itemName=numso.prettier-standard-vscode)  
