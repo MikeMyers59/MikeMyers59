@@ -18,3 +18,12 @@ Other Code Storage Sites:
 - [CodePlex](https://www.CodePlex.com/)
 - [SourceForge](http://www.sourceforge.net/)
 
+## Table of Contents
+
+<!-- prettier-ignore-start -->  
+
+<!-- START doctoc -->  
+<!-- END doctoc -->  
+
+<!-- prettier-ignore-end -->  
+
