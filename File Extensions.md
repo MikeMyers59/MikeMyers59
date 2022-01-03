@@ -14,4 +14,3 @@ WAV sound file .wav
 QuickTime movie .mov
 MPEG movie .mpeg or .mpg
 
-
