@@ -20,6 +20,13 @@ A list of propely formaatted comments:
 | Markdown  | `<!-- prettier-ignore -->` |  
 | YAML | `# prettier-ignore` |
 
+## Simple Example
+```
+# Ignore all minimized files
+**/*.min.js
+**/*.min.css
+```
+
 ## Extreme Example
 ```
 # PRETTIER SUCKS AND IS NOT ALLOWED TO RUN IN THIS PROJECT
