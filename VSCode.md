@@ -38,9 +38,9 @@
     "source.fixAll.eslint": true
   }
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": { **false** | true },
-  "editor.formatOnSave":  { **false** | true },
-  "editor.insertSpaces":  { **false** | true },
+  "editor.formatOnPaste": { *false* | true },
+  "editor.formatOnSave":  { *false* | true },
+  "editor.insertSpaces":  { *false* | true },
   "editor.wordWrap": "on",
   "editor.tabSize": 2,
   "eslint.validate": [
@@ -56,10 +56,10 @@
   }
   "html.format.wrapLineLength": 0,
   "less.validate": false,
-  "prettier-config.tip":  { false | **true** },
-  "prettier.enable": { false | **true** },
-  "scss.validate": { false | **true** },
-  "stylelint.enable": { false | **true** }
+  "prettier-config.tip":  { false | *true* },
+  "prettier.enable": { false | *true* },
+  "scss.validate": { false | *true* },
+  "stylelint.enable": { false | *true* }
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
