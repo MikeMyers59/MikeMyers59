@@ -26,16 +26,17 @@ root = true
 
 # Defaults for All Files
 [*]
+charset = utf-8
+end_of_line = lf
 indent_style = space
 indent_size = 2
-charset = utf-8
-trim_trailing_whitespace = true
-end_of_line = lf
 insert_final_newline = true
+trim_trailing_whitespace = true
 
 # For Markdown Files
 [*.md]
-trim_trailing_whitespace = false
+max_line_length = off  
+trim_trailing_whitespace = false  
 
 # Settings for Programing languages
 [*.{js,py,ts,vb}]
