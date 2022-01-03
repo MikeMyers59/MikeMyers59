@@ -41,3 +41,23 @@ trim_trailing_whitespace = false
 [*.{js,py,ts,vb}]
 charset = utf-8
 ```
+
+## .editorconfig file supports the following file types:
+
+| Language | Files Extensions |  
+| --- | --- |  
+| C# | .cs, .csx, .cake |  
+| CSS | .css, .sass, .scss, .less, .pcss |  
+| HTML | .htm, .html |  
+| JavaScript | .js, .jsm, .vue |  
+| JSON | .json, .json5 |  
+| Makefile | makefile |  
+| Markdown | .md |  
+| Script | .sh, .ps1, .psm1, .bat, .cmd |  
+| SVG | .svg |  
+| Typecript | .ts, .tsx, .vue |  
+| Visual Basic | .vb, vbx |  
+| Visual Studio | .sln, .csproj, .vbproj, .vcxproj, .vcxproj.filters, .proj, .projitems, .shproj |  
+| XML | .xml, .config, .props, .targets, .nuspec, .resx, .ruleset |  
+| YAML | .yml, .yaml |  
+
