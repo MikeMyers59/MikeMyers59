@@ -1,5 +1,7 @@
 # GitIgnore 
 
+- [gitignore Syntax](https://git-scm.com/docs/gitignore#_pattern_format)
+
 ## Special Characters Used
 | Character(s) | Description |  
 | --- | --- |  
