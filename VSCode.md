@@ -113,6 +113,8 @@ vsc-extension-quickstart.md
 
 ## Keyboard Shortcuts
 
+- [Keyboard shortcuts (Windows)](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
+
 | Action | Shortcut |  
 | --- | --- | 
 | Switch Panel Menu | `CTRL + Q` |  
