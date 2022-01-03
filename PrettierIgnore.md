@@ -3,6 +3,7 @@
 - [Prettier](https://prettier.io/)
 - [Prettier Ignores](https://prettier.io/docs/en/ignore.html)  
 - `.prettierignore`:  works just like a `.gitignore`
+- [VSCode Extension Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 
 To exclude files from formatting, create a .prettierignore file in the root of your project. .prettierignore uses gitignore syntax.
 
