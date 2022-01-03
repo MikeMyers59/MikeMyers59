@@ -18,6 +18,7 @@ Special characters recognized in section names for wildcard matching:
 | [!name] | Matches any single character not in name |  
 | {s1,s2,s3} | Matches any of the strings given (separated by commas) (Available since EditorConfig Core 0.11.0) |  
 | {num1..num2} | Matches any integer numbers between num1 and num2, where num1 and num2 can be either positive or negative |  
+
 Special characters can be escaped with a backslash so they won't be interpreted as wildcard patterns.
 
 Simple Sample .editorconfig  
