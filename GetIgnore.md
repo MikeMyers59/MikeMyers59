@@ -1,6 +1,8 @@
 # GitIgnore 
 
-- [gitignore Syntax](https://git-scm.com/docs/gitignore#_pattern_format)
+- [gitignore](https://git-scm.com/docs/gitignore)  
+- [gitignore Syntax](https://git-scm.com/docs/gitignore#_pattern_format)  
+- [Ignoring-Files](https://git-scm.com/book/en/v2/Git-Basics-Recording-Changes-to-the-Repository#Ignoring-Files)
 
 ## Special Characters Used
 | Character(s) | Description |  
