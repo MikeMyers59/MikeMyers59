@@ -18,7 +18,7 @@ A list of propely formaatted comments:
 | HTML  | `<!-- prettier-ignore -->` |  
 | JavaScript  | `// prettier-ignore` |  
 | JSX  | `{/* prettier-ignore */}` |  
-| Markdown  | `<!-- prettier-ignore -->` |  
+| Markdown  | `<!-- prettier-ignore -->` <BR> or create an explicit block: <BR> `<!-- prettier-ignore-start -->` <BR> `<!-- prettier-ignore-end -->` |  
 | YAML | `# prettier-ignore` |
 
 ## Simple Example
