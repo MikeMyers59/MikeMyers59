@@ -40,6 +40,12 @@
 | Super replace | `CTRL + D` |  
 | Wrap Text | `ALT + Z` |  
 
+## Processes
+| Process | Actions |  
+| -- | -- |  
+| Access VS Code Settings | Open Command Palette; Type "Settings" and Select "Open User Settings" |  
+| Enable the Soft Wrapping | "View" -> "Toggle Soft Wrap" |  
+
 ## Resources
 
 - https://github.com/FourMInfo/DevOps-Space/wiki/VSCode
