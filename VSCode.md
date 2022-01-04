@@ -14,24 +14,6 @@
 
 ## Configuration: `.vscodeignore`, `/.vscode/settings.json`, & `/.vscode/extensions.json`
 
-### VSCode Ignore
-```
-.vscode/**
-.vscode-test/**
-test/**
-.gitignore
-.yarnrc
-vsc-extension-quickstart.md
-**/jsconfig.json
-**/*.map
-**/.eslintrc.json
-.editorconfig
-*.vsix
-
-.prettierignore
-.prettierrc.js
-```
-
 ## Keyboard Shortcuts
 
 - [Keyboard shortcuts (Windows)](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
