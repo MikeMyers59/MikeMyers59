@@ -113,5 +113,5 @@ When using the Sort dialog, Excel will often warn you if it encounters text and 
 
 Select Custom Lists under Order in the Sort dialog box!  
 
-[Data Sorting 01]
+![Data Sorting 01](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Data%20Sorting%2001.jpg)  
 
