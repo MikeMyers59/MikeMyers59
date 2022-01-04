@@ -12,8 +12,6 @@
 - [Rainbow Brackets](https://marketplace.visualstudio.com/items?itemName=2gua.rainbow-brackets)  
 - [Rainbow Highlighter](https://marketplace.visualstudio.com/items?itemName=cobaltblu27.rainbow-highlighter)  
 
-## Configuration: `.vscodeignore`, `/.vscode/settings.json`, & `/.vscode/extensions.json`
-
 ## Keyboard Shortcuts
 
 - [Keyboard shortcuts (Windows)](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)
