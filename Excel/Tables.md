@@ -29,7 +29,7 @@ If the table assumes too much, simply undo its work by choosing an option from t
 
 I've barely scratched the surface, but these are the features that I think most users will put to use the most. Many common spreadsheet tasks are now easier to implement and more intuitive. I'm in favor of anything that means less work for me!  
 
-## Table Processes
+## Table Processes  
  
 #### Change table format  
 
@@ -86,4 +86,44 @@ How to transpose rows and columns, part II. Let's say you want to see the same t
 
 1. When you create a table, drop-down arrows appear at the top of each column.   
 2. Click an arrow to sort the column. Note that you can sort only one column at a time.  
+
+## Use Quick Formula Auto-Fill  
+By [Susan Harkins](http://www.techrepublic.com/meet-the-team/us/susan-harkins/) \| in [Microsoft Office](http://www.techrepublic.com/blog/microsoft-office/) April 1, 2011, 3:44 AM PST  
+Excel 2007's new table feature eliminates the need to copy formulas; once you define a data range as a table, Excel will do it for you!  
+Tables are new to Excel 2007 and at first, you might think…redundant…who needs them? They do appear to be just an easy way to apply some fancy formatting to a data range, but tables are far more than that. Tables have special properties that will make you more productive and efficient.  
+![Tables 15](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2015.jpg)  
+Tables offer a lot, but my favorite feature is the formula auto-fill. Normally, you enter a formula and use the fill handle to copy the formula as needed. For example, using the data range shown below, you might enter a SUM() function that sums `B3:E3` in cell `F3`. Then, you'd use the fill handle to copy that formula to `F4:F6`.
+If you define your data range as a table, Excel will automatically copy the formula in F3 to `F4:F6` for you. To do so, you must first define the data range as a table, as follows:  
+
+1. Select the data range. In this case, that's `A2:E6`.  
+2. Click the Insert tab.  
+3. Click Table in the Tables group.  
+4. Click OK to close the Create Table dialog box. Excel formats the data range as a table.  
+![Tables 16](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2016.jpg)
+![Tables 17](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2017.jpg)
+![Tables 18](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2018.jpg)  
+
+Now, enter the following function into cell F3: `=SUM(B3:E3)` and press Enter. When you do, Excel automatically copies the formula to the remaining rows in the table. It isn't perfect: you'll still have to adjust the column width and enter a column heading. But, copying the formula is one less chore you have to do.  
+It's not a huge deal, but if you can get Excel to do more work for you, why not? This particular behavior will come in handy when working with large data ranges.
+The row behavior is different, but still very handy—let's take a quick look. Enter the following function in cell B7: `=SUM(B3:B6`. When you do, Excel displays a dropdown arrow next to the cell. Click it and you'll see a list of functions. Simply select one of the listed functions to quickly update the current function.   
+
+## Use Table Nomenclature to Quickly Create Dynamic Formulas  
+By [Susan Harkins](http://www.techrepublic.com/meet-the-team/us/susan-harkins/) \| in [Microsoft Office](http://www.techrepublic.com/blog/microsoft-office/), July 22, 2011, 3:17 AM PST   
+In Excel, defining a data range as a table opens the door to a number of efficient behaviors. Susan Harkins explains how to use nomenclature to create and use dynamic formulas.   
+If you're an Excel 2007 or 2010 user, you've probably discovered the new tables feature. Tables are an extension of Excel 2003's list feature. Defining a data range as a table opens the door to a number of efficient behaviors. I'll show you how to use one of my favorite table features, using table nomenclature to create and use dynamic formulas.  
+First, you need a table. To create a table, select any cell in a data range. Then, click the Insert tab and click Insert in the Tables group. Or, press `[CTRL]+T`. In most cases, you won't need to change any of the default settings in the Create Tables dialog box. Using the example sheet below, the feature specifies the correct range and the table has headers, so click OK.   
+![Tables 10](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2010.jpg)
+![Tables 11](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2011.jpg)  
+Next, name the table by clicking the contextual Design tab and entering a name into the Table Name control in the Properties group.  
+With the setup out of the way, let's look at how table nomenclature aids in writing formulas. We'll write a dynamic COUNTIF() function that counts the number of sales per person. (The formula will work the same as it would if you weren't referencing a table.) You can put the formula most anywhere you like; I inserted a few new rows to add the formula above the table. In cell B2, enter  
+`=COUNTIF(`  
+At this point, you'd normally reference a column. Instead, after entering the opening parenthesis, enter the name of the table, followed by an opening bracket, as follows:  
+`=COUNTIF(Sales[`  
+When you enter the opening bracket, Excel will display a list of all the columns in the defined table. To complete the range argument, double-click the appropriate column. In this case, that's Personnel.  
+Type the closing bracket, enter a comma to separate the range and criteria arguments and then specify the criteria argument by pointing to cell B1. Finish it off by entering a closing parenthesis and pressing Enter.  
+![Tables 12](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2012.jpg)
+![Tables 13](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2013.jpg)
+![Tables 14](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Tables%2014.jpg)  
+Change the name in cell B1 to update the formula in B2. If creating the formula this way doesn't seem any easier, it's probably because we've created one formula referencing one column. Once you define the table, you can quickly reference any column in it this way. If you have lots of references, you probably will find it more efficient than traditional referencing.  
+That's not all though - let's add a new record and see what happens. In cell A13, enter Bill. Excel automatically extends the table to include the new row and Excel updates the COUNTIF()—you don't even have to complete the record! That's table nomenclature at work!  
 
