@@ -1,5 +1,17 @@
 # Hold Area
 
+An organization is only as strong as its people. So, ask yourself two questions.  
+1. What one skill, if perfected, would have the greatest impact on my team, my career, and/or my life?  
+2. Am I pursuing that skill now?  
+
+#### Note Taking Rules  
+1. If it is a BOLD statement of fact - write it down!  
+2. If it is a definition - write it down!  
+3. If it is a list - write it down!  
+4. If it is an acronym - write it down!  
+  
+WHY? Because these all make great test questions!  
+
 [Amazon](https://www.amazon.com)  
   - [Amazon Smile](https://smile.amazon.com)  
 
@@ -25,6 +37,45 @@
 [Leslie O'Flahaven](www.ewriteonline.com)
 [Stacey Gordon](www.reworkwork.com)
 [This Caller](https://www.thiscaller.com/)  
+
+## Certifactions Achieved  
+|Authority	|Certification	|Description	|Completed|  
+| -- | -- | -- | -- |  
+|CompTIA	|A+ 	|Basic PC technician skills	|6/5/2015|  
+|CompTIA	|Project+ 	|IT Project management skills	|12/22/2015|  
+|CompTIA	|Network+ 	|Basic networking and connectivity skills	|5/1/2016|  
+|CompTIA	|Security+ 	|Basic system and networking security skills	|9/1/2016|  
+|Microsoft	|MTA-Net	|Networking Essentials	|5/1/2015|  
+|Microsoft	|MTA-DB	|Database Administration	|3/1/2015|  
+
+## Change & Change Management  
+
+### What stage of change are you in?  
+
+**Contemplation**: “I’m thinking about it.”  
+In this first stage, you are thinking about change and becoming motivated to get started. You might be in this stage if you:  
+- have been considering change but are not quite ready to start  
+- believe that your health, energy level, or overall well-being will improve if you develop new habits  
+- are not sure how you will overcome the roadblocks that may keep you from starting to change   
+  
+**Preparation**: “I have made up my mind to take action.”  
+In this next stage, you are making plans and thinking of specific ideas that will work for you. You might be in this stage if you:  
+- have decided that you are going to change and are ready to take action  
+- have set some specific goals that you would like to meet  
+- are getting ready to put your plan into action   
+  
+**Action**: “I have started to make changes.”  
+In this third stage, you are acting on your plan and making the changes you set out to achieve. You might be in this stage if you:  
+- have been making eating, physical activity, and other behavior changes in the last 6 months or so  
+- are adjusting to how it feels to eat healthier, be more active, and make other changes such as getting more sleep or reducing screen time  
+- have been trying to overcome things that sometimes block your success  
+  
+**Maintenance**: “I have a new routine.” 
+In this final stage, you have become used to your changes and have kept them up for more than 6 months. You might be in this stage if you:   
+- your changes have become a normal part of your routine   
+- you have found creative ways to stick with your routine  
+- you have had slip-ups and setbacks but have been able to get past them and make progress
+
 
 ## 		Clear & Brief Communication Tips
 1. Did I give enough context? 
@@ -76,8 +127,64 @@
 - Evaluate content.  
 - Attune to subtle cues.  
 - Empathize.  
-
+ 
+![ASL: Amaerican Sign Language](https://github.com/MikeMyers59/MikeMyers59/blob/main/References/ASL%20Letter%20Chart.jpg)  
+![Dicussion Conduct](https://github.com/MikeMyers59/MikeMyers59/blob/main/References/Discussions%20Conduct.jpg)  
+![What Rebels Want from Bosses](https://github.com/MikeMyers59/MikeMyers59/blob/main/References/What%20Rebels%20Want%20from%20Bosses.jpg)  
+  
 ## [Microsoft Learn](https://learn.microsoft.com/#!/) (MSL)  
 MSL a free, interactive, hands-on training platform that helps people develop in-demand technical skills related to widely used Microsoft products and services including Azure, Microsoft 365, Power Platform, Microsoft Dynamics, and more.  
 Microsoft Learn combines short step-by-step trainings, browser-based interactive coding and scripting environments, and task-based achievements to help learners advance their technical skills and prepare for Microsoft Certifications. With millions of registered learners, Microsoft Learn offers over 225 learning paths, more than 1,000 modules, and is localized in dozens of languages. Microsoft Learn is great for individual users to advance their skills, as well as organizations that want to create curated employee training paths.  
 
+## Your Mind, Your Brain
+####  Three Functions of the Mind
+The mind has three basic functions
+- Thinking  
+- Feeling  
+- Wanting  
+	
+The mind communicates three kinds of messages:
+- Incidents happening in your life  
+- Feelings about what’s happening  
+- Things to pursue or direct our energy toward  
+	
+Thinking, feeling, and wanting interrelate closely and dynamically:  
+- Wherever one is operative, the other two are also present  
+- Each continually influences the other two  
+
+#### Critical Thinking  
+The mind works in odd, strange ways, but you can bend them to your own methods! What Is Critical Thinking? Thinking systematically about one’s own thinking in order to improve it.  
+  
+Three interrelated dimensions:  
+- Analyze  
+- Evaluate  
+- Improve (or reconstruct)  
+  
+Goals of critical thinking:  
+- Learn to critique your own thinking  
+- Establish new habits of thought  
+- Develop confidence in reason  
+  
+Weak-Sense versus Strong-Sense Critical Thinking  
+- Weak sense:  
+  - Use of critical thinking to defend one’s current beliefs  
+  - Makes no effort to consider viewpoints counter to one’s own viewpoint  
+  
+- Strong sense:  
+  - Commitment to evaluating all beliefs, especially one’s own  
+  - Consistent pursuit of what is intellectually fair and just  
+
+###### Critical Thinker
+|Traits	|Tactics|  
+| -- | -- |  
+| - Intellectual humility	<BR> - Intellectual courage <BR> - Intellectual empathy <BR> - Intellectual integrity <BR> - Intellectual perseverance <BR> - Confidence in reason <BR> - Intellectual autonomy| - Use “wasted” time <BR> - Handle a problem a day <BR> - Internalize intellectual standards <BR> - Keep an intellectual journal <BR> - Practice intellectual strategies <BR> - Reshape your character <BR> - Deal with your ego <BR> - Redefine the way you see things <BR> - Get in touch with your emotions <BR> - Analyze group influences on your life |  
+
+#### Metacognition  
+Metacognition, or “thinking about thinking,” refers to your awareness of yourself as a learner and your ability to regulate your own learning. Metacognition involves five distinct skills:  
+- **Assess the task** - Get a handle on what is involved in completing a task (the steps or components required for success) and any constraints (time, resources).  
+- **Evaluate your strengths and weaknesses** - Evaluate your own skills and knowledge in relation to a task.  
+- **Plan an approach** - Take into account your assessment of the task and your evaluation of your own strengths and weaknesses in order to devise an appropriate plan.  
+- **Apply strategies and monitor your performance** - Continually monitor your progress as you are working on a task, comparing where you are to the goal you want to achieve.  
+- **Reflect and adjust if needed** - Look back on what worked and what didn't work so that you can adjust your approach next time and, if needed, start the cycle again.  
+
+  
