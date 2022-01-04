@@ -121,27 +121,29 @@ vsc-extension-quickstart.md
 | Switch Panel Menu | `CTRL + Q` |  
 | Close Window | `CTRL + W` |  
 | Switch Window Menu | `CTRL + TAB` |  
-| Show all commands | `CTRL + SHIFT + P` | 
-| Open folder | `CTRL + K, CTRL + O` | 
-| Toggle terminal | `CTRL + \`` | 
+| Open Command Palette <BR> Show all commands | `F1` <br> `CTRL + SHIFT + P` | 
+| Open Debug Viewlet | `F5` <br> `CTRL + SHIFT + D` | 
+| Toggle terminal | `CTRL + \` ` | 
 | Preview Markdown | `CTRL + SHIFT + V` | 
+| Open Folder | `CTRL + K, CTRL + O` | 
 | Open keyboard shortcuts | `CTRL + K, CTRL + S` | 
 | Switch groups (also `Ctl + 1`, `Ctl + 2`, etc.) | `CTRL + K, CTRL + LEFT/RIGHT ARROW` | 
 | Merge file group | `CTRL + SHIFT + LEFT ARROW` | 
-| Jump to matching bracket | `CTRL + SHIFT + \` | 
-| Super replace | `CTRL + D` | 
 | Go to file | `CTRL + P` |  
-| Open Comand Palette | `F1` | 
-| Start Debugging session | `F5` | 
 | Run Build Task | `CTRL + SHIFT + B` | 
-| Auto Completion | `CTRL + SPACE` | 
 | Open CLI in VSCode | `CTRL + ~` |  
+| Reload Document | `CTRL + R` |  
+| **Editing Shortcuts** |  |  
+| Auto Completion | `CTRL + SPACE` | 
 | Copy <BR> Cut <BR> Paste | `CTRL + C` <BR> `CTRL + X` <BR> `CTRL + P` |  
+| Jump to matching bracket | `CTRL + SHIFT + \` | 
+| Super replace | `CTRL + D` |  
+| Wrap Text | `ALT + Z` |  
 
 ## Resources
 
 - https://github.com/FourMInfo/DevOps-Space/wiki/VSCode
-
+- https://github.com/MicrosoftDocs/visualstudio-docs/blob/main/docs/ide/writing-code-in-the-code-and-text-editor.md 
 
 ## Themes
 
