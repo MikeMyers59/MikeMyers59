@@ -1,4 +1,4 @@
-# Hold Area
+# Training
 
 An organization is only as strong as its people. So, ask yourself two questions.  
 1. What one skill, if perfected, would have the greatest impact on my team, my career, and/or my life?  
