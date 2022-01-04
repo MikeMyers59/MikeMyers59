@@ -1,5 +1,13 @@
-# Settings.json 
+# VS Code Settings.json  
+**Note**: VS Code's Settings uses a custom JSON schema that allows comments in the settings file.   Comments start with "\\" and go to the end of line.
 
+| Action | VS Code Setting |  
+| -- | -- |  
+| Enable Soft wrap | `"editor.wrappingColumn": 0,` |  
+| Exclude Files | `"files.exclude": {` <BR> `	  "out": false // set this to true to hide the "out" folder` <BR> `	},` |  
+| Exclude Search | `"search.exclude": {` <BR> `	  "out": true // set this to false to include "out" folder in search results` <BR> `	},` |  
+
+## An Example
 ```json
 {
   // Switched off, because you need to learn JavaScript
