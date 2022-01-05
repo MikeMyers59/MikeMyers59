@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>My First HTML Application</title>
+
+<HTA:APPLICATION
+  APPLICATIONNAME="My First HTML Application"
+  ID="MyFirstHTA"
+  VERSION="1.0"
+  SCROLL="no"/>
+
+<style type="text/css">
+body {
+	background-color: #fdfeff;
+	color: darkblue;
+	font-family: Calibri;
+	font-size: 12pt;
+	margin: 4em 3em;
+}
+</style>
+</head>
+
+<script language="VBScript">
+Option Explicit
+
+Sub CheckIfPrime( )
+	Dim i, intInput
+	intInput = document.getElementById( "InputNumber" ).value
+	If intInput < 3 Then
+		document.getElementById( "OutputResult" ).innerHTML = "Yes, " & intInput & " is a prime number."
+	Else
+		For i = 2 To intInput - 1
+			If intInput Mod i = 0 Then
+				document.getElementById( "OutputResult" ).innerHTML = "No, " & intInput & " is not a prime number."
+				Exit Sub
+			End If
+		Next
+		document.getElementById( "OutputResult" ).innerHTML = "Yes, " & intInput & " is a prime number."
+	End If
+End Sub
+
+Sub ValidateInput( )
+	Dim objRE, strInput
+	strInput = document.getElementById( "InputNumber" ).value
+	Set objRE = New RegExp
+	objRE.Global  = True
+	objRE.Pattern = "[^\d]+"
+	If objRE.Test( strInput ) Then
+		strInput = objRE.Replace( strInput, "" )
+		document.getElementById( "InputNumber" ).value      = strInput
+		document.getElementById( "OutputResult" ).innerHTML = "Enter a number, and click the ""Check"" button to check if it is a prime number."
+	End If
+	If strInput = "" Then
+		document.getElementById( "OutputResult" ).innerHTML = "Enter a number, and click the ""Check"" button to check if it is a prime number."
+	End If
+	Set objRE = Nothing
+End Sub
+
+Sub Window_OnLoad
+	window.resizeTo 640, 480
+	document.title = document.title & ",  Version " & MyFirstHTA.Version
+End Sub
+</script>
+
+<body>
+
+<p><input type="text" id="InputNumber" onchange="ValidateInput" onkeyup="ValidateInput" />
+&nbsp;
+<input type="button" value="Check" onclick="CheckIfPrime" /></p>
+
+<p>&nbsp;</p>
+
+<p id="OutputResult">Enter a number, and click the "Check" button to find out if it is a prime number.</p>
+
+</body>
+</html>

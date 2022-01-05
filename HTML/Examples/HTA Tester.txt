@@ -1,0 +1,38 @@
+<html>
+
+<script>
+var gnWinCaption= "HTA tester";
+var gnWinWide= 400;
+var gnWinHigh= 300;
+
+function DoStartup() {  // called from BODY ONLOAD 
+	SetWindowSize( gnWinWide, gnWinHigh ); // app init stuff
+	document.title=gnWinCaption;
+}
+
+function SetWindowSize(w,h) {  // known bug in mshtml; try/catch fixes
+	try     { window.resizeTo( w, h );} 
+	catch(e){ SetWindowSize(w,h); }  //  do it until it works
+}
+
+function DoTest() 
+{
+	// instantiate and exercise ActiveX objects, etc.
+	oDivDisplayArea.innerHTML="<b>test complete!</b>";
+}
+</script>
+
+<!-- I like to put the U/I stuff at the bottom -->
+<!-- ***************************************** -->
+<body onLoad='DoStartup();'>
+<DIV align=right><input type=button value="restart" 
+    onclick= "document.location.reload();"></DIV>
+
+<input type=button value='DoTest' onclick='DoTest();' </input>
+<DIV ID=oDivDisplayArea>
+   <font color=gray>(stuff will be displayed here)</font>
+</DIV>
+
+</body>
+
+</html>

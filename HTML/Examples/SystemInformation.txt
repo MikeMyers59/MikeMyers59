@@ -1,0 +1,1189 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Computer Info Tool (http://www.wisesoft.co.uk)</title>
+<hta:application applicationname="WiseSoft Computer Info Tool" scroll="yes" singleinstance="no"
+        windowstate="normal">
+<style type="text/css">
+body {
+	margin:0px;
+	background-color:#CBCBCB; /*#F6F6F6;*/
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#595959;
+}
+h1 {
+	font-size:24px;
+	font-weight:bold;
+	color:#FFFFFF;
+	background-color:#2886C8;
+	text-align:center;
+	border-style:solid;
+	border-width:thin;
+	border-color:#C9E0F1;
+	padding:5px;
+}
+h2 {
+	font-size:18px;
+	font-weight:bold;
+}
+h3 {
+	font-size:16px;
+	font-weight:bold;
+}
+a {
+	color:#2886C8;
+}
+
+#Main {
+	margin-left:20px;
+	margin-right:20px;
+}
+#DisplayError {
+	color:red;
+	margin-left:20px;
+	margin-right:20px;
+}
+#Footer {
+	margin:20px;
+	font-weight:bold;
+	font-size:16px;
+}
+#Header {
+	margin-left:20px;
+	margin-right:20px;
+	text-align:center;
+}
+#Tools {
+	text-align:center;
+	border-color:#595959;
+	border-style:dotted;
+	border-width:1px;
+	background-color:#F6F6F6;
+	margin-left:20px;
+	margin-right:20px;
+	margin-top:20px;
+	padding:5px;
+}
+.Button { 
+	color: #444444; 
+} 
+.InfoSectionHeader {
+	font-size:20px;
+	font-weight:bold;
+	background-color:#595959;
+	color:#FFFFFF;
+	text-align:center;
+	padding:5px;
+	margin-top:0px;
+	cursor:pointer;
+}
+.InfoSection {
+	text-align:center;
+	margin-bottom:10px;
+	background-color:#FFFFFF;
+	border-color:#595959;
+	border-style:dotted;
+	border-width:1px;
+}
+.InfoSectionBody {
+	padding:10px;
+}
+.Link {
+	text-decoration: underline;
+	cursor:pointer;
+	color:#2886C8;
+}
+.HeaderLink {
+	text-decoration: underline;
+	cursor:pointer;
+	color:#FFFFFF;
+}
+.Table {
+	/*width:90%;*/
+    border: 2px solid;
+	border-collapse: collapse;
+	border-color: #696969;
+}
+.Table th {
+	border: 1px dotted #111111;
+	border-color: #787878;
+	color: #FFFFFF;
+	font: bold 12pt arial, sans-serif;
+	background-color: #595959; /* #787878;*/
+	text-align: left;
+ padding=3px;
+}
+.Table td {
+	border: 1px dotted #111111;
+	border-color: #787878;
+	font: bold 10pt arial, sans-serif;
+	color: #787878;
+ padding=5px;
+}
+
+</style>
+<script language="VBScript">
+
+	Option Explicit
+	Const bytesToMB = 1048576
+    Const bytesToGB = 1073741824
+    Const bytesToTB = 1099511627776
+    Const adVarChar = 200
+    Const adDate = 7
+	Const MaxCharacters = 255
+	Const adFldIsNullable = 32
+	Const adInteger = 3
+	Const adBigInt = 20
+    Const blnConfirmKillProcess = true
+	Const ADS_SECURE_AUTHENTICATION = 1
+    
+    Private objWMIService
+    Private strComputer
+    private intProcessTimerID
+	
+	' ***************************************
+	' Open Windows explorer to a given path
+	' Used when clicking a link in the "Shares" section
+	' ***************************************
+	Sub OpenUNC(ByVal strPath)
+		
+		Dim objShell
+			
+		Set objShell = CreateObject("Wscript.Shell")
+		strPath = "explorer.exe /e," & strPath
+		objShell.Run strPath
+
+	End Sub
+	
+	' ***************************************
+	' Reboot computer
+	' ***************************************
+	Sub RebootComputer()
+		Dim objItem, colItems
+		strComputer = CurrentComputer.InnerHTML
+		if MsgBox("Are you sure you want to reboot '" & strComputer & "'?",vbYesNo+vbExclamation,"Confirm Reboot") = vbYes then
+			Set colItems = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
+			For Each objItem in colItems
+				objItem.Reboot()
+			Next
+			msgbox "Computer '" & strComputer & "' has been rebooted",vbOKOnly+vbInformation
+		end if
+
+	End Sub
+	
+	' ***************************************
+	' Shutdown computer
+	' ***************************************
+	Sub ShutDownComputer()
+		Dim objItem, colItems
+		strComputer = CurrentComputer.InnerHTML
+		
+		dim intOption
+		intOption = InputBox("Shutdown computer '" & strComputer & "'" & vbcrlf & _
+				"Options:" & vbcrlf & vbcrlf & _
+				"0 = Log Off " & vbcrlf & _
+				"4 = Forced Log Off" & vbcrlf & _
+				"1 = Shut Down" & vbcrlf & _
+				"5 = Forced Shutdown" & vbcrlf & _
+				"2 = Reboot" & vbcrlf & _
+				"6 = Forced Reboot" & vbcrlf & _
+				"8 = Power Off" & vbcrlf & _
+				"12 = Forced Power Off","Shutdown",1)
+		SELECT CASE intOption
+			CASE "0","4","1","5","2","6","8","12"
+					Set colItems = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
+					For Each objItem in colItems
+						objItem.Win32Shutdown(intOption)
+					Next
+					msgbox "Command has been sent to '" & strComputer & "'",vbOKOnly+vbInformation
+			CASE ""
+			CASE Else
+					msgbox "Invalid option specified:" & intOption,vbOKOnly+vbExclamation
+		END SELECT
+
+	End Sub
+	
+	' ***************************************
+	' Kills the specified process
+	' Called when "Kill Process" link is clicked in the Running Processes section
+	' ***************************************
+	Sub KillProcess(ByVal intProcessID, ByVal strName)
+		Dim objItem, colItems
+		strComputer = CurrentComputer.InnerHTML
+		if blnConfirmKillProcess = True then
+			if msgbox("Are you sure you want to kill the '" & strName & "' process on '" & strComputer & "'?",vbYesNo+vbExclamation,"Confirm Kill Process") = vbNo then
+				exit sub
+			end if
+		end if
+		'Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_Process WHERE ProcessID = '" & _
+											 intProcessID & "' AND Name = '" & strName & "'")
+
+		For Each objItem In colItems
+			objItem.Terminate()
+		Next
+		RefreshProcesses
+	End Sub
+	
+	' ***************************************
+	' Refreshes list of processes in the "Running Processes" section
+	' ***************************************
+	Sub RefreshProcesses
+		'strComputer = CurrentComputer.InnerHTML
+		'Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
+		ProcessesData.InnerHTML = RunningProcesses_HTML
+	End Sub
+	
+	' ***************************************
+	' Enables/Disables the auto refresh feature in the "Running Processes" section
+	' ***************************************
+	sub SetProcessAutoRefresh
+		dim intInterval
+		' Get the refresh interval
+		intInterval = ProcessAutoRefresh.Value
+		' Remove the current auto-refresh
+		window.clearInterval(intProcessTimerID)
+		' Add an auto-refresh if specified
+		if intInterval > 0 then
+			intProcessTimerID = window.setInterval("RefreshProcesses", intInterval)
+		end if
+	end sub
+	
+	' ***************************************
+	' Stores the sort value for "Running Processes" section in a hidden div
+	' and refreshes the processes list with the new sort value
+	' ***************************************
+	Sub SortProcesses(byval strSort)
+		' If sort link is clicked twice on the same column, sort descending
+		if ProcessSort.InnerHTML = strSort then
+			ProcessSort.InnerHTML = strSort & " DESC"
+		else
+			ProcessSort.InnerHTML = strSort
+		end if
+		RefreshProcesses()
+	End Sub
+	
+	' ***************************************
+	' Map as network drive on this computer to a share on another computer
+	' Called from the "Shares" section. User is prompted for a drive letter
+	' ***************************************
+	Sub MapDrive(ByVal strPath)
+		Dim objNetwork
+		Dim strDrive
+		strDrive = InputBox("Enter drive letter:","Drive Letter","Z")
+		If strDrive <> "" Then
+			strDrive = Left(strDrive,1) & ":"
+		
+			Set objNetwork = CreateObject("WScript.Network")
+			objNetwork.MapNetworkDrive strDrive,strPath
+		End If
+	End Sub
+	
+	' ***************************************
+	' Stores the sort value for "Running Processes" section in a hidden div
+	' ***************************************
+	Sub MapPrinter(ByVal strPath)
+		Dim objNetwork
+		Set objNetwork = createobject("Wscript.Network")
+		objNetwork.AddWindowsPrinterConnection(strPath)
+		If MsgBox("Make Printer Default?",vbYesNo+vbQuestion,"Default Printer") = vbYes Then
+			objNetwork.SetDefaultPrinter strPath
+		End If
+	End Sub
+	
+	' ***************************************
+	' Replace special HTML characters
+	' ***************************************
+	Function HTMLEncode(strValue)
+		HTMLEncode= REplace(Replace(strValue,"<","&lt;"),">","&gt;")
+	End Function
+	
+	' ***************************************
+	' Convert Bytes to MB,GB or TB as appropriate
+	' ***************************************
+    Function ConvertToDiskUnit(ByVal value) 
+        IF (value/bytesToTb) > 1 Then
+            ConvertToDiskUnit = round(value / bytesToTB,1) & " TB"
+        ELSEIF (value/bytesToGb) > 1 Then
+            ConvertToDiskUnit = round(value / bytesToGB,1) & " GB"
+        Else
+            ConvertToDiskUnit = round(value / bytesToMB,1) & " MB"
+        END If
+    End Function
+    
+    	' ***************************************
+	' Convert integer value to string
+	' ***************************************
+    Function GetMemoryType(ByVal intType)
+       	Dim strType
+    	Select case intType
+    	Case 0
+ 			strType = "Unknown"
+ 		Case 1
+ 			strType = "Other"
+ 		Case 2
+ 			strType = "DRAM"
+ 		Case 3
+ 			strType = "Synchronous DRAM"
+		Case 4
+			strType = "Cache DRAM"
+		Case 5
+			strType = "EDO" 
+		Case 6
+		 	strType = "EDRAM" 
+		Case 7
+		 	strType = "VRAM"
+		Case 8
+		 	strType = "SRAM"
+		Case 9
+		  	strType = "RAM"
+		Case 10
+		 	strType = "ROM"
+		Case 11
+			strType = " Flash"
+		Case 12
+			strType = "EEPROM"
+		Case 13
+ 			strType = "FEPROM"
+		Case 14
+		 	strType = " EPROM"
+		Case 15
+		 	strType = " CDRAM"
+		Case 16
+		  	strType = "3DRAM"
+		Case 17
+		 	strType = " SDRAM"
+		Case 18
+		 	strType = " SGRAM"
+		Case 19
+		 	strType = " RDRAM"
+		Case 20
+		 	strType = " DDR"
+		Case 21
+		 	strType = " DDR-2"
+		Case Else
+		 	strType = "Unknown"
+		End Select
+		GetMemoryType=strType
+    End Function
+    
+    ' ***************************************
+	' Convert Integer value to string
+	' ***************************************
+    Function GetMemoryFormFactor(ByVal intFormFactor)
+    	Dim strFormFactor
+    	Select Case intFormFactor
+    	Case 0
+			strFormFactor = "Unknown"
+		Case 1
+			strFormFactor = "Other"
+		Case 2
+			strFormFactor = "SIP"
+		Case 3
+			strFormFactor = "DIP"
+		Case 4
+			strFormFactor = "ZIP"
+		Case 5
+			strFormFactor = "SOJ"
+		Case 6
+			strFormFactor = "Proprietary"
+		Case 7
+			strFormFactor = "SIMM"
+		Case 8
+			strFormFactor = "DIMM"
+		Case 9
+			strFormFactor = "TSOP"
+		Case 10
+			strFormFactor = "PGA"
+		Case 11
+			strFormFactor = "RIMM"
+		Case 12
+			strFormFactor = "SODIMM"
+		Case 13
+			strFormFactor = "SRIMM"
+		Case 14
+			strFormFactor = "SMD"
+		Case 15
+			strFormFactor = "SSMP"
+		Case 16
+			strFormFactor = "QFP"
+		Case 17
+			strFormFactor = "TQFP"
+		Case 18
+			strFormFactor = "SOIC"
+		Case 19
+			strFormFactor = "LCC"
+		Case 20
+			strFormFactor = "PLCC"
+		Case 21
+			strFormFactor = "BGA"
+		Case 22
+			strFormFactor = "FPBGA"
+		Case 23
+			strFormFactor = "LGA"
+		case Else
+			strFormFactor = "Unknown"
+		End Select
+		GetMemoryFormFactor=strFormFactor
+    End Function
+    
+   	' ***************************************
+	' Convert date string to a more readable format
+	' ***************************************
+    Function FormatDate(ByVal strValue)
+    	Dim strDate
+    	If ISNULL(strValue) Or strValue = "" Then
+    		strDate = ""
+    	Else
+    		strDate = Left(strValue,4) & "-" & MID(strValue,5,2) & "-" & MID(strValue,7,2) & " " & _
+    				Mid(strValue,9,2) & ":" &  Mid(strValue,11,2)
+    	End If
+    	FormatDate = strDate
+    End Function
+    
+	' ***************************************
+	' Clear existing report data
+	' ***************************************
+	Sub Reset
+		ProcessAutoRefresh.Value="0"
+		window.clearInterval(intProcessTimerID)
+		Main.Style.Display = "none"
+		Tools.Style.Display = "none"
+		LogicalDisk.InnerHTML=""
+		PhysicalDisk.InnerHTML=""
+		Processor.InnerHTML =""
+		Memory.InnerHTML = ""
+		OS.InnerHTML =""
+		Shares.InnerHTML=""
+		DisplayError.InnerHTML=""
+	End Sub
+	
+	' ***************************************
+	' Main procedure used to generate report
+	' Calls other procedures that generate the HTML for each section
+	' ***************************************
+	Sub GenerateReport
+		Reset()
+		strComputer = txtComputer.Value
+		if strComputer = "" Then 
+			Dim objNetwork
+			set objNetwork = createobject("wscript.network")
+			strComputer =  objNetwork.ComputerName
+			txtComputer.Value = strComputer
+		End If
+		CurrentComputer.InnerHTML = strComputer
+		Dim objSWbemLocator
+		On Error Resume Next
+		If txtUserName.Value <> "" Then
+			Set objSWbemLocator = CreateObject("WbemScripting.SWbemLocator")
+			Set objWMIService = objSWbemLocator.ConnectServer _
+				(strComputer, "root\cimv2", txtUserName.Value, txtPassword.Value)
+			objWMIService.Security_.ImpersonationLevel = 3
+		Else
+			Set objWMIService = GetObject("winmgmts:\\" & strComputer & "\root\cimv2")
+		End If
+		
+		If Err.Number <> 0 Then
+			On Error GoTo 0
+			DisplayError.InnerHTML = "Error connecting to '" & strComputer & "'"
+			Err.Clear
+			Exit Sub
+		End If
+		On Error GoTo 0
+		Main.Style.Display = ""
+		Tools.Style.Display = ""
+	
+		ProcessesData.InnerHTML = RunningProcesses_HTML
+		LogicalDisk.InnerHTML = LogicalDisk_HTML
+		PhysicalDisk.InnerHTML = PhysicalDisk_HTML
+		Processor.InnerHTML = Processor_HTML
+		Memory.InnerHTML = Memory_HTML
+		OS.InnerHTML = OS_HTML
+		Shares.InnerHTML = Shares_HTML
+		Users.InnerHTML = Users_HTML
+	
+	End Sub
+	
+	
+	' ***************************************
+	' Gets a list of running processes and returns HTML for the "Running Processes" section
+	' ***************************************
+	Function RunningProcesses_HTML
+		Dim row,strHTML,strFilter
+		Dim DataList,colItems,objItem,strUser,strDomain
+		Dim strWMIQuery
+		strFilter = txtProcessFilter.Value
+		
+		' Recordset is used to sort data from WMI
+		Set DataList = CreateObject("ADOR.Recordset")
+		DataList.Fields.Append "Name", adVarChar, MaxCharacters, adFldIsNullable
+		DataList.Fields.Append "WorkingSet", adInteger, adFldIsNullable
+		DataList.Fields.Append "CreationDate",adVarChar, MaxCharacters, adFldIsNullable
+		DataList.Fields.Append "Description",adVarChar,MaxCharacters, adFldIsNullable
+		DataList.Fields.Append "ProcessID",adInteger, adFldIsNullable
+		DataList.Fields.Append "CPUTime",adInteger, adFldIsNullable
+		DataList.Fields.Append "Caption",adVarChar,MaxCharacters, adFldIsNullable
+		DataList.Fields.Append "Owner",adVarChar,MaxCharacters, adFldIsNullable
+		DataList.Fields.Append "Path",adVarChar,MaxCharacters, adFldIsNullable
+		DataList.Open
+
+		strWMIQuery = "Select * From Win32_Process"
+		' Add filter if required
+		if strFilter <> "" then
+			strWMIQuery = strWMIQuery & " WHERE Name LIKE '%" & strFilter & "%'"
+		end if
+		
+		Set colItems = objWMIService.ExecQuery(strWMIQuery)
+
+		' Load WMI data into recordset
+		For Each objItem in colItems
+			Dim strOwner
+    		DataList.AddNew
+    		on error resume next
+    		DataList("Name") = HTMLEncode(objItem.Name)
+    		DataList("WorkingSet") = objItem.WorkingSetSize
+    		DataList("CreationDate") = objItem.CreationDate
+    		DataList("Description") = HTMLEncode(objItem.Description)
+    		DataList("ProcessID") = objItem.ProcessID
+    		DataList("Caption") = objItem.Caption
+    		DataList("CPUTime") = (CSng(objItem.KernelModeTime) + CSng(objItem.UserModeTime)) / 10000000
+    		If objItem.GetOwner (strUser, strDomain) = 0 Then
+				strOwner = strDomain & "\" & strUser
+			End If
+			DataList("Owner") = strOwner
+			on error goto 0
+    		DataList.Update
+		Next
+		' Sort recordset
+		DataList.Sort = ProcessSort.InnerHTML
+		' Check if recordset is not empty
+		If DataList.BOF = FALSE then
+			DataList.MoveFirst
+			' Generate HTML table report with running processes
+			strHTML = strHTML & "<table class=""Table"">"
+			strHTML = strHTML &  "<tr><th><span onclick=""SortProcesses('Name')"" class=""HeaderLink"">Name</span></th>" & _
+						"<th><span onclick=""SortProcesses('CreationDate')"" class=""HeaderLink"">Creation Date</span></th>" & _
+						"<th><span onclick=""SortProcesses('Owner')"" class=""HeaderLink"">Owner</span></th>" & _
+						"<th><span onclick=""SortProcesses('WorkingSet')"" class=""HeaderLink"">Working Set</span></th>" & _
+						"<th><span onclick=""SortProcesses('CPUTime')"" class=""HeaderLink"">Total CPU Time(s)</span></th>" & _
+						"<th>&nbsp;</th></tr>"
+						
+			Do Until DataList.EOF
+				Dim strCaption,strCreationDate,strPath,intProcessID,strDescription
+				Dim strWorkingSet
+								
+				strHTML = strHTML & "<tr>" & _
+									"<td><div title=""" & DataList("Path") & """>" & DataList("Name") & "</div></td>" & _
+									"<td>" & FormatDate(DataList("CreationDate")) & "</td>" & _
+									"<td>" & DataList("Owner") & "</td>" & _
+									"<td>" & ConvertToDiskUnit(DataList("WorkingSet")) & "</td>" & _
+									"<td>" & DataList("CPUTime")  & "</td>" & _
+									"<td><span onclick=""KillProcess '" & DataList("ProcessID") & "','" & DataList("Name") & "'"" class=""Link"">Kill Process</span></td>" & _
+									"</tr>"
+				DataList.MoveNext
+			Loop
+			strHTML = strHTML & "</table>"
+		end if
+		DataList.Close
+		strHTML = strHTML & "<br>Last Refresh:" & Now()
+		
+		RunningProcesses_HTML=strHTML
+	End Function
+	
+	' ***************************************
+	' Gets a list of shared folders and shared printers and
+	' returns HTML for the "Shares" section
+	' *************************************** 
+    Function Shares_HTML
+    	Dim objItem, colItems
+		Dim strHTML
+		
+		' Query to return shared folders
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_Share WHERE Type = 2147483648 OR Type = 0")
+
+		strHTML = strHTML & "<table><tr><td style=""vertical-align:top"">"
+		strHTML = strHTML & "<table class=""Table""><tr><th colspan=""2"">Folder Shares</th></tr>"
+		For Each objItem In colItems
+			Dim strShare 
+			strShare = HTMLEncode(objItem.Name)
+			strHTML = strHTML & "<tr><td><span class=""Link"" onclick=""OpenUNC('\\" & strComputer & "\" & strShare & "')"">" & strShare & "</span></td>"
+			strHTML = strHTML &	"<td><input class=""Button"" type=""button"" onclick=""MapDrive('\\" & strComputer & "\" & strShare & "')"" value=""Map Drive""></input></td></tr>"
+		Next
+		strHTML = strHTML & "</table></td>"
+		
+		' Query to return shared printers
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_Share WHERE Type = 2147483649 OR Type = 1")
+		
+		strHTML = strHTML & "<td style=""vertical-align:top"">"
+		strHTML = strHTML & "<table class=""Table""><tr><th colspan=""2"">Printer Shares</th></tr>"
+		For Each objItem In colItems
+			Dim strPrinterShare 
+			strPrinterShare = HTMLEncode(objItem.Name)
+			strHTML = strHTML & "<tr><td><span class=""Link"" onclick=""OpenUNC('\\" & strComputer & "\" & strPrinterShare & "')"">" & strPrinterShare & "</span></td>"
+			strHTML = strHTML &	"<td><input class=""Button"" type=""button"" onclick=""MapPrinter('\\" & strComputer & "\" & strPrinterShare & "')"" value=""Connect Printer""></input></td></tr>"
+		Next
+		strHTML = strHTML & "</table></td></table>"
+
+		Shares_HTML = strHTML 
+    End Function
+    
+    ' ***************************************
+	' Gets computer system info to be included in the "OS / General" section
+	' *************************************** 
+    Sub GetComputerSystemInfo(BYRef strDNSHostName,ByRef strDomain,ByRef strDomainRole, _
+    						ByRef strManufacturer,ByRef strModel,ByRef strUserName)
+    	Dim objItem, colItems
+		
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_ComputerSystem")
+		For Each objItem In colItems
+			On Error Resume Next 
+			strDNSHostName = HTMLEncode(objItem.DNSHostName)
+			strDomain = HTMLEncode(objItem.Domain)
+			strManufacturer = HTMLEncode(objItem.Manufacturer)
+			strModel = HTMLEncode(objItem.Model)
+			strUserName = HTMLEncode(objItem.UserName)
+			On Error GoTo 0
+			If strUserName = "" Then
+				strUserName = "{not logged in}"
+			End If
+			Select Case objItem.DomainRole
+				Case 0
+				strDomainRole="Standalone Workstation"
+				Case 1
+				strDomainRole="Member Workstation"
+				Case 2
+				strDomainRole="Standalone Server"
+				Case 3
+				strDomainRole="Member Server"
+				Case 4
+				strDomainRole="Backup Domain Controller"
+				Case 5
+				strDomainRole="Primary Domain Controller"
+				Case Else
+				strDomainRole = "Unknown (" & strDomainRole & ")"
+			End Select
+		Next
+    End Sub
+    
+    ' ***************************************
+	' Returns a HTML report for the "Operating System/General" section
+	' ***************************************  
+    Function OS_HTML()
+    
+    	Dim objItem, colItems
+		Dim strHTML
+		Dim strDNSHostName,strDomain,strDomainRole,strManufacturer,strModel,strUserName
+		GetComputerSystemInfo strDNSHostName,strDomain,strDomainRole,strManufacturer,strModel,strUserName
+		
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
+		
+		strHTML = "<h3>Current User: " & strUserName & "</h3>"
+		
+		For Each objItem In colItems
+			Dim strComputerRole
+			Dim strCaption,strBuildNumber,strInstallDate,strBootDate
+			Dim intServicePackMajor,intServicePackMinor,intTotalVisibleMemorySize
+			Dim intFreePhysicalMemory,intTotalVirtualMemorySize,intFreeVirtualMemory
+			On Error Resume Next
+			strCaption = HTMLEncode(objItem.Caption)
+			strBuildNumber = HTMLEncode(objItem.BuildNumber)
+			intServicePackMajor = objItem.ServicePackMajorVersion
+			intServicePackMinor = objItem.ServicePackMinorVersion
+			intTotalVisibleMemorySize = objItem.TotalVisibleMemorySize
+			intFreePhysicalMemory = objItem.FreePhysicalMemory
+			intFreeVirtualMemory =  objItem.FreeVirtualMemory
+			intTotalVirtualMemorySize = objItem.TotalVirtualMemorySize
+			strInstallDate = FormatDate(objItem.InstallDate)
+			strBootDate = FormatDate(objItem.LastBootUpTime)
+			On Error GoTo 0
+						
+			strHTML = strHTML & "<table class=""Table"">" & _
+					 	"<tr>" & _
+					 	"<th>Operating System:</th><td>" & strCaption & "</td>" & _
+					 	"<th>Build Number:</th><td>" & strBuildNumber & "</td>" & _
+					 	"</tr><tr>" & _
+					 	"<th>Service Pack:</th><td>" & intServicePackMajor & "." &  intServicePackMinor & "</td>" & _
+					 	"<th>Role:</th><td>" & strDomainRole & "</td>" & _
+					 	"</tr><tr>" & _
+					 	"<th>DNS Host Name:</th><td>" & strDNSHostName & "</td>" & _
+					 	"<th>Domain:</th><td>" & strDomain & "</td>" & _
+					 	"</tr><tr>" & _
+					 	"<th>Manufacturer:</th><td>" & strManufacturer & "</td>" & _
+					 	"<th>Model:</th><td>" & strModel & "</td>" & _
+					 	"</tr><tr>" & _
+					 	"<th>Total Physical Memory:</th><td>" & intTotalVisibleMemorySize & "KB</td>" & _
+					 	"<th>Free Physical Memory:</th><td>" & intFreePhysicalMemory  & "KB</td>" & _
+					 	"</tr><tr>" & _
+					 	"<th>Total Virtual Memory:</th><td>" & intTotalVirtualMemorySize & "KB</td>" & _
+					 	"<th>Free Virtual Memory:</th><td>" & intFreeVirtualMemory & "KB</td>" & _
+					 	"</tr><tr>" & _
+					 	"<th>Install Date:</th><td>" & strInstallDate & "</td>" & _
+					 	"<th>Last BootUp Time:</th><td>" & strBootDate & "</td>" & _
+					 	"</tr>" & _
+					 	"</table>"
+					 	
+			Exit For
+		Next
+		
+		OS_HTML = strHTML
+		
+    End Function
+    
+	' ***************************************
+	' Get the number of memory slots and memory arrays
+	' for the memory section
+	' ***************************************
+    Function GetMemoryArrayInfo(ByRef intSlots,ByRef intArrays)
+    	Dim objItem, colItems
+		intSlots = 0
+		intArrays = 0
+    	Set colItems = objWMIService.ExecQuery("Select * from Win32_PhysicalMemoryArray WHERE Use=3")
+    	
+    	For Each objItem In colItems
+    		intSlots = intSlots + objItem.MemoryDevices
+    		intArrays = intArrays + 1
+    	Next
+    End Function
+    	
+	' ***************************************
+	' Returns a HTML report for the "Memory" section
+	' ***************************************  
+	Function Memory_HTML()
+    	Dim objItem, colItems
+		Dim strHTML
+		
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_PhysicalMemory")
+
+		strHTML = "<table class=""Table"">" & _
+				"<tr>" & _
+				"<th>BankLabel</th>" & _
+				"<th>Capacity</th>" & _
+				"<th>Caption</th>" & _
+				"<th>Description</th>" & _
+				"<th>DeviceLocator </th>" & _
+				"<th>Manufacturer</th>" & _
+				"<th>Memory Type</th>" & _
+				"<th>Form Factor</th>" & _
+				"<th>Model</th>" & _
+				"<th>Speed</th>" & _
+				"</tr>"
+
+		For Each objItem In colItems
+			Dim strBankLabel,strCaption,strDescription,strDeviceLocator
+			Dim strManufacturer,strMemoryType,strFormFactor,strModel
+			Dim strCapacity,intSpeed
+			On Error Resume Next
+			strBankLabel = HTMLEncode(objItem.BankLabel) 
+			strCapacity = ConvertToDiskUnit(objItem.Capacity)
+			strCaption = HTMLEncode(objItem.Caption)
+			strDescription = HTMLEncode(objItem.Description)
+			strDeviceLocator = HTMLEncode(objItem.DeviceLocator)
+			strManufacturer = HTMLEncode(objItem.Manufacturer)
+			strMemoryType = GetMemoryType(objItem.MemoryType)
+			strFormFactor = GetMemoryFormFactor(objItem.FormFactor)
+			strModel = HTMLEncode(objItem.Model)
+			intSpeed = objItem.Speed
+			On Error GoTo 0
+		
+			strHTML = strHTML & "<tr><td>" & strBankLabel & "</td>" & _
+								"<td>" & strCapacity & "</td>" & _
+								"<td>" & strCaption & "</td>" & _
+								"<td>" & strDescription & "</td>" & _
+								"<td>" & strDeviceLocator & "</td>" & _
+								"<td>" & strManufacturer & "</td>" & _
+								"<td>" & strMemoryType & "</td>" & _
+								"<td>" & strFormFactor & "</td>" & _
+								"<td>" & strModel & "</td>" & _
+								"<td>" & intSpeed & "</td>" & _
+								"</tr>"
+		Next
+		strHTML = strHTML & "</table>"
+		
+		Dim intSlots,intArrays
+		GetMemoryArrayInfo intSlots,intArrays
+		
+		strHTML = strHTML & "Total Memory Slots:" & intSlots & ", Memory Arrays:" & intArrays
+		
+		Memory_HTML=strHTML
+    End Function
+    
+     ' ***************************************
+	' Returns a HTML report for the "Processor" section
+	' ***************************************  
+    Function Processor_HTML()
+    	Dim objItem, colItems
+		Dim strHTML
+		
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_Processor")
+
+		strHTML = "<table class=""Table"">" & _
+				"<tr>" & _
+				"<th>Name</th>" & _
+				"<th>Manufacturer</th>" & _
+				"<th>Description</th>" & _
+				"<th>Address Width</th>" & _
+				"<th>Current Clock Speed</th>" & _
+				"<th>Data Width</th>" & _
+				"<th>Device ID</th>" & _
+				"<th>Ext Clock</th>" & _
+				"<th>L2 Cache</th>" & _
+				"<th>Max Clock Speed</th>" & _
+				"<th>#Cores</th>" & _
+				"<th>#Logical Processors</th>" & _
+				"</tr>"
+
+		For Each objItem in colItems
+			Dim strName,strManufacturer,strDescription,strDeviceID
+			Dim intAddressWidth,intCurrentClockSpeed,intDataWidth,intExtClock
+			Dim intL2CacheSize,intMaxClockSpeed, intNumberOfCores,intNumberOfLogicalProcessors
+			On Error Resume Next
+			strName = HTMLEncode(objItem.Name)
+			strManufacturer = HTMLEncode(objItem.Manufacturer)
+			strDescription = HTMLEncode(objItem.Description)
+			intAddressWidth = objItem.AddressWidth
+			intCurrentClockSpeed = objItem.CurrentClockSpeed
+			intDataWidth = objItem.DataWidth
+			strDeviceID = HTMLEncode(objItem.DeviceID)
+			intExtClock = objItem.ExtClock
+			intL2CacheSize = objItem.L2CacheSize
+			intMaxClockSpeed = objItem.MaxClockSpeed
+			intNumberOfCores  = objItem.NumberOfCores
+			intNumberOfLogicalProcessors= objItem.NumberOfLogicalProcessors
+			On Error GoTo 0
+			strHTML = strHTML & "<tr><td>" & strName & "</td>" & _
+								"<td>" & strManufacturer & "</td>" & _
+								"<td>" & strDescription & "</td>" & _
+								"<td>" & intAddressWidth & "</td>" & _
+								"<td>" & intCurrentClockSpeed & "</td>" & _
+								"<td>" & intDataWidth & "</td>" & _
+								"<td>" & strDeviceID  & "</td>" & _
+								"<td>" & intExtClock & "</td>" & _
+								"<td>" & intL2CacheSize & "</td>" & _
+								"<td>" & intMaxClockSpeed & "</td>" & _
+								"<td>" & intNumberOfCores & "</td>" & _
+								"<td>" & intNumberOfLogicalProcessors & "</td>" & _
+								"</tr>"
+		Next
+		strHTML = strHTML & "</table>"
+		
+		Processor_HTML=strHTML
+    End Function
+    
+    ' ***************************************
+	' Returns a HTML report for the "Physical Disk" section
+	' ***************************************  
+    Function PhysicalDisk_HTML()
+    	Dim objItem, colItems
+		Dim strHTML
+		
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_DiskDrive")
+
+		strHTML = "<table class=""Table""><tr><th>Caption</th><th>Manufacturer</th>" & _
+				"<th>Model</th><th>Size</th><th>Serial</th><th>Media Type</th><th>#Partitions</th><th>DeviceID</th><th>Firmware</th><th>Interface</th></tr>"
+
+		For Each objItem in colItems
+			Dim intSize,intPartitions
+			Dim strSize,strCaption,strManufacturer,strModel,strMediaType
+			Dim strDeviceID,strFirmwareRevision,strInterfaceType, strSerialNumber
+			intSize = objItem.Size
+			If IsNumeric(intSize) = False Then
+				intSize = 0
+			End If
+			On Error Resume Next
+			strCaption= HTMLEncode(objItem.Caption) 
+			strSize = ConvertToDiskUnit(intSize)
+			strSerialNumber = HTMLEncode(objItem.SerialNumber)
+			strMediaType = HTMLEncode(objItem.MediaType)
+			intPartitions = HTMLEncode(objItem.Partitions)
+			strDeviceID = HTMLEncode(objItem.DeviceID)
+			strFirmwareRevision = HTMLEncode(objItem.FirmwareRevision)
+			strInterfaceType = HTMLEncode(objItem.InterfaceType)
+			strModel = HTMLEncode(objItem.Model)
+			strManufacturer = HTMLEncode(objItem.Manufacturer)
+			On Error GoTo 0
+		
+			strHTML = strHTML & "<tr><td>" & strCaption & "</td>" & _
+								"<td>" & strManufacturer & "</td>" & _
+								"<td>" & strModel & "</td>" & _
+								"<td>" & strSize & "</td>" & _
+								"<td>" & strSerialNumber & "</td>" & _
+								"<td>" & strMediaType & "</td>" & _
+								"<td>" & intPartitions & "</td>" & _
+								"<td>" & strDeviceID & "</td>" & _
+								"<td>" & strFirmwareRevision & "</td>" & _
+								"<td>" & strInterfaceType & "</td>" & _
+								"</tr>"
+		Next
+		strHTML = strHTML & "</table>"
+		
+		PhysicalDisk_HTML=strHTML
+    	
+    End Function
+
+	' ***************************************
+	' Returns a HTML report for the "Logical Disk" section
+	' ***************************************  
+	Function LogicalDisk_HTML()
+
+		Dim objItem, colItems
+		Dim strDriveType, strDiskSize, strHTML
+		
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_LogicalDisk WHERE DriveType = 3")
+
+		strHTML = "<table class=""Table""><tr><th>Drive</th><th>Name</th><th>File System</th><th>Size</th><th>Used</th><th>Free</th><th>Free(%)</th></tr>"
+
+		For Each objItem in colItems
+	
+			Dim pctFreeSpace,strFreeSpace,strusedSpace,strName,strFileSystem,strVolumeName
+			Dim intFreeSpace, intSize
+			On Error Resume Next
+			intFreeSpace = objItem.FreeSpace
+			intSize = objItem.Size
+			If ISNUMERIC(intFreeSpace) = False Then
+				intFreeSpace=0
+			End If
+			If IsNumeric(intSize) = False Then
+				intSize = 0
+			End If
+			If objItem.FreeSpace > 0 Then
+				pctFreeSpace = round(((intFreeSpace / intSize) * 100),0)
+			Else
+				pctFreeSpace=0
+			End If
+			strDiskSize = ConvertToDiskUnit(intSize) 
+			strFreeSpace = ConvertToDiskUnit(intFreeSpace)
+			strUsedSpace = ConvertToDiskUnit(intSize-intFreeSpace)
+			strName = HTMLEncode(objItem.Name)
+			strVolumeName = HTMLEncode(objItem.VolumeName)
+			strFileSystem = HTMLEncode(objItem.FileSystem)
+			On Error GoTo 0
+
+			dim strChart 
+			strChart = "<div width=100%;""><span style=""padding:0px;margin:0px;width=" & 100-pctFreeSpace & _
+				"%;background-color:blue;"">&nbsp;</span><span style=""padding:0px;margin:0px;width=" & pctFreeSpace & _
+				"%;background-color:#FF00FF;"">&nbsp;</span></div>"
+
+			strHTML = strHTML & "<tr><td>" & strName & "</td><td>" & _
+					strVolumeName & "</td><td>" & strFileSystem & "</td><td>" & _
+					strDiskSize & "</td><td>" & strUsedSpace & "</td><td>" & _
+					strFreeSpace & "</td><td>" &  pctFreeSpace & "%</td></tr>" & _
+					"<tr><td colspan=""7"">" & strChart & "</td></tr>"
+
+		Next
+	
+		strHTML = strHTML + "</table></br>"
+
+		LogicalDisk_HTML = strHTML
+	
+	End Function
+	
+	' ***************************************
+	' Returns a HTML report for the "Users" section
+	' ***************************************  
+	Function Users_HTML
+		Dim strHTML,colItems,objItem, i, strAccountControl
+		Set colItems = objWMIService.ExecQuery("Select * from Win32_UserAccount WHERE LocalAccount=True")
+		strHTML = "<table class=""Table""><tr><th>Account Name</th><th>Full Name</th><th>Description</th><th></th><th></th></tr>"
+		i = 1
+		For Each objItem In colItems
+			if objItem.Disabled then
+				strAccountControl = "<span id=""AccountControl" & i & """ class=""Link"" OnClick=""ToggleEnableDisable '" & objItem.Name & "','" & strComputer & "','AccountControl" & i & "'"">Enable</span>"
+			else
+				strAccountControl = "<span id=""AccountControl" & i & """ class=""Link"" OnClick=""ToggleEnableDisable '" & objItem.Name & "','" & strComputer & "','AccountControl" & i & "'"">Disable</span>"
+			end if
+			strHTML = strHTML & "<tr><td>" & objItem.Name & "</td><td>" & objItem.FullName & "</td><td>" & objItem.Description & _
+				"</td><td><input id=""PWD" & i & """ type=""password""></input><span onclick=""ResetPassword '" & objItem.Name & "','" & _
+				strComputer & "','PWD" & i & "'"" class=""Link"">Reset Password</span></td><td>" & strAccountControl & "</td></tr>"
+			i = i + 1
+		next
+		strHTML = strHTML & "</table>"
+		Users_HTML = strHTML
+	End Function
+	
+	' ***************************************
+	' Disables/Enables a user account
+	' ***************************************  
+	Sub ToggleEnableDisable(strUserName,strComputerName,strID)
+		Dim objUser, objNT
+		If txtUserName.Value <> "" then
+			Set objNT = GetObject("WinNT:")
+			Set objUser = objNT.OpenDSObject("WinNT://" & strComputerName & "/" & strUserName & ", user", txtUserName.Value, txtPassword.Value, ADS_SECURE_AUTHENTICATION)
+		Else
+			Set objUser = GetObject("WinNT://" & strComputerName & "/" & strUserName & ", user")
+		End If
+		If objUser.AccountDisabled = True Then
+			objUser.AccountDisabled = False
+			objUser.SetInfo
+			document.getElementById(strID).InnerHTML="Disable"
+		Else
+			objUser.AccountDisabled = True
+			objUser.SetInfo
+			document.getElementById(strID).InnerHTML="Enable"
+		End If
+		set objUser = nothing
+		set objNT = nothing
+	End Sub
+	
+	' ***************************************
+	' Resets a users password
+	' ***************************************  
+	Sub ResetPassword(strUserName,strComputerName,strPasswordID)
+		Dim strPassword, objUser, objNT
+		strPassword = document.getElementById(strPasswordID).Value
+		If txtUserName.Value <> "" then
+			Set objNT = GetObject("WinNT:")
+			Set objUser = objNT.OpenDSObject("WinNT://" & strComputerName & "/" & strUserName & ", user", txtUserName.Value, txtPassword.Value, ADS_SECURE_AUTHENTICATION)
+		Else
+			Set objUser = GetObject("WinNT://" & strComputerName & "/" & strUserName & ", user")
+		End If
+		objUser.SetPassword strPassword
+		set objUser = nothing 
+		set objNT = nothing
+		msgbox "Password Changed",vbOKOnly+vbInformation,"Computer Info"
+	End Sub
+	
+	' ***************************************
+	' Opens Computer Management Console
+	' ***************************************  
+	Sub ManageComputer
+		dim objSh
+		set objSh = createobject("wscript.shell")  
+		objSh.run "compmgmt.msc /computer:" & strComputer
+		set objSh = nothing
+	End Sub
+	
+	' ***************************************
+	' Opens a Remote Desktop Connection
+	' ***************************************  
+	Sub ConnectRDP
+		dim objSh
+		set objSh = createobject("wscript.shell")  
+		objSh.run "mstsc.exe /v:" & strComputer
+		set objSh = nothing
+	End Sub
+	
+</script>
+<script type="text/javascript">
+	/* Toggle expand/collapse state for specified section */
+	function toggleDisplay(obj) {
+		var el = document.getElementById(obj);
+		if ( el.style.display != 'none' ) {
+			el.style.display = 'none';
+		}
+		else {
+			el.style.display = '';
+		}
+	}
+	/* Toggle expand/collapse state for all sections */
+	function toggleAll() {
+		var el = document.getElementById("OS");
+		var display = ''
+		if ( el.style.display != 'none' ) {
+			display = 'none';
+		}
+		el.style.display = display;
+		el = document.getElementById("Memory");
+		el.style.display = display;
+		el = document.getElementById("LogicalDisk");
+		el.style.display = display;
+		el = document.getElementById("PhysicalDisk");
+		el.style.display = display;
+		el = document.getElementById("Processor");
+		el.style.display = display;
+		el = document.getElementById("Shares");
+		el.style.display = display;
+		el = document.getElementById("Processes");
+		el.style.display = display;
+		el = document.getElementById("Users");
+		el.style.display = display;
+	}
+
+</script>
+</head>
+<body OnLoad="GenerateReport">
+<h1>Computer Info Tool</h1>
+<div id="Header" style="padding-bottom:0px;margin-bottom:0px;">
+	<table style="font-weight:bold;"><tr><td>UserName:</td><td><input id="txtUserName"></input></td><td style="font-size:8px;">(Optional)</td><tr>
+	<tr><td>Password:</td><td><input type="password" id="txtPassword"></input></td><td style="font-size:8px;">(Optional)</td></tr>
+	<tr><td>Computer:</td><td><input id="txtComputer"></input></td>
+	<td colspan="2">  <input class="Button" style="font-weight:bold;" onClick="GenerateReport()" type="submit" value="Generate Report">
+  </input>
+  </td></tr>
+  </table>
+ </div>
+ <div id="Tools" style="display:none;margin-bottom:0px;">
+   <span class="Link" onClick="RebootComputer">Reboot Computer</span>&nbsp;|&nbsp;
+   <span class="Link" onClick="ShutDownComputer">Shutdown Computer</span>&nbsp;|&nbsp;
+   <span class="Link" onClick="ConnectRDP">Remote Desktop</span>&nbsp;|&nbsp;
+   <span class="Link" onClick="ManageComputer">Manage</span>
+  </div>
+
+<div id="Main" style="display:none;">
+  <div id="CurrentComputer" style="display:none"></div>
+  <div style="text-align:right;">
+  <span class="Link" style="font-weight:bold;" onclick="javascript:toggleAll();">Expand/Collapse All</span>
+  </div>
+  <div class="InfoSection">
+    <div onClick="javascript:toggleDisplay('OS');"  class="InfoSectionHeader">Operating System / General</div>
+    <div id="OS" class="InfoSectionBody" ></div>
+  </div>
+  <div class="InfoSection">
+    <div onClick="javascript:toggleDisplay('Processes');"  class="InfoSectionHeader">Running Processes</div>
+    <div id="Processes" class="InfoSectionBody">
+    	Auto Refresh Interval:<select id="ProcessAutoRefresh" onchange="SetProcessAutoRefresh">
+		  <option value ="0">None</option>
+		  <option value ="1000">1 second</option>
+		  <option value ="2000">2 seconds</option>
+		  <option value ="3000">3 seconds</option>
+		  <option value ="5000">5 seconds</option>
+		  <option value ="10000">10 seconds</option>
+		  <option value ="20000">20 seconds</option>
+		  <option value ="30000">30 seconds</option>
+		  <option value ="60000">1 minute</option>
+		</select>
+		Filter (Optional):<input id="txtProcessFilter"></input>
+		<br/><br/>
+		<span onclick="RefreshProcesses()" style=""font-weight:bold"" class="Link">Refresh Processes</span>
+		<br/><br/>
+		
+   		<div id="ProcessesData"></div>
+    	</div>
+    	<div id="ProcessSort" style="display:none">Name</div>
+  </div>
+  <div class="InfoSection">
+    <div onClick="javascript:toggleDisplay('Memory');"  class="InfoSectionHeader">Memory</div>
+    <div id="Memory" class="InfoSectionBody"></div>
+  </div>
+  <div class="InfoSection">
+    <div onClick="javascript:toggleDisplay('LogicalDisk');"  class="InfoSectionHeader">Logical Disk</div>
+    <div id="LogicalDisk" class="InfoSectionBody"></div>
+  </div>
+  <div class="InfoSection">
+    <div onClick="javascript:toggleDisplay('PhysicalDisk');" class="InfoSectionHeader">Physical Disk</div>
+    <div id="PhysicalDisk" class="InfoSectionBody"></div>
+  </div>
+  <div class="InfoSection">
+    <div onClick="javascript:toggleDisplay('Processor');"  class="InfoSectionHeader">Processor</div>
+    <div id="Processor" class="InfoSectionBody"></div>
+  </div>
+  <div class="InfoSection">
+    <div onClick="javascript:toggleDisplay('Shares');"  class="InfoSectionHeader">Shares</div>
+    <div id="Shares" class="InfoSectionBody"></div>
+  </div>
+    <div class="InfoSection">
+    <div onClick="javascript:toggleDisplay('Users');"  class="InfoSectionHeader">Users</div>
+    <div id="Users" class="InfoSectionBody"></div>
+  </div>
+</div>
+<div id="DisplayError"></div>
+<div id="Footer">
+<hr/>
+  <div style="float:left;">Version 1.1</div>
+  <div style="float:right;">By David Wiseman<br />
+   </div>
+    <div style="clear:both;"></div>
+    <div style="text-align:center;font-size:20px;font-weight:bold"><a href="http://www.wisesoft.co.uk">www.wisesoft.co.uk</a></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,258 @@
+<HTML xmlns:IE>
+<HEAD>
+
+<TITLE>Calendar Demo</TITLE>
+
+<HTA:APPLICATION 
+	ID="CalendarDemo"
+	VERSION="1.01"
+	APPLICATIONNAME="Calendar Demo"
+	SYSMENU="yes"
+	MAXIMIZEBUTTON="yes"
+	MINIMIZEBUTTON="yes"
+	BORDER="thin"
+	INNERBORDER="thin"
+	SCROLL="auto"
+	SINGLEINSTANCE="yes"
+	WINDOWSTATE="maximize"
+>
+
+<STYLE>
+@media all 
+{
+	IE\:Calendar { behavior : url(calendar.htc) }
+	a            { color    : cyan              }
+	a:active     { color    : red               }
+	a:hover      { color    : yellow            }
+}
+</STYLE>
+
+</HEAD>
+
+<SCRIPT LANGUAGE="VBScript">
+Option Explicit
+
+Dim numVerMsgSize, strAppName, strAppVer, strFileNames
+
+strAppName   = CalendarDemo.ApplicationName
+strAppVer    = CalendarDemo.Version
+strFileNames = "caldemo"
+
+
+Sub Calendar_OnPropertyChange( )
+	Dim strDate
+
+	' Read the selected date from the calendar control
+	strDate = CDate( Calendar.Day & " " _
+	        & MonthName( Calendar.Month ) & " " _
+	        & Calendar.Year )
+
+	' Fill in the fields below the calendar control for the selected date
+	myLongDate.Value        = FormatDateTime( strDate, vbLongDate )
+	myShortDate.Value       = FormatDateTime( strDate, vbShortDate )
+	myDayOfWeekName.Value   = WeekDayName( DatePart( "w", strDate ) )
+	myMonthName.Value       = MonthName( DatePart( "m", strDate ) )
+	myDayOfMonth.Value      = DatePart( "d",    strDate )
+	myDayOfYear.Value       = DatePart( "y",    strDate )
+	myMonthNumber.Value     = DatePart( "m",    strDate )
+	myYear.Value            = DatePart( "yyyy", strDate )
+	myQuarter.Value         = DatePart( "q",    strDate )
+	myWeek.Value            = DatePart( "ww",   strDate )
+	myDayOfWeekNumber.Value = DatePart( "w",    strDate )
+End Sub
+
+
+Sub CheckUpdate( )
+	Dim lenLatestVer, strCurrentVer, strLatestVer
+
+	' Change cursor to hourglass while checking for update
+	Document.Body.Style.Cursor = "wait"
+
+	strLatestVer  = TextFromHTML( "http://www.robvanderwoude.com/updates/" & strFileNames & ".txt" )
+	lenLatestVer  = Len( strLatestVer )
+	If lenLatestVer = 4 Then
+		strCurrentVer = Split( strAppVer )(0)
+		If strLatestVer < strCurrentVer Then
+			Update.InnerHTML = "<P>You are using an invalid version (" & strCurrentVer _
+			                 & ") of the " & strAppName _
+			                 & ".<BR>The latest valid version is "    _
+			                 & strLatestVer & " and it is available " _
+			                 & "<A HREF=""http://www.robvanderwoude.com/updates/" _
+			                 & strFileNames & ".html"">" _
+			                 & "<FONT COLOR=""Red"">here</FONT></A>.</P>"
+			numVerMsgSize    = 85
+		End If
+		If strLatestVer > strCurrentVer Then
+			Update.InnerHTML = "<P>You are using version " & strCurrentVer _
+			                 & " of the " & strAppName _
+			                 & ".<BR>An update to version " _
+			                 & strLatestVer & " is available " _
+			                 & "<A HREF=""http://www.robvanderwoude.com/updates/" _
+			                 & strFileNames & ".html"">" _
+			                 & "<FONT COLOR=""Red"">here</FONT></A>.</P>"
+			numVerMsgSize    = 85
+		End If
+	End If
+
+	' Change cursor back to default
+	Document.Body.Style.Cursor = "default"
+End Sub
+
+
+Sub TodayButton_OnClick( )
+	Calendar.Year  = DatePart( "yyyy", Now )
+	Calendar.Month = DatePart( "m",    Now )
+	Calendar.Day   = DatePart( "d",    Now )
+End Sub
+
+
+Function TextFromHTML( myURL )
+	' Basic routine borrowed from http://dev.remotenetworktechnology.com/wsh/rubegoldberg.htm
+	' Improved wait-until-ready routine for HTAs by McKirahan on
+	' http://support.microsoft.com/newsgroups/default.aspx?dg=microsoft.public.scripting.scriptlets&tid=be461ec2-b444-440c-8155-ad0e8e839ca6&lang=en&cr=US&sloc=en-us&p=1
+
+	Dim objIE
+
+	' Set the default value
+	TextFromHTML = ""
+
+	' Temporarily disable error handling
+	On Error Resume Next
+
+	' Create an IE object
+	Set objIE = CreateObject( "InternetExplorer.Application" )
+
+	' Load the requested URL
+ 	objIE.Navigate myURL
+
+	' Wait for the requested URL to become available
+	While objIE.Busy
+	Wend
+
+	' Retrieve the body text
+	TextFromHTML = objIE.Document.Body.InnerText
+
+	' Release the object and return to default error handling
+	On Error Goto 0
+	objIE.Quit
+End Function
+
+
+Sub Window_OnLoad( )
+	Dim strMsg
+
+	strMsg = "<P>The Calendar HTML Component was not found.</P>" _
+	       & "<P>Please download and extract Microsoft's " _
+	       & "<A HREF=""http://www.microsoft.com/downloads/" _
+	       & "details.aspx?FamilyId=" _
+	       & "E50D0D0C-279D-4B78-81CD-B106EBE65C36"">" _
+	       & "Calendar sample files</A>.<BR>" & vbCrLf _
+	       & "Then run this HTA in the directory where " _
+	       & "<I>calendar.htc</I> is located.</P>"
+
+	' Fill in the proper application name and
+	' version number at the bottom of the screen
+	AppName.InnerHTML    = strAppName
+	AppVersion.InnerHTML = strAppVer
+
+	' Use custom error handling; after all, we cannot be sure the
+	' required HTML component is available in the right location
+	On Error Resume Next
+
+	' Set some of the calendar control's properties
+	Calendar.DayLength         = "long"
+	Calendar.MonthLength       = "long"
+	Calendar.ShowDateSelectors = 1
+	Calendar.ShowDays          = 1
+	Calendar.ShowTitle         = 1
+
+	' Fill in the date fields below the calendar control
+	Calendar_OnPropertyChange( )
+
+	' If an error occurred, we may assume the calendar control isn't
+	' available; in that case, display an error message and point the
+	' user to the download location
+	If Err Then
+		Err.Clear
+		CalendarSpace.InnerHTML = strMsg
+	End If
+	On Error Goto 0
+
+	' Check for updates
+	CheckUpdate
+End Sub
+</SCRIPT>
+
+<BODY STYLE="font:12 pt arial; color:white; filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#000040', EndColorStr='#00007F')">
+
+<DIV ALIGN="center">
+
+<H1>Calendar Demo</H1>
+
+<HR>
+
+<P>&nbsp;</P>
+
+<SPAN ID="CalendarSpace">
+
+<IE:Calendar id="Calendar" style="width : 300; height : 275; border : 1px solid black;"></IE:Calendar>
+
+<SPAN ID="Update">&nbsp;</SPAN>
+
+<P>&nbsp;</P>
+
+<TABLE BORDER="0" CELLPADDING="2">
+<TR>
+    <TD>Date (short / long)</TD>
+    <TD><INPUT ID="myShortDate" TYPE="text" SIZE="10" READONLY></TD>
+    <TD><INPUT ID="myLongDate" TYPE="text" SIZE="32" READONLY></TD>
+</TR>
+<TR>
+    <TD>Day of week (number / name)</TD>
+    <TD><INPUT ID="myDayOfWeekNumber" TYPE="text" SIZE="10" READONLY></TD>
+    <TD><INPUT ID="myDayOfWeekName" TYPE="text" SIZE="32" READONLY></TD>
+</TR>
+<TR>
+    <TD>Day of month / Day of year</TD>
+    <TD><INPUT ID="myDayOfMonth" TYPE="text" SIZE="10" READONLY></TD>
+    <TD><INPUT ID="myDayOfYear" TYPE="text" SIZE="32" READONLY></TD>
+</TR>
+<TR>
+    <TD>Month (number / name)</TD>
+    <TD><INPUT ID="myMonthNumber" TYPE="text" SIZE="10" READONLY></TD>
+    <TD><INPUT ID="myMonthName" TYPE="text" SIZE="32" READONLY></TD>
+</TR>
+<TR>
+    <TD>Week / Quarter</TD>
+    <TD><INPUT ID="myWeek" TYPE="text" SIZE="10" READONLY></TD>
+    <TD><INPUT ID="myQuarter" TYPE="text" SIZE="32" READONLY></TD>
+</TR>
+<TR>
+    <TD>Year</TD>
+    <TD><INPUT ID="myYear" TYPE="text" SIZE="10" READONLY></TD>
+    <TD ALIGN="center"><INPUT ID="TodayButton" TYPE="button" VALUE="   Today   "></TD>
+</TR>
+</TABLE>
+
+</SPAN>
+
+<P>&nbsp;</P>
+
+<HR>
+
+<P><FONT FACE="MS SANS SERIF" SIZE="1">
+<SPAN ID="AppName">Application Name</SPAN>,&nbsp;
+Version <SPAN ID="AppVersion">0.00</SPAN>,&nbsp;
+&copy; 2008
+<A HREF="http://www.robvanderwoude.com/">Rob van der Woude</A>.<BR>
+Calendar HTML Component&nbsp; &copy; 2000
+<A HREF="http://www.microsoft.com/">Microsoft Corporation</A>.<BR>
+Download the
+<A HREF="http://www.microsoft.com/downloads/details.aspx?FamilyId=E50D0D0C-279D-4B78-81CD-B106EBE65C36">HTML
+Component &amp; sample files</A>.
+</FONT></P>
+
+</DIV>
+
+</BODY>
+</HTML>

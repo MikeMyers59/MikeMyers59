@@ -1,0 +1,558 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<title>Software Inventory</title>
+
+<HTA:APPLICATION
+  APPLICATIONNAME="Software Inventory"
+  ID="SoftInv"
+  VERSION="3.02"
+  ICON="msiexec.exe"
+  SINGLEINSTANCE="yes"
+  WINDOWSTATE="maximize"/>
+
+<style type="text/css">
+body {
+	font: 12pt arial,sans-serif;
+	color: white;
+	background-color: black;
+	filter: progid:DXImageTransform.Microsoft.Gradient(Gradienttype=0, StartColorStr='#0000FF', EndColorStr='#000000');
+	padding: 0;
+	margin: 0;
+	height:
+}
+
+a {
+	color: red;
+}
+
+td
+{
+	text-align: left;
+}
+
+.Button
+{
+	width: 12em;
+	margin: 3px 1em 3px 1em;
+}
+
+.Center
+{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.Left
+{
+	text-align: left;
+}
+
+.Red
+{
+	color: red;
+}
+
+.Right
+{
+	text-align: right;
+}
+
+.White
+{
+	color: white;
+}
+</style>
+
+</head>
+
+<script language="VBScript">
+Option Explicit
+
+Const CopyRights = "©"
+
+' Global variables
+Dim clrBgErr, clrTxtErr
+Dim intUpdateSize, intVerMsgSize, intWindowHeight, intWindowWidth
+Dim strAppName, strAppVer, strComputer, strFileNames
+
+
+clrBgErr      = "#FF0000"
+clrTxtErr     = "#FFFFFF"
+' Global variables, used by CheckUpdate subroutine
+strAppName    = SoftInv.ApplicationName
+strAppVer     = SoftInv.Version
+strFileNames  = "software"
+
+
+Sub CheckUpdate( )
+	Dim intAnswer, intButtons, lenLatestVer, strLatestver, strPrompt, strTitle, wshShell
+	
+	' Change mouse pointer to hourglass while checking for update
+	document.body.style.cursor = "wait"
+
+	Set wshShell  = CreateObject( "WScript.Shell" )
+	strLatestVer  = TextFromHTML( "http://www.robvanderwoude.com/updates/" & strFileNames & ".txt" )
+
+	If strAppVer <> strLatestver Then
+		' Clear the IE cache
+		wshShell.Run "RUNDll32.EXE InetCpl.cpl,ClearMyTracksByProcess 8", 7, True
+		' Try again, read the latest version info from the web
+		strLatestver = TextFromHTML( "http://www.robvanderwoude.com/updates/" & strFileNames & ".txt" )
+	End If
+
+	lenLatestVer  = Len( strLatestVer )
+	If lenLatestVer = 4 Then
+		intButtons = vbYesNoCancel + vbApplicationModal + vbInformation
+		If strLatestVer < strAppVer Then
+			strTitle  = "Unofficial version"
+			strPrompt = "You seem to be using a pre-release version (" & strAppVer & ") of the " & strAppName & "." _
+			          & vbCrLf & vbCrLf _
+			          & "The latest official release is " & strLatestver _
+			          & vbCrLf & vbCrLf _
+			          & "Do you want to download the latest official version?"
+			intAnswer = MsgBox( strPrompt, intButtons + vbDefaultButton2, strTitle )
+			If intAnswer = vbYes Then
+				wshShell.Run "http://www.robvanderwoude.com/" & strFileNames & ".php", 3, False
+			End If
+		End If
+		If strLatestVer > strAppVer Then
+			strTitle  = "Old version"
+			strPrompt = "You are using version " & strAppVer & " of the " & strAppName & "." _
+			          & vbCrLf & vbCrLf _
+			          & "The latest official release is " & strLatestver _
+			          & vbCrLf & vbCrLf _
+			          & "Do you want to download the latest official version?"
+			intAnswer = MsgBox( strPrompt, intButtons, strTitle )
+			If intAnswer = vbYes Then
+				wshShell.Run "http://www.robvanderwoude.com/" & strFileNames & ".php", 3, False
+			End If
+		End If
+	End If
+
+	Set wshShell = Nothing
+
+	' Change mouse pointer back to default
+	document.body.style.cursor = "default"
+End Sub
+
+
+Sub CopyClipboard
+	Document.ParentWindow.ClipboardData.SetData "text", ResultsHiddenText.Value
+End Sub
+
+
+Sub EditQuery
+	ComputerNameTextBox.Disabled      = False
+	ResultsTextArea.Value             = ""
+	ResultsHiddenText.Value           = ""
+	FilterNameTextBox.Disabled        = False
+	FilterVendorTextBox.Disabled      = False
+	FilterDateTextBox.Disabled        = False
+	SPTextBox.Disabled                = False
+	CopyButton.Disabled               = True
+	EditButton.Disabled               = True
+	PasteButtonPC.Disabled            = False
+	PasteButtonNameFilter.Disabled    = False
+	PasteButtonVendorFilter.Disabled  = False
+	PasteButtonDateFilter.Disabled    = False
+	RunButton.Disabled                = False
+	ResetButton.Disabled              = False
+	ComputerNameTextBox.Focus( )
+End Sub
+
+
+Function GetComputerName( )
+	Dim colItems, objItem, objWMIService
+
+	On Error Resume Next
+
+	Set objWMIService = GetObject( "winmgmts://./root/cimv2" )
+	If Err Then
+		ComputerNameTextBox.Style.backgroundColor = clrBgErr
+		ComputerNameTextBox.Style.Color           = clrTxtErr
+		ComputerNameTextBox.Focus( )
+		Err.Clear
+		On Error GoTo 0
+		EditQuery( )
+		Exit Function
+	End If
+
+	Set colItems = objWMIService.ExecQuery( "Select * from Win32_ComputerSystem" )
+	If Err Then
+		ComputerNameTextBox.Style.backgroundColor = clrBgErr
+		ComputerNameTextBox.Style.Color           = clrTxtErr
+		ComputerNameTextBox.Focus( )
+		Err.Clear
+		On Error GoTo 0
+		EditQuery( )
+		Exit Function
+	End If
+
+	For Each objItem in colItems
+		strComputer = objItem.Name
+	Next
+
+	On Error GoTo 0
+
+	ComputerNameTextBox.Value = strComputer
+	GetComputerName           = strComputer
+End Function
+
+
+Sub Inventory
+	Dim strDateFilter, strSortDate
+
+	' Change mouse pointer to hourglass while checking for update
+	Document.Body.Style.Cursor   = "wait"
+
+	ComputerNameTextBox.Style.backgroundColor = ""
+	ComputerNameTextBox.Style.Color           = ""
+
+	strComputer = Trim( UCase( ComputerNameTextBox.Value ) )
+	If strComputer = "" Or strComputer = "." Then strComputer = GetComputerName( )
+
+	strSortDate    = Year( Now( ) ) & Right( "0" & Month( Now( ) ), 2 ) & Right( "0" & Day(   Now( ) ), 2 )
+	strDateFilter  = Trim( FilterDateTextBox.Value )
+	If strDateFilter <> "" Then
+		If IsNumeric( strDateFilter ) = False Then
+			MsgBox "The date filter format should be YYYYMMDD", vbInformation, "Date Filter Error"
+			FilterDateTextBox.Focus( )
+			Exit Sub
+		ElseIf strDateFilter < 19800101 Or strDateFilter > strSortDate Then
+			MsgBox "The date filter format should be YYYYMMDD", vbInformation, "Date Filter Error"
+			FilterDateTextBox.Focus( )
+			Exit Sub
+		End If
+	End If
+
+	WinVer( strComputer )
+
+	ComputerNameTextBox.ReadOnly     = True
+	FilterNameTextBox.ReadOnly       = True
+	FilterVendorTextBox.ReadOnly     = True
+	FilterDateTextBox.ReadOnly       = True
+	PasteButtonPC.disabled           = True
+	PasteButtonNameFilter.Disabled   = True
+	PasteButtonVendorFilter.Disabled = True
+	PasteButtonDateFilter.Disabled   = True
+	RunButton.Disabled               = True
+	ResetButton.Disabled             = True
+
+	ResultsTextArea.Value            = "WMI query in progress, please wait . . ."
+
+	window.setTimeout "ListSoftware( )", 10
+End Sub
+
+
+Sub ListSoftware( )
+	Dim arrProgram, arrSoftware
+	Dim i
+	Dim colItems, objItem, objWMIService
+	Dim strCsv, strDateFilter, strKey, strNameFilter, strOutput, strSortDate, strVendorFilter, strValue
+
+	strNameFilter   = Trim( FilterNameTextBox.Value )
+	strVendorFilter = Trim( FilterVendorTextBox.Value )
+	strDateFilter   = Trim( FilterDateTextBox.Value )
+	strSortDate     = Year( Now( ) ) & Right( "0" & Month( Now( ) ), 2 ) & Right( "0" & Day(   Now( ) ), 2 )
+
+	ResultsHiddenText.Value = "Computer:"      & vbTab _
+	                        & "Name:"          & vbTab _
+	                        & "Version:"       & vbTab _
+	                        & "Vendor:"        & vbTab _
+	                        & "Install Date:"  & vbTab _
+	                        & "Package Cache:" & vbTab _
+	                        & "ID:"            & vbCrLf
+
+	Set arrSoftware   = CreateObject( "System.Collections.Sortedlist" )
+
+	On Error Resume Next
+
+	Set objWMIService = GetObject( "winmgmts://" & strComputer & "/root/CIMV2" )
+	If Err Then
+		ComputerNameTextBox.Style.backgroundColor = clrBgErr
+		ComputerNameTextBox.Style.Color           = clrTxtErr
+		ComputerNameTextBox.Focus( )
+		Err.Clear
+		On Error GoTo 0
+		EditQuery( )
+		Exit Sub
+	End If
+
+	Set colItems = objWMIService.ExecQuery( "SELECT * FROM Win32_Product" )
+	If Err Then
+		ComputerNameTextBox.Style.backgroundColor = clrBgErr
+		ComputerNameTextBox.Style.Color           = clrTxtErr
+		ComputerNameTextBox.Focus( )
+		Err.Clear
+		On Error GoTo 0
+		EditQuery( )
+		Exit Sub
+	End If
+
+	For Each objItem In colItems
+		If InStr( 1, objItem.Name, strFilter, vbTextCompare ) > 0 Then
+			strKey   = objItem.Name & " " & objItem.Version
+			strValue = objItem.Name & vbTab & objItem.Version & vbTab & objItem.Vendor & vbTab & objItem.InstallDate & vbTab & objItem.PackageCache & vbTab & objItem.IdentifyingNumber
+			If arrSoftware.ContainsKey( strKey ) Then
+				Do While arrSoftware.ContainsKey( strKey )
+					strKey = strKey & " 0"
+				Loop
+			End If
+			arrSoftware.Add strKey, strValue
+		End If
+	Next
+
+	On Error Goto 0
+
+	ResultsTextArea.Value = ""
+
+	For i = 0 To arrSoftware.Count - 1
+		arrProgram = Split( arrSoftware.GetByIndex(i), vbTab )
+		If InStr( 1, arrProgram(0), strNameFilter, vbTextCompare ) > 0 And InStr( 1, arrProgram(2), strVendorFilter, vbTextCompare ) > 0 And arrProgram(3) >= strDateFilter Then
+			strOutput  = "Name          :  " & arrProgram(0) & vbCrLf _
+			           & "Version       :  " & arrProgram(1) & vbCrLf _
+			           & "Vendor        :  " & arrProgram(2) & vbCrLf _
+			           & "Install Date  :  " & arrProgram(3) & vbCrLf _
+			           & "Package Cache :  " & arrProgram(4) & vbCrLf _
+			           & "ID            :  " & arrProgram(5) & vbCrLf & vbCrLf
+			ResultsTextArea.Value = ResultsTextArea.Value & strOutput
+			strCsv     = strComputer   & vbTab _
+			           & arrProgram(0) & vbTab _
+			           & arrProgram(1) & vbTab _
+			           & arrProgram(2) & vbTab _
+			           & arrProgram(3) & vbTab _
+			           & arrProgram(4) & vbTab _
+			           & arrProgram(5) & vbCrLf
+			ResultsHiddenText.Value = ResultsHiddenText.Value & strCsv
+		End If
+	Next
+	CopyButton.Disabled  = False
+	ResetButton.Disabled = False
+
+	' Change mouse pointer back to default
+	Document.Body.Style.Cursor = "default"
+End Sub
+
+
+Sub PasteClipboardDateFilter
+	FilterDateTextBox.Value = Document.ParentWindow.ClipboardData.GetData( "text" )
+End Sub
+
+
+Sub PasteClipboardNameFilter
+	FilterNameTextBox.Value = Document.ParentWindow.ClipboardData.GetData( "text" )
+End Sub
+
+
+Sub PasteClipboardPC
+	ComputerNameTextBox.Value = Document.ParentWindow.ClipboardData.GetData( "text" )
+End Sub
+
+
+Sub PasteClipboardVendorFilter
+	FilterVendorTextBox.Value = Document.ParentWindow.ClipboardData.GetData( "text" )
+End Sub
+
+
+Sub RestoreWindowSize( )
+	If blnUpdate Then
+		intUpdateSize = 200
+	Else
+		intUpdateSize = 0
+	End If
+	' Disabled error handling to prevent an error message but no error when the window is resized by doubleclicking the title bar
+	On Error Resume Next
+	WindowSize intWindowWidth, intWindowHeight + intUpdateSize
+	On Error Goto 0
+End Sub
+
+
+Function TextFromHTML( myURL )
+    Dim objHTTP
+    TextFromHTML = ""
+    Set objHTTP = CreateObject( "WinHttp.WinHttpRequest.5.1" )
+    objHTTP.Open "GET", myURL
+    objHTTP.Send
+    ' Check if the result was valid, and if so return the result
+    If objHTTP.Status = 200 Then
+    	TextFromHTML = objHTTP.ResponseText
+    End If
+    Set objHTTP = Nothing
+End Function
+
+
+Sub Window_Onload
+	WindowSize 1024, 840
+	document.title = SoftInv.ApplicationName & ",   Version " & SoftInv.Version & "   -   " & CopyRights & " Rob van der Woude"
+	ComputerNameTextBox.ReadOnly     = False
+	ComputerNameTextBox.Value        = ""
+	ResultsTextArea.Value            = ""
+	ResultsHiddenText.Value          = ""
+	FilterNameTextBox.ReadOnly       = False
+	FilterNameTextBox.Value          = ""
+	FilterVendorTextBox.ReadOnly     = False
+	FilterVendorTextBox.Value        = ""
+	FilterDateTextBox.ReadOnly       = False
+	FilterDateTextBox.Value          = ""
+	WindowsTextBox.Value             = ""
+	SPTextBox.Value                  = ""
+	CopyButton.Disabled              = True
+	PasteButtonPC.disabled           = False
+	PasteButtonPC.Disabled           = False
+	PasteButtonNameFilter.Disabled   = False
+	PasteButtonVendorFilter.Disabled = False
+	PasteButtonDateFilter.Disabled   = False
+	RunButton.Disabled               = False
+	ResetButton.Disabled             = False
+	AppVersion.InnerHTML             = SoftInv.Version
+	ComputerNameTextBox.Focus( )
+	window.setTimeout "CheckUpdate( )", 100
+End Sub
+
+
+Sub WindowSize( intWidth, intHeight )
+	On Error Resume Next
+	Dim posWidth, posHeight
+	If intWidth  > window.screen.width  Then intWidth  = window.screen.width
+	If intHeight > window.screen.height Then intHeight = window.screen.height
+	posWidth  = ( window.screen.width  - intWidth  ) / 2
+	posHeight = ( window.screen.height - intHeight ) / 2
+	If posWidth  < 0 Then posWidth  = 0
+	If posHeight < 0 Then posHeight = 0
+	window.resizeTo intWidth, intHeight
+	window.moveTo posWidth, posHeight
+	On Error GoTo 0
+End Sub
+
+
+Sub WinVer( strComputer )
+	Dim colItems, objItem, objWMIService
+	On Error Resume Next
+	Set objWMIService = GetObject( "winmgmts://" & strComputer & "/root/cimv2" )
+	If Err Then
+		ComputerNameTextBox.Style.backgroundColor = clrBgErr
+		ComputerNameTextBox.Style.Color           = clrTxtErr
+		ComputerNameTextBox.Focus( )
+		Err.Clear
+		On Error GoTo 0
+		EditQuery( )
+		Exit Sub
+	End If
+	Set colItems = objWMIService.ExecQuery("Select * from Win32_OperatingSystem",,48)
+	If Err Then
+		ComputerNameTextBox.Style.backgroundColor = clrBgErr
+		ComputerNameTextBox.Style.Color           = clrTxtErr
+		ComputerNameTextBox.Focus( )
+		Err.Clear
+		On Error GoTo 0
+		EditQuery( )
+		Exit Sub
+	End If
+	For Each objItem in colItems
+		WindowsTextBox.Value = Split( objItem.Caption, " ", 2, vbTextCompare )(1)
+		SPTextBox.Value      = objItem.CSDVersion
+	Next
+	On Error GoTo 0
+End Sub
+</script>
+
+<body>
+
+<div class="Center">
+
+<span id="Update">&nbsp;</span>
+
+<table class="Center">
+<tr>
+    <th class="Right">Computer Name:</th>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Center"><input type="text" name="ComputerNameTextBox" size="20" title="Fill in a remote computer name or leave this field blank to query the local computer."></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Left"><input id="PasteButtonPC" class="Button" type="button" value="Paste" name="PasteButtonPC" onclick="PasteClipboardPC" title="Click here to paste a remote computer name from the clipboard into the Computer Name field."></td>
+</tr>
+<tr>
+    <th class="Right">Windows Version:</th>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Center"><input name="WindowsTextBox" id="WindowsTextBox" size="20" readonly="readonly" title="This read-only field will display the Windows version."></td>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+    <th class="Right">ServicePack:</th>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Center"><input name="SPTextBox" id="SPTextBox" size="20" readonly="readonly" title="This read-only field will display Windows' latest installed ServicePack."></td>
+    <td colspan="2">&nbsp;&nbsp;&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="5">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="2">&nbsp;</td>
+    <th class="Center">Filters:</th>
+    <td colspan="2">&nbsp;</td>
+</tr>
+<tr>
+    <th class="Right">Name:</th>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Center"><input name="FilterNameTextBox" id="FilterNameTextBox" size="20" title="Use this field to limit the output to only software with the filter string in its NAME value."></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Left"><input name="PasteButtonNameFilter" id="PasteButtonNameFilter" class="Button" type="button" value="Paste" onclick="PasteClipboardNameFilter" title="Click here to paste a filter string from the clipboard into the Name Filter field."></td>
+</tr>
+<tr>
+    <th class="Right">Vendor:</th>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Center"><input name="FilterVendorTextBox" id="FilterVendorTextBox" size="20" title="Use this field to limit the output to only software with the filter string in its VENDOR value."></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Left"><input name="PasteButtonVendorFilter" id="PasteButtonVendorFilter" class="Button" type="button" value="Paste" onclick="PasteClipboardVendorFilter" title="Click here to paste a filter string from the clipboard into the Vendor Filter field."></td>
+</tr>
+<tr>
+    <th class="Right">Install Date:</th>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Center"><input name="FilterDateTextBox" id="FilterDateTextBox" size="20" title="Use this field to display only software installed at the specified date or later. Date should be in YYYYMMDD format."></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+    <td class="Left"><input name="PasteButtonDateFilter" id="PasteButtonDateFilter" class="Button" type="button" value="Paste" onclick="PasteClipboardDateFilter" title="Click here to paste a filter date from the clipboard into the Install Date Filter field."></td>
+</tr>
+<tr>
+    <td colspan="5">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="5">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="5" class="Center"><textarea name="ResultsTextArea" id="ResultsTextArea" rows="15" cols="80" readonly="readonly" title="This read-only field will display all software that has been installed by Windows' Installer."></textarea></td>
+</tr>
+<tr>
+    <td colspan="5">&nbsp;</td>
+</tr>
+<tr>
+    <td colspan="5"><input type="hidden" name="ResultsHiddenText" id="ResultsHiddenText"></td>
+</tr>
+<tr>
+	<td class="Right"><input id="RunButton" class="Button" type="button" value="Go" name="RunButton" onclick="window.setTimeout 'Inventory', 1" title="Click here to start the inventory"></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+	<td class="Center"><input id="CopyButton"  class="Button" type="button" value="Copy"  name="CopyButton"  onclick="CopyClipboard" title="Click here to copy the results to the clipboard. The data in the clipboard will be in tab delimited format. Paste the data in a spreadsheet, using tab as the only delimiter, to create reports."></td>
+    <td>&nbsp;&nbsp;&nbsp;</td>
+	<td class="Left"><input id="ResetButton" class="Button" type="button" value="Reset" name="ResetButton" onclick="Location.Reload(True)" title="Click here to clear all fields"></td>
+</tr>
+</table>
+
+<p>&nbsp;</p>
+
+<p class="Center">
+
+<p class="Center">Software Inventory,  Version <span id="AppVersion">0.00</span><br>
+<span style="font-size: 80%;">&copy; 2005 - 2013, Rob van der Woude<br>
+<a href="http://www.robvanderwoude.com/software.php"><span class="Red">http://www.robvanderwoude.com</span></a></span></p>
+
+<p class="Center" style="font-size: 80%;">Created using the Microsoft Scripting Guys'
+<a href="http://www.microsoft.com/technet/scriptcenter/tools/scripto2.mspx" class="Red">Scriptomatic 2.0</a> and
+<a href="http://www.microsoft.com/downloads/details.aspx?FamilyId=231D8143-F21B-4707-B583-AE7B9152E6D9&displaylang=en" class="Red">HTA Helpomatic</a>
+tools.</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+</body>
+</html>
