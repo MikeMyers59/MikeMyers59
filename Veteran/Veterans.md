@@ -1,4 +1,5 @@
 # Veterans
+[US Department of Defense (DoD)]()
 [US Department of Veterans Affairs](https://github.com/MikeMyers59/MikeMyers59/new/main#us-department-of-veterans-affairs-dva)
 
 | VA Disability Rating|Ind. Rating|Aggr. Rating|Rest|VA Rating |  
@@ -13,6 +14,17 @@
 | 8 Elbow (left)|10%|57%|43%|60% |  
 | 9 AML|0%| | |  |  
 | SCC|0%| | |  |  
+
+- [eHome Military Counseling](https://www.emilitarycounseling.com/)
+- [Patriot Link](https://patriotlink.org/): enables all Veterans, their families, caregivers, and survivors access to vetted, direct, cost-free, Veteran services.  
+- [RallyPoint](https://www.rallypoint.com/) - [Discussions](https://www.rallypoint.com/answers/)
+
+# US Department of Defense (DoD)
+
+## Defense Health Agency (DHA)
+
+#### [DHA PI 6025.12: Retiree At Cost Hearing Aid Program Retiree Hearing Aid Purchase Program (RACHAP)](https://health.mil/Reference-Center/Policies/2018/10/19/Retiree-At-Cost-Hearing-Aid-Program-Retiree-Hearing-Aid-Purchase-Program-RACHAP)  
+This Defense Health Agency-Procedural Instruction (DHA-PI): a. Based on the authority of References (a) and (b), and in accordance with the guidance of References (c) through (r), establishes the Defense Health Agency’s (DHA) procedures to establish common and uniform guidelines, standards, and procedures for all DoD MTFs providing hearing health services to beneficiaries through RACHAP. This program has been operating at self-selected MTFs without established DoD guidance. b. Enables MTFs with capacity and capability to provide hearing aid evaluation, selection, fitting, and follow-up appointments utilizing an at cost Federal Government contract price through RACHAP to RACHAP-eligible beneficiaries (“RACHAP-eligible beneficiaries” defined in the Glossary). c. Incorporates, cancels, and replaces Reference (s).  
 
 # US Department of Veterans Affairs (DVA)  
 [Benefits](https://github.com/MikeMyers59/MikeMyers59/new/main#benefits)  
