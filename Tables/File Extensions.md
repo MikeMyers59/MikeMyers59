@@ -20,3 +20,9 @@
 | Script | DOS Shell | .bat <BR> .cmd |  
 | Script | PowerShell | .ps1 |  
    
+JPEG Standards: https://jpeg.org/jpeg/index.html 
+MPEG Standards: https://mpeg.chiariglione.org/standards/mpeg-h/image-file-format
+WebP Formats    https://www.howtogeek.com/325864/how-to-save-googles-webp-images-as-jpeg-or-png/ 
+HEVC [AKA: H.265]    High Efficiency Video Compression format
+  
+  
