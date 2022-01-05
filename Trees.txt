@@ -1,0 +1,46 @@
+Ash
+Aspen
+Arborvitae
+Baldcypress
+Beech
+Birch
+Buckeye
+Catalpa
+Cedar
+Cherry
+Citrus (all)
+Cherry
+Chestnut
+Cottonwood
+Crabapple
+Dogwood
+Douglas-fir
+Elm
+Fir
+Ginkgo
+Goldenrain
+Hawthorn
+Hickory
+Holly
+Horsechestnut
+Juniper
+Kentucky Coffee Tree
+Linden
+Locust
+London Planetree
+Magnolia
+Maple
+Mulberry
+Oak
+Palm
+Pear
+Pecan
+Pine
+Poplar
+Redbud
+Rose
+Spruce
+Sycamore
+Tuliptree
+Willow
+Wisteria
