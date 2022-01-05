@@ -12,10 +12,18 @@ An organization is only as strong as its people. So, ask yourself two questions.
   
 WHY? Because these all make great test questions!  
 
-[Amazon](https://www.amazon.com)  
+**[Amazon](https://www.amazon.com)**  
   - [Amazon Smile](https://smile.amazon.com)  
 
-[LinkedIn]( https://www.linkedin.com/login)  
+**[Goodwill Community Foundation (GCF)](http://www.gcflearnfree.org/)**  
+- [Microsoft Access 2010](http://www.gcflearnfree.org/access2010/)  
+
+**[Khan Academy](https://www.khanacademy.org/)**  
+- [Algorithm Theory](https://www.khanacademy.org/computing/computer-science/algorithms)  
+- [Information Theory](https://www.khanacademy.org/computing/computer-science/informationtheory)  
+- [SQL](https://www.khanacademy.org/computing/computer-programming/sql)  
+
+**[LinkedIn]( https://www.linkedin.com/login)**  
 - [My Profile](https://www.linkedin.com/in/michael-myers-294112105)  
 - [Learning](https://www.linkedin.com/learning) Courses to Check Out:
     - https://www.linkedin.com/learning/paths/build-your-excel-skills  
@@ -32,6 +40,13 @@ WHY? Because these all make great test questions!
     - [Divesrity, Inclusion & Belonging for All](https://www.linkedin.com/learning/paths/diversity-inclusion-and-belonging-for-all)  
     - [Finding a Job during Challenging Economic Times](https://www.linkedin.com/learning/paths/finding-a-job-during-challenging-economic-times) **PARTIAL**
     - [Master in Demand Profesional Skills](https://www.linkedin.com/learning/paths/master-in-demand-professional-soft-skills)
+
+**[NetCom Learning](http://www.netcomlearning.com/)**   
+- [Webinars](http://www.netcomlearning.com/webinars/recorded-webinars.phtml)  
+
+**[Open Education Consortium (OEC)](http://www.oeconsortium.org/)**  
+- [Information Security](https://learn.saylor.org/course/cs406 )  
+- [Intro to Computer Science & Programming](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/references/)  
 
 [How Secure Is My Password?](https://howsecureismypassword.net)  
 [Leslie O'Flahaven](www.ewriteonline.com)
