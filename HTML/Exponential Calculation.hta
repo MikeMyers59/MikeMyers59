@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML lang="en">
+<HEAD>
+  <TITLE>Mike's HTA Demo</TITLE>
+  <HTA:APPLICATION ID="oHTA"
+     APPLICATIONNAME="myHTA_App"
+     BORDER="thin"
+     BORDERSTYLE="normal"
+      CAPTION="yes"
+      ICON="graphics/face01.ico"
+      MAXIMIZEBUTTON="no"
+      MINIMIZEBUTTON="no"
+      SHOWINTASKBAR="yes"
+      SINGLEINSTANCE="no"
+      SYSMENU="yes"
+      VERSION="1.0"
+      WINDOWSTATE="normal"
+  />
+</HEAD>
+<BODY>
+<SCRIPT language="VBScript">
+Sub Expo (PowerValue)
+  ExpoReturn = 2
+  if PowerValue > 1 then 
+    for i = 2 to PowerValue
+      ExpoReturn = ExpoReturn * 2
+    next
+    document.write ("The Exponentiation of 2 to the ")
+    document.write (PowerValue)
+    document.write (" is: ")
+    document.write (ExpoReturn)
+  end if
+End Sub
+</SCRIPT>
+<*  Create the form - Input Values & output values! *>
+  <BUTTON onClick="Expo(8)">Run Script(1)</BUTTON> 
+  <input type="button" value="Run Script(2)" name="run_button"  onClick="Expo(8)"> 
+  
+  <HR>
+  <BUTTON onclick="window.close()">Quit Application</BUTTON>
+<HR>
+<SCRIPT language="VBScript">
+  document.write( CRLF )
+  document.write( "Mike's Exponentiation Function HTA ran on: ")
+  document.write( date() )
+</SCRIPT>  
+</BODY>
+</HTML>
+  
+  
