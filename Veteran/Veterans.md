@@ -1,7 +1,8 @@
 # Veterans
+[Disabled American Veterans (DAV)]()
 [US Department of Defense (DoD)](https://github.com/MikeMyers59/MikeMyers59/blob/main/Veteran/Veterans.md#us-department-of-defense-dod)  
-[US Department of Veterans Affairs](https://github.com/MikeMyers59/MikeMyers59/new/main#us-department-of-veterans-affairs-dva)
-[Washington State Department of Veteran Affairs (WDVA)]()
+[US Department of Veterans Affairs](https://github.com/MikeMyers59/MikeMyers59/new/main#us-department-of-veterans-affairs-dva)  
+[Washington State Department of Veteran Affairs (WDVA)](https://github.com/MikeMyers59/MikeMyers59/blob/main/Veteran/Veterans.md#washington-state-department-of-veteran-affairs-wdva)
 
 | VA Disability Rating|Ind. Rating|Aggr. Rating|Rest|VA Rating |  
 | -- | :--: | :--: | :--: | :--: |   
@@ -30,6 +31,12 @@
 | Name | Location | Email/Phone | Website | 
 | -- | -- | -- | -- |  
 | Retsil | 1141 Beach Drive	Retsil	WA |  |  |    
+
+# Disabled American Veterans (DAV)
+
+| Name | Location | Email/Phone | Website | 
+| -- | -- | -- | -- |  
+| Seattle National Service Office | 915 2nd AVE Room 1040 Seattle WA, 98174 | Main Office (206) 341-8267 <BR> Fax (206) 220-4171 |  | 
 
 # US Department of Defense (DoD)
 
