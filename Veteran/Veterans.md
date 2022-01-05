@@ -1,6 +1,7 @@
 # Veterans
-[US Department of Defense (DoD)]()
+[US Department of Defense (DoD)](https://github.com/MikeMyers59/MikeMyers59/blob/main/Veteran/Veterans.md#us-department-of-defense-dod)  
 [US Department of Veterans Affairs](https://github.com/MikeMyers59/MikeMyers59/new/main#us-department-of-veterans-affairs-dva)
+[Washington State Department of Veteran Affairs (WDVA)]()
 
 | VA Disability Rating|Ind. Rating|Aggr. Rating|Rest|VA Rating |  
 | -- | :--: | :--: | :--: | :--: |   
@@ -19,7 +20,24 @@
 - [Patriot Link](https://patriotlink.org/): enables all Veterans, their families, caregivers, and survivors access to vetted, direct, cost-free, Veteran services.  
 - [RallyPoint](https://www.rallypoint.com/) - [Discussions](https://www.rallypoint.com/answers/)
 
+#### Veteran Cemetaries
+| Name | Location | Email/Phone | Website | 
+| -- | -- | -- | -- |  
+| Tahoma National Cemetery | 18600 SE 240th St. Kent, WA 98042 | 425-413-9614 |  |  
+| Washington State Veterans Cemetery | 21702 W. Espanola Road, Medical Lake, WA 99022 | 509-299-6280 <BR> [cemetery@dva.wa.gov](mailto:cemetery@dva.wa.gov) | www.dva.wa.gov/cemetery |  
+  
+#### Veteran Homes
+| Name | Location | Email/Phone | Website | 
+| -- | -- | -- | -- |  
+| Retsil | 1141 Beach Drive	Retsil	WA |  |  |    
+
 # US Department of Defense (DoD)
+
+## Defense Fianance and Accounting Service (DFAS)
+- [DFAS](https://www.dfas.mil/)
+- [DFAS YouTube Channel](https://YouTube.com/DFAS)
+- [myPay](https://mypay.dfas.mil/)
+- [AskDFAS](https://corpweb1.dfas.mil/askDFAS/askRA.jsp)
 
 ## Defense Health Agency (DHA)
 
@@ -44,6 +62,7 @@ Department of Veterans Affairs (1989-present)
 | eBenefits Technical Support | 800-983-0937 |  |  |  	 
 | Mission Act (2019) |  |  | www.MISSIONAct.va.gov <BR> [Booklet](https://www.missionact.va.gov/library/files/MISSION_ACT_Community_Care_Booklet.pdf) |  	 
 | MyVA311 | 844-698-2311 |  |  |  	 
+| [Post-9/11 Vet Newsletter](https://www.publichealth.va.gov/exposures/publications/oef-oif-ond/post-9-11-vet-2018/index.asp) |  |  |  |  	 
 | Veterans |  |  | https://www.vets.gov/ |  	 
 |  |  |  |  |  	 
 
@@ -149,5 +168,5 @@ The Beneficiary Travel program provides eligible Veterans and other beneficiarie
 Basically, what this means is that VA will pay for your transportation costs to a VA facility if you are eligible. Check the link above to learn more, but most Veterans who are eligible have a service connected rating of 30% or higher or are being treated for a service connected injury.
 If you have applied for travel reimbursement and are waiting to receive payments after the claim has been processed, please contact your local Beneficiary Travel Program Office or call 1-877-222-VETS (8387) for assistance. The funds are typically direct deposited into the individual’s account within 7 to 10 business days.  
 
-  
+# Washington State Department of Veteran Affairs (WDVA)
 
