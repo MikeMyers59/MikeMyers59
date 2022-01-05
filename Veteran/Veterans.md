@@ -102,6 +102,7 @@ Department of Veterans Affairs (1989-present)
 #### Points of Contact
 | Contact | Phone | EMail | Website |  
 | -- | -- | -- | -- |  
+| American Lake Vision Clinic |  | (253) 583-1241  |  |  
 | Health Benefits Hotline | 877-222-VETS (8387) |  |  |  
 | My HealtheVet |  |  | https://www.myhealth.va.gov  |  
 | My HealtheVet Help Desk | 877-327-0022 M-F, 8-8 (ET) <BR> TTY: 800-877-8339 |  |  |  
