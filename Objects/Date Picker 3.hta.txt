@@ -1,0 +1,29 @@
+<html>
+<script language="vbscript"> 
+Self.resizeTo 294,215 
+</script> 
+<HEAD> 
+<script language="jscript"> 
+function SeedDate(DateIN) 
+  { 
+  document.oClnd.Value = "4/01/05"; 
+  } 
+</script> 
+<HTA:APPLICATION 
+  APPLICATIONNAME="" ID="oCalend" BORDER="thin" 
+  BORDERSTYLE="normal" CAPTION="yes" CONTEXTMENU="yes" 
+  INNERBORDER="no" MAXIMIZEBUTTON="no" MINIMIZEBUTTON="yes" 
+  NAVIGABLE="no" SCROLL="no" SCROLLFLAT="yes" 
+  SELECTION="yes" SHOWINTASKBAR="yes" SINGLEINSTANCE="yes" 
+  SYSMENU="yes" VERSION="" WINDOWSTATE="normal"> 
+<TITLE> 
+Calendar 
+</TITLE> 
+</HEAD> 
+<BODY topmargin=0 bottommargin=0 leftmargin=0 rightmargin=0 
+onLoad="SeedDate('04/05/2005')"> 
+<object id="oClnd" height="25" width="100" 
+classid="clsid:20DD1B9E-87C4-11D1-8BE3-0000F8754DA1"> 
+</object> 
+</BODY> 
+</HTML> 
