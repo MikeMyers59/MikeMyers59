@@ -1,5 +1,5 @@
 # Veterans
-[Disabled American Veterans (DAV)]()
+[Disabled American Veterans (DAV)](https://github.com/MikeMyers59/MikeMyers59/blob/main/Veteran/Veterans.md#disabled-american-veterans-dav)
 [US Department of Defense (DoD)](https://github.com/MikeMyers59/MikeMyers59/blob/main/Veteran/Veterans.md#us-department-of-defense-dod)  
 [US Department of Veterans Affairs](https://github.com/MikeMyers59/MikeMyers59/new/main#us-department-of-veterans-affairs-dva)  
 [Washington State Department of Veteran Affairs (WDVA)](https://github.com/MikeMyers59/MikeMyers59/blob/main/Veteran/Veterans.md#washington-state-department-of-veteran-affairs-wdva)
@@ -20,6 +20,22 @@
 - [eHome Military Counseling](https://www.emilitarycounseling.com/)
 - [Patriot Link](https://patriotlink.org/): enables all Veterans, their families, caregivers, and survivors access to vetted, direct, cost-free, Veteran services.  
 - [RallyPoint](https://www.rallypoint.com/) - [Discussions](https://www.rallypoint.com/answers/)
+- [Shop Veterans Canteen Service (VCS)](http://shopvcs.com/) online shopping benefit exclusively for Veterans enrolled in VA Healthcare
+- [Together We Served](https://www.togetherweserved.com/) designed to reconnect Veterans
+- [Veterans Evaluation Services (VES)](http://www.vesservices.com) 877-637-8387 6:00 AM – 7:00PM Central – Mon – Friday
+
+###### Oath of Enlistment
+I, (NAME), do solemnly swear (or affirm) that I will support and defend the Constitution of the United States against all enemies, foreign and domestic; that I will bear true faith and allegiance to the same; and that I will obey the orders of the President of the United States and the orders of the officers appointed over me, according to regulations and the Uniform Code of Military Justice. [So help me God.]
+
+Warning: US Military Veteran!  
+![US Military Veteran](https://github.com/MikeMyers59/MikeMyers59/blob/main/Veteran/Veterans%2001.png)
+
+###### Sailor's Creed
+I am a United States Sailor.
+I will support and defend the Constitution of the United States of America and I will obey the orders of those appointed over me.
+I represent the fighting spirit of the Navy and those who have gone before me to defend freedom and democracy around the world.
+I proudly serve my country's Navy combat team with Honor, Courage and Commitment.
+I am committed to excellence and the fair treatment of allUSMV
 
 #### Veteran Cemetaries
 | Name | Location | Email/Phone | Website | 
@@ -39,6 +55,10 @@
 | Seattle National Service Office | 915 2nd AVE Room 1040 Seattle WA, 98174 | Main Office (206) 341-8267 <BR> Fax (206) 220-4171 |  | 
 
 # US Department of Defense (DoD)
+| Name | Location | Email/Phone | Website | 
+| -- | -- | -- | -- |  
+| DoD Self Service Login (DS Logon) |  | Main Office (206) 341-8267 <BR> Fax (206) 220-4171 | https://www.dmdc.osd.mil/identitymanagement/authenticate.do?execution=e1s1 <br> https://myaccess.dmdc.osd.mil/ | 
+| milConnect (DMDC) |  | 800-538-9552 <br> 800-477-8227 | https://milconnect.dmdc.osd.mil/milconnect/ |  
 
 ## Defense Fianance and Accounting Service (DFAS)
 - [DFAS](https://www.dfas.mil/)
