@@ -1,7 +1,14 @@
 #  Markdown
 
-## Use doctoc to create your Table of Contents  
+## Center an Image in MD
+Here are thre ways to get that image centered!
+```html
+<p align="center">  <img src=<ImageURL> /></p>
+<div style="text-align:center"><img src=<ImageURL> /></div>
+<span style="display:block;text-align:center">![Your Image Alt Text] <ImageURL>)</span>
+```
 
+## Use doctoc to create your Table of Contents  
 - [doctoc Install](https://github.com/thlorenz/doctoc)
 
 Adding toc to all files in a directory and sub directories  
