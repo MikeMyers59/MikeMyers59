@@ -143,3 +143,97 @@ Script Call to run an HTA: `runas /user:<user name> "mshta.exe <full path to HTA
 </BODY>
 </HTML>
 ```
+
+## Examples
+
+### Access the HTA Instances attributes and display in the display 
+
+Create the HTA Object ID in the HTA element in the Head section.
+```html
+<HTA:APPLICATION ID="objHTA" … >
+```
+In the HTML's Body Section
+```html
+<!-- How to execute the jsShowProp() script -->
+<BUTTON onclick="jsShowProp()">Retrieve HTA Property Values</BUTTON>
+
+<!-- Display Area designation for the fnShowProp() function -->
+<PRE ID="objPre"> </PRE>
+```
+The Script in the Head section.
+```javascript
+<SCRIPT language="VBScript">
+/* This function also gets the value of commandLine,
+    which cannot be set as an attribute  */
+function jsShowProp(){
+  sTempStr = "applicationName  = " + objHTA.applicationName + "\n" + 
+             "border           = " + objHTA.border          + "\n" +
+             "borderStyle      = " + objHTA.borderStyle     + "\n" + 
+             "caption          = " + objHTA.caption         + "\n" +
+             "commandLine      = " + objHTA.commandLine     + "\n" +
+             "icon             = " + objHTA.icon            + "\n" +
+             "maximizeButton   = " + objHTA.maximizeButton  + "\n" +
+             "minimizeButton   = " + objHTA.minimizeButton  + "\n" + 
+             "showInTaskBar    = " + objHTA.showInTaskBar   + "\n" +
+             "singleInstance   = " + objHTA.singleInstance  + "\n" +  
+             "sysMenu          = " + objHTA.sysMenu         + "\n" + 
+             "version          = " + objHTA.version         + "\n" + 
+             "windowState      = " + objHTA.windowState     + "\n" ;
+	  
+  objPre.innerText = sTempStr;		  
+}
+</SCRIPT>
+```
+
+### Minimize/Maximize an HTA Window  
+The Script in the Head section
+```html
+<SCRIPT type="text/javascript">
+function jsMinWin( ) {
+	try {
+		objMinimizeWindow.Click( );
+	}
+	catch ( err ) {
+		alert( err.message );
+	}
+}
+
+function jsMaxWin( ) {
+	try {
+		objMaximizeWindow.Click( );
+	}
+	catch ( err ) {
+		alert( err.message );
+	}
+};
+</SCRIPT>
+```
+
+The Object in the Body (Last Items)
+```html
+<!-- These are for the required minimize/Maximize function objects -->
+<OBJECT Id="objMinimizeWindow" CLASSID="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+    <param NAME="command" VALUE="minimize">
+</OBJECT>
+<OBJECT id="objMaximizeWindow" classid="clsid:adb880a6-d8ff-11cf-9377-00aa003b7a11">
+  <param name="command" value="maximize" />
+</OBJECT>
+```
+
+
+Call the scripts:
+```html
+<BUTTON onClick="javascript:jsMinWin();">Minimize Application</BUTTON>
+<BUTTON onClick="javascript:jsMaxWin();">Maximize Application</BUTTON>
+```
+
+Use these for VBScript calls:
+```html
+<INPUT type="hidden" name="MaximizeWindow" id="MaximizeWindow" onClick="javascript:jsMaxWin();" />
+<INPUT type="hidden" name="MinimizeWindow" id="MinimizeWindow" onClick="javascript:jsMinWin();" />
+```
+```vbscript
+"vbscript:MinimizeWindow.click" 
+"vbscript:MaximizeWindow.click"
+```
+
