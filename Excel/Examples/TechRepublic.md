@@ -139,3 +139,36 @@ Now that we’ve created the scenarios, we can compare them to determine the bes
 ![Examples 07](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2007.png)  
 As you can see, bringing in two more consultants gets us finished the earliest and at the least additional cost. Excel’s Scenario Manager made this “what if” analysis a snap!  
 
+## Use Check Boxes to Create a List-Totaling Spreadsheet  
+As my office’s resident Excel guru, I often discover handy tricks unknown to many casual Excel users. For example, the Excel’s Scenario feature (select Tools | Scenarios) lets you save different values in the same cells without retyping.  
+But sometimes you may have a list of values you want to total in varying combinations, such as a price list. One way to accomplish this task would be to mark certain cells and then add the values in the associated cells. Unfortunately, this solution is difficult, because:  
+-	Marking a cell requires clicking in a cell, typing a character, and then pressing [Enter].   
+-	Removing a mark involves selecting a cell and pressing [Delete].   
+-	Unless you set up input restrictions, the character used to mark the cell could vary, which might affect conditional formulas.  
+
+Fortunately, Excel’s Forms toolbar offers a much more intuitive solution: check boxes. You can easily set up a spreadsheet list that, when the associated check boxes are selected, totals the values of the selected items. Here’s how to set up an intuitive checklist in Excel 2000.  
+#### Setting up the check boxes  
+We’ll demonstrate the technique with a spreadsheet you may download. The example spreadsheet lists PC components in column A and their prices in column B. Simple functions show how much all the listed components cost and their average prices, but the checklist you build totals the items checked in any combination.  
+First, format column C to a width of 1.86 to hold the check boxes.  
+Invoke the Forms toolbar by navigating to View | Toolbars | Forms or by right-clicking a toolbar and choosing Forms. Select the Check Box tool and then click the cell in column C next to the price of the first component. If necessary, use your arrow keys to nudge the box so it sits squarely over the column (see Figure A). (The check box doesn’t occupy the cell but rather sits on top of it like any Excel object; I will discuss how to take advantage of this property in a moment.)  
+**Figure A**  
+![Examples 08](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2008.png)  
+Now you’ll need to format the check box. First, select the default check box text and delete it. Now, either select the Control Properties button on the Forms toolbar or right-click your new check box and choose Format Control. The Format Control dialog box appears. Enter the address of the cell beneath the check box in the Cell link text box, as shown in Figure B, and click OK.  
+**Figure B**  
+![Examples 09](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2009.png)  
+Unfortunately, this process can get a bit tedious, as you need to repeat it for each item. However, you can’t simply copy and paste one formatted check box because doing so selects all items when you check any one box.  
+When you’re finished creating the check boxes, you can improve their appearance by dragging or nudging them individually, or you can use a quick method to align them. Select the Arrow tool on the Drawing toolbar. Shift-click each check box to select them. From the Drawing toolbar’s Draw menu, select Align or Distribute and then choose Align Left, as shown in Figure C. (Don’t choose Align Center; since the check boxes might be of different widths, doing so would skew the column.) Be sure to deselect the Arrow tool when you’ve finished.  
+**Figure C**  
+![Examples 10](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2010.png)  
+Now, since the check boxes are currently deselected, the cells they’re over (and linked to) hold a value of False. The value becomes True when the check box is selected and reverts to False when deselected. You can take advantage of this fact to create some conditional formulas that’ll total the selected components.  
+#### The formulas  
+As we mentioned, the SUM function in cell F4 adds the prices in column B. To keep them inconspicuous, we’ll put the conditional formulas in column H. Our first item is in row 4, so in cell H4, enter:  
+`=IF(C4=TRUE,B4,"")`  
+Use Excel’s Fill feature to copy the formula to the other rows. Now, in cell F6, enter a simple SUM function that adds the values in column H. That’s all there is to it!  
+Now when the user selects a check box, the value of the underlying cell becomes True. (By setting the width of column C to 1.86, you prevent the text from appearing.) Excel displays the corresponding value in column H and adds it to the total in cell F6 (see Figure D). If you want, you can format column H so the values are invisible by making the text color white, as shown in the downloadable example.  
+**Figure D**  
+![Examples 11](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2011.png)  
+One nice thing about the check box technique is that it works even if the list is reordered. As you can see in Figure E, we’ve sorted the list by price, but the spreadsheet still functions exactly as before. Of course, if you add items to the list, you’ll need to add corresponding check boxes, and if you delete an item, be sure to delete its check box!  
+**Figure E**  
+![Examples 12](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2012.png)  
+
