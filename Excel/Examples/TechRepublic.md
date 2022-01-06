@@ -1,4 +1,4 @@
-# Excel Examples from TEchRepublic
+# Excel Examples from TechRepublic
 
 ## Create custom Excel add-ins ([TechRepublic Examples.xls](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/TechRepublic%20Examples.xls) & [SpecialButtons.xla](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/SpecialButtons.xla))
 Although the add-ins that come with Excel are quite useful, you can also create your own custom add-ins that can be helpful to your Excel users. The add-in sample referred to in this article will create a new toolbar with two new buttons on it. The new buttons will enable you to make a single click when you want to perform the commands `Copy | Paste | Special Values `(CPSV) or `Paste | Special Values` (PSV). This comes in handy when you have cells containing formulas and you want to remove that formula and just show the resulting value.  
