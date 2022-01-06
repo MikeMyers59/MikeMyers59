@@ -26,5 +26,8 @@ Make a commandlet to run your HTA.
 
 | Variable Name | Description |  
 | ---- | --- |
+| %COMPUTERNAME%| |  
+| %USERNAME%| |  
+| %USERPROFILE%|Returns the folder for the current user in the form C:\Users\<UserName> |  
 | %WINDIR% | Typically `C:\Windows\System` unless you chose to install it somewhere else. |
 
