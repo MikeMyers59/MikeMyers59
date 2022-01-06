@@ -27,3 +27,17 @@
 | Start Excel in Safe Mode|Hold CTRL key and click on Excel icon <br> In the Windows Start Menu’s Search Box, type Excel /s and enter. |  
 | Set Number to minimum number of displayed digits|Select cell(s). Expand Number from the Home Ribbon (click arrow). Select Custom then add #,#00 in Type field for a minimum of two digit display with optional comma separation for larger numbers. <br> ![Process 01](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Process%2001.png) |  
 
+## Script Examples
+  
+### Create a File Based on Spreadsheet Information
+```vba
+Sub SaveCustFile()  
+  Dim strWkbkName As String  
+  strWkbkName  = ActiveWorkbook.Sheets("Sheetl").Cells(2,3).Value & " "  
+  strWkbkName = strWkbkName  & ActiveWorkbook.Sheets("Sheetl").Cells(2,4).Value  
+  ActiveWorkbook.SaveAs  Environ$("UserProfile") & "\Documents\" & strWkbkName  
+  FileFormat := xlOpenXMLWorkbookMacroEnabled  
+End Sub
+```
+  
+  
