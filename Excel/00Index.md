@@ -1,5 +1,8 @@
 # Excel
 
+![Excel Logo 1](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Excel%20Logo%201.png) ![Excel Logo 2](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Pics/Excel%20Logo%202.png)  
+- [The Excel Addict](http://www.theexceladdict.com/)
+
 ## Constants, Predefined 
 | Constant | Type | Value | Description |  
 | -- | -- | -- | -- |  
