@@ -82,7 +82,7 @@ Once you've copied the file to your client, open Excel. Go to Tools | Add-Ins an
 ![Example 01](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2001.png)  
 If the toolbar doesn't appear automatically, go to View | Toolbars and select SpecialButtons. Drag-and-drop it with all the other toolbars, and it will lock into place. From then on, when you open Excel, the add-in will be called upon and it will verify that the toolbar exists, and then create it, if needed.  
 
-## Password Generator  ([TechRepublic Examples.xls](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/TechRepublic%20Examples.xls))
+## Password Generator  ([TechRepublic Examples.xls](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/TechRepublic%20Examples.xls))  
 The heart of the random password generator is the RAND() function. By itself, the function returns a decimal value between 0 and 1. However, if you multiply this number by a particular value, you can generate a number within a specified range. For this spreadsheet, I wanted an equal chance of generating an uppercase letter, a lowercase letter, and a number.   
 To begin, I want to generate a number between one and 15 using this code:   
 `=RAND()*(15-1)+1`  
@@ -102,4 +102,40 @@ Now all we need is a CONCATENATE() function in cell A110 to assemble the passwor
 #### Putting it all together  
 Here’s how to combine the functions into a spreadsheet. Place the RAND() functions into cells F100:F107 to obscure the spreadsheet’s workings. A message to the user at the top of the screen and a simple cell reference (=A110) provides the eight-character password. Figure B shows the final spreadsheet. (We’ve hidden the intervening blank rows so you can see all the active cells.)  
 To use the spreadsheet to generate random passwords, all you have to do is press F9, which causes Excel to recalculate the random numbers. If you wanted to weigh the possibility of uppercase or lowercase letters or numbers more heavily, you can adjust the values in the nested IF functions or alter the values to eliminate one type of character altogether.  
+
+## Manage Multiple Possibilities with Excel Scenarios ([TechRepublic Examples.xls](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/TechRepublic%20Examples.xls))  
+An Excel spreadsheet is a wonderful tool for “what if” analysis because you can change results throughout the workbook by editing a single cell. A disadvantage to this process, however, is that it isn’t always easy or convenient to restore the original values, especially when you’re changing multiple cells.  
+Fortunately, Excel offers the Scenario Manager, which allows you to substitute values in a number of cells and save that condition under a unique name. By invoking a number of scenarios, you can easily demonstrate to customers and managers the impact of different events or possibilities.  
+#### The original scenario  
+Let’s quickly recap the situation. We’re beginning a software rollout on Dec. 1, and we have to be finished by the end of the year. The project will require at least 160 hours of work. We currently have one technician available for the job, but we can hire more from a consulting firm for a $200-a-head surcharge. Technicians make a standard $50 an hour ($75 overtime).   
+We’ll assume that we can’t fudge the amount of time the project will take (we set up the spreadsheet with some conditional formatting to warn us if the total hours don’t equal 160) or begin prior to Dec. 1 (actually Dec. 3 since Dec. 1 is a Saturday). While only a one-hour adjustment can bring us back to Dec. 31, we’ll also assume that finishing early is desirable, and there’s even extra money in the budget! Therefore, our options are to bring in more contractors, allow overtime, or both.  
+#### Applying scenarios  
+Although you can use the Scenario Manager to apply a nigh-infinite number of combinations, we’ll restrict the scenarios we examine to two: paying our sole contractor some overtime or hiring additional contractors. Once we’ve created the scenarios, we’ll be able to compare our solutions. First, we’ll invoke the Scenario Manager to save our current (and unacceptable) condition.  
+Choose Scenarios from the Tools menu. In the Scenario Manager dialog box, click Add. In the resulting dialog box, type Original in the Scenario Name text box, as shown in Figure A. Click OK.  
+**Figure A**  
+![Examples 02](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2002.png)  
+Even though this scenario will reflect the spreadsheet’s current values, we have to establish the range of cells that will potentially change so we can restore their values. In the Changing Cells text box, type D8:D10 or use the Collapse Dialog button at the right side of the text box to manually select the cells that hold the # Technicians, Regular Hours, and OT Hours values.  
+When you click OK, you’ll see the Scenario Values dialog box. Ensure the values for cells D8, D9, and D10 are 1, 160, and 0, respectively, as shown in Figure B, and click OK.  
+**Figure B**  
+![Examples 03](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2003.png)  
+#### Single contractor overtime  
+Now let’s see what happens when we pay our current technician a bit of overtime to get the job done faster. We’ll authorize 40 hours of overtime, leaving 120 standard hours. The Scenario Manager dialog box should still be active; if not, choose Tools | Scenarios. In the Scenario Manager dialog box, click Add. In the Add Scenario dialog box, call this scenario Single Contractor Overtime. (Be as descriptive as possible so you can distinguish the scenarios later.)  
+When you click OK, you’ll again see the Scenario Values dialog box. This time, we’ll provide new values. For cell D9, type 120 and enter 40 in the text box for cell D10; the value in D8 remains the same.  
+Click OK, ensure that the Single Contractor Overtime scenario is selected, and click Show. Excel reports that we now finish on Dec. 21 with an additional $1,000 cost, as you can see in Figure C.  
+**Figure C**  
+![Examples 04](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2004..png)  
+We now have a solution, but is it the most cost-effective one? Here’s where the Scenario Manager really shines: By letting you easily switch between different data sets, you can quickly determine the best solution. In this case, since the Scenario Manager dialog box doesn’t obscure any of the changing cells (a luxury you might not always enjoy), you can even click back and forth between scenarios and observe the changes instantly.  
+#### Three contractors  
+In the Scenario Manager dialog box, click Add again. The Add Scenario dialog box appears. In the Scenario Name text box, type Three Consultants. The Changing Cells (D8:D10) should already appear in the proper text box; if not, enter that range. Click OK to invoke the Scenario Values dialog box.  
+Now let’s see what happens when we bring in two outside consultants (by charging $200 for each additional technician, we ensured that values would be different for various combinations). Enter 3 in the text box for cell D8 and 0 in the text box for cell D10. This time, there’s a twist: Since 160 doesn’t divide equally among 3, we’ll enter a formula, not a value, for cell D9. In cell D9’s text box, type =160/3. When you click OK, you’ll see the message box shown in Figure D, informing you that Excel converted your formula into a value.  
+**Figure D**  
+![Examples 05](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2005.png)  
+Click OK to dismiss the message, and Excel returns you to the Scenario Manager dialog box. Sure enough, when you select Three Contractors and click Show, Excel displays 53.3333333 in cell D9, as you can see in Figure E. Nevertheless, the total hours are exactly 160; recall that we’d established conditional formatting to highlight cell D16 if it contained any other value. This scenario gives us a completion date of 12/10 with a cost of $8,400.  
+**Figure E**  
+![Examples 06](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2006.png)  
+#### Compare the possibilities  
+Now that we’ve created the scenarios, we can compare them to determine the best solution. Figure F summarizes the results.  
+**Figure F**  
+![Examples 07](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/Examples%2007.png)  
+As you can see, bringing in two more consultants gets us finished the earliest and at the least additional cost. Excel’s Scenario Manager made this “what if” analysis a snap!  
 
