@@ -1,6 +1,6 @@
 # Excel Examples from TEchRepublic
 
-## Password Generator  ([TechRepublic.xls]())
+## Password Generator  ([TechRepublic Examples.xls](https://github.com/MikeMyers59/MikeMyers59/blob/main/Excel/Examples/TechRepublic%20Examples.xls))
 The heart of the random password generator is the RAND() function. By itself, the function returns a decimal value between 0 and 1. However, if you multiply this number by a particular value, you can generate a number within a specified range. For this spreadsheet, I wanted an equal chance of generating an uppercase letter, a lowercase letter, and a number.   
 To begin, I want to generate a number between one and 15 using this code:   
 `=RAND()*(15-1)+1`  
