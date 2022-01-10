@@ -1,2 +1,0 @@
-# Pictures related to Excel
-

@@ -1,2 +1,0 @@
-# Cash Handling Example
-

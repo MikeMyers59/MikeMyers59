@@ -2,32 +2,13 @@
 
 #### Commadn Prompt (CMD) Executable Files
 
-- .com
-- .exe
-- .bat
-- .cmd
-
 | Command | Description |  
 | --- | --- |  
-| REM | Comment line, ignored by processor. |
-
-
-## Commandlets
-
-#### MSHTML
-
-Make a commandlet to run your HTA.
-
-1. Create a new text file and open with Notepad.
-2. Type into the text file (you may have to use quotes if the path to the .hta has spaces) '%WINDIR%\system32\mshta.exe "FULLPATH_OF_HTA\FILENAME.hta"'
-3. Save the text file, then change the extension from .txt to .cmd
+|  |   |
 
 ## Environmental Variables
 
 | Variable Name | Description |  
 | ---- | --- |
-| %COMPUTERNAME%| |  
-| %USERNAME%| |  
-| %USERPROFILE%|Returns the folder for the current user in the form C:\Users\<UserName> |  
-| %WINDIR% | Typically `C:\Windows\System` unless you chose to install it somewhere else. |
+|  | |  
 
