@@ -7,6 +7,7 @@
 - [<CDNJS>](https://cdnjs.com/) & https://github.com/cdnjs/cdnjs 
 - https://github.com/olivierloverde/minutes-of-javascript  
 - https://github.com/markodenic/web-development-resources  
+- https://github.com/devalot/webdev/tree/master/content/js 
 
 # CSS
 CSS seems deceptively straightforward, but there are many challenges when trying to style an app perfectly for all browsers and all screen sizes. CSS-Grid and Flexbox are tools that have been developed to make the job a little more structured and more reliable. Learn about these tools by playing [Flexbox Froggy](https://flexboxfroggy.com/) and [Grid Garden](https://codepip.com/games/grid-garden/).

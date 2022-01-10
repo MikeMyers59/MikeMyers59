@@ -1,9 +1,10 @@
 #  Git Commands
 
-- https://github.com/FourMInfo/DevOps-Space/wiki/Git-and-Github
-- https://github.com/tja4472/wiki/wiki/Git-Hub-Pull-Request
-- https://github.com/markcheret/footnotes/wiki/Git-Tips
-- [Git Cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/)
+- [GIT Commands](https://git-scm.com/docs)  
+- https://github.com/FourMInfo/DevOps-Space/wiki/Git-and-Github  
+- https://github.com/tja4472/wiki/wiki/Git-Hub-Pull-Request  
+- https://github.com/markcheret/footnotes/wiki/Git-Tips  
+- [Git Cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet/)  
 
 | Git Command | Description |  
 | --- | --- |  
@@ -25,6 +26,8 @@
 | git push --set-upstream origin <BranchName> | Send your new branch to GitHub |  
 | git branch -d <BranchName> | Clean up, delete obsolete branch |  
 | git clone https://github.com/<ProjectURL> | Copy a community repository into your own space |  
+| git reflog | List of every thing you've done in git, across all branches! |  
+| git reset HEAD@{index} | Rolls git Head back to the <Index> |  
 
 ### Typical Actions to Save new information
 ```git
