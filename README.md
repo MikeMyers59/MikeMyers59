@@ -15,5 +15,6 @@ GitHub Markdown is different and requires some changes from standard md files. C
 Popular git repositories: [GitHub](https://github.com/) and [BitBucket](https://bitbucket.org/). 
 
 Other Code Storage Sites:
+- [CodePip](https://codepip.com/)
 - [CodePlex](https://www.CodePlex.com/)
 - [SourceForge](http://www.sourceforge.net/)

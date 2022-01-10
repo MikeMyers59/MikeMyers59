@@ -1,47 +1,19 @@
 # Hold Area
 
-# Editors
-One of the most crucial tools for software development is the editor. Editors are where you write your code and sometimes where you will run your code.  
-Developers rely on editors for a few additional reasons:  
-- **Debugging** Discovering bugs and errors by stepping through code, line by line. Some editors have debugging capabilities, or can be customized and added for specific programming languages.  
-- **Syntax highlighting** Adds colors and text formatting to code, makes it easier to read. Most editors allow customized syntax highlighting.
-- **Extensions and Integrations** Additions that are specialized for developers, by developers, for access to additional tools that aren't built into the base editor. For example, many developers also need a way to document their code and explain how it works and will install a spell check extension to check for typos. Most of these additions are intended for use within a specific editor, and most editors come with a way to search for available extensions.
-- **Customization** Most editors are extremely customizable, and each developer will have their own unique development environment that suits their needs. Many also allow developers to create their own extensions.  
+🤖 🎨 🚀 ✨ ⭐ ⚡  
 
-### Popular Editors and Web Development Extensions
-- [Visual Studio Code](https://code.visualstudio.com/)
-  - [Code Spell Checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-  - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare-pack)
-  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-- [Atom](https://atom.io/)
-  - [spell-check](https://atom.io/packages/spell-check)
-  - [teletype](https://atom.io/packages/teletype)
-  - [atom-beautify](https://atom.io/packages/atom-beautify)
+- https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/5-browser-extension/1-about-browsers
+- https://www.webdevsimplified.com & https://github.com/WebDevSimplified 
+- [<CDNJS>](https://cdnjs.com/) & https://github.com/cdnjs/cdnjs 
+- https://github.com/olivierloverde/minutes-of-javascript  
+- https://github.com/markodenic/web-development-resources  
 
-# Browsers
-Another crucial tool is the browser. Web developers rely on the browser to observe how their code runs on the web, it's also used to view visual elements of a web page that are written in the editor, like HTML.
-Many browsers come with *developer tools* (DevTools) that contain a set of helpful features and information to assist developers to collect and capture important insights about their application. For example: If a web page has errors, it's sometimes helpful to know when they occurred. DevTools in a browser can be configured to capture this information.
+# CSS
+CSS seems deceptively straightforward, but there are many challenges when trying to style an app perfectly for all browsers and all screen sizes. CSS-Grid and Flexbox are tools that have been developed to make the job a little more structured and more reliable. Learn about these tools by playing [Flexbox Froggy](https://flexboxfroggy.com/) and [Grid Garden](https://codepip.com/games/grid-garden/).
 
-### Popular Browsers and DevTools
-- [Edge](https://docs.microsoft.com/microsoft-edge/devtools-guide-chromium?WT.mc_id=academic-13441-cxa)
-- [Chrome](https://developers.google.com/web/tools/chrome-devtools/)
-- [Firefox](https://developer.mozilla.org/docs/Tools)
-
-# Command Line Options
-Options for the command line will differ based on the operating system you use.
-*💻 = comes preinstalled on the operating system.*
-
-### Windows
-- [Powershell](https://docs.microsoft.com/powershell/scripting/overview?view=powershell-7?WT.mc_id=academic-13441-cxa) 💻
-- [Command Line](https://docs.microsoft.com/windows-server/administration/windows-commands/windows-commands?WT.mc_id=academic-13441-cxa) (also known as CMD) 💻
-- [Windows Terminal](https://docs.microsoft.com/windows/terminal/?WT.mc_id=academic-13441-cxa)
-- [mintty](https://mintty.github.io/)
-- [Bash](https://www.gnu.org/software/bash/manual/html_node/index.html) 💻
-
-### Popular Command Line Tools
-- [Git](https://git-scm.com/) (💻 on most operating systems)
-- [NPM](https://www.npmjs.com/)
-- [Yarn](https://classic.yarnpkg.com/en/docs/cli/)
+# HTML
+- [Accessible Rich Internet Applications (ARIA)](https://developer.mozilla.org/docs/Web/Accessibility/ARIA)  
+- [Learn WebDev from Microsoft](https://docs.microsoft.com/en-us/learn/modules/build-simple-website/?WT.mc_id=academic-13441-cxa)
 
 # WWW: World Wide Web
 
@@ -52,21 +24,262 @@ Options for the command line will differ based on the operating system you use.
 - [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
 
 
-# Git Commands
-| Command | Description |  
-| -- | -- |  
-| git config --global user.name <your-name> | Set User Name Setting |  
-| git config --global user.email <your-email> | Set EMail setting |  
-| git config --list | List Configuration settings |  
-| git init | Intialize a new repository |  
-| git status | Check git status |  
-| git add . | Move all files/folders to staging area |  
-| git add <FileFolderName> | Move file/folder to staging area |  
-| git reset | Unstage all |  
 
-# GitHub
-| Action | Description |  
-| -- | -- |  
-| Go to GitHub WebDev | Open GitHub, Select a Repository, Select a Code file, in the view page type `.` to open WebDev. |  
-| Open Git Hub WebDev | Use the URL `https://github.dev/<UserName>/<ReposName>/` for example: `https://github.dev/MikeMyers59/MikeMyers59/` |  
+## Docs
+
+* 📓 http://developer.mozilla.org
+* 📓 http://w3schools.com
+* 📓 http://w3docs.com
+* 📓 http://devdocs.io
+* 📓 http://web.dev
+* 📓 https://free-for.dev
+
+## Free hosting
+
+* ⚡️ http://netlify.com
+* ⚡️ http://firebase.google.com
+* ⚡️ http://aws.amazon.com
+* ⚡️ http://heroku.com
+* ⚡️ [GitHub Pages](http://pages.github.com)
+* ⚡️ http://vercel.com
+* ⚡️ http://surge.sh
+* ⚡️ http://render.com
+* ⚡️ [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages)
+
+## Learning Platforms
+
+* 🎓 http://freecodecamp.org
+* 🎓 http://codecademy.com
+* 🎓 http://javascript30.com
+* 🎓 http://frontendmentor.io
+* 🎓 http://testautomationu.applitools.com
+* 🎓 http://coursera.org
+* 🎓 http://khanacademy.org
+* 🎓 http://sololearn.com
+* 🎓 https://javascript.info
+* 🎓 https://www.udemy.com
+
+## Coding Challenge Platforms
+
+* ⌨️ http://codewars.com
+* ⌨️ http://topcoder.com
+* ⌨️ http://codingame.com
+* ⌨️ http://hackerrank.com
+* ⌨️ http://projecteuler.net
+* ⌨️ http://coderbyte.com
+* ⌨️ http://codechef.com
+* ⌨️ http://exercism.io
+* ⌨️ http://leetcode.com
+* ⌨️ http://spoj.com
+
+## Freelancing platforms
+
+* 💰 http://toptal.com
+* 💰 http://upwork.com
+* 💰 http://freelancer.com
+* 💰 http://peopleperhour.com
+* 💰 http://simplyhired.com
+* 💰 http://envato.com
+* 💰 http://guru.com
+* 💰 http://fiverr.com
+* 💰 http://hireable.com
+* 💰 http://6nomads.com
+
+## Free CC-0 Photo Stocks
+
+* 📷 http://unsplash.com
+* 📷 http://pixabay.com
+* 📷 http://pexels.com
+* 📷 http://morguefile.com
+* 📷 http://freephotosbank.com
+* 📷 http://stockvault.net
+* 📷 http://freeimages.com
+* 📷 http://search.creativecommons.org
+
+## Illustrations
+
+* 🌠 http://undraw.co/illustrations
+* 🌠 http://drawkit.io
+* 🌠 http://icons8.com/ouch
+* 🌠 http://iradesign.io
+* 🌠 http://interfacer.xyz
+* 🌠 http://blush.design
+
+## Icons
+
+* 🍩 http://fontawesome.com
+* 🍩 http://flaticon.com
+* 🍩 http://icons8.com
+* 🍩 http://material.io/resources/icons
+* 🍩 http://iconmonstr.com
+* 🍩 https://heroicons.dev
+* 🍩 https://www.abstractapi.com/user-avatar-api
+
+## Fonts
+
+* ✒️ http://fonts.google.com
+* ✒️ http://fontspace.com
+* ✒️ http://1001fonts.com
+* ✒️ http://fontsquirrel.com
+
+## Color Palettes
+
+* 🎨 http://coolors.co
+* 🎨 http://colorhunt.co
+* 🎨 http://paletton.com
+* 🎨 http://color-hex.com
+* 🎨 http://mycolor.space
+
+## Podcasts
+
+* 🎙 [Syntax](https://syntax.fm)
+* 🎙 [Fullstack radio](https://www.fullstackradio.com)
+* 🎙 [The Changelog](https://changelog.com/podcast)
+* 🎙 [The Laracasts Snippet](https://laracasts.com/podcast)
+* 🎙 [Front End Happy Hour](https://frontendhappyhour.com/)
+* 🎙 [JavaScript Jabber Archives](https://devchat.tv/podcasts/js-jabber)
+* 🎙 [Commit Your Code!](https://anchor.fm/commityourcode)
+* 🎙 [Shop Talk](https://shoptalkshow.com)
+* 🎙 [Ladybug Podcast](https://www.ladybug.dev)
+* 🎙 [CodePen Radio](https://blog.codepen.io/radio)
+* 🎙 [JAMStack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio)
+* 🎙 [Modern web](https://www.thisdot.co/modern-web)
+
+## UI Inspiration
+
+* 🤔 http://uimovement.com
+* 🤔 http://uigarage.net
+* 🤔 http://collectui.com
+* 🤔 https://dribbble.com
+* 🤔 https://ui-patterns.com
+
+## Chrome Extensions
+
+* 🔖 [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)
+* 🔖 [CSSViewer](https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce)
+* 🔖 [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
+* 🔖 [JSONView](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
+* 🔖 [Lorem Ipsum Generator](https://chrome.google.com/webstore/detail/lorem-ipsum-generator/pglahbfamjiifnafcicdibiiabpakkkb)
+* 🔖 [VisBug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc)
+* 🔖 [Colorblindly](https://chrome.google.com/webstore/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg)
+* 🔖 [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
+* 🔖 [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni)
+* 🔖 [ColorPick Eyedropper](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg)
+* 🔖 [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi)
+* 🔖 [Dimensions](https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj)
+
+## Website Optimization Tools
+
+* ⚡ [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)
+* ⚡ [GTmetrix](https://gtmetrix.com)
+* ⚡ [WebPageTest](https://www.webpagetest.org)
+* ⚡ [Yslow](http://yslow.org)
+* ⚡ [CrUX](https://crux.run)
+
+## API's
+* 🤖 [Abstract API](https://www.abstractapi.com)
+* 🤖 [RapidAPI](https://www.rapidapi.com)
+
+
+## Photos:
+
+| Website |
+| ------- |
+| https://unsplash.com |    
+| https://pixabay.com |  
+| https://pexels.com | 
+| https://reshot.com | 
+| https://librestock.com |
+| https://visualhunt.com | 
+| https://freephotos.cc | 
+| https://picjumbo.com | 
+| https://www.pxfuel.com |
+| https://www.splitshire.com |
+
+
+## Illustrations:
+
+| Website |
+| ------- |
+| https://www.opendoodles.com |
+| https://undraw.co/illustrations |  
+| https://drawkit.io |  
+| https://icons8.com/ouch |  
+| https://iradesign.io |  
+| https://interfacer.xyz |  
+| https://blush.design |
+| https://avataaars.com |
+| https://storyset.com |
+| https://themeisle.com/illustrations/ |
+| https://www.manypixels.co/gallery |
+
+## Icons:
+
+| Website |
+| ------- |
+| https://fontawesome.com |  
+| https://flaticon.com |  
+| https://icons8.com |  
+| https://iconfinder.com |  
+| https://material.io/resources/icons |  
+| https://iconmonstr.com | 
+| https://heroicons.com |
+| https://boxicons.com |
+| https://css.gg/ |
+| https://lineicons.com/ |
+| https://icons.eosdesignsystem.com/ |
+| https://icons.modulz.app |
+| https://remixicon.com |
+| https://tablericons.com |
+| https://simpleicons.org |
+| https://feathericons.com |
+| https://svgrepo.com/ |
+| https://iconic.app |
+| https://icomoon.io/ |
+| https://iconscout.com/unicons |
+| https://holasvg.com/icons |
+| https://fontello.com/ |
+| https://fontastic.me/ |
+
+## Fonts:
+
+| Website |
+| ------- |
+| https://fonts.google.com |  
+| https://fontspace.com |  
+| https://1001fonts.com |  
+| https://fontsquirrel.com |
+| https://ffonts.net |  
+| https://fontfabric.com |  
+| https://urbanfonts.com |
+
+## Learning Platforms:
+
+| Website |
+| ------- |
+| https://freecodecamp.org |
+| https://www.lambdatest.com/learning-hub/ |  
+| https://codecademy.com |  
+| https://javascript30.com |  
+| https://frontendmentor.io |  
+| https://testautomationu.applitools.com |  
+| https://coursera.org |  
+| https://edx.org |  
+| https://khanacademy.org |    
+| https://sololearn.com |
+| https://www.theodinproject.com |
+| https://javascript.info/ |
+| https://vueschool.io/ |
+| https://www.guru99.com/ |
+| https://trailhead.salesforce.com/ |
+| https://ocw.mit.edu/ |
+| https://open.appacademy.io/ |
+| https://web.dev/ |
+| https://scrimba.com |
+| https://thegymnasium.com |
+| https://www.amigoscode.com |
+| https://cssbattle.dev/ |
+| https://bento.io/ |
+| https://fullstackopen.com/en/ |
+| https://upskillcourses.com/courses |
 
