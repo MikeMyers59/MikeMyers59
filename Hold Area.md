@@ -1,6 +1,6 @@
 # Hold Area
 
-🤖 🎨 🚀 ✨ ⭐ ⚡  
+ 
 
 - https://github.com/microsoft/Web-Dev-For-Beginners/tree/main/5-browser-extension/1-about-browsers
 - https://www.webdevsimplified.com & https://github.com/WebDevSimplified 
@@ -25,7 +25,6 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 - [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
 
 ## Docs
-
 * 📓 http://developer.mozilla.org
 * 📓 http://w3schools.com
 * 📓 http://w3docs.com
@@ -34,7 +33,6 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 * 📓 https://free-for.dev
 
 ## Free hosting
-
 * ⚡️ http://netlify.com
 * ⚡️ http://firebase.google.com
 * ⚡️ http://aws.amazon.com
@@ -45,21 +43,7 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 * ⚡️ http://render.com
 * ⚡️ [GitLab Pages](https://docs.gitlab.com/ee/user/project/pages)
 
-## Learning Platforms
-
-* 🎓 http://freecodecamp.org
-* 🎓 http://codecademy.com
-* 🎓 http://javascript30.com
-* 🎓 http://frontendmentor.io
-* 🎓 http://testautomationu.applitools.com
-* 🎓 http://coursera.org
-* 🎓 http://khanacademy.org
-* 🎓 http://sololearn.com
-* 🎓 https://javascript.info
-* 🎓 https://www.udemy.com
-
 ## Coding Challenge Platforms
-
 * ⌨️ http://codewars.com
 * ⌨️ http://topcoder.com
 * ⌨️ http://codingame.com
@@ -72,7 +56,6 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 * ⌨️ http://spoj.com
 
 ## Freelancing platforms
-
 * 💰 http://toptal.com
 * 💰 http://upwork.com
 * 💰 http://freelancer.com
@@ -84,45 +67,7 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 * 💰 http://hireable.com
 * 💰 http://6nomads.com
 
-## Free CC-0 Photo Stocks
-
-* 📷 http://unsplash.com
-* 📷 http://pixabay.com
-* 📷 http://pexels.com
-* 📷 http://morguefile.com
-* 📷 http://freephotosbank.com
-* 📷 http://stockvault.net
-* 📷 http://freeimages.com
-* 📷 http://search.creativecommons.org
-
-## Illustrations
-
-* 🌠 http://undraw.co/illustrations
-* 🌠 http://drawkit.io
-* 🌠 http://icons8.com/ouch
-* 🌠 http://iradesign.io
-* 🌠 http://interfacer.xyz
-* 🌠 http://blush.design
-
-## Icons
-
-* 🍩 http://fontawesome.com
-* 🍩 http://flaticon.com
-* 🍩 http://icons8.com
-* 🍩 http://material.io/resources/icons
-* 🍩 http://iconmonstr.com
-* 🍩 https://heroicons.dev
-* 🍩 https://www.abstractapi.com/user-avatar-api
-
-## Fonts
-
-* ✒️ http://fonts.google.com
-* ✒️ http://fontspace.com
-* ✒️ http://1001fonts.com
-* ✒️ http://fontsquirrel.com
-
 ## Color Palettes
-
 * 🎨 http://coolors.co
 * 🎨 http://colorhunt.co
 * 🎨 http://paletton.com

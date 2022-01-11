@@ -1,12 +1,15 @@
 # Media  
 
-[Fonts]()
-[Icons]()
-[Illustrations]()
-[Learning Platforms]()
+🤖 🎨 🚀 ✨ ⭐ ⚡ 
+
+## Contents
+[Fonts](https://github.com/MikeMyers59/MikeMyers59/blob/main/Media.md#fonts)
+[Icons](https://github.com/MikeMyers59/MikeMyers59/blob/main/Media.md#icons)
+[Illustrations](https://github.com/MikeMyers59/MikeMyers59/blob/main/Media.md#illustrations)
+[Learning Platforms](https://github.com/MikeMyers59/MikeMyers59/blob/main/Media.md#learning-platforms)
 [Magazines](https://github.com/MikeMyers59/MikeMyers59/blob/main/Media.md#magazines)  
-[Photos]()
-[Podcasts]()
+[Photos](https://github.com/MikeMyers59/MikeMyers59/blob/main/Media.md#photos)
+[Podcasts](https://github.com/MikeMyers59/MikeMyers59/blob/main/Media.md#podcasts)
 
 ### [Microsoft](https://www.microsoft.com/en-us/)  
 - [Code Examples](https://docs.microsoft.com/en-us/samples/browse/) 
@@ -15,20 +18,22 @@
 
 ### [Stackoverflow](https://stackoverflow.com/)  
 
-# Fonts
+# ✒️ Fonts
 | Website |
 | ------- |
 | https://1001fonts.com |  
 | https://ffonts.net |  
+| http://fontawesome.com |  
 | https://fontfabric.com |  
 | https://fonts.google.com |  
 | https://fontspace.com |  
-| https://fontsquirrel.com |
+| https://fontsquirrel.com |  
 | https://urbanfonts.com |
 
-# Icons
+# 🍩 Icons
 | Website |
-| ------- |
+| ------- |  
+| https://www.abstractapi.com/user-avatar-api |  
 | https://boxicons.com |
 | https://css.gg/ |
 | https://feathericons.com |
@@ -53,7 +58,7 @@
 | https://svgrepo.com/ |
 | https://tablericons.com |  
 
-# Illustrations
+# 🌠 Illustrations
 | Website |
 | ------- |
 | https://avataaars.com |
@@ -68,7 +73,7 @@
 | https://www.manypixels.co/gallery |
 | https://www.opendoodles.com |  
 
-# Learning Platforms
+# 🎓 Learning Platforms
 | Website | Free |  
 | ------- | -- |  
 | https://bento.io/ |  |  
@@ -96,37 +101,43 @@
 | https://www.guru99.com/ |  |  
 | https://www.lambdatest.com/learning-hub/ |  |    
 | https://www.theodinproject.com |  |  
+| https://www.udemy.com |  |  
 
 # Magazines  
 - [PC Mag](www.pcmag.com/)   
 
 
-# Photos
+# 📷 Photos
 | Website |
 | ------- |
+| http://freeimages.com |  
 | https://freephotos.cc | 
+| http://freephotosbank.com |  
 | https://librestock.com |
+| http://morguefile.com |  
 | https://pexels.com | 
 | https://picjumbo.com | 
 | https://pixabay.com |  
 | https://reshot.com | 
+| http://search.creativecommons.org |  
+| http://stockvault.net |  
 | https://unsplash.com |    
 | https://visualhunt.com | 
 | https://www.pxfuel.com |
 | https://www.splitshire.com |
 
 
-# Podcasts
-* 🎙 [CodePen Radio](https://blog.codepen.io/radio)
-* 🎙 [Commit Your Code!](https://anchor.fm/commityourcode)
-* 🎙 [Front End Happy Hour](https://frontendhappyhour.com/)
-* 🎙 [Fullstack radio](https://www.fullstackradio.com)
-* 🎙 [JAMStack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio)
-* 🎙 [JavaScript Jabber Archives](https://devchat.tv/podcasts/js-jabber)
-* 🎙 [Ladybug Podcast](https://www.ladybug.dev)
-* 🎙 [Modern web](https://www.thisdot.co/modern-web)
-* 🎙 [Shop Talk](https://shoptalkshow.com)
-* 🎙 [Syntax](https://syntax.fm)
-* 🎙 [The Changelog](https://changelog.com/podcast)
-* 🎙 [The Laracasts Snippet](https://laracasts.com/podcast)
+# 🎙 Podcasts
+* [CodePen Radio](https://blog.codepen.io/radio)
+* [Commit Your Code!](https://anchor.fm/commityourcode)
+* [Front End Happy Hour](https://frontendhappyhour.com/)
+* [Fullstack radio](https://www.fullstackradio.com)
+* [JAMStack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio)
+* [JavaScript Jabber Archives](https://devchat.tv/podcasts/js-jabber)
+* [Ladybug Podcast](https://www.ladybug.dev)
+* [Modern web](https://www.thisdot.co/modern-web)
+* [Shop Talk](https://shoptalkshow.com)
+* [Syntax](https://syntax.fm)
+* [The Changelog](https://changelog.com/podcast)
+* [The Laracasts Snippet](https://laracasts.com/podcast)
 
