@@ -24,8 +24,6 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 - [Web.dev](https://web.dev), from Google, publishers of [Chrome](https://www.google.com/chrome/)
 - [Microsoft's own developer docs](https://docs.microsoft.com/microsoft-edge/#microsoft-edge-for-developers), for [Microsoft Edge](https://www.microsoft.com/edge)
 
-
-
 ## Docs
 
 * 📓 http://developer.mozilla.org
@@ -131,46 +129,14 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 * 🎨 http://color-hex.com
 * 🎨 http://mycolor.space
 
-## Podcasts
-
-* 🎙 [Syntax](https://syntax.fm)
-* 🎙 [Fullstack radio](https://www.fullstackradio.com)
-* 🎙 [The Changelog](https://changelog.com/podcast)
-* 🎙 [The Laracasts Snippet](https://laracasts.com/podcast)
-* 🎙 [Front End Happy Hour](https://frontendhappyhour.com/)
-* 🎙 [JavaScript Jabber Archives](https://devchat.tv/podcasts/js-jabber)
-* 🎙 [Commit Your Code!](https://anchor.fm/commityourcode)
-* 🎙 [Shop Talk](https://shoptalkshow.com)
-* 🎙 [Ladybug Podcast](https://www.ladybug.dev)
-* 🎙 [CodePen Radio](https://blog.codepen.io/radio)
-* 🎙 [JAMStack Radio](https://www.heavybit.com/library/podcasts/jamstack-radio)
-* 🎙 [Modern web](https://www.thisdot.co/modern-web)
-
 ## UI Inspiration
-
 * 🤔 http://uimovement.com
 * 🤔 http://uigarage.net
 * 🤔 http://collectui.com
 * 🤔 https://dribbble.com
 * 🤔 https://ui-patterns.com
 
-## Chrome Extensions
-
-* 🔖 [Web Developer](https://chrome.google.com/webstore/detail/web-developer/bfbameneiokkgbdmiekhjnmfkcnldhhm)
-* 🔖 [CSSViewer](https://chrome.google.com/webstore/detail/cssviewer/ggfgijbpiheegefliciemofobhmofgce)
-* 🔖 [Wappalyzer](https://chrome.google.com/webstore/detail/wappalyzer/gppongmhjkpfnbhagpmjfkannfbllamg)
-* 🔖 [JSONView](https://chrome.google.com/webstore/detail/json-viewer/gbmdgpbipfallnflgajpaliibnhdgobh)
-* 🔖 [Lorem Ipsum Generator](https://chrome.google.com/webstore/detail/lorem-ipsum-generator/pglahbfamjiifnafcicdibiiabpakkkb)
-* 🔖 [VisBug](https://chrome.google.com/webstore/detail/visbug/cdockenadnadldjbbgcallicgledbeoc)
-* 🔖 [Colorblindly](https://chrome.google.com/webstore/detail/colorblindly/floniaahmccleoclneebhhmnjgdfijgg)
-* 🔖 [Lighthouse](https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk)
-* 🔖 [Accessibility Insights for Web](https://chrome.google.com/webstore/detail/accessibility-insights-fo/pbjjkligggfmakdaogkfomddhfmpjeni)
-* 🔖 [ColorPick Eyedropper](https://chrome.google.com/webstore/detail/colorpick-eyedropper/ohcpnigalekghcmgcdcenkpelffpdolg)
-* 🔖 [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi)
-* 🔖 [Dimensions](https://chrome.google.com/webstore/detail/dimensions/baocaagndhipibgklemoalmkljaimfdj)
-
 ## Website Optimization Tools
-
 * ⚡ [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights)
 * ⚡ [GTmetrix](https://gtmetrix.com)
 * ⚡ [WebPageTest](https://www.webpagetest.org)
@@ -180,107 +146,4 @@ CSS seems deceptively straightforward, but there are many challenges when trying
 ## API's
 * 🤖 [Abstract API](https://www.abstractapi.com)
 * 🤖 [RapidAPI](https://www.rapidapi.com)
-
-
-## Photos:
-
-| Website |
-| ------- |
-| https://unsplash.com |    
-| https://pixabay.com |  
-| https://pexels.com | 
-| https://reshot.com | 
-| https://librestock.com |
-| https://visualhunt.com | 
-| https://freephotos.cc | 
-| https://picjumbo.com | 
-| https://www.pxfuel.com |
-| https://www.splitshire.com |
-
-
-## Illustrations:
-
-| Website |
-| ------- |
-| https://www.opendoodles.com |
-| https://undraw.co/illustrations |  
-| https://drawkit.io |  
-| https://icons8.com/ouch |  
-| https://iradesign.io |  
-| https://interfacer.xyz |  
-| https://blush.design |
-| https://avataaars.com |
-| https://storyset.com |
-| https://themeisle.com/illustrations/ |
-| https://www.manypixels.co/gallery |
-
-## Icons:
-
-| Website |
-| ------- |
-| https://fontawesome.com |  
-| https://flaticon.com |  
-| https://icons8.com |  
-| https://iconfinder.com |  
-| https://material.io/resources/icons |  
-| https://iconmonstr.com | 
-| https://heroicons.com |
-| https://boxicons.com |
-| https://css.gg/ |
-| https://lineicons.com/ |
-| https://icons.eosdesignsystem.com/ |
-| https://icons.modulz.app |
-| https://remixicon.com |
-| https://tablericons.com |
-| https://simpleicons.org |
-| https://feathericons.com |
-| https://svgrepo.com/ |
-| https://iconic.app |
-| https://icomoon.io/ |
-| https://iconscout.com/unicons |
-| https://holasvg.com/icons |
-| https://fontello.com/ |
-| https://fontastic.me/ |
-
-## Fonts:
-
-| Website |
-| ------- |
-| https://fonts.google.com |  
-| https://fontspace.com |  
-| https://1001fonts.com |  
-| https://fontsquirrel.com |
-| https://ffonts.net |  
-| https://fontfabric.com |  
-| https://urbanfonts.com |
-
-## Learning Platforms:
-
-| Website |
-| ------- |
-| https://freecodecamp.org |
-| https://www.lambdatest.com/learning-hub/ |  
-| https://codecademy.com |  
-| https://javascript30.com |  
-| https://frontendmentor.io |  
-| https://testautomationu.applitools.com |  
-| https://coursera.org |  
-| https://edx.org |  
-| https://khanacademy.org |    
-| https://sololearn.com |
-| https://www.theodinproject.com |
-| https://javascript.info/ |
-| https://vueschool.io/ |
-| https://www.guru99.com/ |
-| https://trailhead.salesforce.com/ |
-| https://ocw.mit.edu/ |
-| https://open.appacademy.io/ |
-| https://web.dev/ |
-| https://scrimba.com |
-| https://thegymnasium.com |
-| https://www.amigoscode.com |
-| https://cssbattle.dev/ |
-| https://bento.io/ |
-| https://fullstackopen.com/en/ |
-| https://upskillcourses.com/courses |
 
