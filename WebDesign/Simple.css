@@ -1,5 +1,10 @@
 /* Simple.css created by Micheal R. Myers and released under the Creative Commons License */
 
+/* Chrome Reset */
+* {
+  outline : none;      /* Fix for chrome adding a blue outline on focus. */
+}
+
 /*  Background Colors  */
 .black {  background: #000000; }
 .white {  background: #FFFFFF; }
@@ -35,6 +40,8 @@
 .bluetext {  color: #0000FF; }
 
 /*  Text Styles  */
+.lowercase {  text-transform  : uppercase; }
+.uppercase {  text-transform  : lowercase; }
 .textcenter {   text-align: center; }
 .textitalic {  font-style: italic; }
 .textleft {  text-align: left; }
