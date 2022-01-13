@@ -10,5 +10,5 @@
 | Borders | .rounded-corners <BR> .shadow |  
 | Margins & Padding | .margins0 <BR> .margins5 <BR> .padding0 <BR> .padding5 |  
 | Text Color | .blacktext  <BR> .whitetext  <BR> .redtext  <BR> .greentext  <BR> .bluetext |  
-| Text Style | .center  <BR> .italic <BR> .left  <BR> .right  <BR> .strong |  
+| Text Style | .textcenter  <BR> .textitalic <BR> .textleft  <BR> .textright  <BR> .textstrong |  
 
