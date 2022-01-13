@@ -48,3 +48,8 @@
 .textright {  text-align: right; }
 .textstrong {  font-weight: bold; }
 
+/*  Vertical Alignment  */
+.vabottom {  vertical-align: bottom; } 
+.vamiddle {  vertical-align: middle; } 
+.vatop {  vertical-align: top; }
+
