@@ -2,6 +2,19 @@
 
 ## CSS: Cascade Style Sheets
 
+#### Adapting to Media Size
+```html
+/*  Mobile  */
+@media screen (max-width: 767px) {
+}
+/*  Tablet  */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+}
+/*  Tablet and Laptop/Desktop  */
+@media screen and (min-width: 768px) {
+}
+```
+
 #### Simple.css
 
 | Area | List | 
