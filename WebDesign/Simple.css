@@ -6,7 +6,12 @@
 }
 
 /*  General  */
+.centered {  max-width:90%; margin-left: auto; margin-right: auto;  display: block; }
+.clearall {  clear: both; } 
+.floatleft {  float:left; }
+.floatright {  float:right; } 
 .hidden {   display: none; }
+.middle {  margin-left: auto; 	margin-right: auto; }
 
 /*  Background Colors  */
 .black {  background: #000000; }
