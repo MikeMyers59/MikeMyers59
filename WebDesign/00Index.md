@@ -24,12 +24,16 @@
 ### Pseudo Selectors
 | Selector | Description | Example |  
 | --- | --- | --- |  
+| :active |  |  |  
 | :after |  |  |  
 | :before  |  |  |   
 | :checked  |  |  |   
+| :disabled  |  |  |   
+| :enabled  |  |  |   
 | :first-of-type  |  |  |   
 | :focus  |  |  |   
 | :hover  |  |  |   
+| :link  |  |  |   
 | :not(<Selector>)  |  |  |   
 | :nth-of-type(\<IndexNumber> \| even \| odd)  |  | `#table1 .col:nth-child(even)` |   
 | :visited |  |  |  |  
