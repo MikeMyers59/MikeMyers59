@@ -16,6 +16,9 @@
 @media screen and (min-width: 768px) {
   <Adaptive CSS Script>
 }
+/*   Laptop/Desktop  */
+@media screen and (min-width: 1200px) {
+}
 ```
 
 #### Simple.css
