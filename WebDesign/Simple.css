@@ -5,6 +5,9 @@
   outline : none;      /* Fix for chrome adding a blue outline on focus. */
 }
 
+/*  General  */
+.hidden {   display: none; }
+
 /*  Background Colors  */
 .black {  background: #000000; }
 .white {  background: #FFFFFF; }
