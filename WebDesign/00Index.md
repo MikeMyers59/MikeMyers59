@@ -63,7 +63,7 @@
 
 | Area | List | 
 | -- | -- |  
-| GENERAL | .centered  <BR> .clearall <BR> .hidden <BR> .floatleft <BR> .floatright <BR> .middle  |  
+| GENERAL | .centered  <BR> .clearall <BR> .floatleft <BR> .floatright <BR> .hidden <BR> .middle  |  
 | Background Color | .black  <BR> .white  <BR> .red  <BR> .green  <BR> .blue  |  
 | Borders | .rounded-corners <BR> .shadow |  
 | Margins & Padding | .margins0 <BR> .margins5 <BR> .padding0 <BR> .padding5 |  
