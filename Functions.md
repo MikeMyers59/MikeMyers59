@@ -19,4 +19,4 @@
 | submit() | Emulates a click on the Submit button of a form | Y |  |  
 
 JS - JavaScript  
-WD - Web Design  
+WD - Web Design (HTML, CSS, etc.)
