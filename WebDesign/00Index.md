@@ -63,6 +63,7 @@
 
 | Area | List | 
 | -- | -- |  
+| GENERAL | .hidden |  
 | Background Color | .black  <BR> .white  <BR> .red  <BR> .green  <BR> .blue  |  
 | Borders | .rounded-corners <BR> .shadow |  
 | Margins & Padding | .margins0 <BR> .margins5 <BR> .padding0 <BR> .padding5 |  
