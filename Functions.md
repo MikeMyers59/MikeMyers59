@@ -18,5 +18,5 @@
 | select() | Emulates selecting text in a field (password, text, text area) | Y |  |  
 | submit() | Emulates a click on the Submit button of a form | Y |  |  
 
-JS - JavaScript
-WD - Web Design
+JS - JavaScript  
+WD - Web Design  
