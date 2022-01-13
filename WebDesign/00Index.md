@@ -6,12 +6,15 @@
 ```html
 /*  Mobile  */
 @media screen (max-width: 767px) {
+  <Adaptive CSS Script>
 }
 /*  Tablet  */
 @media screen and (min-width: 768px) and (max-width: 1199px) {
+  <Adaptive CSS Script>
 }
 /*  Tablet and Laptop/Desktop  */
 @media screen and (min-width: 768px) {
+  <Adaptive CSS Script>
 }
 ```
 
