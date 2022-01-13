@@ -42,6 +42,10 @@
 /*  Text Styles  */
 .lowercase {  text-transform  : uppercase; }
 .uppercase {  text-transform  : lowercase; }
+.monospace {  
+  font-family: monospace;  
+  font-size: 1.23em;  
+}  
 .textcenter {   text-align: center; }
 .textitalic {  font-style: italic; }
 .textleft {  text-align: left; }
