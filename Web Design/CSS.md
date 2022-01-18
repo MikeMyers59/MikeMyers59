@@ -29,7 +29,7 @@
 ## Pseudo Selectors
 | Attribute | Options |  
 | --- | --- |  
-| nth-child({ even \| odd})] | Select every other row based on index number |   
+| :nth-child({ even \| odd})] | Select every other row based on index number |   
 
 ## Responsive Selectors
 ```css
