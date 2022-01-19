@@ -33,13 +33,28 @@
 
 ## Responsive Selectors
 ```css
+/* Setup just for Printing */
+@media print{
+}
 /*  responsive set to typical tablet portrait size  */
+@media only screen and (max-width:951px){
+}
+@media all and (max-width: 798px){
+}
 @media only screen and (max-width: 768px) {
 }
-
+@media all and (max-width: 641px){
+}
+@media all and (max-width: 540px){
+}
+@media all and (max-width: 480px){
+}
 /*     responsive set to typical phone portrait size */
 @media only screen and (max-width: 400px) {
 }
+@media all and (max-width: 400px){
+}
+
 ```
 
 ## Simple CSS Additions

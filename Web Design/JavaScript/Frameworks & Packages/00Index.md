@@ -25,6 +25,8 @@
 <script type="text/javascript" src="jquery-ui.js"></script>
 ```
 
+## [Magnific Popup by Dmitry Semenov](http://bit.ly/magnific-popup) 
+
 ## Prism.js & Prism.css
 
 ```html
