@@ -2,12 +2,15 @@
 
 If you have an RGB palette that you need to convert to HEX, you can use a converter like this one from [COLORRRS](http://www.webpagefx.com/web-design/hex-to-rgb/).
 
-RGB (Red-Green-Blue) vs. HSL (Hue-Saturation-Luminosity)  
+#### RGB (Red-Green-Blue) vs. HSL (Hue-Saturation-Luminosity)  
 
-```html
-style="--hue: 194.8993288590604; --sat: 97.38562091503269%; --lum: 30%;"
-```
+| RGB() & RGBa() | HSL() |  
+| -- | -- |  
+| Red (0-255) <BR> Green (0-255) <BR> Blue (0-255) | Hue (0-360 or 0-255) <BR> Saturation (0-255) <BR> Luminosity - Brightness (0-255) |  
 
+**Note**: Typically, the Hue of a color ranges from 1-360 degrees (because it is usually represented in a color wheel), but Excel uses the range 0-255 if you are entering the colors manually using the HSL values.  
+
+The functions for HTML & CSS:
 ```html
 hsl(h,s,l)
 rbg(r,g,b)

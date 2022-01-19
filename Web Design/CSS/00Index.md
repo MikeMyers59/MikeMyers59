@@ -6,30 +6,72 @@
 | --- | --- | --- |  
 | align-items | center;  |   |  
 | animation | animateleft 0.4s;  |   |  
+| background | { <Color> \| [ <ImageFile> <Setting> <Size> <Size> ] } | --- |  
+| background-position | <Percent> | --- |  
+| background-size | { <Size> ] } | --- |  
+| border <Size> <Type> <Color> | none | `border: solid 1px #aaa;` |  
+| border-bottom | { <Size> \| none } | --- |  
+| border-bottom-left-radius | <Size> | --- |  
+| border-bottom-right-radius | <Size> | --- |  
+| border-radius | <Size> | --- |  
+| border-left | <Size> | --- |  
+| border-right | <Size> | --- |  
+| border-top | <Size> | --- |  
+| box-shadow  <Top> <Right> <Bottom> <Color> <BR> -moz-box-shadow <BR> -webkit-box-shadow | { none }; | --- |  
 | box-sizing| { border-box | content-box | inherit} ; |   |  
-| clear| both; |   |  
+| clear| { both \| left \| right }; |   |  
 | code[class=""], |   |  
-| code|not{ [class]}   |   |  
-| cursor | pointer;  |   |  
+| code|not{ [class] }   |   |  
+| color | <Color> | `color: #ddd;` |  
+| cursor | { initial \| pointer };  |   |  
 | display | {  block \| flex \| inline-block \| none \| table \| table-cell }   |   |  
 | flex| 1 1 50%;  |   |  
 | flex-direction | {  column | row } ;  |   |  
 | float | {  none | left | right } ;  |   |  
-| font-family | { Arial \| Cambria \| LibreFranklin-Bold \| gdCorp \| gdUniv} ;  |   |  
-| font-size | 11pt;  |   |  
-| font-weight | bold | 800;  |   |  
+| font-family | { Arial \| Arial Narrow \| Cambria \| Helvetica \| LibreFranklin-Bold \| Roboto \| sans-serif \| serif } ;  |   |  
+| font-size | <Size>  |   |  
+| font-weight | { bold \| bolder \| normal } |  |  
+| height | <Size> |  |  
 | justify-content| space-between;  |   |  
+| left | { <Percentage> } | --- |  
+| line-height | <Size> | --- |  
 | list-style-type| {  circle \| decimal \| lower-alpha \| lower-roman \| none \| square \| upper-alpha \| upper-roman } ; |   |  
-| position | { absolute \| relative} ;  |   |  
-| text-decoration| { none \| underline} ; |   |  
+| margin <Top> <Right> <Bottom> <Left> <BR> margin <Top-Bottom> <Right-Left> <BR> margin <All>   | { <Size> \| auto \| none } | --- |  
+| margin-bottom |  |  |  
+| margin-left |  |  |  
+| margin-right |  |  |  
+| margin-top |  |  |  
+| opacity | <Percent> |  |  
+| padding | <Size> | --- |  
+| padding-bottom | <Size> | --- |  
+| padding-left | <Size> | --- |  
+| padding-right | <Size> | --- |  
+| padding-top | <Size> | --- |  
+| position | { absolute \| fixed \| relative } ;  |   |  
+| right | { <Percentage> } | --- |  
+| text-align | { center \| left \| right } | --- |  
+| text-decoration| { none \| underline }; |   |  
+| text-shadow <Top> <Right> <Bottom> <Color> | { none }; | `text-shadow: -2px 2px 4px #ccc;` |  
+| text-transform | { lowercase \| uppercase } | --- |  
+| transition-duration <BR> -webkit-transition-duration | <Seconds>s | --- |  
+| top | { <Percentage> } | --- |  
+| User-Select | { all \| none}; | --- |  
 | vertical-align| {  bottom \| middle \| sub \| super \| top } ; |   |  
-| white-space| normal;  |   |  
-| width| auto;  |   |  
+| white-space| { normal \| nowrap };  |   |  
+| width| <Size>  |   |  
+| z-index | <Index> |  |  
+
+<Color>  { black \| white }  
+<Size>   { none \| em \| en \| px \| % }  
+<Type>   { solid }
+
+-mox  Namespace for Mozilla (FireFox)
+-webkit Namespace for Microsoft (CrEdge)
 
 ## Pseudo Selectors
 | Attribute | Options |  
 | --- | --- |  
-| :nth-child({ even \| odd})] | Select every other row based on index number |   
+| :nth-child({ even \| odd \| <Index> })] | Select every other row based on index number |   
 | :root |  |  
 
 #### Set CSS Variables

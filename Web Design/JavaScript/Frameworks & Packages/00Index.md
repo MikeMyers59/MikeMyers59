@@ -13,6 +13,14 @@
 <link type="text/css" href="jquery-ui.css" rel="Stylesheet">
 ```
 
+### jQuery Document Loaded Enclosure
+Use this enclosure for any actions that need to occur after the DOM is loaded.
+```javascript
+$(document).ready(function() {
+  <JSCommands>
+});
+```
+
 ### jQuery-Migrate
 
 ```html

@@ -2,7 +2,14 @@
 
 ![Excel Color Palette](ExcelColorPalette.JPG)  
 
-[Table References](https://support.microsoft.com/en-us/office/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e?ui=en-us&rs=en-us&ad=us)  
+Microsoft  
+  [Table References](https://support.microsoft.com/en-us/office/using-structured-references-with-excel-tables-f5ed2452-2337-4f71-bed3-c8ae6d2b276e?ui=en-us&rs=en-us&ad=us)  
+[Vertex42](https://www.vertex42.com/) - numerous Templates
+
+#### Common Folders
+```dos
+C:\Users\<UserName>\AppData\Roaming\Microsoft\Templates\Document Themes\Theme Colors
+```
 
 ## Using Color Themes  
 [Color Template Generator](https://www.vertex42.com/ExcelArticles/color-palette-generator.html)  
