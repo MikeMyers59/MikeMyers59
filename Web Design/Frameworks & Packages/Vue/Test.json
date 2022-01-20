@@ -1,0 +1,7 @@
+Test = {
+	'test': 'this is a test variable',
+	'innerTest': {
+		'innerOb': 5, 
+		'otherField': 10
+	}
+};
