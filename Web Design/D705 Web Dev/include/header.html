@@ -1,0 +1,90 @@
+  <header>
+
+<!-- This is the GDEB Compliant Drop Down from top of the screen; it builds from the right -->
+    <div id="univ-header-container" class="univ-header-container-closed">
+
+      <div id="univ-header" class="univ-header-closed">
+
+        <div class="univ-header-column">
+          <h3>Help Desk Infomation</h3>
+          <ul class="no-style">
+            <li>
+              <b>EB Production Support:</b> 860-433-5864
+            </li>
+            <li>
+              <b>CSC Help Desk:</b> 860-433-HELP (4357)
+            </li>
+            <li>
+              <a href="https://help-gd.amer.csc.com" target="_blank">
+              <button id="csc-help-desk-btn">CSC Help Desk Chat</button></a>
+            </li>  
+          </ul>
+        </div> <!-- End of Help Desk Info - Column 4 -->
+
+        <div class="univ-header-column">
+          <h3>Employee Directory Search</h3>
+          <form id="simpleSearch" class="simpleSearch" name="phonebook" action="/ed/" method="get" target="_blank" >
+            <table>
+              <tr>
+                <td>Last:</td><td><input type="text" name="lname" size="15" /></td>
+                <td>Badge:</td><td><input type="text" name="badge" size="15" /></td>
+              </tr>
+              <tr>
+                <td>First:</td><td><input type="text" name="fname" size="15" /></td>
+                <td>Dept:</td><td><input type="text" name="dept" size="15" /></td>
+              </tr>
+              <tr>
+                <td>Middle:</td><td><input type="text" name="mname" size="15" /></td>
+                <td>Phone:</td><td><input type="text" name="phone_combined" size="15" /></td>
+              </tr>
+            </table>
+            <div align="center">
+              <input name="Submit" type="submit" class="button" value="Submit" />
+              <input name="Reset" type="Reset" class="button" id="Reset"  value="Reset" />
+              <a href="https://www.ebnet.gdeb.com/ed/">Advanced Search</a>
+            </div>
+          </form>
+        </div> <!-- End of Employee Directory Search Column 3 -->
+
+        <div class="univ-header-column">
+          <h3>Intranet Search</h3>
+          <form id="intranetSearch" method="get" action="https://www.ebnet.gdeb.com/search" class="zoom_searchform" target="_blank" >
+            <input type="hidden" name="zoom_sort" value="0" />
+            <input type="hidden" name="zoom_xml" value="0" />
+            <input type="hidden" name="zoom_and" value="0" />
+            <input type="hidden" name="zoom_per_page" value="10" />
+            <input type="hidden" name="zoom_cat[]" value="-1" />
+            <input type="text" name="zoom_query" size="20" value="" id="zoom_searchbox" class="zoom_searchbox" />
+            <button title="Search"><span class="fa fa-search"></span></button>
+          </form>
+          <h3>Wiki Search</h3>
+          <form id="wikiSearch" method="get" action="https://wiki.ebnet.gdeb.com/Main/WebSearch" target="_blank" >
+            <input type="hidden" name="scope" value="all" />
+            <input type="hidden" name="web" value="all" />
+            <input type="hidden" name="recurse" value="on" />
+            <input type="text" name="search"/>
+            <button title="Search"><span class="fa fa-search"></span></button>
+          </form>
+        </div> <!-- End of Internet & Wiki Search Column 2 -->
+
+        <div id="univ-header-column" class="univ-header-news">
+          <h3>Announcements &amp; News</h3>
+           <table id="newsTable" class="no-style">
+           </table>
+        </div>  <!-- End of Announcements & News -->  
+       
+      </div> <!-- End of Drop Down Sub-Container --> 
+
+    </div>  
+<!-- End of Drop Down Container -->
+
+<!-- Drop Down Header Bar -->
+     <div class="header">
+       <span id="show-univ" class="fa fa-chevron-down fa-2x centered-text right"></span>
+       <p class="gdeb-logo">
+         <a href="https://www.ebnet.gdeb.com"><img src="images/gdeb-logo-white.png"></a>
+       </p>
+       <h1 id="siteTitle" class="right">D705 Bangor Planning Yard Support</h1>
+     </div> <!-- End of the Drop Down Header Bar -->
+
+  </header>
