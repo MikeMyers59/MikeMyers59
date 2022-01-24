@@ -20,6 +20,7 @@
 | box-shadow  <Top> <Right> <Bottom> <Color> <BR> -moz-box-shadow <BR> -webkit-box-shadow | { none }; | --- |  
 | box-sizing| { border-box | content-box | inherit} ; |   |  
 | clear| { both \| left \| right }; |   |  
+| clip| auto \| rect() |   |  
 | code[class=""], |   |  
 | code|not{ [class] }   |   |  
 | color | <Color> | `color: #ddd;` |  
@@ -34,32 +35,33 @@
 | height | <Size> |  |  
 | justify-content| space-between;  |   |  
 | left | { <Percentage> } | --- |  
-| line-height | <Size> | --- |  
+| line-height | <Size> \| inherit | --- |  
 | list-style-type| {  circle \| decimal \| lower-alpha \| lower-roman \| none \| square \| upper-alpha \| upper-roman } ; |   |  
-| margin <Top> <Right> <Bottom> <Left> <BR> margin <Top-Bottom> <Right-Left> <BR> margin <All>   | { <Size> \| auto \| none } | --- |  
-| margin-bottom |  |  |  
-| margin-left |  |  |  
-| margin-right |  |  |  
-| margin-top |  |  |  
+| margin <Top> <Right> <Bottom> <Left> <BR> margin <Top-Bottom> <Right-Left> <BR> margin <All>  <BR> margin-bottom <BR> margin-left <BR> margin-right <BR> margin-top | { <Size> \| auto \| none } | --- |  
+| max-width | <Size> |  |  
+| min-width | <Size> |  |  
 | opacity | <Percent> |  |  
-| padding | <Size> | --- |  
-| padding-bottom | <Size> | --- |  
-| padding-left | <Size> | --- |  
-| padding-right | <Size> | --- |  
-| padding-top | <Size> | --- |  
-| position | { absolute \| fixed \| relative } ;  |   |  
+| overflow | [ visible \| hidden ] |  |  
+| padding <BR> padding-bottom <BR> padding-left <BR> padding-right <BR> padding-top | <Size> | --- |   
+| position | { absolute \| fixed \| relative \| static } ;  |   |  
 | right | { <Percentage> } | --- |  
 | text-align | { center \| left \| right } | --- |  
 | text-decoration| { none \| underline }; |   |  
+| text-overflow | ellipsis |  |  
 | text-shadow <Top> <Right> <Bottom> <Color> | { none }; | `text-shadow: -2px 2px 4px #ccc;` |  
 | text-transform | { lowercase \| uppercase } | --- |  
+| transform | [ translate(-50%, -50%) /| scale(0.25) ] |  |  
+| transform-origin | { bottom | center | top } { center | right | left }  |  |  
 | transition-duration <BR> -webkit-transition-duration | <Seconds>s | --- |  
 | top | { <Percentage> } | --- |  
 | User-Select | { all \| none}; | --- |  
 | vertical-align| {  bottom \| middle \| sub \| super \| top } ; |   |  
 | white-space| { normal \| nowrap };  |   |  
-| width| <Size>  |   |  
+| width| <Size> \| auto |   |  
 | z-index | <Index> |  |  
+| zoom |  |  |  
+| -webkit-transform | [ translate(-50%, -50%) /| scale(0.25) ] |  |  
+| -webkit-transform-origin | { bottom | center | top } { center | right | left }  |  |  
 
 <Color>  { black \| white }  
 <Size>   { none \| em \| en \| px \| % }  

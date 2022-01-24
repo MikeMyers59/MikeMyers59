@@ -1,0 +1,55 @@
+/* Font Styles */
+
+/* ====== Font Size ====== */
+.f-1x {
+  font-size: 1em; 
+}
+
+.f-2x {
+  font-size: 2em; 
+}
+
+.f-3x {
+  font-size: 3em; 
+}
+
+.f-4x {
+  font-size: 4em; 
+}
+
+.f-5x {
+  font-size: 5em; 
+}
+
+.f-6x {
+  font-size: 6em; 
+}
+
+.f-7x {
+  font-size: 7em; 
+}
+
+.f-8x {
+  font-size: 8em; 
+}
+
+.f-9x {
+  font-size: 9em; 
+}
+
+.f-10x {
+  font-size: 10em; 
+}
+
+.f-lg {
+  font-size: 1.33333em;
+}
+
+.f-xs {
+  font-size: .75em;
+}
+
+.f-sm {
+  font-size: .875em; 
+}
+
