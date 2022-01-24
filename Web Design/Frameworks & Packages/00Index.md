@@ -1,5 +1,12 @@
 # Frameworks & Packages
 
+[ShadowBox](http://shadowbox-js.com/)
+- [ShadowBox on GitHub](http://github.com/mjijackson/shadowbox/)
+[Sizzle.js](http://sizzlejs.com/)
+[swfobject](http://code.google.com/p/swfobject/)
+
+
+
 ## Font Awesome
 
 ```html
