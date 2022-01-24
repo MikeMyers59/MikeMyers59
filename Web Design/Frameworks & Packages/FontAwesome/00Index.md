@@ -35,3 +35,4 @@ All brand icons are trademarks of their respective owners. The use of these trad
 <i class="fas fa-camera"></i> <!-- using an <i> element to reference the icon -->
 <span class="fas fa-camera"></span> <!-- using a <span> element to reference the icon -->
 ```
+
