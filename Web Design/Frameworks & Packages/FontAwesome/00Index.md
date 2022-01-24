@@ -4,6 +4,12 @@
 [Full Font Awesome Free license](https://fontawesome.com/license)
 [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons/)
 
+U: Michael.R.Myers1.CTR@navy.mil PHint: 1st QTR 2022
+Kit:
+```html
+<script src="https://kit.fontawesome.com/249fc961f6.js" crossorigin="anonymous"></script>
+```
+
 ## Brand Icons
 All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by Font Awesome, nor vice versa. **Please do not use brand logos for any purpose except to represent the company, product, or service to which they refer.**  
 
