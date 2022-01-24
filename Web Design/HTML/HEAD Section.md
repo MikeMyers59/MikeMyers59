@@ -1,8 +1,18 @@
 # HTML HEAD Section  
 
+```html
+<DESCRIPTION>Alerts warn about vulnerabilities, incidents, and other security issues that pose a significant risk.</DESCRIPTION>
+<LANGUAGE>en</LANGUAGE>
+```
+
 ## Links
 ```html
 <link rel="canonical" href="https://www.yoursite.com/YourPage.html">
+```
+
+### Google APIs
+```html
+<LINK href="https://fonts.googleapis.com/css?family=Dosis:200|Merriweather|Montserrat|Roboto" rel="stylesheet">
 ```
 
 ### Set CSS 
@@ -20,6 +30,12 @@
 ## META Data  
 ```html
 <META name="theme-color" content="#3969ad">
+<META charset="UTF-8">
+<META http-equiv="X-UA-Compatible" content="IE=11" />
+<META http-equiv="X-UA-Compatible" content="ie=edge">
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META http-equiv=Content-Type content="text/html; charset=windows-1252"> <META name="Keywords" content="publication" />
+<META name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 ```
 
 ### Set Character Set  
@@ -38,6 +54,7 @@ There is an order to these scripts!  Be sure to put requiremnts before usage/cal
 ```html
 <SCRIPT type="text/javascript" src="jquery.js"></SCRIPT>
 <SCRIPT type="text/javascript" src="main.js"></SCRIPT>
+<SCRIPT type="text/markdown" src="markdown.js"></SCRIPT>
 ```
 
 ## Style

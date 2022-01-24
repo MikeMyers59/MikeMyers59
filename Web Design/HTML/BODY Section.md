@@ -52,9 +52,6 @@ h3 { font-size:1.6em; color:var(--Base); font-weight:normal; line-height:1.5em; 
 h4 { font-size:1.4em; color:var(--Base); font-weight:normal; line-height:1.5em; padding-bottom:2px; margin-top:2em; margin-bottom:0;     border: 2px solid var(--Accent3); }
 h5 { font-size:1.2em; color:var(--Base); font-weight:normal; line-height:1.5em; padding-bottom:2px; margin-top:2em; margin-bottom:0;     border: 2px solid var(--Accent3); }
 h6 { font-size:1.0em; color:var(--Base); font-weight:normal; line-height:1.5em; padding-bottom:2px; margin-top:2em; margin-bottom:0;     border: 2px solid var(--Accent3); }
-a { color:#369; }
-a:hover { color:#060; }
-a:hover { color:#060; }
 ol li, ul li { margin-bottom:0.5em; line-height:1.4em; } 
 p { line-height:1.4em; }
 

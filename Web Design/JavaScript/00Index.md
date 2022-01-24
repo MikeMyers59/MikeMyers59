@@ -69,3 +69,36 @@ Contains the following CSS modules:
   -  jquery.ui.theme.css
   -  jquery.ui.tooltip.css
 
+# Code Structures
+
+## Event Driven Functions
+```javascript
+(function(w,d){
+}) ( window, document);
+```
+
+## Self Executing Functions
+
+#### OnLoad/Unload Events
+```javascript
+window.onload = function () {
+};
+window.onunload = function () {
+};
+```
+
+# Examples
+
+#### Check if Cahracter is Printable
+```javascript
+function isPrintable(keycode) {
+  const valid = (keycode > 47 && keycode < 58) || // number keys
+    keycode === 32 || // spacebar & return key(s) (if you want to allow carriage returns)
+    (keycode > 64 && keycode < 91) || // letter keys
+    (keycode > 95 && keycode < 112) || // numpad keys
+    (keycode > 185 && keycode < 193) || // ;=,-./` (in order)
+    (keycode > 218 && keycode < 223); // [\]' (in order)
+  return valid;
+}
+```
+

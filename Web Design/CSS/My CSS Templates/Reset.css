@@ -1,0 +1,21 @@
+/* CSS Reset - so all browsers start the same! */
+
+/* ANCHORS */
+a {
+  text-decoration:underline; 
+  text-underline:single;
+}
+a:link {
+  color:blue; 
+
+}
+a:active {#ff0000
+  color:red; 
+}
+a:visited {
+  color:purple; 
+}
+a:hover {
+  color:orange; 
+}
+
