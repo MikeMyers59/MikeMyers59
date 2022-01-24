@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=11" >
+</head>
+<body>
+<section id="ar1" class="markdown"> 
+# This is Markdown
+## It is cooler than you are
+    
+</section>
+<section id="ar2" class="markdown"> 
+# This is Markdown
+## It is more hip than html.
+
+[Go to Live Renderer](editor.html)    
+</section>
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script src="markdown.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(".markdown").each(function() {
+            $(this).html(markdown.toHTML($(this).html()));
+        });
+      });
+    </script>    
+  </body>
+</html>
