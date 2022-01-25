@@ -1,6 +1,8 @@
 # Frameworks & Packages
 
 [Dash.js](https://github.com/Dash-Industry-Forum/dash.js/) 
+[DataTables](https://datatables.net/)
+  Included libraries: JSZip 2.5.0, pdfmake 0.1.36, DataTables 1.10.24, Buttons 1.7.0, HTML5 export 1.7.0, Print view 1.7.0, FixedHeader 3.1.8
 **JSON**
   - [JSONML: JSON Markup Language](http://jsonml.org/) 
 [LESS - Leaner CSS](http://lesscss.org) 
