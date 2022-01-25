@@ -5,6 +5,8 @@
   Included libraries: JSZip 2.5.0, pdfmake 0.1.36, DataTables 1.10.24, Buttons 1.7.0, HTML5 export 1.7.0, Print view 1.7.0, FixedHeader 3.1.8
 **JSON**
   - [JSONML: JSON Markup Language](http://jsonml.org/) 
+[JSZip](<http://stuartk.com/jszip>) - A Javascript class for generating and reading zip files
+  - [JSZip on GitHub](https://raw.github.com/Stuk/jszip/)
 [LESS - Leaner CSS](http://lesscss.org) 
 **Markdown-IT**
   - [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/markdown-it/markdown-it) 
@@ -15,6 +17,7 @@
 [MathJax](http://www.mathjax.org/) 
   - [MathJax on GitHub](https://github.com/mathjax/MathJax/) 
 [Node.js®](https://nodejs.org/) 
+[pdfmake](http://pdfmake.org)
 [React](https://reactjs.org/)
   - [React DevTools](https://reactjs.org/link/react-devtools) 
   - [React DevTool FAQs](https://reactjs.org/link/react-devtools-faq) 
