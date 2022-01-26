@@ -4,6 +4,7 @@
 <script type="text/javascript" src="jquery.js"></script>
 <link type="text/css" href="jquery-ui.css" rel="Stylesheet">
 ```
+
 Alternates:
 ```html
 <SCRIPT src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous" type="text/javascript" ></SCRIPT>
@@ -24,7 +25,10 @@ $(document).ready(function() {
 <script type="text/javascript" src="jquery-migrate.js"></script>
 ```
 
-## jQuery-UI
+## [jQuery-UI](http://jqueryui.com/)
+
+**JS Includes**: core.js, widget.js, mouse.js, position.js, draggable.js, droppable.js, resizable.js, selectable.js, sortable.js, accordion.js, autocomplete.js, button.js, datepicker.js, dialog.js, menu.js, progressbar.js, selectmenu.js, slider.js, spinner.js, tabs.js, tooltip.js, effect.js, effect-blind.js, effect-bounce.js, effect-clip.js, effect-drop.js, effect-explode.js, effect-fade.js, effect-fold.js, effect-highlight.js, effect-puff.js, effect-pulsate.js, effect-scale.js, effect-shake.js, effect-size.js, effect-slide.js, effect-transfer.js  
+**CSS Includes**: jquery.ui.core.css, jquery.ui.resizable.css, jquery.ui.selectable.css, jquery.ui.accordion.css, jquery.ui.autocomplete.css, jquery.ui.button.css, jquery.ui.datepicker.css, jquery.ui.dialog.css, jquery.ui.menu.css, jquery.ui.progressbar.css, jquery.ui.slider.css, jquery.ui.spinner.css, jquery.ui.tabs.css, jquery.ui.tooltip.css, jquery.ui.theme.css  
 
 ```html
 <script type="text/javascript" src="jquery-ui.js"></script>

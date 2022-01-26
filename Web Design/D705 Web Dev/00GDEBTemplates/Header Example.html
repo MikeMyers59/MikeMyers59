@@ -1,0 +1,77 @@
+<header>
+    <div id="univ-header-container" class="univ-header-container-closed">
+        <div id="univ-header" class="univ-header-closed">
+                <div class="univ-header-column">
+                    <h3>Help Desk Infomation</h3>
+                    <ul class="no-style">
+                        <li><b>EB Production Support:</b> 860-433-5864</li>
+                        <li><b>EBIT Help Desk:</b> 860-433-HELP (4357)</li>
+                        <li><a href="https://sn.ebnet.gdeb.com/sp"><button class="red-button">Service Now</button></a></li>
+                    </ul>
+                </div>
+                <div class="univ-header-column">
+                    <h3>Employee Directory Search</h3>
+                <form id="simpleSearch" class="simpleSearch" name="phonebook" action="/ed/" method="get" target="_blank">
+                    <table>
+                      <tbody><tr>
+                        <td>Last:</td><td><input type="text" name="lname" size="15"></td>
+                        <td>Badge:</td><td><input type="text" name="badge" size="15"></td>
+                      </tr>
+                      <tr>
+                        <td>First:</td><td><input type="text" name="fname" size="15"></td>
+                        <td>Dept:</td><td><input type="text" name="dept" size="15"></td>
+                      </tr>
+                      <tr>
+                        <td>Middle:</td><td><input type="text" name="mname" size="15"></td>
+                        <td>Phone:</td><td><input type="text" name="phone_combined" size="15"></td>
+                      </tr>
+                    </tbody></table>
+                    <div align="center">
+                      <input name="Submit" type="submit" class="button" value="Submit">
+                      <input name="Reset" type="Reset" class="button" id="Reset" value="Reset">
+                      <a href="https://www.ebnet.gdeb.com/ed/">Advanced Search</a>
+                    </div>
+                </form>
+                </div>
+                <div class="univ-header-column">
+                    <h3>Intranet Search</h3>
+                    <form id="intranetSearch" method="get" action="/search" class="zoom_searchform" target="_blank">
+                        <input type="hidden" name="zoom_sort" value="0">
+                        <input type="hidden" name="zoom_xml" value="0">
+                        <input type="hidden" name="zoom_and" value="0">
+                        <input type="hidden" name="zoom_per_page" value="10">
+                        <input type="hidden" name="zoom_cat[]" value="-1">
+                        <input type="text" name="zoom_query" size="20" id="zoom_searchbox" class="zoom_searchbox">
+                        <button title="Search"><span class="fa fa-search"></span></button>
+                    </form>
+                    <h3>Wiki Search</h3>
+                    <form id="wikiSearch" method="get" action="https://wiki.ebnet.gdeb.com/Main/WebSearch" target="_blank">
+                        <input type="hidden" name="scope" value="all">
+                        <input type="hidden" name="web" value="all">
+                        <input type="hidden" name="recurse" value="on">
+                        <input type="text" name="search">
+                        <button title="Search"><span class="fa fa-search"></span></button>
+                    </form>
+                </div>
+                <div id="univ-header-news" class="univ-header-news">
+                    <h3>Announcements &amp; News</h3>
+                    <table id="newsTable" class="no-style">
+                        <tbody><tr>
+  <td valign="top" nowrap="nowrap" bgcolor="#ffffff" align="center">
+	<br>
+  </td>
+</tr>
+                    </tbody></table>
+                </div>            
+        </div>
+    </div>
+    <div class="header">
+        <span id="show-univ" class="fa fa-chevron-down fa-2x centered-text right"></span>
+        <p class="gdeb-logo">
+        <a href="https://homeport.ecms.gdeb.com/">
+        <img src="Web%20Development%20Instructions%20and%20Help_files/gdeb-logo-white.png">
+        </a>
+        </p>
+        <h1 id="siteTitle" class="right"></h1>
+    </div>
+</header>
