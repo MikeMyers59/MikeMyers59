@@ -1,5 +1,14 @@
 /* CSS Reset - so all browsers start the same! */
 
+/* The Page */
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 /* ANCHORS */
 a {
   text-decoration:underline; 
@@ -7,9 +16,9 @@ a {
 }
 a:link {
   color:blue; 
-
 }
-a:active {#ff0000
+
+a:active {
   color:red; 
 }
 a:visited {

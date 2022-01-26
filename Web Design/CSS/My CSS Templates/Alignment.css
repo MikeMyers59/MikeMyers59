@@ -1,0 +1,66 @@
+/* Alignment */
+
+.block-center {
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.centered {
+	max-width:90%;
+	margin-left: auto;
+	margin-right: auto;
+  display: block;
+}
+
+.float-left {
+	float:left;
+}
+
+.float-middle {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.float-right {
+	float:right;
+}
+
+.text-centered {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.vertical-center{
+	height: 75px;
+	line-height: 75px;
+}
+
+.vertical-middle {
+	vertical-align: middle;
+}
+
+.vertical-top {
+	vertical-align: top;
+}
+
+.vertical-bottom {
+	vertical-align: bottom;
+}
+
+.vertical-subscript {
+	vertical-align: sub;
+}
+
+.vertical-superscript {
+	vertical-align: super;
+}
+

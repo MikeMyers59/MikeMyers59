@@ -1,55 +1,77 @@
 /* Font Styles */
 
+/* Base for starting modular font scale
+px	em
+2	  0.125
+4	  0.25
+8	  0.5
+12	0.75
+14	0.875
+16	1
+20	1.25
+32	2
+36	2.25
+64	4
+128	8
+256	16
+512	32
+*/
+
 /* ====== Font Size ====== */
-.f-1x {
+.font-1x {
   font-size: 1em; 
 }
 
-.f-2x {
+.font-2x {
   font-size: 2em; 
 }
 
-.f-3x {
+.font-3x {
   font-size: 3em; 
 }
 
-.f-4x {
+.font-4x {
   font-size: 4em; 
 }
 
-.f-5x {
+.font-5x {
   font-size: 5em; 
 }
 
-.f-6x {
+.font-6x {
   font-size: 6em; 
 }
 
-.f-7x {
+.font-7x {
   font-size: 7em; 
 }
 
-.f-8x {
+.font-8x {
   font-size: 8em; 
 }
 
-.f-9x {
+.font-9x {
   font-size: 9em; 
 }
 
-.f-10x {
+.font-10x {
   font-size: 10em; 
 }
 
-.f-lg {
+.font-lg {
   font-size: 1.33333em;
 }
 
-.f-xs {
+.font-xs {
   font-size: .75em;
 }
 
-.f-sm {
+.font-sm {
   font-size: .875em; 
+}
+
+.monospace {
+  font-family: monospace;
+  font-size: 1.23em;
 }
 
