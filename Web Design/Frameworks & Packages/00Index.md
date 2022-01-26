@@ -25,6 +25,7 @@
   - [ShadowBox on GitHub](http://github.com/mjijackson/shadowbox/)  
 [Sizzle.js](http://sizzlejs.com/)  
 [swfobject](http://code.google.com/p/swfobject/)  
+tooltipster v4.2.6 
 [Video.js](https://github.com/videojs/video.js)   
   - [Video.js on GitHub](https://github.com/videojs/videojs-contrib-dash/)  
 
