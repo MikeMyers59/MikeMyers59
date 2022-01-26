@@ -9,6 +9,8 @@
     - [Theme Management & Creation](http://jqueryui.com/themeroller/)
   - [jQuery License](https://jquery.org/license)
   - jQuery Migrate
+[Matt Kruse](<matt@mattkruse.com>)
+  - calendar_popup.js
 [PrismJS](http://prismjs.com/)  
 [SPServices](http://spservices.codeplex.com)
 
