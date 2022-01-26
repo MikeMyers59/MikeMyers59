@@ -1,5 +1,8 @@
 # jQuery
 
+[jQuery API](http://api.jquery.com/)
+[jQueryUI API](http://api.jqueryui.com/)
+
 ```html
 <script type="text/javascript" src="jquery.js"></script>
 <link type="text/css" href="jquery-ui.css" rel="Stylesheet">
