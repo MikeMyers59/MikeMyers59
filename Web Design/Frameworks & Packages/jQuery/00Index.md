@@ -53,7 +53,7 @@ if(typeof jQuery === 'undefined') {
 ```javascript
 if(jQuery) {
 }
-Else {
+else {
   alert('jQuery is not loaded on this page.  "<ScriptName>.js" requires jQuery to function.');
 }
 ```
