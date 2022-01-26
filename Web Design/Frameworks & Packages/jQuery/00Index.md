@@ -37,3 +37,24 @@ $(document).ready(function() {
 <script type="text/javascript" src="jquery-ui.js"></script>
 ```
 
+## Examples
+
+### Check if jQuery is loaded, load if not
+```javascript
+if(typeof jQuery === 'undefined') {
+  var script = document.createElement( 'script' );
+  script.type = 'text/javascript';
+  script.src = 'js/jquery.min.js';
+  jQuery('head').append(script);
+}
+```
+
+### Check jQuery loaded before using
+```javascript
+if(jQuery) {
+}
+Else {
+  alert('jQuery is not loaded on this page.  "<ScriptName>.js" requires jQuery to function.');
+}
+```
+
