@@ -19,3 +19,6 @@ Other Code Storage Sites:
 - [CodePlex](https://www.CodePlex.com/)
 - [SourceForge](http://www.sourceforge.net/)
 
+## Training Available
+- [MIT Open Learning](https://openlearning.mit.edu/)
+

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* Colors */
+
+/* ====== Backgroung Colors */
+.bggreen {
+  color: #FFF;
+background-color: #019875;
+  font-weight: bold;
+}
+
+.bgred {
+   color: #FFF;
+ background-color: #D9534F;
+   font-weight: bold;
+}
+
+.bgyellow {
+   color: #FFF;
+   background-color: #CACA19;
+   font-weight: bold;
+}
+
+/* ====== Text Colors ====== */
+.textgreen {
+  color: #019875;
+  font-weight: bold;
+}
+
+.testred {
+  color: #D9534F;
+  font-weight: bold;
+}
+
+.texttwitter-blue {
+   color: #1DA1F2;
+}
+
+.textyellow {
+  color: #CACA19;
+  font-weight: bold;
+}
+

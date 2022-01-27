@@ -1,5 +1,16 @@
 # CSS
 
+#### To Check Out
+```css
+behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
+```
+
+#### Training Available
+[The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) 
+- Data files on [GitHub](https://github.com/missing-semester/missing-semester)
+- Lectures on [Hacker Tools](https://hacker-tools.github.io/lectures/)
+- Video recordings of the lectures are available [YouTube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J)
+
 ## Attributes
 
 | Attribute | Options | Example |  

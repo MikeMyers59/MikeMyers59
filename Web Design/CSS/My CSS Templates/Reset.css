@@ -8,14 +8,22 @@
 
  html {
   box-sizing: border-box;
-  font-family: sans-serif; /* 1 */
+  font-family: Arial, Helvetica, sans-serif; /* 1 */
   -ms-text-size-adjust: 100%; /* 2 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
 
 /* Remove default margin. */
 body {
+	background-color: #FFFFFF;
+	color: #000000;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9pt;
+	line-height: 1.2em;
   margin: 0;
+  margin-top: 0px;
+	margin-left: 0px;
+
 }
 
 *, *:before, *:after {
@@ -24,13 +32,14 @@ body {
 
 /* ANCHORS */
 a {
+  cursor: pointer;
+  padding: 1px;
   text-decoration:underline; 
   text-underline:single;
 }
 a:link {
   color:blue; 
 }
-
 a:active {
   color:red; 
 }
@@ -44,7 +53,6 @@ a:hover {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-
  a:active,
  a:hover {
    outline: 0;
