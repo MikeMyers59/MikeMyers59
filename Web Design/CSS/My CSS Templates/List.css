@@ -14,56 +14,69 @@ dt {
 }
 
 dd {
-
 }
 
 /* Ordered Lists */
 ol {
   line-height: 25px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 ol.upper-roman-bullets {
-list-style-type: upper-roman;
+  list-style-type: upper-roman;
   line-height: 25px;
 }
 
 ol.lower-roman-bullets {
-list-style-type: lower-roman;
+  list-style-type: lower-roman;
   line-height: 25px;
 }
 
 ol.upper-alpha-bullets {
-list-style-type: upper-alpha;
+  list-style-type: upper-alpha;
   line-height: 25px;
 }
 
 ol.lower-alpha-bullets {
-list-style-type: lower-alpha;
+  list-style-type: lower-alpha;
   line-height: 25px;
 }
 
 ol.numbered-bullets {
-list-style-type: decimal;
+  list-style-type: decimal;
   line-height: 25px;
 }
 
 /* Unordered Lists */
 ul {
   line-height: 25px;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
 }
 
-ul.no-bullets {
-list-style-type: none;
-  line-height: 25px;
+ul li {
+  list-style-type: none;
+}
+
+ul li:before {
+  content: "\2013  "; /* note: extra space needed because first is consumed by css parser */
+  position: absolute;
+  margin-left: -1rem;
 }
 
 ul.circle-bullets {
-list-style-type: circle;
+  list-style-type: circle;
   line-height: 25px;
 }
 
-ul.square-bullets {
-list-style-type: square;
+ul.double-spaced li {
+  margin-top: 1rem;
+}
+
+ul.no-bullets {
+  list-style-type: none;
   line-height: 25px;
 }
 
@@ -74,4 +87,13 @@ ul.no-style {
   line-height: 25px;
 }
 
+ul.square-bullets {
+  list-style-type: square;
+  line-height: 25px;
+}
+
+/* List Items */
+li > ul {
+  padding-left: 2rem;
+}
 
