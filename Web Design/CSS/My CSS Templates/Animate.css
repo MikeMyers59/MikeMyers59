@@ -1,4 +1,7 @@
+@charset "UTF-8";
+
 /* Animation Style */
+
 :root .fa-rotate-00,
 :root .fa-rotate-90,
 :root .fa-rotate-180,
@@ -30,7 +33,6 @@
 }
 
 /* ====== Rotation ====== */
-
 
 .rotate-00 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";

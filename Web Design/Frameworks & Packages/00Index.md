@@ -17,6 +17,7 @@
 [MathJax](http://www.mathjax.org/) 
   - [MathJax on GitHub](https://github.com/mathjax/MathJax/) 
 [Node.js®](https://nodejs.org/) 
+[Normalize](https://git.io/normalize)
 [pdfmake](http://pdfmake.org)
 [React](https://reactjs.org/)
   - [React DevTools](https://reactjs.org/link/react-devtools) 
