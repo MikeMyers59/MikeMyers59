@@ -63,6 +63,22 @@ Let's get you up to speed with dotfiles.
 1. Migrate all of your current tool configurations to your dotfiles repository.
 1. Publish your dotfiles on GitHub.
 
+## .editorconfig
+[EditorConfig](https://EditorConfig.org)
+
+```
+# top-most EditorConfig file
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = false
+```
+
 ## .prettierignore
 ```
 **/*.min.js
