@@ -1,5 +1,7 @@
 # Ruby
 
-[Ruby](http://ruby-lang.org/) i
-[Rake build tool](http://rake.rubyforge.org/)
+[Ruby](http://ruby-lang.org/)  
+[Rake build tool](http://rake.rubyforge.org/)  
+[Ruby Gems](https://rubygems.org/)  
+
 
