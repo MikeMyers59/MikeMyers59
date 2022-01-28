@@ -62,3 +62,14 @@ Let's get you up to speed with dotfiles.
 1. Test your installation script on a fresh virtual machine.
 1. Migrate all of your current tool configurations to your dotfiles repository.
 1. Publish your dotfiles on GitHub.
+
+## .prettierignore
+```
+**/*.min.js
+**/*.min.css
+
+.idea/
+node_modules/
+dist/
+build/
+```
