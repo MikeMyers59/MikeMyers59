@@ -23,3 +23,13 @@ Create an HTA interface to an access database?
 
 Can CSS & HTML use JS Constants?  This would be great for setting colors as constants to make uniform color scheme with a project.
 
+What does this markdown do?
+```
+---
+layout: page
+title: The Missing Semester of Your CS Education
+---
+```
+
+What is the prupose of the robots.txt file?
+
