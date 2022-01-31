@@ -13,9 +13,9 @@ alert-yellow{
   background-color:#fff064
 }
 
-/* ======= Border Colors ====== */
+/* ======= Background Colors ====== */
 
-/* Primary Border Colors:
+/* Primary Background Colors:
 black, blue, brown, cyan, green, orange, purple, red, white, yellow
 */
 
@@ -50,7 +50,7 @@ yellow{
   background-color:#ffeb3b
 }
 
-/* Gray or Gray Borders 
+/* Gray or Gray Background Colors: 
 blue-grey,blue-gray, dark-grey, dark-gray, grey, gray, light-grey, light-gray
 */
 
@@ -67,7 +67,7 @@ light-grey, light-gray{
   background-color:#f1f1f1
 }
 
-/* Alternate Border Colors:
+/* Alternate Background Colors:
 amber, aqua, banner-brown, deep-orange, deep-purple, indigo, khaki, 
 light-blue, light-green, lime, mustangblue, pale-blue, pale-green, 
 pale-red, pale-yellow, pink, sand, teal
