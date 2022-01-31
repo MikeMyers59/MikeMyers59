@@ -3,6 +3,10 @@
 ```css
 @media(min-width: 480px) {
 }
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+}
+@media screen and (max-width: 766px) {
+}
 ```
 
 ## Dark Mode
