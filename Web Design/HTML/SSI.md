@@ -26,6 +26,8 @@ Set the format of your date in a #CONFIG and then use #ECHO to place the formate
 <!--#echo var="DATE_LOCAL"--> <br />
 <!--#config timefmt="%B %d, %Y" -->
 <!--#echo var="DATE_LOCAL"-->
+<!--#config timefmt="%Y" -->
+<!--#echo var="LAST_MODIFIED" -->
 ```
 
 ### #Include
