@@ -30,6 +30,21 @@ Set the format of your date in a #CONFIG and then use #ECHO to place the formate
 <!--#echo var="LAST_MODIFIED" -->
 ```
 
+### If-Endif Enclosures
+```css
+<!--[if gte IE 9]>
+<![endif]-->
+<!--[if lt IE 9]>
+<![endif]-->
+```
+
+| Operator | Description |  
+| --- | --- |  
+| gt | Greater Than |  
+| gte | Greater Than or Equal |  
+| lt | Less Than |  
+| lte | Less Than or Equal |  
+
 ### #Include
 Use these to include markup snippets stroed in another file. This allows for a modular design that is contrlled by the server. 
 ```html
