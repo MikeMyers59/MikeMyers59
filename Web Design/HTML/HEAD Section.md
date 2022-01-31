@@ -3,11 +3,12 @@
 ```html
 <DESCRIPTION>Alerts warn about vulnerabilities, incidents, and other security issues that pose a significant risk.</DESCRIPTION>
 <LANGUAGE>en</LANGUAGE>
+<TITLE>Your Page Title</TITLE>
 ```
 
 ## Links
 ```html
-<link rel="canonical" href="https://www.yoursite.com/YourPage.html">
+<LINK rel="canonical" href="https://www.yoursite.com/YourPage.html">
 ```
 
 ### Google APIs
@@ -55,6 +56,8 @@ There is an order to these scripts!  Be sure to put requiremnts before usage/cal
 <SCRIPT type="text/javascript" src="jquery.js"></SCRIPT>
 <SCRIPT type="text/javascript" src="main.js"></SCRIPT>
 <SCRIPT type="text/markdown" src="markdown.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="js/jquery-migrate.min.js"></SCRIPT>
+<SCRIPT type="text/javascript" src="js/jquery_ui_latest/js/jquery-ui.custom.min.js"></SCRIPT>
 ```
 
 ## Style
@@ -70,6 +73,9 @@ Inline Style
 
 Linked Style File
 ```html
-<LINK rel="stylesheet" href="main.css" type="text/css">
+<LINK rel="stylesheet" href="css/main.css" type="text/css">
+<LINK type="text/css" href="css/jquery-ui.custom.css" rel="Stylesheet" />
+<LINK type="text/css" href="css/jquery-ui.gdeb.css" rel="Stylesheet" />
+<LINK type="text/css" href="css/homepage.css" rel="Stylesheet" />
 ```
 
