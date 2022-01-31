@@ -4,5 +4,6 @@ SSI's are directions to the Web Server to include additonal code/script/markup i
 ```html
 <!--#include virtual="/include/header/stylesheet.html" -->
 <!--#include virtual="/homepages/departments/999/custom/site-stylesheet.html" -->
+<!--#include virtual="/homepages/departments/999/custom/navbar.html" -->
 ```
 
