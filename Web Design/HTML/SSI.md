@@ -8,10 +8,10 @@ SSI's are directions to the Web Server to include additonal code/script/markup i
 Set your configuration requirements.  
 | Element | Type | Description |  
 | --- | --- | --- |   
-| \%A | timefmt |  |  
-| \%B | timefmt |  |  
-| \%d | timefmt |  |  
-| \%Y | timefmt | Year in the form 9999 |  
+| \%A | timefmt | Full day of Week Name |  
+| \%B | timefmt | Full Month Name |  
+| \%d | timefmt | Day of the Month `[1-31]` |  
+| \%Y | timefmt | Year in the form `[0,1,2]999` |  
 
 ### #ECHO  
 The Echo command copies directly into the document at the location inserted.  
@@ -24,7 +24,7 @@ Set the format of your date in a #CONFIG and then use #ECHO to place the formate
 ```html
 <!--#config timefmt="%A" -->
 <!--#echo var="DATE_LOCAL"--> <br />
-<!--#config timefmt="%B %d, %Y" -->
+<!--#config timefmt="%A, %B %d, %Y" -->
 <!--#echo var="DATE_LOCAL"-->
 <!--#config timefmt="%Y" -->
 <!--#echo var="LAST_MODIFIED" -->
