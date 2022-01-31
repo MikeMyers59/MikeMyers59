@@ -17,7 +17,10 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | --- | --- | --- |  
 | align-items | center;  |   |  
 | animation | animateleft 0.4s;  |   |  
-| background | { <Color> \| [ <ImageFile> <Setting> <Size> <Size> ] } | --- |  
+| animation-delay | `<Time>` |  |   
+| animation-duration | `<Time>` |  |   
+| animation-iteration-count | `<Integer>` |  |    
+| animation-name | '<IDName>' |  |   | background | { <Color> \| [ <ImageFile> <Setting> <Size> <Size> ] } | --- |  
 | background-position | <Percent> | --- |  
 | background-size | { <Size> ] } | --- |  
 | border <Size> <Type> <Color> | none | `border: solid 1px #aaa;` |  
@@ -46,7 +49,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | height | <Size> |  |  
 | justify-content| space-between;  |   |  
 | left | { <Percentage> } | --- |  
-| line-height | <Size> \| inherit | --- |  
+| line-height | <Size> \| `normal \| inherit` | --- |  
 | list-style-type| {  circle \| decimal \| lower-alpha \| lower-roman \| none \| square \| upper-alpha \| upper-roman } ; |   |  
 | margin <Top> <Right> <Bottom> <Left> <BR> margin <Top-Bottom> <Right-Left> <BR> margin <All>  <BR> margin-bottom <BR> margin-left <BR> margin-right <BR> margin-top | { <Size> \| auto \| none } | --- |  
 | max-width | <Size> |  |  
@@ -76,10 +79,10 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 
 <Color>  { black \| white }  
 <Size>   { none \| em \| en \| px \| % }  
-<Type>   { solid }
+<Type>   { solid }  
 
--mox  Namespace for Mozilla (FireFox)
--webkit Namespace for Microsoft (CrEdge)
+-mox  Namespace for Mozilla (FireFox)  
+-webkit Namespace for Microsoft (CrEdge)  
 
 ## Pseudo Selectors
 | Attribute | Options |  
