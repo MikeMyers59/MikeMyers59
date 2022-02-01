@@ -20,5 +20,4 @@ Other Code Storage Sites:
 - [SourceForge](http://www.sourceforge.net/)
 
 ## Training Available
-- [MIT Open Learning](https://openlearning.mit.edu/)
 
