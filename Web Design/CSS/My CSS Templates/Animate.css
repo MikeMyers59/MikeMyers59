@@ -1,18 +1,136 @@
 @charset "UTF-8";
 
-/* Animation Style */
+/* Animation Style 
+  Animate    - "animate-"
+  Flip       - "flip-"
+  Rotate     - "rotate-"
+*/
 
-:root .fa-rotate-00,
-:root .fa-rotate-90,
-:root .fa-rotate-180,
-:root .fa-rotate-270,
-:root .fa-flip-horizontal,
-:root .fa-flip-vertical {
+/* Set defaults */
+:root .rotate-00,
+:root .rotate-90,
+:root .rotate-180,
+:root .rotate-270,
+:root .flip-horizontal,
+:root .flip-vertical {
   -webkit-filter: none;
   filter: none; 
 }
 
+/* ====== Animate ====== */
+/* animate-bottom
+   animate-fading
+   animate-input
+   animate-left
+   animate-opacity
+   animate-right
+   animate-top
+   animate-zoom
+*/
+.animate-bottom{
+  position: relative;
+  animation: animatebottom 0.4s;
+}
+@keyframes animatebottom{
+  from{
+    bottom: -300px;
+    opacity: 0;
+  }
+  to{
+    bottom: 0;
+    opacity: 1;
+  }
+}
+.animate-fading{
+  animation:fading 10s infinite;
+}
+@keyframes fading{
+  0%{
+    opacity:0;
+  }
+  50%{
+    opacity:1;
+  }
+  100%{
+    opacity:0;
+  }
+}
+.animate-input{
+  transition: width 0.4s ease-in-out
+}
+.animate-input:focus{
+  width: 100%
+}
+.animate-left{
+  position: relative;
+  animation: animateleft 0.4s;
+}
+@keyframes animateleft{
+  from{
+    left: -300px;
+    ;opacity: 0;
+  }
+  to{
+    left: 0;
+    opacity: 1;
+  }
+}
+.animate-opacity{
+  animation:opac 0.8s;
+}
+@keyframes opac{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+.animate-right{
+  position: relative;
+  animation: animateright 0.4s;
+}
+@keyframes animateright{
+  from{
+    right: -300px;
+    opacity: 0;
+  }
+  to{
+    right: 0;
+    opacity: 1;
+  }
+}
+.animate-top{
+  position: relative;
+  animation: animatetop 0.4s;
+}
+@keyframes animatetop{
+  from{
+    top: -300px;
+    opacity: 0;
+  }
+  to{
+    top: 0;
+    opacity: 1;
+  }
+}
+.animate-zoom {
+  animation:animatezoom 0.6s;
+}
+@keyframes animatezoom{
+  from{
+    transform:scale(0);
+  }
+  to{
+    transform:scale(1);
+  }
+}
+
 /* ====== Flip ====== */
+/* 
+   flip-horizontal
+   flip-vertical
+*/
 
 .flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
@@ -32,7 +150,13 @@
   transform: scale(-1, -1); 
 }
 
-/* ====== Rotation ====== */
+/* ====== Rotate ====== */
+/*  
+   rotate-00
+   rotate-90
+   rotate-180
+   rotate-270
+*/
 
 .rotate-00 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";

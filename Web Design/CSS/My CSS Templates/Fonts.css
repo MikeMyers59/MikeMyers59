@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* Font Styles */
+/* 
+   Font Size
+   Font Family
+*/
 
 /* Base for starting modular font scale
 px	em
@@ -70,13 +74,23 @@ px	em
 .font-sm {
   font-size: .875em; 
 }
-
-.monospace {
-  font-family: monospace;
-  font-size: 1.23em;
-}
-
 .small {
 	font-size: 8pt;
 }
 
+/* ====== Font Famiy ====== */
+/* 
+   monospace
+   sanserif
+   serif
+*/
+.monospace {
+  font-family: monospace;
+  font-size: 1.23em;
+}
+.sanserif{
+  font-family:sanserif
+}
+.serif{
+  font-family:serif
+}
