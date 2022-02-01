@@ -35,8 +35,12 @@
 <META http-equiv="X-UA-Compatible" content="IE=11" />
 <META http-equiv="X-UA-Compatible" content="ie=edge">
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <META http-equiv=Content-Type content="text/html; charset=windows-1252"> <META name="Keywords" content="publication" />
 <META name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+<META http-equiv="cache-control" content="max-age=0">
+<META http-equiv="cache-control" content="no-cache">
+<META http-equiv="expires" content="0">
 ```
 
 ### Set Character Set  

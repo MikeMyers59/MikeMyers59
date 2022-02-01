@@ -21,3 +21,8 @@ Other Code Storage Sites:
 
 ## Training Available
 
+## Editors
+[Brackets](http://brackets.io/) - extensible open source code editor
+NotePad (WindowsOS)
+TextEdit (MacOS)
+

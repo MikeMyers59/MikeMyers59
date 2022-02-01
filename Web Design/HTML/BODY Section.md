@@ -80,11 +80,3 @@ p { line-height:1.4em; }
 }
 ```  
 
-## Make a Container or Wrapper
-'''html
-<DIV class="container">
-</DIV>
-<DIV class="wrapper">
-</DIV>
-```
-
