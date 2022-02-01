@@ -154,3 +154,13 @@ $("#toc-container").html(ToC);
 });
 ```
 
+#### Display URL (href) as Modal
+```javascript
+function displayModal(url) {
+// show the modal dialog from a href
+    var options = SP.UI.$create_DialogOptions();
+    options.url = url;
+    SP.UI.ModalDialog.showModalDialog(options);
+}
+```
+
