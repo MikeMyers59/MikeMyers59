@@ -1,5 +1,11 @@
 # Non-jQyuery Examples
 
+#### On Document Ready Function Template
+```javascript
+document.addEventListener("DOMContentLoaded", function(event) {
+});
+```
+
 ## Change an Element's Class
 ```javascript
 function AppendToClassName(element, className) {
