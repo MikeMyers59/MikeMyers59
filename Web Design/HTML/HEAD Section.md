@@ -11,12 +11,21 @@
 <LINK rel="canonical" href="https://www.yoursite.com/YourPage.html">
 ```
 
-### Google APIs
+### Link Fonts with Google API
 ```html
 <LINK href="https://fonts.googleapis.com/css?family=Dosis:200|Merriweather|Montserrat|Roboto" rel="stylesheet">
 ```
 
-### Set CSS 
+### Link Icons 
+For the browser tab - use 16x16
+For the taskbar - use 32x32
+```html
+<LINK rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<LINK rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<LINK rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-192x192.png" sizes="192x192">
+<LINK rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-512x512.png" sizes="512x512">```
+
+### Link CSS 
 ```html
 <LINK rel="stylesheet" href="main.css" type="text/css">
 ```
@@ -24,8 +33,7 @@
 ### Set Icons  
 ```html
 <LINK rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-32x32.png" sizes="32x32">
-<LINK rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-192x192.png" sizes="192x192">
-<LINK rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-512x512.png" sizes="512x512">
+
 ```
 
 ## META Data  

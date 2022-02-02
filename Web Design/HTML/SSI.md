@@ -1,6 +1,7 @@
 # SSI: Server Side Includes
 
-SSI's are directions to the Web Server to include additonal code/script/markup into an outgoing HTML files for the user. Some examples:  
+SSI's are directions to the Web Server to include additonal code/script/markup into an outgoing HTML files for the user. 
+**Note**: CSS also allows SSI, but is limited! 
 
 # SSI Commands  
 
@@ -31,13 +32,14 @@ Set the format of your date in a #CONFIG and then use #ECHO to place the formate
 ```
 
 ### If-Endif Enclosures
-```css
+```html
 <!--[if gte IE 9]>
 <![endif]-->
-<!--[if lt IE 9]>
+<!--[if lt IE 9]>  
 <![endif]-->
 ```
 
+### SSI Operators
 | Operator | Description |  
 | --- | --- |  
 | gt | Greater Than |  

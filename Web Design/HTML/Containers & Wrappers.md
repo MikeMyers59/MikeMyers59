@@ -1,18 +1,25 @@
 # Containers & Wrappers  
 
-**Containers** are major sections within the BODY of the document.  Thee are used to segment the page and separate by function on the page.  
-- Articles  
-- Aside  
-- Footer  
-- Header  
-- Main  
-- Nav  
-- Section  
+**Containers** are major sections within the BODY of the document.  Thee are used to segment the page and separate by function on the page.   
 
-**Wrappers** are to hold the data to be displayed. Divisions provide upper level formating, paragraphs contain the information, and the SPAN is to modify small segments of text within a paragraph.  
-- Div (Division)
-- P (Paragraph)
-- Span 
+**Wrappers** are to hold the data to be displayed. Divisions provide upper level formating, paragraphs contain the information, and the SPAN is to modify small segments of text within a paragraph. 
+
+![Simple Container Interaction Chart](HTMLContainerExample.jpg)
+
+### Container & Section Elements
+| Element|Notes|Roadmap |  
+| --- | --- | --- |  
+| Division|class="column-container" <BR> class="column-of-two" <BR> class="column-of-three"|<DIV class="<Class>" id="<IDName>">  </DIV> |  
+| Article|Container|`<ARTICLE>…</ARTICLE>` |  
+| Header|Container|`<HEADER>…</HEADER>` |  
+| Aside|Container|`<ASIDE>…</ASIDE>` |  
+| Section|Container|`<SECTION>…</SECTION>` |  
+| ContentContainer||`<CONTENT>…</CONTENT>` |  
+| Footer|Container|`<FOOTER>…</FOOTER>` |  
+| Navigation|Container|`<NAV>  </NAV>` |  
+| Division| Wrapper | `<DIV>  </DIV>` |  
+| Paragraph|class="centered"|`<P class="<Class>" id="<IDName>">  </P>` |  
+| Span|Wrapper: Used for small area style changes or identification of an area in the document. |`<SPAN class="<Class>" id="<IDName>"></SPAN>` |  
 
 ***PLACE DIV-P-SPAN GRAPHIC HERE!***
 
@@ -37,6 +44,13 @@
 ## Div  (Division)  
 ```html
 <DIV id="" class=""></DIV>
+```
+
+```html
+<div class="small center">
+  <p> </p>
+  <p> </p>
+</div>
 ```
 
 ## Footer  

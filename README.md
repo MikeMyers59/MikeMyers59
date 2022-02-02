@@ -8,6 +8,10 @@ MikeMyers59/MikeMyers59 is a ✨ special ✨ repository because its `README.md` 
 You can click the Preview link to take a look at your changes. ✂ 
 --->
 
+Will these work?
+[![Build Status](https://github.com/MikeMyers59/MikeMyers59/workflows/Build/badge.svg)](https://github.com/missing-semester/MikeMyers59/actions?query=workflow%3ABuild) 
+[![Links Status](https://github.com/MikeMyers59/MikeMyers59/workflows/Links/badge.svg)](https://github.com/missing-semester/MikeMyers59/actions?query=workflow%3ALinks)
+
 # Notes
 
 GitHub Markdown is different and requires some changes from standard md files. Check out their own Markdown description.
