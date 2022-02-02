@@ -2,19 +2,22 @@
 
 - GUI automation (pyautogui) [Automating the boring stuff Chapter 18](https://automatetheboringstuff.com/chapter18/)
 
+## PDB - Python Debugger
+[PDB](https://docs.python.org/3/library/pdb.html) is the Python debugger.
+
+Insert `import pdb; pdb.set_trace()` where you want to drop into PDB, basically a hybrid of a debugger (like GDB) and a Python shell.
+
 ## Examples
 
 ###sorts.py
 ```python
 import random
 
-
 def test_sorted(fn, iters=1000):
     for i in range(iters):
         l = [random.randint(0, 100) for i in range(0, random.randint(0, 50))]
         assert fn(l) == sorted(l)
         # print(fn.__name__, fn(l))
-
 
 def insertionsort(array):
 
@@ -27,7 +30,6 @@ def insertionsort(array):
         array[j+1] = v
     return array
 
-
 def quicksort(array):
     if len(array) <= 1:
         return array
@@ -35,7 +37,6 @@ def quicksort(array):
     left = [i for i in array[1:] if i < pivot]
     right = [i for i in array[1:] if i >= pivot]
     return quicksort(left) + [pivot] + quicksort(right)
-
 
 def quicksort_inplace(array, low=0, high=None):
     if len(array) <= 1:
@@ -55,7 +56,6 @@ def quicksort_inplace(array, low=0, high=None):
     quicksort_inplace(array, low, j)
     quicksort_inplace(array, j+2, high)
     return array
-
 
 if __name__ == '__main__':
     for fn in [quicksort, quicksort_inplace, insertionsort]:
