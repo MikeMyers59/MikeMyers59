@@ -3,9 +3,9 @@
 ## A Simple Example
 These are the classes
 - **column-container** – use as an outer container	
-- **column-of-two** – use to have two columns in the area	
-- **column-of-three** – use to have three columns in the area	
-- **column-of-four** – use to have four columns in the area
+- **column-of-two** – use to have two equally spaced columns in the area	
+- **column-of-three** – use to have three equally spaced columns in the area	
+- **column-of-four** – use to have four equally spaced columns in the area
 
 The Stylesheet:
 ```css
@@ -48,3 +48,8 @@ The usage:
   </div>
 </div> <!—End Column Container -->
 ```
+
+The Result:  
+![Column of Two Demo](ColumnofTwoDemo.PNG)
+**Note**: I used wide blue border for showing the actual columns. 
+
