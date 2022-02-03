@@ -3,9 +3,28 @@
 ## A Simple Example
 These are the classes
 - **column-container** – use as an outer container	
+    ```html
+    <DIV class="container">   </DIV>
+    ```
 - **column-of-two** – use to have two equally spaced columns in the area	
+    ```html
+    <DIV class="column-of-two">   </DIV>
+    <DIV class="column-of-two">   </DIV>
+    ```
 - **column-of-three** – use to have three equally spaced columns in the area	
+    ```html
+    <DIV class="column-of-three">  </DIV>
+    <DIV class="column-of-three">  </DIV>
+    <DIV class="column-of-three">  </DIV>
+    ```
 - **column-of-four** – use to have four equally spaced columns in the area
+    ```html
+    <DIV class="column-of-four">   </DIV>
+    <DIV class="column-of-four">   </DIV>
+    <DIV class="column-of-four">   </DIV>
+    <DIV class="column-of-four">   </DIV>
+    ```
+**Note**: All columns must be placed within a *column-container*.  The *column-container* allows the columns to scale properly themselves without being affected by other content on a page.
 
 The Stylesheet:
 ```css
