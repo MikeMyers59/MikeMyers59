@@ -72,3 +72,57 @@ The Result:
 ![Column of Two Demo](ColumnofTwoDemo.PNG)
 **Note**: I used wide blue border for showing the actual columns. 
 
+## Another Method:
+```css
+/* Columns */
+.col,.half,.third,.twothird,.threequarter,.quarter{float:left;width:100%}
+
+/* Small columns */
+@media (min-width:480px){
+  .col.s1 {width:8.33333%}
+  .col.s2 {width:16.66666%}
+  .col.s3 {width:24.99999%}
+  .col.s4 {width:33.33333%}
+  .col.s5 {width:41.66666%}
+  .col.s6 {width:49.99999%}
+  .col.s7 {width:58.33333%}
+  .col.s8 {width:66.66666%}
+  .col.s9 {width:74.99999%}
+  .col.s10 {width:83.33333%}
+  .col.s11 {width:91.66666%}
+  .col.s12 {width:99.99999%}
+}
+
+/* Medium columns */
+@media (min-width:768px){
+  .col.m1 {width:8.33333%}
+  .col.m2 {width:16.66666%}
+  .col.m3 {width:24.99999%}
+  .col.m4 {width:33.33333%}
+  .col.m5 {width:41.66666%}
+  .col.m6 {width:49.99999%}
+  .col.m7 {width:58.33333%}
+  .col.m8 {width:66.66666%}
+  .col.m9 {width:74.99999%}
+  .col.m10 {width:83.33333%}
+  .col.m11 {width:91.66666%}
+  .col.m12 {width:99.99999%}
+}
+
+/* Large columns */
+@media (min-width:1200px){
+  .col.l1 {width:8.33333%}
+  .col.l2 {width:16.66666%}
+  .col.l3 {width:24.99999%}
+  .col.l4 {width:33.33333%}
+  .col.l5 {width:41.66666%}
+  .col.l6 {width:49.99999%}
+  .col.l7 {width:58.33333%}
+  .col.l8 {width:66.66666%}
+  .col.l9 {width:74.99999%}
+  .col.l10 {width:83.33333%}
+  .col.l11 {width:91.66666%}
+  .col.l12 {width:99.99999%}
+}
+```
+
