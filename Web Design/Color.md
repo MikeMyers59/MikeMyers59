@@ -2,6 +2,9 @@
 
 If you have an RGB palette that you need to convert to HEX, you can use a converter like this one from [COLORRRS](http://www.webpagefx.com/web-design/hex-to-rgb/).
 
+- [0to255 Color Picker](https://www.0to255.com/)
+- [FlatUIColors](https://www.flatuicolors.com)
+
 #### RGB (Red-Green-Blue) vs. HSL (Hue-Saturation-Luminosity)  
 
 | RGB() & RGBa() | HSL() |  
