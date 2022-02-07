@@ -9,6 +9,7 @@
 
 ## Common Elements
 | Element|Notes|Roadmap |  
+| --- | --- | --- | 
 | Anchor||`<A href=URL>  </A>` |  
 | Blockquote||`<BLOCKQUOTE>  </BLOCKQUOTE>` |  
 | Button||`<BUTTON>  </BUTTON>` |  
@@ -35,5 +36,10 @@
   </body>
 
 </html>
+```
+
+## Automatically Relaod Page (5 Second Timer)
+```javascript
+window.setTimeout('window.location.reload()', 5000)
 ```
 
