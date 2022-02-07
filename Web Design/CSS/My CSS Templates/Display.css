@@ -1,0 +1,25 @@
+/* Display */
+.hidden, .invisible {
+  display: none;
+  visibility: hidden;
+}
+.unhidden, .visible {
+  display: block; 
+  visibility: visible;
+}
+.show-block {
+  display:block;
+}
+.show-inline-block {
+  display:inline-block;
+}
+.show-flex {
+  display:flex;
+}
+.table-cell {
+  display: table-cell;
+}
+.table {
+  display: table;
+}
+
