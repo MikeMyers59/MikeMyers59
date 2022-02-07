@@ -8,6 +8,7 @@
 [JSZip](<http://stuartk.com/jszip>) - A Javascript class for generating and reading zip files
   - [JSZip on GitHub](https://raw.github.com/Stuk/jszip/)
 [LESS - Leaner CSS](http://lesscss.org) 
+[Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
 **Markdown-IT**
   - [Gitter](https://gitter.im/markdown-it/markdown-it) 
   - [jsDeliver CDN](http://www.jsdelivr.com/#!markdown-it "jsDeliver CDN") 
@@ -28,6 +29,7 @@
 [SlickJS](https://github.com/kenwheeler/slick) - carousel 
 [swfobject](http://code.google.com/p/swfobject/)  
 tooltipster v4.2.6 - needs prettification.
+[Vertex42](https://www.vertex42.com/) - MS Office Templates
 [Video.js](https://github.com/videojs/video.js)   
   - [Video.js on GitHub](https://github.com/videojs/videojs-contrib-dash/)  
 
