@@ -25,6 +25,7 @@
 [ShadowBox](http://shadowbox-js.com/)  
   - [ShadowBox on GitHub](http://github.com/mjijackson/shadowbox/)  
 [Sizzle.js](http://sizzlejs.com/)  
+[SlickJS](https://github.com/kenwheeler/slick) - carousel 
 [swfobject](http://code.google.com/p/swfobject/)  
 tooltipster v4.2.6 - needs prettification.
 [Video.js](https://github.com/videojs/video.js)   
