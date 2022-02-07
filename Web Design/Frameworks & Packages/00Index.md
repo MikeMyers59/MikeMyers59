@@ -35,6 +35,12 @@ tooltipster v4.2.6 - needs prettification.
 <link type="text/css" href="font-awesome.css" rel="Stylesheet">
 ```
 
+## jQuery
+```html
+https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.min.css
+https://www.jsdelivr.com/projects/jquery.slick
+```
+
 ## [Magnific Popup by Dmitry Semenov](http://bit.ly/magnific-popup) 
 
 ## Mustache
@@ -70,4 +76,10 @@ tooltipster v4.2.6 - needs prettification.
 <SCRIPT crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></SCRIPT>
 <SCRIPT crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></SCRIPT>
 ```
+
+## SlickJS
+```html
+https://cdnjs.com/libraries/slick-carousel
+```
+
 
