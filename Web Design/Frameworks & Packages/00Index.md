@@ -9,7 +9,7 @@
   - [JSZip on GitHub](https://raw.github.com/Stuk/jszip/)
 [LESS - Leaner CSS](http://lesscss.org) 
 **Markdown-IT**
-  - [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/markdown-it/markdown-it) 
+  - [Gitter](https://gitter.im/markdown-it/markdown-it) 
   - [jsDeliver CDN](http://www.jsdelivr.com/#!markdown-it "jsDeliver CDN") 
   - [cdnjs.com CDN](https://cdnjs.com/libraries/markdown-it "cdnjs.com") 
   - [API documentation](https://markdown-it.github.io/markdown-it/) 
@@ -40,6 +40,23 @@ tooltipster v4.2.6 - needs prettification.
 ```html
 https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.min.css
 https://www.jsdelivr.com/projects/jquery.slick
+```
+
+```javascript
+// Load the jquery UI if necessary (1.10.3)
+if ( jquery_ui != "undefined" ) {
+  var html_doc = document.getElementsByTagName('head')[0];
+  var ca = document.createElement('link'); ca.type = 'text/css';
+  ca.rel = 'stylesheet';
+  ca.href = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.min.css';
+  html_doc.appendChild(ca);
+  var ja = document.createElement('script');
+  ja.type = 'text/javascript';
+  ja.async = true;
+  ja.src = 'https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js';
+  var js = document.getElementsByTagName('script')[0];
+  js.parentNode.insertBefore(ja, js);
+};
 ```
 
 ## [Magnific Popup by Dmitry Semenov](http://bit.ly/magnific-popup) 
