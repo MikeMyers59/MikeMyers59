@@ -1,5 +1,10 @@
 # Fonts
 
+### font-family
+- Georgia, "Times New Roman", Times, serif;
+- lato, arial, sans-serif;
+- Consolas,"Courier New", monospace;
+
 ## Linking from CDNs & APIs
 
 ### Google API
