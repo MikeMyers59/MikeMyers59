@@ -1,4 +1,7 @@
+@charset "UTF-8";
+
 /* Display */
+
 .hidden, .invisible {
   display: none;
   visibility: hidden;
