@@ -11,6 +11,11 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 - Lectures on [Hacker Tools](https://hacker-tools.github.io/lectures/)
 - Video recordings of the lectures are available [YouTube](https://www.youtube.com/playlist?list=PLyzOVJj3bHQuloKGG59rS43e29ro7I57J)
 
+#### CSS Namespace
+| Namespace ID | Source |  
+| --- | --- |  
+| UI- | jQuery-UI |  
+
 ## Attributes
 
 | Attribute | Options | Example |  
