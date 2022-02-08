@@ -1,3 +1,5 @@
+// An Attempt to unminimize & understand mustache
+
 (function define Mustache(global,factory){
   if(typeof exports==="object"&&exports){
     factory(exports)
