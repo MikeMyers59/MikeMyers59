@@ -17,6 +17,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | Namespace ID | Source |  
 | --- | --- |  
 | UI- | jQuery-UI |  
+| ms- | Microsoft |  
 
 ## Attributes
 
