@@ -9,7 +9,12 @@ overflow-x		  auto
 transform		    translate(-50%,-50%)
 -ms-transform
 white-space		  normal
-  
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
 -webkit-appearance	button \| none \| textfield
 
 ## WebDev Functions

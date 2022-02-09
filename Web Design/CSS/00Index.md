@@ -16,9 +16,11 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 #### CSS Namespace
 | Namespace ID | Source |  
 | --- | --- |  
-| UI- | jQuery-UI |  
+| -moz- | Mozilla |  
+| fa- | FontAwesome |  
 | ms- | Microsoft |  
 | mso- | Microsoft Office | 
+| UI- | jQuery-UI |  
 
 ## Attributes
 
