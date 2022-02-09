@@ -1,21 +1,47 @@
 # HOLD AREA
 
 ## Attributes
+background-clip	padding-box
 box-sizing		  content-box
 color			      crimson
+cursor	not-allowed \| pointer
+display	table-row-group
 filter			    grayscale() \| sepia()
+font-smoothing  antialiased \| grayscale 
+  -moz-osx-font-smoothing
+  -webkit-font-smoothing
+font-variant: normal
+letter-spacing	normal
+line-break	auto
 outline-offset	<Size>
 overflow-x		  auto
+position	fixed
+table-layout	fixed
+text-align	start
+text-rendering: auto
+touch-action	manipulation
 transform		    translate(-50%,-50%)
--ms-transform
-white-space		  normal
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
+  -ms-transform
+transition	opacity .15s linear
+  -o-transition	opacity .15s linear
+transition-duration	.35s
+transition-property	height,visibility
+transition-timing-function	ease
+user-select	none
+  -moz-user-select	none
+  -ms-user-select	none
+white-space		  normal \| nowrap
+word-break  normal
+word-spacing  normal
+word-wrap normal
+
 -webkit-appearance	button \| none \| textfield
+-webkit-box-shadow	0 5px 10px rgba(0,0,0,0.2)
+-webkit-transition	opacity .15s linear
+-webkit-transition-duration	.35s
+-webkit-transition-property	height,visibility
+-webkit-transition-timing-function	ease
+-webkit-user-select	none
 
 ## WebDev Functions
 grayscale(50%)

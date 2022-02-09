@@ -1,5 +1,7 @@
 # Frameworks & Packages
-
+[Bootstrap](http://getbootstrap.com)]
+  - [Bootstrap on GitHub](https://github.com/twbs/bootstrap/
+  - [Bootstrap-tour](http://bootstraptour.com/) - Ulrich Sossou  
 [Dash.js](https://github.com/Dash-Industry-Forum/dash.js/) 
 [DataTables](https://datatables.net/)
   Included libraries: JSZip 2.5.0, pdfmake 0.1.36, DataTables 1.10.24, Buttons 1.7.0, HTML5 export 1.7.0, Print view 1.7.0, FixedHeader 3.1.8
@@ -9,6 +11,8 @@
   - [JSZip on GitHub](https://raw.github.com/Stuk/jszip/)
 [LESS - Leaner CSS](http://lesscss.org) 
 [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
+[Matt Kruse](<matt@mattkruse.com>)
+  - calendar_popup.js
 [Normalize](https://git.io/normalize)
 [pdfmake](http://pdfmake.org)
 [prismJS](https://prismjs.com/)
@@ -16,6 +20,7 @@
   - [ShadowBox on GitHub](http://github.com/mjijackson/shadowbox/)  
 [Sizzle.js](http://sizzlejs.com/)  
 [SlickJS](https://github.com/kenwheeler/slick) - carousel 
+[SPServices](http://spservices.codeplex.com)
 [swfobject](http://code.google.com/p/swfobject/)  
 tooltipster v4.2.6 - needs prettification.
 [Vertex42](https://www.vertex42.com/) - MS Office Templates
@@ -32,6 +37,12 @@ tooltipster v4.2.6 - needs prettification.
 ```
 
 ## jQuery
+[jQuery Foundation, Inc.](https://jquery.org)
+  - [jQuery-UI](http://jqueryui.com) 
+    - [Theme Management & Creation](http://jqueryui.com/themeroller/)
+  - [jQuery License](https://jquery.org/license)
+  - jQuery Migrate
+
 ```html
 https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/ui-lightness/jquery-ui.min.css
 https://www.jsdelivr.com/projects/jquery.slick
