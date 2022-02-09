@@ -11,7 +11,6 @@
   - jQuery Migrate
 [Matt Kruse](<matt@mattkruse.com>)
   - calendar_popup.js
-[PrismJS](http://prismjs.com/)  
 [SPServices](http://spservices.codeplex.com)
 
 ### jQuery UI (uses a MIT License)

@@ -58,3 +58,16 @@ else {
 }
 ```
 
+``javascript
+<SCRIPT src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></SCRIPT>
+<SCRIPT src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></SCRIPT>
+
+/* check if jQuery is loaded, and load if not */
+if(typeof jQuery === 'undefined') {
+  var script = document.createElement( 'script' );
+  script.type = 'text/javascript';
+  script.src = '/jquery/jquery_latest/jquery.min.js';
+  jQuery('head').append(script);
+}
+```
+

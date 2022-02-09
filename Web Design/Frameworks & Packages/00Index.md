@@ -9,20 +9,9 @@
   - [JSZip on GitHub](https://raw.github.com/Stuk/jszip/)
 [LESS - Leaner CSS](http://lesscss.org) 
 [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
-**Markdown-IT**
-  - [Gitter](https://gitter.im/markdown-it/markdown-it) 
-  - [jsDeliver CDN](http://www.jsdelivr.com/#!markdown-it "jsDeliver CDN") 
-  - [cdnjs.com CDN](https://cdnjs.com/libraries/markdown-it "cdnjs.com") 
-  - [API documentation](https://markdown-it.github.io/markdown-it/) 
-[Materialize](https://github.com/jasonmayes/mdl-component-design-pattern) 
-[MathJax](http://www.mathjax.org/) 
-  - [MathJax on GitHub](https://github.com/mathjax/MathJax/) 
-[Node.js®](https://nodejs.org/) 
 [Normalize](https://git.io/normalize)
 [pdfmake](http://pdfmake.org)
-[React](https://reactjs.org/)
-  - [React DevTools](https://reactjs.org/link/react-devtools) 
-  - [React DevTool FAQs](https://reactjs.org/link/react-devtools-faq) 
+[prismJS](https://prismjs.com/)
 [ShadowBox](http://shadowbox-js.com/)  
   - [ShadowBox on GitHub](http://github.com/mjijackson/shadowbox/)  
 [Sizzle.js](http://sizzlejs.com/)  
@@ -33,7 +22,11 @@ tooltipster v4.2.6 - needs prettification.
 [Video.js](https://github.com/videojs/video.js)   
   - [Video.js on GitHub](https://github.com/videojs/videojs-contrib-dash/)  
 
+## Angular
+  - [Angular SSO example](https://github.com/jlguenego/angular-sso-example) 
+
 ## Font Awesome
+[Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons/)
 ```html
 <link type="text/css" href="font-awesome.css" rel="Stylesheet">
 ```
@@ -61,7 +54,23 @@ if ( jquery_ui != "undefined" ) {
 };
 ```
 
+## JSON
+[JsonML: JSON Markup Language](http://jsonml.org/) 
+
 ## [Magnific Popup by Dmitry Semenov](http://bit.ly/magnific-popup) 
+
+## Markdown-IT
+  - [Gitter](https://gitter.im/markdown-it/markdown-it) 
+  - [jsDeliver CDN](http://www.jsdelivr.com/#!markdown-it "jsDeliver CDN") 
+  - [cdnjs.com CDN](https://cdnjs.com/libraries/markdown-it "cdnjs.com") 
+  - [API documentation](https://markdown-it.github.io/markdown-it/)  
+
+## Materialize
+[Materialize](https://github.com/jasonmayes/mdl-component-design-pattern) 
+
+## MathJax
+[MathJax](http://www.mathjax.org/) 
+  - [MathJax on GitHub](https://github.com/mathjax/MathJax/) 
 
 ## Mustache
 ```html
@@ -92,6 +101,10 @@ if ( jquery_ui != "undefined" ) {
 ```
 
 ## React.js
+[React](https://reactjs.org/)
+  - [React DevTools](https://reactjs.org/link/react-devtools) 
+  - [React DevTool FAQs](https://reactjs.org/link/react-devtools-faq) 
+  - [React SSO example](https://github.com/jlguenego/react-sso-example) 
 ```html
 <SCRIPT crossorigin src="https://unpkg.com/react@17/umd/react.development.js"></SCRIPT>
 <SCRIPT crossorigin src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></SCRIPT>
@@ -102,4 +115,16 @@ if ( jquery_ui != "undefined" ) {
 https://cdnjs.com/libraries/slick-carousel
 ```
 
+## Video.js 
+[Video.js](https://github.com/videojs/video.js) 
+  - [Video.js on GitHub](https://github.com/videojs/videojs-contrib-dash/) 
+
+## VueJS
+[Vue]( https://vuejs.org/) 
+  - [Vu Devtools](https://github.com/vuejs/vue-devtools) 
+  - [Vue SSO example](https://github.com/jlguenego/vue-sso-example) 
+Vue in development mode. Make sure to turn on production mode when deploying for production. See more tips at https://vuejs.org/guide/deployment.html 
+```html
+<SCRIPT src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></SCRIPT>
+```
 

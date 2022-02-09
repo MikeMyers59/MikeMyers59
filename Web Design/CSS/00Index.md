@@ -18,6 +18,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | --- | --- |  
 | UI- | jQuery-UI |  
 | ms- | Microsoft |  
+| mso- | Microsoft Office | 
 
 ## Attributes
 

@@ -80,3 +80,17 @@ p { line-height:1.4em; }
 }
 ```  
 
+## Article
+<ARTICLE>…</ARTICLE>
+
+## Horizontal Rule
+<HR width="60%" />
+
+## Line Break
+<BR />
+
+## Sections, Containers & Wrappers  
+<MAIN role="main" id="" class="">…</MAIN>
+<NAV class=""></NAV>
+<SECTION id="">…</SECTION>
+

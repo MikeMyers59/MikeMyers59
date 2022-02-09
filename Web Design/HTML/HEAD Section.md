@@ -6,9 +6,20 @@
 <TITLE>Your Page Title</TITLE>
 ```
 
+## Description
+```html
+<DESCRIPTION>This web site provides: .</DESCRIPTION>
+```
+
+## Language  
+```html
+<LANGUAGE>en</LANGUAGE>
+```
+
 ## Links
 ```html
 <LINK rel="canonical" href="https://www.yoursite.com/YourPage.html">
+<LINK>https://www.us-cert.gov/</LINK>
 ```
 
 ### Link Fonts with Google API
@@ -33,7 +44,6 @@ For the taskbar - use 32x32
 ### Set Icons  
 ```html
 <LINK rel="icon" href="https://cdn.vertex42.com/Images/Vertex42Icon-32x32.png" sizes="32x32">
-
 ```
 
 ## META Data  
@@ -44,7 +54,8 @@ For the taskbar - use 32x32
 <META http-equiv="X-UA-Compatible" content="ie=edge">
 <META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <META http-equiv="Content-Type" content="text/html; charset=windows-1252">
-<META http-equiv=Content-Type content="text/html; charset=windows-1252"> <META name="Keywords" content="publication" />
+<META http-equiv=Content-Type content="text/html; charset=windows-1252">
+<META name="Keywords" content="publication" />
 <META name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <META http-equiv="cache-control" content="max-age=0">
 <META http-equiv="cache-control" content="no-cache">
