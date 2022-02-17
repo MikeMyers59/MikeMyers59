@@ -2,3 +2,6 @@
 *.log
 *.gz
 *.zip
+desktop.ini
+thumb.db
+thumbs.db
