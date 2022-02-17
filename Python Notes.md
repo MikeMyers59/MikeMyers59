@@ -2,6 +2,49 @@
 
 - GUI automation (pyautogui) [Automating the boring stuff Chapter 18](https://automatetheboringstuff.com/chapter18/)
 
+## Brython - Browser Python  
+Brython (Browser Python) is an implementation of Python 3 running in the browser, with an interface to the DOM elements and events.
+- https://github.com/brython-dev/brython
+- http://www.brython.info/
+
+```html
+<!-- Load Brython JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3/brython.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/brython@3/brython_stdlib.js"></script>
+
+<!-- Run Brython on load -->
+<script>
+    AJS.toInit(function() {
+        brython();
+    });
+</script>
+
+<!-- Create Python interpreter -->
+<script type="text/python">
+from interpreter import Interpreter
+from browser import document
+
+def OpenInt(event):
+	Interpreter()
+
+document["InterpreterButton"].bind("click", OpenInt)
+</script>
+<br />
+<button id="InterpreterButton">Open a Python interpreter</button>
+
+<h2>Python example (see source code)</h2>
+<script type="text/python">
+from browser import document, alert
+
+def echo(event):
+	alert(document["zone"].value)
+
+document["mybutton"].bind("click", echo)
+</script>
+<br />
+<input id="zone" /><button id="mybutton">Alert me!</button>
+```
+
 ## PDB - Python Debugger
 [PDB](https://docs.python.org/3/library/pdb.html) is the Python debugger.
 
