@@ -56,6 +56,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | float | {  none | left | right } ;  |   |  
 | font-family | { Arial \| Arial Narrow \| Cambria \| Helvetica \| LibreFranklin-Bold \| Roboto \| sans-serif \| serif } ;  |   |  
 | font-size | <Size>  |   |  
+| [font-smooth](https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth) <BR> | { <size> \| always \| **auto** \| inherit \| initial \| never \| revert \| unset } |  |  
 | font-weight | { bold \| bolder \| normal } |  |  
 | height | <Size> |  |  
 | justify-content| space-between;  |   |  
