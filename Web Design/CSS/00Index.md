@@ -100,36 +100,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | Attribute | Options |  
 | --- | --- |  
 | :nth-child({ even \| odd \| <Index> })] | Select every other row based on index number |   
-| :root |  |  
-
-#### Set CSS Variables
-Setting variables is CSS uses a Key-Value pair:
-```css
-/* For Root Values */
-:root {
-  --hue: 215;
-  --sat: 39%;
-  --lum: 51%;
-  --one: 0;
-  --two: 60;
-  --three: 120;
-  --four: 180;
-  --five: 240;
-  --six: 300;
-  --dark: 30;
-  --light: 210;
-}
-/* For individual selector values */
-.accent-1 {
-  --this-hue: calc(var(--hue) + var(--one));
-  background: hsl(var(--this-hue), var(--sat), var(--lum));
-  position:relative;
-}
-```
-Call the variable using the `var()` function. as show:  
-```css
-hsl(var(--hue), var(--sat), var(--lum))
-```
+| :root | matches the document's root element; used to set global variables |  
 
 ## Responsive Selectors
 ```css
