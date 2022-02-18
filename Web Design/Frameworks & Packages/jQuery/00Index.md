@@ -1,7 +1,9 @@
 # jQuery
 
-[jQuery API](http://api.jquery.com/)
-[jQueryUI API](http://api.jqueryui.com/)
+[jQuery](http://jquery.org/)  
+- [jQuery API](http://api.jquery.com/)  
+- [jQueryUI API](http://api.jqueryui.com/)  
+- [MIT License](http://jquery.org/license)  
 
 ```html
 <script type="text/javascript" src="jquery.js"></script>
@@ -36,6 +38,7 @@ $(document).ready(function() {
 ```html
 <script type="text/javascript" src="jquery-ui.js"></script>
 ```
+#### jQuery UI Sortable
 
 ## Examples
 
