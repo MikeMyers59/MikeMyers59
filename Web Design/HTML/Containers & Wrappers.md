@@ -104,14 +104,28 @@
 <p id="testMode" class="hidden">0</p>
 ```
 
+## Accessibility (ARIA Support)
+| Action | HTML | CSS |  
+| --- | --- | --- |  
+| Bread Crumbs | `<div id="breadcrumb-container">` <BR> `<ol id="breadcrumbs" aria-label="Breadcrumbs"></ol>` <BR> `</div>` | `#breadcrumb-container {` <BR> `}` <BR> `#breadcrumbs {` <BR> `}` |  
+
+## Box System fot Simple Web Page 
+
+![Mike's Simple Web Page Box System](WebPageBox.PNG)  
+
 | Action | HTML | CSS |  
 | --- | --- | --- |  
 | Body-Container | `<div id="body-container"></div> <!-- \#body-container -->` | `#body-container {` <BR> `}` |  
-| Body-Header | `<div id="body-header">` <BR> `<h1 id="body-header-text"></h1>` <BR> `</div> <!-- \#body-header -->` | `#body-header {` <BR> `}` |  
+| Body-Header | `<div id="body-header">` <BR> `  <h1 id="body-header-text"></h1>` <BR> `</div> <!-- \#body-header -->` | `#body-header {` <BR> `}` |  
+| Footer-Container | `<div id="footer-container role="contentinfo">` <BR> `  <section class="footer-body">` <BR> `</section>` <BR> `</div> <!-- \#footer-container -->` | `#footer-container {` <BR> `}` |  
 | Main-Container | `<div id="main-container"></div> <!-- \#main-container -->` | `#main-container {` <BR> `}` |  
-| Main-Header | `<div id="main-header">` <BR> `<h1 id="main-header-text"></h1>` <BR> `</div> <!-- \#main-header -->` | `#main-header {` <BR> `}` |  
+| Main-Header | `<div id="main-header">` <BR> `  <h1 id="main-header-text"></h1>` <BR> `</div> <!-- \#main-header -->` | `#main-header {` <BR> `}` |  
 | Sidebar Container | `<div id="sidebar-container"></div> <!-- \#sidebar-container -->` | `#sidebar-container {` <BR> `}` |  
-| Sidebar-Header | `<div id="sidebar-header">` <BR> `<h1 id="sidebar-header-text"></h1>` <BR> `</div> <!-- \#sidebar-header -->` | ``#sidebar-header {` <BR> `}`` |  
-| Text to Small | `<span class="smalltext"></span>` | `.smalltext {` <BR> `  font-size=0.5;` <BR> `}` |  
-| Text to Small Caps | `<span class="smallcap"></span>` | `.smallcap{` <BR> `  font-size=0.5;` <BR> `  text-transform="uppercase";` <BR> `}` |  
-  
+| Sidebar-Header | `<div id="sidebar-header">` <BR> `  <h1 id="sidebar-header-text"></h1>` <BR> `</div> <!-- \#sidebar-header -->` | ``#sidebar-header {` <BR> `}`` |  
+
+## Modify Text
+| Action | HTML | CSS |  
+| --- | --- | --- |  
+| Small | `<span class="smalltext"></span>` | `.smalltext {` <BR> `  font-size=0.5;` <BR> `}` |  
+| Small Caps | `<span class="smallcap"></span>` | `.smallcap{` <BR> `  font-size=0.5;` <BR> `  text-transform="uppercase";` <BR> `}` |  
+
