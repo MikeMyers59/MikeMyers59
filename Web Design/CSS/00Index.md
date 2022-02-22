@@ -17,6 +17,8 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | Namespace ID | Source |  
 | --- | --- |  
 | -moz- | Mozilla |  
+| -webkit | on MAC: Chrome, Safari, etc |  
+| aui- | Atlassian User Interface |  
 | fa- | FontAwesome |  
 | ms- | Microsoft |  
 | mso- | Microsoft Office | 
