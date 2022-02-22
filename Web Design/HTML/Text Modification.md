@@ -15,6 +15,7 @@
 ## Modify Text
 | Action | HTML | CSS |  
 | --- | --- | --- |  
+| Pre | `` |  
 | Small | `<span class="smalltext"></span>` | `.smalltext {` <BR> `  font-size=0.5;` <BR> `}` |  
 | Small Caps | `<span class="smallcap"></span>` | `.smallcap{` <BR> `  font-size=0.5;` <BR> `  text-transform="uppercase";` <BR> `}` |  
 
