@@ -104,3 +104,14 @@
 <p id="testMode" class="hidden">0</p>
 ```
 
+| Action | HTML | CSS |  
+| --- | --- | --- |  
+| Body-Container | `<div id="body-container"></div> <!-- \#body-container -->` | `#body-container {` <BR> `}` |  
+| Body-Header | `<div id="body-header">` <BR> `<h1 id="body-header-text"></h1>` <BR> `</div> <!-- \#body-header -->` | `#body-header {` <BR> `}` |  
+| Main-Container | `<div id="main-container"></div> <!-- \#main-container -->` | `#main-container {` <BR> `}` |  
+| Main-Header | `<div id="main-header">` <BR> `<h1 id="main-header-text"></h1>` <BR> `</div> <!-- \#main-header -->` | `#main-header {` <BR> `}` |  
+| Sidebar Container | `<div id="sidebar-container"></div> <!-- \#sidebar-container -->` | `#sidebar-container {` <BR> `}` |  
+| Sidebar-Header | `<div id="sidebar-header">` <BR> `<h1 id="sidebar-header-text"></h1>` <BR> `</div> <!-- \#sidebar-header -->` | ``#sidebar-header {` <BR> `}`` |  
+| Text to Small | `<span class="smalltext"></span>` | `.smalltext {` <BR> `  font-size=0.5;` <BR> `}` |  
+| Text to Small Caps | `<span class="smallcap"></span>` | `.smallcap{` <BR> `  font-size=0.5;` <BR> `  text-transform="uppercase";` <BR> `}` |  
+  
