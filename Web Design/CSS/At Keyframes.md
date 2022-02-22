@@ -3,9 +3,22 @@
 ## Examples
 
 ```css
-@keyframes blinker {  
-  50% { opacity: 0.25; }
-}# 
+@keyframes blink{
+  50%{
+    background-color:transparent;
+    opacity: 0.25;
+  }
+}
+@-moz-keyframes blink{
+  50%{
+    background-color:transparent;
+  }
+}
+@-webkit-keyframes blink{
+  50%{
+    background-color:transparent;
+  }
+}
 ```
 
 ```css
