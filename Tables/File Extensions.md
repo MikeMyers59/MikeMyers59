@@ -8,5 +8,6 @@
 | Document |  |  |  
 | Image |  |  |  
 | Script |  |  |  
+| System | VS Code Install Extension | .vsix |  
  
  
