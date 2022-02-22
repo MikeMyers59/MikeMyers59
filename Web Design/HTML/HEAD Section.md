@@ -49,28 +49,25 @@ For the taskbar - use 32x32
 ## META Data  
 ```html
 <META name="theme-color" content="#3969ad">
-<META charset="UTF-8">
 <META http-equiv="cache-control" content="max-age=0">
 <META http-equiv="cache-control" content="no-cache">
-<META http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <META http-equiv="X-UA-Compatible" content="IE=11" />
 <META http-equiv="X-UA-Compatible" content="ie=edge">
 <META name="Keywords" content="publication" />
 <META name="robots" content="noarchive,noindex,nofollow">
-<META name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 <META http-equiv="expires" content="0">
 ```
 
 ### Set Character Set  
 ```html  
 <META http-equiv="content-type" content="text/html; charset=UTF-8">  
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252">
 <META charset="UTF-8">  
 ```  
 
 ### Set Viewport  
 ```html
-<META name="viewport" content="width=device-width, initial-scale=1
+<META name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
 ```
 
 ## Script
