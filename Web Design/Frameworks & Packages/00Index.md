@@ -1,6 +1,7 @@
-# Frameworks & Packages
-[Bootstrap](http://getbootstrap.com)]
-  - [Bootstrap on GitHub](https://github.com/twbs/bootstrap/
+# Frameworks & Packages  
+
+[Bootstrap](http://getbootstrap.com)
+  - [Bootstrap on GitHub](https://github.com/twbs/bootstrap/)  
   - [Bootstrap-tour](http://bootstraptour.com/) - Ulrich Sossou  
 [Dash.js](https://github.com/Dash-Industry-Forum/dash.js/) 
 [DataTables](https://datatables.net/)
