@@ -21,6 +21,7 @@
 [Sizzle.js](http://sizzlejs.com/)  
 [SlickJS](https://github.com/kenwheeler/slick) - carousel 
 [SPServices](http://spservices.codeplex.com)
+[StackTraceJS](https://www.stacktracejs.com/)
 [swfobject](http://code.google.com/p/swfobject/)  
 tooltipster v4.2.6 - needs prettification.
 [Vertex42](https://www.vertex42.com/) - MS Office Templates
@@ -29,6 +30,13 @@ tooltipster v4.2.6 - needs prettification.
 
 ## Angular
   - [Angular SSO example](https://github.com/jlguenego/angular-sso-example) 
+
+## [FancyBox](http://fancybox.net) 
+A jQuery Plugin for simple and fancy lightbox alternative; requires jQuery v1.3+, and jQuery Mousewheel
+```html
+<script type="text/javascript" src="./fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<link rel="stylesheet" type="text/css" href="./fancybox/jquery.fancybox-1.3.4.css" media="screen" />
+```
 
 ## Font Awesome
 [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/icons/)
@@ -50,6 +58,8 @@ https://www.jsdelivr.com/projects/jquery.slick
 
 CDN Calls
 ```html
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.0/jquery.min.js" integrity="sha512-K7Zj7PGsHk2fpY3Jwvbuo9nKc541MofFrrLaUUO9zqghnJxbZ3Zn35W/ZeXvbT2RtSujxGbw8PgkqpoZXXbGhw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -70,6 +80,13 @@ if ( jquery_ui != "undefined" ) {
   var js = document.getElementsByTagName('script')[0];
   js.parentNode.insertBefore(ja, js);
 };
+```
+
+### [jQuery Mousewheel](http://brandon.aaron.sh) 
+Adds cross-browser mouse wheel support with delta normalization
+- [jQuery Mousewheel on GitHub](https://github.com/jquery/jquery-mousewheel) 
+```html
+<script type="text/javascript" src="./fancybox/jquery.mousewheel-3.0.4.pack.js"></script> 
 ```
 
 ## JSON
