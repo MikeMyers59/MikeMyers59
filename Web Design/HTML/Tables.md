@@ -7,3 +7,26 @@
 | Table Cell|Components of a Table Row|`<TD>  </TD>` |  
 | Table Body | to contain the tables body section | <TBODY></TBODY> |  
 
+## Table Template
+```html
+<TABLE width="100%" cellspacing="1">
+  <TBODY>
+    <TR>
+      <TH></TH>
+      <TH></TH>
+      <TH></TH>
+      <TH></TH>
+    </TR>
+    <TR>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+      <TD></TD>
+    </TR>      
+    <TR>
+      <TD colspan="4">No data to present.</TD>
+    </TR>
+  </TBODY>
+</TABLE>
+```
+
