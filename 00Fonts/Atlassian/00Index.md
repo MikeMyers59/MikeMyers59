@@ -21,3 +21,4 @@ CDNs
 | aui/css/fonts/atlassian-icons.svg|cdnjs|https://cdnjs.cloudflare.com/ajax/libs/aui/7.6.0/aui/css/fonts/atlassian-icons.svg|  
 | aui/css/fonts/atlassian-icons.ttf|cdnjs|https://cdnjs.cloudflare.com/ajax/libs/aui/7.6.0/aui/css/fonts/atlassian-icons.ttf|  
 | aui/css/fonts/atlassian-icons.woff|cdnjs|https://cdnjs.cloudflare.com/ajax/libs/aui/7.6.0/aui/css/fonts/atlassian-icons.woff
+
