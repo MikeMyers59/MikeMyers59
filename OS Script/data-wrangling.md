@@ -1,18 +1,32 @@
-Have you ever had a bunch of text and wanted to do something with it?
-Good. That's what data wrangling is all about!
-Specifically, adapting data from one format to another, until you end up
-with exactly what you wanted.
+---
+layout: lecture
+title: "Data Wrangling"
+date: 2020-01-16
+ready: true
+video:
+  aspect: 56.25
+  id: sz_dsktIjt4
+---
 
-We've already seen basic data wrangling: `journalctl | grep -i intel`.
- - find all system log entries that mention Intel (case insensitive)
- - really, most of data wrangling is about knowing what tools you have,
-   and how to combine them.
+Have you ever wanted to take data in one format and turn it into a
+different format? Of course you have! That, in very general terms, is
+what this lecture is all about. Specifically, massaging data, whether in
+text or binary format, until you end up with exactly what you wanted.
 
-Let's start from the beginning: we need a data source, and something to
-do with it. Logs often make for a good use-case, because you often want
-to investigate things about them, and reading the whole thing isn't
-feasible. Let's figure out who's trying to log into my server by looking
-at my server's log:
+We've already seen some basic data wrangling in past lectures. Pretty
+much any time you use the `|` operator, you are performing some kind of
+data wrangling. Consider a command like `journalctl | grep -i intel`. It
+finds all system log entries that mention Intel (case insensitive). You
+may not think of it as wrangling data, but it is going from one format
+(your entire system log) to a format that is more useful to you (just
+the intel log entries). Most data wrangling is about knowing what tools
+you have at your disposal, and how to combine them.
+
+Let's start from the beginning. To wrangle data, we need two things:
+data to wrangle, and something to do with it. Logs often make for a good
+use-case, because you often want to investigate things about them, and
+reading the whole thing isn't feasible. Let's figure out who's trying to
+log into my server by looking at my server's log:
 
 ```bash
 ssh myserver journalctl
@@ -25,11 +39,27 @@ ssh myserver journalctl | grep sshd
 ```
 
 Notice that we're using a pipe to stream a _remote_ file through `grep`
-on our local computer! `ssh` is magical. This is still way more stuff
-than we wanted though. And pretty hard to read. Let's do better:
+on our local computer! `ssh` is magical, and we will talk more about it
+in the next lecture on the command-line environment. This is still way
+more stuff than we wanted though. And pretty hard to read. Let's do
+better:
 
 ```bash
-ssh myserver journalctl | grep sshd | grep "Disconnected from"
+ssh myserver 'journalctl | grep sshd | grep "Disconnected from"' | less
+```
+
+Why the additional quoting? Well, our logs may be quite large, and it's
+wasteful to stream it all to our computer and then do the filtering.
+Instead, we can do the filtering on the remote server, and then massage
+the data locally. `less` gives us a "pager" that allows us to scroll up
+and down through the long output. To save some additional traffic while
+we debug our command-line, we can even stick the current filtered logs
+into a file so that we don't have to access the network while
+developing:
+
+```console
+$ ssh myserver 'journalctl | grep sshd | grep "Disconnected from"' > ssh.log
+$ less ssh.log
 ```
 
 There's still a lot of noise here. There are _a lot_ of ways to get rid
@@ -54,6 +84,11 @@ construct that lets you match text against patterns. The `s` command is
 written on the form: `s/REGEX/SUBSTITUTION/`, where `REGEX` is the
 regular expression you want to search for, and `SUBSTITUTION` is the
 text you want to substitute matching text with.
+
+(You may recognize this syntax from the "Search and replace" section of our Vim
+[lecture notes](/2020/editors/#advanced-vim)! Indeed, Vim uses a syntax for
+searching and replacing that is similar to `sed`'s substitution command.
+Learning one tool often helps you become more proficient with others.)
 
 ## Regular expressions
 
@@ -80,7 +115,10 @@ you can pass `-E`.
 
 So, looking back at `/.*Disconnected from /`, we see that it matches
 any text that starts with any number of characters, followed by the
-literal string "Disconnected from ". Which is what we wanted. But
+literal string "Disconnected from &rdquo;. Which is what we wanted. But
+{% comment %}
+note: the spelling of "trixy" below is intentional; see https://github.com/missing-semester/missing-semester/pull/84
+{% endcomment %}
 beware, regular expressions are trixy. What if someone tried to log in
 with the username "Disconnected from"? We'd have:
 
@@ -105,9 +143,9 @@ perl's command-line mode though, which _does_ support that construct:
 perl -pe 's/.*?Disconnected from //'
 ```
 
-We'll stick to `sed` for the rest of this though, because it's by far
-the more common tool for these kinds of jobs. `sed` can also do other
-handy things like print lines following a given match, do multiple
+We'll stick to `sed` for the rest of this, because it's by far the more
+common tool for these kinds of jobs. `sed` can also do other handy
+things like print lines following a given match, do multiple
 substitutions per invocation, search for things, etc. But we won't cover
 that too much here. `sed` is basically an entire topic in and of itself,
 but there are often better tools.
@@ -128,7 +166,7 @@ two prefixes in the logs). Then we're matching on any string of
 characters where the username is. Then we're matching on any single word
 (`[^ ]+`; any non-empty sequence of non-space characters). Then the word
 "port" followed by a sequence of digits. Then possibly the suffix
-` [preauth]`, and then the end of the line.
+`[preauth]`, and then the end of the line.
 
 Notice that with this technique, as username of "Disconnected from"
 won't confuse us any more. Can you see why?
@@ -170,18 +208,10 @@ ssh myserver journalctl
  | sed -E 's/.*Disconnected from (invalid |authenticating )?user (.*) [^ ]+ port [0-9]+( \[preauth\])?$/\2/'
 ```
 
-We could do it just with `sed`, but why would we? For fun is why.
-
-```bash
-ssh myserver journalctl
- | sed -E
-   -e '/Disconnected from/!d'
-   -e 's/.*Disconnected from (invalid |authenticating )?user (.*) [^ ]+ port [0-9]+( \[preauth\])?$/\2/'
-```
-
-This shows off some of `sed`'s capabilities. `sed` can also inject text
-(with the `i` command), explicitly print lines (with the `p` command),
-select lines by index, and lots of other things. Check `man sed`!
+`sed` can do all sorts of other interesting things, like injecting text
+(with the `i` command), explicitly printing lines (with the `p`
+command), selecting lines by index, and lots of other things. Check `man
+sed`!
 
 Anyway. What we have now gives us a list of all the usernames that have
 attempted to log in. But this is pretty unhelpful. Let's look for common
@@ -198,7 +228,7 @@ ssh myserver journalctl
 `sort` will, well, sort its input. `uniq -c` will collapse consecutive
 lines that are the same into a single line, prefixed with a count of the
 number of occurrences. We probably want to sort that too and only keep
-the most common logins:
+the most common usernames:
 
 ```bash
 ssh myserver journalctl
@@ -218,8 +248,8 @@ wouldn't matter, but we're here to learn!
 If we wanted the _least_ common ones, we could use `head` instead of
 `tail`. There's also `sort -r`, which sorts in reverse order.
 
-Okay, so that's pretty cool, but we'd sort of like to only give the
-usernames, and maybe not one per line?
+Okay, so that's pretty cool, but what if we'd like these extract only the usernames
+as a comma-separated list instead of one per line, perhaps for a config file?
 
 ```bash
 ssh myserver journalctl
@@ -231,8 +261,13 @@ ssh myserver journalctl
  | awk '{print $2}' | paste -sd,
 ```
 
+If you're using macOS: note that the command as shown won't work with the BSD
+`paste` shipped with macOS. See [exercise 4 from the shell tools
+lecture](/2020/shell-tools/#exercises) for more on the difference between BSD
+and GNU coreutils and instructions for how to install GNU coreutils on macOS.
+
 Let's start with `paste`: it lets you combine lines (`-s`) by a given
-single-character delimiter (`-d`). But what's this `awk` business?
+single-character delimiter (`-d`; `,` in this case). But what's this `awk` business?
 
 ## awk -- another editor
 
@@ -282,11 +317,15 @@ leave that as an exercise to the reader.
 
 ## Analyzing data
 
-You can do math!
+You can do math directly in your shell using `bc`, a calculator that can read 
+from STDIN! For example, add the numbers on each line together by concatenating
+them together, delimited by `+`:
 
 ```bash
  | paste -sd+ | bc -l
 ```
+
+Or produce more elaborate expressions:
 
 ```bash
 echo "2*($(data | paste -sd+))" | bc -l
@@ -294,7 +333,7 @@ echo "2*($(data | paste -sd+))" | bc -l
 
 You can get stats in a variety of ways.
 [`st`](https://github.com/nferraz/st) is pretty neat, but if you already
-have R:
+have [R](https://www.r-project.org/):
 
 ```bash
 ssh myserver journalctl
@@ -302,13 +341,13 @@ ssh myserver journalctl
  | grep "Disconnected from"
  | sed -E 's/.*Disconnected from (invalid |authenticating )?user (.*) [^ ]+ port [0-9]+( \[preauth\])?$/\2/'
  | sort | uniq -c
- | awk '{print $1}' | R --slave -e 'x <- scan(file="stdin", quiet=TRUE); summary(x)'
+ | awk '{print $1}' | R --no-echo -e 'x <- scan(file="stdin", quiet=TRUE); summary(x)'
 ```
 
 R is another (weird) programming language that's great at data analysis
 and [plotting](https://ggplot2.tidyverse.org/). We won't go into too
 much detail, but suffice to say that `summary` prints summary statistics
-about a matrix, and we computed a matrix from the input stream of
+for a vector, and we created a vector containing the input stream of
 numbers, so R gives us the statistics we wanted!
 
 If you just want some simple plotting, `gnuplot` is your friend:
@@ -327,9 +366,83 @@ ssh myserver journalctl
 
 Sometimes you want to do data wrangling to find things to install or
 remove based on some longer list. The data wrangling we've talked about
-so far + `xargs` can be a powerful combo:
+so far + `xargs` can be a powerful combo.
+
+For example, as seen in lecture, I can use the following command to uninstall
+old nightly builds of Rust from my system by extracting the old build names
+using data wrangling tools and then passing them via `xargs` to the
+uninstaller:
 
 ```bash
-rustup toolchain list | grep nightly | grep -vE "nightly-x86|01-17" | sed 's/-x86.*//' | xargs rustup toolchain uninstall
+rustup toolchain list | grep nightly | grep -vE "nightly-x86" | sed 's/-x86.*//' | xargs rustup toolchain uninstall
 ```
 
+## Wrangling binary data
+
+So far, we have mostly talked about wrangling textual data, but pipes
+are just as useful for binary data. For example, we can use ffmpeg to
+capture an image from our camera, convert it to grayscale, compress it,
+send it to a remote machine over SSH, decompress it there, make a copy,
+and then display it.
+
+```bash
+ffmpeg -loglevel panic -i /dev/video0 -frames 1 -f image2 -
+ | convert - -colorspace gray -
+ | gzip
+ | ssh mymachine 'gzip -d | tee copy.jpg | env DISPLAY=:0 feh -'
+```
+
+# Exercises
+
+1. Take this [short interactive regex tutorial](https://regexone.com/).
+2. Find the number of words (in `/usr/share/dict/words`) that contain at
+   least three `a`s and don't have a `'s` ending. What are the three
+   most common last two letters of those words? `sed`'s `y` command, or
+   the `tr` program, may help you with case insensitivity. How many
+   of those two-letter combinations are there? And for a challenge:
+   which combinations do not occur?
+3. To do in-place substitution it is quite tempting to do something like
+   `sed s/REGEX/SUBSTITUTION/ input.txt > input.txt`. However this is a
+   bad idea, why? Is this particular to `sed`? Use `man sed` to find out
+   how to accomplish this.
+4. Find your average, median, and max system boot time over the last ten
+   boots. Use `journalctl` on Linux and `log show` on macOS, and look
+   for log timestamps near the beginning and end of each boot. On Linux,
+   they may look something like:
+   ```
+   Logs begin at ...
+   ```
+   and
+   ```
+   systemd[577]: Startup finished in ...
+   ```
+   On macOS, [look
+   for](https://eclecticlight.co/2018/03/21/macos-unified-log-3-finding-your-way/):
+   ```
+   === system boot:
+   ```
+   and
+   ```
+   Previous shutdown cause: 5
+   ```
+5. Look for boot messages that are _not_ shared between your past three
+   reboots (see `journalctl`'s `-b` flag). Break this task down into
+   multiple steps. First, find a way to get just the logs from the past
+   three boots. There may be an applicable flag on the tool you use to
+   extract the boot logs, or you can use `sed '0,/STRING/d'` to remove
+   all lines previous to one that matches `STRING`. Next, remove any
+   parts of the line that _always_ varies (like the timestamp). Then,
+   de-duplicate the input lines and keep a count of each one (`uniq` is
+   your friend). And finally, eliminate any line whose count is 3 (since
+   it _was_ shared among all the boots).
+6. Find an online data set like [this
+   one](https://stats.wikimedia.org/EN/TablesWikipediaZZ.htm), [this
+   one](https://ucr.fbi.gov/crime-in-the-u.s/2016/crime-in-the-u.s.-2016/topic-pages/tables/table-1),
+   or maybe one [from
+   here](https://www.springboard.com/blog/free-public-data-sets-data-science-project/).
+   Fetch it using `curl` and extract out just two columns of numerical
+   data. If you're fetching HTML data,
+   [`pup`](https://github.com/EricChiang/pup) might be helpful. For JSON
+   data, try [`jq`](https://stedolan.github.io/jq/). Find the min and
+   max of one column in a single command, and the difference of the sum
+   of each column in another.
