@@ -225,5 +225,22 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 .showMsg::after {
   content: ' (Click to dismiss)';
   font-size: 75%;
-}```
+}
+```
+
+## Text Wrapping
+```css
+.wrap-nowrap {
+  white-space:nowrap;
+}
+.wrap-normal {
+  white-space:normal;
+}
+.wrap-pre {
+  white-space:pre;
+}
+.wrap-prewrap {
+  white-space:pre-wrap;
+}
+```
 

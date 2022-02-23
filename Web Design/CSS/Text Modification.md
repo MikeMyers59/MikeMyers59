@@ -12,10 +12,26 @@
 | Underline | `.underline {` <BR> `  text-decoration:underline` <BR> `}` |  
 | Visible | `.visible{` <BR> `  visibility:visible` <BR> `}` |  
 
+## Font Family Selection
+```css
+.monospace{  
+  font-family:monospace;  
+}
+.cursive{  
+  font-family:cursive;  
+}  
+.sans-serif{  
+  font-family:sans-serif;  
+}  
+.serif{  
+  font-family:serif;  
+}  
+```
+
 ## Modify Text
 | Action | HTML | CSS |  
 | --- | --- | --- |  
-| Pre | `` |  
+| Pre | `.pre{` <BR> `  word-wrap:break-word;` <BR> `  word-break:normal;` <BR> `}` |  
 | Small | `<span class="smalltext"></span>` | `.smalltext {` <BR> `  font-size=0.5;` <BR> `}` |  
 | Small Caps | `<span class="smallcap"></span>` | `.smallcap{` <BR> `  font-size=0.5;` <BR> `  text-transform="uppercase";` <BR> `}` |  
 
