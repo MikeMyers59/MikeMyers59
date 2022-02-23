@@ -16,9 +16,9 @@ Requires the image sprites home, next & preveious
 }
 ```
 Example explained:
-•	`#navlist {position:relative;}` - position is set to relative to allow absolute positioning inside it
-•	`#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;}` - margin and padding are set to 0, list-style is removed, and all list items are absolute positioned
-•	`#navlist li, #navlist a {height:44px;display:block;}` - the height of all the images are 44px
+- `#navlist {position:relative;}` - position is set to relative to allow absolute positioning inside it  
+- `#navlist li {margin:0;padding:0;list-style:none;position:absolute;top:0;}` - margin and padding are set to 0, list-style is removed, and all list items are absolute positioned  
+- `#navlist li, #navlist a {height:44px;display:block;}` - the height of all the images are 44px  
 
 ```html
 <ul id="navlist">
