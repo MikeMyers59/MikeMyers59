@@ -131,6 +131,7 @@ Adds cross-browser mouse wheel support with delta normalization
 - Git Bash: `curl --negotiate -u : http://localhost:3000 -b cookie.txt`
 - Powershell: `Invoke-WebRequest -uri http://localhost:3000 -UseDefaultCredentials`
 
+## [Normalize](http://necolas.github.io/normalize.css/)
 
 ## Popper
 ```html

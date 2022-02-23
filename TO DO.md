@@ -1,3 +1,8 @@
+
+#TODO List
+
+🚀 🐦 📸 💼 📚 
+
 1. https://github.com/pstaender/csv2md/blob/master/src/cli.js  - Base of information.
 
 2. https://github.com/MrMikey59?tab=repositories  - another Base of information.
@@ -14,10 +19,14 @@
     - https://pretagteam.com/question/working-with-xlsx-in-javascript 
     - https://github.com/faisalman/simple-excel-js 
     - https://marksweb.site/hta/
+    - https://www.udacity.com/ 
+    - https://github.com/zenorocha/voice-elements 
     - [XMLStarlet](https://sourceforge.net/projects/xmlstar/files/xmlstarlet/) is a command line XML toolkit which can be used to transform, query, validate, and edit XML documents and files using simple set of shell commands in similar way it is done for plain text files using grep/sed/awk/ tr/diff/patch.
     - [SheetJS Community Edition](https://docs.sheetjs.com/) - xlsx.full.min.js
     - https://www.vmware.com/
     - https://crates.io/
+
+Test Browser Web Page Speed: http://yslow.org/
 
 Create an HTA interface to an access database? 
 
