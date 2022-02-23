@@ -131,3 +131,11 @@ Contains the following CSS modules:
   -  jquery.ui.theme.css
   -  jquery.ui.tooltip.css
 
+## Is using jQuery the Best Option?
+
+Consider the following HTML: `<div id="text">Let's change this content</div>`
+
+| jQuery Method | Plain Vanilla JS Method |  
+| --- | --- |  
+| `$('#text').html('The content has changed').css({` <BR> `  backgroundColor: 'red',` <BR> `  color: 'yellow'` <BR> `});` | `var text = document.getElementById('text');` <BR> `text.innerHTML = 'The content has changed';` <BR> `text.style.backgroundColor = 'red';` <BR> `text.style.color = 'yellow';` |  
+
