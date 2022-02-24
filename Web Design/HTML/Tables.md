@@ -30,3 +30,16 @@
 </TABLE>
 ```
 
+```css
+table {
+  position: relative;
+}
+tr {
+  position: inherit;
+}
+td {
+  position: inherit;
+  word-wrap: break-word;
+}
+```
+

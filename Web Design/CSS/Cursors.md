@@ -1,6 +1,6 @@
 # Cursors
 
-## Common CSS to Modify Text
+## Common CSS to Modify Cursors
 | Action | CSS |  
 | --- | --- |  
 | Crosshair | `.cursor-crosshair{` <BR> `  cursor:crosshair;` <BR> `}` |  

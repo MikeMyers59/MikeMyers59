@@ -19,7 +19,8 @@
 ## Links
 ```html
 <LINK rel="canonical" href="https://www.yoursite.com/YourPage.html">
-<LINK>https://www.us-cert.gov/</LINK>
+<link rel="shortlink" href="https://www.yoursite.com/YourPage.html">
+<link rel="stylesheet" type="text/css" href="css/style.css"> 
 ```
 
 ### Link Fonts with Google API
@@ -78,6 +79,22 @@ There is an order to these scripts!  Be sure to put requiremnts before usage/cal
 <SCRIPT type="text/markdown" src="markdown.js"></SCRIPT>
 <SCRIPT type="text/javascript" src="js/jquery-migrate.min.js"></SCRIPT>
 <SCRIPT type="text/javascript" src="js/jquery_ui_latest/js/jquery-ui.custom.min.js"></SCRIPT>
+```
+
+## Span
+```css
+span.icon {
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAvklEQVR42rVTPQuFIBT1p1t7e2EFDrXnVmNb4Ca4BS5BW9AfOA+F+wjfAwfpwuHcDzn3olcGIAv5An3fo+u6L55x27bE5P+cZdkWqVJH6pDMsWxTSsFjmqbAMZIC4zjivm9c14XjOLDvO4wx2LYNwzCkBZqmwXmecM7BWgutNdZ1xTzP8LWkQFVVWJYFUspwQUII1HUd2NeSApxzeJRlCfKLovBxYPa6xe9KsedHLc7TXryzidQpnurvZNm/8QMbqb4yyqv4rAAAAABJRU5ErkJggg==);
+  width:16px;
+  height:16px;
+  display:inline-block
+}
+span.icon2 {
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAw0lEQVR42q1TMQqAMBDr0/UBroJiBUEf0E51dRMcxUlwFBcHPxA5IUuLONSDcDmupO01VQCiEC+gtYagrusH5FVVCfdz0FfRQVVR5CmoLtzfnWBf/R7WWhhjIFnAmvlToOs6XNeF8zyx7zvWdcU8zxjHEW3bhgK8NydaFAWO48C2bViWBdM0YRgGOOcgPc7t9RWyLEPf92ia5hEuyxJ5nj+Lpae+IkkSpGkKZnLW6u/gDHzX+c6kP4j/nfjmNJ8HiP6NN81gzxU6QYojAAAAAElFTkSuQmCC);
+  width:16px;
+  height:16px;
+  display:inline-block;
+}
 ```
 
 ## Style
