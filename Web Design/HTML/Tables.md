@@ -34,6 +34,15 @@
 table {
   position: relative;
 }
+th,
+td,
+hr,
+thead,
+tbody {
+  border-color: #ccc;
+  background: #fff;
+}
+
 tr {
   position: inherit;
 }

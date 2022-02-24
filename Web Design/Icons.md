@@ -11,6 +11,18 @@
   transform: rotate(180deg);
   margin-top: -0.05rem;
 }
+.size-24{
+  width:24px;
+  height:24px;
+}
+.size-48{
+  width:48px;
+  height:48px;
+}
+.size-96{
+  width:96px;
+  height:96px;
+}
 ```
 
 ## Archive File
