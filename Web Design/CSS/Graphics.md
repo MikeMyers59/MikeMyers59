@@ -1,5 +1,16 @@
 # CSS Graphics
 
+## Dashed Row Background or Newline Icon
+![Dashed Row Background](DashBackground.PNG)
+```css
+.newline-button {
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAvklEQVR42rVTPQuFIBT1p1t7e2EFDrXnVmNb4Ca4BS5BW9AfOA+F+wjfAwfpwuHcDzn3olcGIAv5An3fo+u6L55x27bE5P+cZdkWqVJH6pDMsWxTSsFjmqbAMZIC4zjivm9c14XjOLDvO4wx2LYNwzCkBZqmwXmecM7BWgutNdZ1xTzP8LWkQFVVWJYFUspwQUII1HUd2NeSApxzeJRlCfKLovBxYPa6xe9KsedHLc7TXryzidQpnurvZNm/8QMbqb4yyqv4rAAAAABJRU5ErkJggg==);
+  width:16px;
+  height:16px;
+  display:inline-block
+}
+```
+
 ## Faded Org Chart Background
 ```css
 .container-orgchart {
