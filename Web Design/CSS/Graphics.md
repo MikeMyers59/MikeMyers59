@@ -10,6 +10,16 @@
   display:inline-block
 }
 ```
+## Dashed Row Strikethrough Background or Inline Display Icon
+![Dashed Row Strikethrough Background](DashStrikeBackground.PNG)
+```css
+.display-inline-button {
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAw0lEQVR42q1TMQqAMBDr0/UBroJiBUEf0E51dRMcxUlwFBcHPxA5IUuLONSDcDmupO01VQCiEC+gtYagrusH5FVVCfdz0FfRQVVR5CmoLtzfnWBf/R7WWhhjIFnAmvlToOs6XNeF8zyx7zvWdcU8zxjHEW3bhgK8NydaFAWO48C2bViWBdM0YRgGOOcgPc7t9RWyLEPf92ia5hEuyxJ5nj+Lpae+IkkSpGkKZnLW6u/gDHzX+c6kP4j/nfjmNJ8HiP6NN81gzxU6QYojAAAAAElFTkSuQmCC);
+  width:16px;
+  height:16px;
+  display:inline-block
+}
+```
 
 ## Faded Org Chart Background
 ```css
