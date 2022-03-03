@@ -39,6 +39,7 @@
   src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
   ```
 
+## Spreadsheets-Icon-Font
 ```css
 @font-face {
   font-family: 'Spreadsheets-Icon-Font';
