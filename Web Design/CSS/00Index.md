@@ -20,6 +20,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | -webkit | on MAC: Chrome, Safari, etc |  
 | aui- | Atlassian User Interface |  
 | fa- | FontAwesome |  
+| Ls- | [LightSlider](https://github.com/sachinchoolur/lightslider) |  
 | ms- | Microsoft |  
 | mso- | Microsoft Office | 
 | UI- | jQuery-UI |  
