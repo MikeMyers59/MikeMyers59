@@ -1,5 +1,9 @@
 # Web Development Icons
 
+https://findicons.com/ 
+https://www.flaticon.com/ 
+https://icons8.com/
+
 #### The Style Container
 ```html
 <style type="text/css"> </style>
