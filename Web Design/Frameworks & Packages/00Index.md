@@ -11,6 +11,7 @@
 [JSZip](<http://stuartk.com/jszip>) - A Javascript class for generating and reading zip files
   - [JSZip on GitHub](https://raw.github.com/Stuk/jszip/)
 [LESS - Leaner CSS](http://lesscss.org) 
+[LightSlider](https://github.com/sachinchoolur/lightslider)
 [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
 [Matt Kruse](<matt@mattkruse.com>)
   - calendar_popup.js
