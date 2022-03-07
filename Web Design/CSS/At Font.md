@@ -39,6 +39,23 @@
   src: url("../webfonts/fa-solid-900.eot?#iefix") format("embedded-opentype"), url("../webfonts/fa-solid-900.woff2") format("woff2"), url("../webfonts/fa-solid-900.woff") format("woff"), url("../webfonts/fa-solid-900.ttf") format("truetype"), url("../webfonts/fa-solid-900.svg#fontawesome") format("svg"); }
   ```
 
+## Omnes-Pro (Adobe)
+```css
+@font-face{
+  font-family:omnes-pro;
+  src:url(https://use.typekit.net/af/570fe7/000000000000000000012863/21/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/570fe7/000000000000000000012863/21/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/570fe7/000000000000000000012863/21/a?subset_id=2&fvd=n4&v=3) format("opentype");
+  font-weight:400;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:omnes-pro;src:url(https://use.typekit.net/af/894210/000000000000000000012861/21/l?subset_id=2&fvd=n3&v=3) format("woff2"),url(https://use.typekit.net/af/894210/000000000000000000012861/21/d?subset_id=2&fvd=n3&v=3) format("woff"),url(https://use.typekit.net/af/894210/000000000000000000012861/21/a?subset_id=2&fvd=n3&v=3) format("opentype");
+  font-weight:300;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:omnes-pro;src:url(https://use.typekit.net/af/44d911/000000000000000000012865/21/l?subset_id=2&fvd=n5&v=3) format("woff2"),url(https://use.typekit.net/af/44d911/000000000000000000012865/21/d?subset_id=2&fvd=n5&v=3) format("woff"),url(https://use.typekit.net/af/44d911/000000000000000000012865/21/a?subset_id=2&fvd=n5&v=3) format("opentype");
+  font-weight:500;font-style:normal;font-stretch:normal;font-display:auto;}@font-face{font-family:source-code-pro;
+  src:url(https://use.typekit.net/af/4bd05c/000000000000000000013297/21/l?subset_id=2&fvd=n4&v=3) format("woff2"),url(https://use.typekit.net/af/4bd05c/000000000000000000013297/21/d?subset_id=2&fvd=n4&v=3) format("woff"),url(https://use.typekit.net/af/4bd05c/000000000000000000013297/21/a?subset_id=2&fvd=n4&v=3) format("opentype");
+  font-weight:400;
+  font-style:normal;
+  font-stretch:normal;
+  font-display:auto;
+}
+.omnes-pro{font-family:"omnes-pro",sans-serif;}
+```
+
 ## Spreadsheets-Icon-Font
 ```css
 @font-face {
@@ -47,5 +64,34 @@
   font-weight: normal;
   font-style: normal;
   font-display: block;
-}```
+}
+```  
+
+## SS-Social
+```css
+@font-face{
+  font-family:"SSSocial";
+  src:url('ss-social-circle.eot');
+  src:url('ss-social-circle.eot?#iefix') format('embedded-opentype'),
+      url('ss-social-circle.woff') format('woff'),
+      url('ss-social-circle.ttf') format('truetype'),
+      url('ss-social-circle.svg#SSSocialCircle') format('svg');
+  font-weight:bold;
+  font-style:normal
+}
+```
+
+## SS-Standard  
+```css
+@font-face{
+  font-family:"SSStandard";
+  src:url('fonts/ss-standard.eot');
+  src:url('fonts/ss-standard.eot?#iefix') format('embedded-opentype'),
+      url('fonts/ss-standard.woff') format('woff'),
+      url('fonts/ss-standard.ttf') format('truetype'),
+      url('fonts/ss-standard.svg#SSStandard') format('svg');
+  font-weight:normal;
+  font-style:normal
+}
+```
 

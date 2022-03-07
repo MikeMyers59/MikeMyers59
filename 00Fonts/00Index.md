@@ -1,6 +1,7 @@
 # Fonts
 
-[Font Awesome Free 5.0.8 ](https://fontawesome.com)
+[Adobe Fonts](https://fonts.adobe.com/fonts)  
+[Font Awesome Free 5.0.8 ](https://fontawesome.com)  
 
 ## Atlassian
 https://aui.atlassian.com/aui/7.8/docs/icons.html 
