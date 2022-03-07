@@ -3,10 +3,12 @@
 ## Common CSS to Modify Text
 | Action | CSS |  
 | --- | --- |  
+| Abbreviation | `abbr {` <BR> `  border-bottom:1px dotted #7a869a;` <BR> `  cursor:help` <BR> `}` |  
 | Code | `.code{` <BR> `  font-family:monospace;` <BR> `  outline:0;` <BR> `}` |  
 | Emphasis | `.empahsis {` <BR> `  font-style:italic` <BR> `}` |  
 | Hidden | `.hidden{` <BR> `  visibility:hidden` <BR> `}` |  
 | Overline | `.overline {` <BR> `  text-decoration:overline` <BR> `}` |  
+| Quotes | `q { ` <BR> `  color:#7a869a ` <BR> `} ` <BR> `q:before { ` <BR> `  content:open-quote ` <BR> `} ` <BR> `q:after { ` <BR> `  content:close-quote ` <BR> `}` |  
 | Strikethrough | `.strikethrough {` <BR> `  text-decoration:line-through` <BR> `}` |  
 | Strong | `.strong{` <BR> `  font-weight:700` <BR> `}` | 
 | Underline | `.underline {` <BR> `  text-decoration:underline` <BR> `}` |  
@@ -14,11 +16,11 @@
 
 ## Font Family Selection
 ```css
-.monospace{  
-  font-family:monospace;  
-}
 .cursive{  
   font-family:cursive;  
+}  
+.monospace{  
+  font-family:monospace;  
 }  
 .sans-serif{  
   font-family:sans-serif;  

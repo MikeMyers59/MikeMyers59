@@ -20,7 +20,6 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | -webkit | on MAC: Chrome, Safari, etc |  
 | aui- | Atlassian User Interface |  
 | fa- | FontAwesome |  
-| Ls- | [LightSlider](https://github.com/sachinchoolur/lightslider) |  
 | ms- | Microsoft |  
 | mso- | Microsoft Office | 
 | UI- | jQuery-UI |  
@@ -70,7 +69,9 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | max-width | <Size> |  |  
 | min-width | <Size> |  |  
 | opacity | <Percent> |  |  
-| overflow | [ visible \| hidden ] |  |  
+| overflow | [ auto \| hidden \| scroll \| visible ] |  |  
+| overflow-x | [ auto \| hidden \| scroll ] |  |  
+| overflow-y | [ auto \| hidden \| scroll ] |  |  
 | padding <BR> padding-bottom <BR> padding-left <BR> padding-right <BR> padding-top | <Size> | --- |   
 | position | { absolute \| fixed \| relative \| static } ;  |   |  
 | right | { <Percentage> } | --- |  

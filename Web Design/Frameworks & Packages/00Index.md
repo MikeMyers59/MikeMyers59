@@ -1,8 +1,10 @@
 # Frameworks & Packages  
 
+[Atlassian](https://www.atlassian.com)  
 [Bootstrap](http://getbootstrap.com)
   - [Bootstrap on GitHub](https://github.com/twbs/bootstrap/)  
   - [Bootstrap-tour](http://bootstraptour.com/) - Ulrich Sossou  
+[CodeMirror.css]( https://github.com/codemirror) 
 [Dash.js](https://github.com/Dash-Industry-Forum/dash.js/) 
 [DataTables](https://datatables.net/)
   Included libraries: JSZip 2.5.0, pdfmake 0.1.36, DataTables 1.10.24, Buttons 1.7.0, HTML5 export 1.7.0, Print view 1.7.0, FixedHeader 3.1.8
@@ -11,7 +13,6 @@
 [JSZip](<http://stuartk.com/jszip>) - A Javascript class for generating and reading zip files
   - [JSZip on GitHub](https://raw.github.com/Stuk/jszip/)
 [LESS - Leaner CSS](http://lesscss.org) 
-[LightSlider](https://github.com/sachinchoolur/lightslider)
 [Magnific Popup](https://dimsemenov.com/plugins/magnific-popup/)
 [Matt Kruse](<matt@mattkruse.com>)
   - calendar_popup.js
@@ -57,6 +58,7 @@ A jQuery Plugin for simple and fancy lightbox alternative; requires jQuery v1.3+
 [jQuery Foundation, Inc.](https://jquery.org)
   - [jQuery-UI](http://jqueryui.com) 
     - [Theme Management & Creation](http://jqueryui.com/themeroller/)
+  - [jQuery Browser Plugin](https://github.com/gabceb/jquery-browser-plugin) 
   - [jQuery License](https://jquery.org/license)
   - jQuery Migrate
 
