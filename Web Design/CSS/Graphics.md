@@ -49,3 +49,11 @@
 }
 ```
 
+## Tag Icon
+```css
+.icon-tag{
+  background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAHlBMVEX///9vb29vb29vb29vb29vb29vb29vb29vb29vb29iaA79AAAACnRSTlMAESIzZoiZqsz/6xKC/QAAADxJREFUeNqNylkKACAMA9HUreb+F1ZQCFUQ5y+P4KfCWYMitwhyDkImCx+uJO0h9RIc4ojSDZK9VaUbvhquIwMSfzVGNwAAAABJRU5ErkJggg==);
+  background-repeat:no-repeat
+}
+```
+

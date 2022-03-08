@@ -23,7 +23,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | lb- | LightBos |  
 | ms- | Microsoft |  
 | mso- | Microsoft Office | 
-| ss- | SS Standard |  
+| ss- | SymbolSet Standard |  
 | UI- | jQuery-UI |  
 
 ## Attributes

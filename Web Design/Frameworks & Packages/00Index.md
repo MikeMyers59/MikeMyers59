@@ -26,6 +26,7 @@
 [SPServices](http://spservices.codeplex.com)
 [StackTraceJS](https://www.stacktracejs.com/)
 [swfobject](http://code.google.com/p/swfobject/)  
+[Symbolset](https://symbolset.com/) 
 tooltipster v4.2.6 - needs prettification.
 [Vertex42](https://www.vertex42.com/) - MS Office Templates
 [Video.js](https://github.com/videojs/video.js)   
