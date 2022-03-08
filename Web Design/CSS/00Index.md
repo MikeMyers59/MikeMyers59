@@ -20,8 +20,10 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | -webkit | on MAC: Chrome, Safari, etc |  
 | aui- | Atlassian User Interface |  
 | fa- | FontAwesome |  
+| lb- | LightBos |  
 | ms- | Microsoft |  
 | mso- | Microsoft Office | 
+| ss- | SS Standard |  
 | UI- | jQuery-UI |  
 
 ## Attributes

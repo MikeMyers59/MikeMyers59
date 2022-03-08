@@ -1,0 +1,784 @@
+/* Base for starting modular font scale
+px  em
+2  0.125
+4  0.25
+8  0.5
+12  0.75
+14  0.875
+16  1
+20  1.25
+32  2
+36  2.25
+64  4
+128  8
+256  16
+512  32
+*/
+
+/* Natural box layout model to all elements, but allowing elements to change 
+The width and height properties include the padding and border, but not the margin.*/
+html {
+  box-sizing: border-box;
+}
+
+/* Set default display for HTML5 elements for IE8 */ 
+
+img {
+  max-width: 100%;
+}
+
+.text {
+  color: rgba(0,0,0,0.87);
+}
+
+.secondary-text {
+  color: rgba(0,0,0,0.54);
+}
+
+.disabled-hint-text {
+  color: rgba(0,0,0,0.26);
+}
+
+.dividers {
+  color: rgba(0,0,0,0.12);
+}
+
+
+/* End General Colors */
+/**********************/
+
+document{
+  min-width: 660px;
+}
+
+body {
+  margin: 0px 0px 0px 0px;
+  font-family: Arial;
+  font-size: 0.875em;
+  background-color:#f5f5f5;
+  color: #343434;
+  min-width: 900px;
+}
+
+a:link {
+  color: #06c;
+}
+
+p {
+  line-height: 22px;
+  color: rgba(0,0,0,0.87);
+}
+
+/****************************/
+/* Begin BUTTONS!!!!!!  */
+
+/* Base style for a button types */
+button, .button, a.button, .grey-button, .green-button, .button-success, .orange-button, .button-warning, .red-button, .button-danger {
+  background-color: #FFF;
+  color: #0272A7;
+  border-color: #0272A7;
+  border-style: solid;
+  border-width: 1px;
+  margin: 2px;
+  padding: 4px;
+  text-decoration: none;
+  
+  /* Rounded Corners */
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -khtml-border-radius: 5px;
+  border-radius: 5px;
+  
+}
+
+/* Hover effects for default button */
+button:hover, .button:hover, a.button:hover {
+  background-color: #0272A7;
+  border-color: #0272A7;
+  color: #FFF;
+  cursor: pointer;
+}
+
+/* */
+button:active, .button:active, a.button:active {
+  color: #5EAEFF;
+  background-color: #f1f8fd;
+  border-color: #0272A7;
+}
+
+/* Override default link style for links styled as buttons */
+a.button:link, a.button:visited {
+  text-decoration: none;
+}
+
+
+/* Grey Button Styles */
+.grey-button {
+  background:#F5F5F5;
+  border:1px solid #bbbbbb;
+  min-width: 125px;
+  display: inline-block;
+  color: #343434;
+
+}
+
+/* Grey Button Hover Effects */
+.grey-button:hover {
+  background:#FFF;
+  color: #0272A7;
+  border-color: #0272A7;
+}
+
+/* Green (style) and Success (role) button styles */
+.green-button, a.green-button:link, .button-success, a.button-success:link {
+  color: #019875;
+  border-color: #019875;
+  background-color: #FFF;
+}
+
+/* Green (style) and Success (role) hover effects */
+.green-button:hover, a.green-button:hover, .button-success:hover, a.button-success:hover {
+  background-color: #019875;
+  color: #FFF;
+  border-color: #019875;
+}
+
+/* Orange (style) and Warning (role) button styles */
+.orange-button, a.orange-button:link, .button-warning, a.button-warning: link {
+  background-color: #FFF;
+  border: 1px solid #FFA500;
+  color: #FFA500;
+}
+
+/* Orange (style) and Warning (role) hover effects */
+.orange-button:hover, a.orange-button:hover, .button-warning:hover, a.button-warning:hover {
+  background-color: #FFA500;
+  color: #FFF;
+}
+
+/* Red (style) and Danger (role) button styles */
+.red-button, a.red-button:link, .button-danger, a.button-danger:link {
+  color: #D9534F;
+  border: 1px solid #D9534F;
+  background-color: #FFF;
+}
+
+/* Red (style) and Danger (role) hover effects */
+.red-button:hover, a.red-button:hover, .button-danger:hover, a.button-danger:hover {
+  background-color: #D9534F;
+  color: #FFF;
+  border-color: #D9534F;
+}
+
+/* End Buttons */
+/*****************/
+
+blockquote {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #5EAEFF;
+  background-color: #f1f8fd;
+  display: inline-block;
+  margin-left: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+code[class=""], code:not([class]) {
+  background-color: #F5F5F5;
+  padding: 10px;
+  border-color: #DDDDDD;
+  border-style: solid;
+  border-width: 1px;
+}
+
+
+.ui-jqgrid table, .ui-jqgrid th, .ui-jqgrid td, .ui-jqgrid tr {
+  border-color: initial;
+  border-style: initial;
+  border-width: initial;
+  background-color: initial;
+  }
+
+.no-link a:link {
+  color: #343434; 
+  text-decoration: none;
+
+}
+
+.no-link a:visited {
+  color: #343434; 
+  text-decoration: none;
+
+}
+
+.no-link a:active {
+  color: #343434; 
+  text-decoration: none;
+
+}
+
+.no-link a:hover {
+  color: #343434; 
+  text-decoration: none;
+
+}
+
+
+.link-like {
+  color: #06c;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*
+  Remove all link styling.
+*/
+
+a.nostyle:link {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+a.nostyle:visited {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+/****************************************
+*** RE-LINK ***************************
+Used to re-apply default link styles.
+Primarily used to override JQGrid's
+removal of default browser styles.
+****************************************/
+.re-link a:link {
+  color: #06c;
+  text-decoration: underline;
+}
+
+.re-link a:visited {
+  color: #800080;
+  text-decoration: underline;
+}
+
+.re-link a:active {
+  color: #06c;
+  text-decoration: underline;
+}
+
+.re-link a:hover {
+  color: #06c;
+  text-decoration: underline;
+}
+
+/**********************/
+/* Header Begin */
+.header {
+  background-color: #0272A7;
+  color: #FFFFFF;
+  height:55px;
+  padding-left: 30px;
+  padding-right: 26px;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  clear:both;
+  min-width: 660px;
+  box-sizing: content-box;
+}
+
+.header a:link { 
+  color: #FFFFFF; 
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.header a:visited { 
+  color: #FFFFFF; 
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.header a:active { 
+  color: #FFFFFF; 
+  text-decoration: none;
+  font-size: 1em;
+}
+
+.header a:hover { 
+  color: #FFFFFF; 
+  text-decoration: underline;
+  font-size: 1em;
+}
+
+#site-title {
+  text-align: center;
+}
+
+p.gdeb-logo{
+  margin-top: 2px;
+  position: absolute;
+}
+
+.gdeb-logo a:link {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+.gdeb-logo a:hover {
+  text-decoration: none;
+  font-size: 1.5em;
+}
+
+
+
+.pageheader {
+  min-width: 50%;
+  max-width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 3px;
+  border-color: #dddddd;  
+  background-color:#FFFFFF;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.pagetitle {
+  font-size: 2.25em;
+  font-family: Arial;
+  text-align: center;
+}
+
+.search-button {
+  font-size: 0.7em;
+}
+
+/* Header End */
+/**********************/
+
+.navbar {
+
+}
+
+.content {
+  background-color: #FFFFFF;
+  color: #343434;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  min-width: 50%;
+  max-width:90%;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 3px;
+  border-color: #dddddd;
+  padding: 5px;
+  line-height: 20px;  
+}
+
+.content > p {
+  margin-left: 15px;
+}
+
+.content:after {
+  content:"";
+  display:table;
+  clear:both;
+  overflow: hidden;    
+}
+
+/* content style without width restrictions*/
+.content-style {
+  background-color: #FFFFFF;
+  color: #343434;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 3px;
+  border-color: #dddddd;
+  padding: 5px;
+  line-height: 20px;  
+}
+
+.content h1, .content h2, .content h3, .content h4, .content h5 {
+  font-family: Arial;
+}
+
+.banner {
+  height:  250px;
+}
+
+.image-banner {
+  height: 250px;
+}
+
+#jqb_object .jqb_bar {
+  filter: alpha(opacity=100);
+}
+
+.content h1, h1 {
+  font-size: 2.25em;
+  line-height: 1em;
+}
+
+.content h2, h2 {
+  font-size: 1.5em;
+  line-height: 1em;  
+}
+
+.content h3, h3 {
+  font-size: 1.3125em;
+  line-height: 1em;
+}
+
+.content h4, h4 {
+  font-size: 1.125em;
+  line-height: 1em;
+}
+
+.content h5, h5 {
+  font-size: 1em;
+  line-height: 1em;
+}
+
+.footer {
+  background-color: #FFFFFF;
+  color: #343434;
+  clear:both;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  min-width: 50%;
+  max-width: 90%;
+  text-align: center;
+  font-size: 1em;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 3px;
+  border-color: #dddddd;
+  padding: 5px;
+}
+
+.sitemessage {
+  display: none;
+}
+
+.pcontainer {
+  display: none;
+}
+
+/**********************/
+/* Begin Style/Display Classes */
+
+.jumbotron {
+  background-color: #5FCCAB;
+  color: #fff;
+  text-align: center;
+  min-height: 10em;
+  min-width: 50%;
+  max-width: 90%;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-bottom-width: 3px;
+  border-color: #479980;  
+  padding-left: 5px;
+  padding-right: 5px;  
+}
+
+.jumbotron h1, .content .jumbotron h1 {
+  font-size: 3em;
+  color: inherit;
+}
+
+.jumbotron p, .content .jumbotron p {
+  font-size: 2em;
+  color: inherit;
+}
+
+.content .jumbotron {
+  background-color: #5FCCAB;
+  color: #fff;
+  text-align: center;
+  min-height: 10em;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px; 
+  border-radius: 25px;
+}
+
+/* End Style/Display Classes */
+/**********************/
+
+/**********************/
+/* Begin Column Classes */
+
+.column-container:after {
+  display: block;
+  height: 0;
+  clear: both;
+  content: " ";
+}
+.column-of-two {
+  padding: 0.5%;
+  float: left;
+  width: 50%;
+}
+.column-of-three {
+  padding: 0.5%;
+  float: left;
+  width:33%;
+}
+.column-of-four {
+  padding: 0.5%;
+  float: left;
+  width: 25%;
+}
+
+/* End Column Classes */
+/**********************/
+
+/**********************/
+/* Start Misc Elements */
+.faq-accordion {
+  width: 75%;
+}
+
+.faq-accordion h3 {
+  margin-bottom: 0;
+}
+
+/****************************************************/
+/* Start Note Block Classes             */
+
+/* Base style for note blocks */
+.note-block, .green-note-block, .note-block-success, .red-note-block, .note-block-danger, .orange-note-block, .note-block-warning {
+  border-left-width: 5px;
+  border-left-style: solid;
+  border-left-color: #5EAEFF;
+  background-color: #f1f8fd;
+  display: inline-block;
+  margin-left: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  clear: both;
+}
+
+/* Green (style) and Success (role) note block styles */
+.green-note-block, .note-block-success {
+  background-color: #F1FDF8;
+  border-left-color: #019875;
+}
+
+/* Red (style) and Danger (role) note block styles */
+.red-note-block, .note-block-danger {
+  background-color: #FEECE5;
+  border-left-color: #D9534F;
+}
+
+/* Orange (style) and Warning (role) note block styles */
+.orange-note-block, .note-block-warning {
+  background-color: #FDF8F1;
+  border-left-color: #FFA500;
+}
+
+
+/* End Note Block Classes             */
+/****************************************************/
+
+.toc {
+  border-style: solid;
+  border-width: 0px;
+  border-top-width: 5px;
+  border-top-color: #5EAEFF;
+  background-color: #f1f8fd;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 3px;
+}
+
+.page-insert {
+  border-style: solid;
+  border-width: 0px;
+  border-right-width: 5px;
+  border-right-color: #5EAEFF;
+  background-color: #f1f8fd;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 3px;
+  width: 18%;
+}
+
+.new-banner
+{
+  background-image:url('/homepages/comp_sys_sup/include/images/new.png');
+  background-repeat:no-repeat;
+  background-position: right top;
+}
+
+.small-note{
+  font-size: 0.6em;
+}
+
+/*  End Misc Elements */
+/**********************/
+
+/**********************/
+/* Begin Position Classes */
+
+table.block-center {
+  max-width:80%;
+  display: table;
+}
+
+table.block-center.dataTable {
+  float:none;
+}
+
+table.centered {
+  max-width:90%;
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+}
+
+table.no-style, table.no-style th, table.no-style td {
+  border-style: none;
+  border-width: 0;
+}
+
+table.form td {
+  border-style: none;
+  height: 40px;
+}
+
+table.minimal {
+  margin: 20px;
+  border-style: none;
+}
+
+table.minimal td {
+  border-style: solid;
+  border-width: 1px;
+  border-color:  rgba(0,0,0,0.12);
+}
+
+table.minimal th {
+  color: rgba(0,0,0,0.54);
+  background-color:  rgba(0,0,0,0.26);
+}
+
+
+/* End Position Classes */
+/**********************/
+
+
+
+/**********************/
+/* Begin Universal Header */
+/* univ-header-container-closed and open are toggled to show/hide the universal header
+using a basic transition animation */
+.univ-header-container-closed {
+  height: 0;
+  visibility: hidden;
+  background-color: #f1f8fd;
+  transition: height 0.5s;
+  margin-top: 0px;
+}
+
+.univ-header-container-open {
+  height: 170px;
+  visibility: visible;
+  background-color: #fff;
+  transition: height 0.5s;
+  overflow: hidden;
+
+}
+
+#univ-header {
+  max-height: 170px;
+  margin-right: 50px;
+}
+
+
+#univ-header > * {
+  margin-top: 0px;
+  max-height: 155px;
+}
+
+#show-univ {
+  cursor: pointer;
+  margin-top: -10px;
+  width: 100px;
+  background-color: #fff;
+  border-radius: 0 0 50px 50px;
+  color: #343434;
+  
+}
+
+.univ-header-closed {
+  display: none;
+}
+
+.univ-header-open {
+  display: block;
+  padding: 5px;
+}
+
+.univ-header-column {
+  margin-left: 50px;
+  padding-left: 50px;
+  height: 160px;
+  float: right;
+  border-style: solid;
+  border-color: #dddddd;
+  border-width: 0 0 0 1px;
+}
+
+.univ-header-column > ul {
+  margin-top: 0;
+}
+
+.univ-header-column > h3 {
+  line-height: 0.5em;
+}
+
+.univ-header-news {
+  float:left;
+  margin-left: 20xp;
+}
+
+.simpleSearch {
+
+}
+
+.simpleSearch td {
+  border-style: none;
+}
+
+/* End Universal Header */
+/**********************/
