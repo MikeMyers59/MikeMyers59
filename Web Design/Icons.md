@@ -1,5 +1,7 @@
 # Web Development Icons
 
+[FavIcon](https://favicon.io/)  - 
+[Favicon Generator](https://www.favicon-generator.org/) 
 https://findicons.com/ 
 https://www.flaticon.com/ 
 https://icons8.com/

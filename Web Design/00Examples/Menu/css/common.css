@@ -15,7 +15,7 @@ header, nav, section, article, aside, footer {
   display:block;
 }
 
-/* ---- Alignment ---- */
+/* ---- Alignment, Float & Position ---- */
 .block-center {
   max-width: 70%;
   margin-left: auto;
@@ -37,6 +37,17 @@ header, nav, section, article, aside, footer {
 }
 .right {
   float:right;
+}
+
+/* Positions */
+.absolute {
+  position:absolute;
+}
+.fixed {
+  position:fixed;
+}
+.relative {
+  position:relative;
 }
 
 /* Text Align */
@@ -296,3 +307,12 @@ th {
 .alt-rows tr:nth-child(odd) {
   background-color: #FFFFFF;
 }
+
+/* ---- Text Modfications --- */
+.overline {
+  text-decoration: overline;
+}
+.underline {
+  text-decoration: underline;
+}
+
