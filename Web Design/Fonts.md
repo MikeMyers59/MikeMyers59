@@ -5,6 +5,7 @@
 - Arial, sans-serif;
 - Consolas,"Courier New", monospace;
 - "Brush Script MT", cursive;
+- Copperplate, Papyrus, fantasy;
 
 ## Linking from CDNs & APIs
 

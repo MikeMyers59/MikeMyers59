@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+
+<head>
+
+<title>No-Click Remover</title>
+
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=IE7">
+
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+</head>
+
+<body>
+
+<h1 id="title-text">No-Click Remover</h1>
+
+<p>This tool allows you to easily remove the no-click nuisance from links you receive in emails. </p>
+<p>Paste a link from an email and the site will open in a new tab instantly:</p>    
+
+<textarea id="link" rows="20" cols="100" placeholder="Paste link here" autofocus="" class=""></textarea>
+  <script>
+    // Get the input field
+      var input = document.getElementById("link");
+
+    // Execute a function when the user presses a key on the keyboard
+      input.addEventListener("keydown", function(event) {
+    // Number 13 is the "Enter" key on the keyboard
+      if (event.keyCode === 13) {
+    // Cancel the default action, if needed
+        event.preventDefault();
+    // Trigger the function
+        RemoveNoClick();
+      }
+    });
+
+            // Catch pasted text and instantly run
+            input.addEventListener('paste', function(event) {
+                let paste = (event.clipboardData || window.clipboardData).getData('text');
+                document.getElementById("link").value = paste;
+                RemoveNoClick();
+                event.preventDefault();
+            });
+
+    function RemoveNoClick() {
+      var str = document.getElementById("link").value;
+      var txt = str.replace(/https:\/\/no-click\.mil\/\?|noclick_/i, "");
+      if (txt != "") {
+        window.open(txt, "_blank");
+      }
+
+      document.getElementById("link").value = "";
+    }
+  </script>
+
+<hr>
+
+</body>
+
+</html>
