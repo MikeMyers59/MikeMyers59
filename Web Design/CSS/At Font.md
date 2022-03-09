@@ -1,5 +1,12 @@
 # @Font
 
+#### Preload Fonts with <LINK>
+```html
+<link rel="preload" href="https://aui.atlassian.com/aui/7.8/css/fonts/adgs-icons.woff" as="font">
+<link rel="preload" href="https://aui.atlassian.com/aui/7.8/css/fonts/adgs-icons.ttf" as="font">
+<link rel="preload" href="https://aui.atlassian.com/aui/7.8/css/fonts/adgs-icons.eot" as="font">
+```
+
 ```css
 @font-face {
   font-family: 'slick';

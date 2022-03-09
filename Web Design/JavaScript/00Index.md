@@ -100,3 +100,9 @@ function displayModal(url) {
 }
 ```
 
+```javascript
+function isElementNode(node) {
+  return node.nodeType === 1;
+}
+```
+

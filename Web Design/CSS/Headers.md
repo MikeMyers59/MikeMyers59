@@ -51,6 +51,9 @@ h6 {
 h1:first-child,h2:first-child,h3:first-child,h4:first-child,h5:first-child,h6:first-child {
   margin-top:0
 }
+h1:hover, h2:hover, h3:hover, h4:hover, h5:hover, h6:hover {
+  visibility: visible;
+}
 h1+h2,h2+h3,h3+h4,h4+h5,h5+h6 {
   margin-top:10px
 }

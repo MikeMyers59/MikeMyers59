@@ -2,8 +2,9 @@
 
 ### font-family
 - Georgia, "Times New Roman", Times, serif;
-- lato, arial, sans-serif;
+- Arial, sans-serif;
 - Consolas,"Courier New", monospace;
+- "Brush Script MT", cursive;
 
 ## Linking from CDNs & APIs
 

@@ -1,5 +1,6 @@
 # CSS
 
+[CSS Default Values](https://www.w3schools.com/cssref/css_default_values.asp) 
 [tool tips](https://www.w3schools.com/css/css_tooltip.asp)  
 
 #### To Check Out
@@ -50,16 +51,14 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | box-sizing| { border-box | content-box | inherit} ; |   |  
 | clear| { both \| left \| right }; |   |  
 | clip| auto \| rect() |   |  
-| code[class=""], |   |  
-| code|not{ [class] }   |   |  
 | color | <Color> | `color: #ddd;` |  
-| cursor | { initial \| pointer };  |   |  
+| cursor | { copy \| initial \| pointer };  |   |  
 | display | {  block \| flex \| inline-block \| none \| table \| table-cell }   |   |  
 | flex| 1 1 50%;  |   |  
 | flex-direction | {  column | row } ;  |   |  
 | float | {  none | left | right } ;  |   |  
 | font-family | { Arial \| Arial Narrow \| Cambria \| Helvetica \| LibreFranklin-Bold \| Roboto \| sans-serif \| serif } ;  |   |  
-| font-size | <Size>  |   |  
+| font-size | { <Size> \| inherit } |   |  
 | [font-smooth](https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth) <BR> | { <size> \| always \| **auto** \| inherit \| initial \| never \| revert \| unset } |  |  
 | font-weight | { bold \| bolder \| normal } |  |  
 | height | <Size> |  |  
@@ -86,10 +85,13 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | transform-origin | { bottom | center | top } { center | right | left }  |  |  
 | transition-duration <BR> -webkit-transition-duration | <Seconds>s | --- |  
 | top | { <Percentage> } | --- |  
+| unicode-bidi | { isolate } |  |  
 | User-Select | { all \| none}; | --- |  
 | vertical-align| {  bottom \| middle \| sub \| super \| top } ; |   |  
-| white-space| { normal \| nowrap };  |   |  
+| visibility | { hidden \| visible } |  |  
+| white-space| { normal \| nowrap \| pre-wrap };  |   |  
 | width| <Size> \| auto |   |  
+| word-wrap | { break-word | normal }; |  
 | z-index | <Index> |  |  
 | zoom |  |  |  
 | -webkit-transform | [ translate(-50%, -50%) /| scale(0.25) ] |  |  
