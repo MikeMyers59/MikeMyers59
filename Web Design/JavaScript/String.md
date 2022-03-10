@@ -1,13 +1,6 @@
 # Strings
 
-### Trim with a Regular Expression
-```javascript
-function TrimString(value) {
-    return value.replace(/^\s+|\s+$/g, '')
-}
-``
-
-### Test Characters for Printability
+## Test Characters for Printability
 ```javascript
 function isPrintable(keycode) {
   const valid = (keycode > 47 && keycode < 58) || // number keys
@@ -17,6 +10,30 @@ function isPrintable(keycode) {
     (keycode > 185 && keycode < 193) || // ;=,-./` (in order)
     (keycode > 218 && keycode < 223); // [\]' (in order)
   return valid;
+}
+```
+
+## Trap HTML Entity Problems
+```javascript
+var safeHtml = function(unsafeHtml) {
+  if (unsafeHtml) {
+    return unsafeHtml
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;') 
+      .replace(/\//g, '&#x2F;')
+      .replace(/\(/g, '&lpar;')
+      .replace(/\)/g, '&rpar;');
+    }
+    return '';
+};
+```
+
+### Trim with a Regular Expression
+```javascript
+function TrimString(value) {
+    return value.replace(/^\s+|\s+$/g, '')
 }
 ```
 

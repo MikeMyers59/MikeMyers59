@@ -35,8 +35,11 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | animation | animateleft 0.4s;  |   |  
 | animation-delay | `<Time>` |  |   
 | animation-duration | `<Time>` |  |   
+| animation-fill-mode | { both } |  |  
 | animation-iteration-count | `<Integer>` |  |    
-| animation-name | '<IDName>' |  |   | background | { <Color> \| [ <ImageFile> <Setting> <Size> <Size> ] } | --- |  
+| animation-name | '<IDName>' |  |   
+| background | { <Color> \| [ <ImageFile> <Setting> <Size> <Size> ] } | --- |  
+| background-clip | { padding-box } | --- |  
 | background-position | <Percent> | --- |  
 | background-size | { <Size> ] } | --- |  
 | border <Size> <Type> <Color> | none | `border: solid 1px #aaa;` |  
@@ -52,45 +55,61 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | clear| { both \| left \| right }; |   |  
 | clip| auto \| rect() |   |  
 | color | <Color> | `color: #ddd;` |  
-| cursor | { copy \| initial \| pointer };  |   |  
-| display | {  block \| flex \| inline-block \| none \| table \| table-cell }   |   |  
+| cursor | { copy \| initial \| not-allowed \| pointer };  |   |  
+| display | {  block \| flex \| inline-block \| none \| table \| table-cell \| table-row-group }   |   |  
+| filter | { grayscale() \| sepia() } |   |  
 | flex| 1 1 50%;  |   |  
 | flex-direction | {  column | row } ;  |   |  
 | float | {  none | left | right } ;  |   |  
 | font-family | { Arial \| Arial Narrow \| Cambria \| Helvetica \| LibreFranklin-Bold \| Roboto \| sans-serif \| serif } ;  |   |  
 | font-size | { <Size> \| inherit } |   |  
 | [font-smooth](https://developer.mozilla.org/en-US/docs/Web/CSS/font-smooth) <BR> | { <size> \| always \| **auto** \| inherit \| initial \| never \| revert \| unset } |  |  
+| font-smoothing <BR> -moz-osx-font-smoothing <BR> -webkit-font-smoothing | { antialiased \| grayscale } |  |  
+| font-variant | { normal } |  |  
 | font-weight | { bold \| bolder \| normal } |  |  
 | height | <Size> |  |  
 | justify-content| space-between;  |   |  
 | left | { <Percentage> } | --- |  
+| letter-spacing | { normal } |  |  
+| line-break | { auto } |  |  
 | line-height | <Size> \| `normal \| inherit` | --- |  
 | list-style-type| {  circle \| decimal \| lower-alpha \| lower-roman \| none \| square \| upper-alpha \| upper-roman } ; |   |  
 | margin <Top> <Right> <Bottom> <Left> <BR> margin <Top-Bottom> <Right-Left> <BR> margin <All>  <BR> margin-bottom <BR> margin-left <BR> margin-right <BR> margin-top | { <Size> \| auto \| none } | --- |  
 | max-width | <Size> |  |  
 | min-width | <Size> |  |  
 | opacity | <Percent> |  |  
+| outline-offset | <Size> |  |  
 | overflow | [ auto \| hidden \| scroll \| visible ] |  |  
 | overflow-x | [ auto \| hidden \| scroll ] |  |  
 | overflow-y | [ auto \| hidden \| scroll ] |  |  
 | padding <BR> padding-bottom <BR> padding-left <BR> padding-right <BR> padding-top | <Size> | --- |   
 | position | { absolute \| fixed \| relative \| static } ;  |   |  
 | right | { <Percentage> } | --- |  
-| text-align | { center \| left \| right } | --- |  
+| stroke-dasharray | { <Size> } | --- |  
+| stroke-dashoffset | { <Size> } | --- |  
+| table-layout | { fixed } |  |  
+| text-align | { center \| left \| right \| start } | --- |  
 | text-decoration| { none \| underline }; |   |  
 | text-overflow | ellipsis |  |  
+| text-rendering | { auto } |  |  
 | text-shadow <Top> <Right> <Bottom> <Color> | { none }; | `text-shadow: -2px 2px 4px #ccc;` |  
 | text-transform | { lowercase \| uppercase } | --- |  
-| transform | [ translate(-50%, -50%) /| scale(0.25) ] |  |  
+| touch-action | { manipulation } |  |  
+| transform <BR> -ms-transform | [ translate(-50%, -50%) /| scale(0.25) ] |  |  
 | transform-origin | { bottom | center | top } { center | right | left }  |  |  
+| transition | `opacity .15s linear` |  |  
 | transition-duration <BR> -webkit-transition-duration | <Seconds>s | --- |  
+| transition-property | { height,visibility } |  |  
+| transition-timing-function | { ease } |  |  
 | top | { <Percentage> } | --- |  
 | unicode-bidi | { isolate } |  |  
-| User-Select | { all \| none}; | --- |  
+| user-Select <br> -moz-user-select <br> -ms-user-select | { all \| none}; | --- |  
 | vertical-align| {  bottom \| middle \| sub \| super \| top } ; |   |  
 | visibility | { hidden \| visible } |  |  
 | white-space| { normal \| nowrap \| pre-wrap };  |   |  
 | width| <Size> \| auto |   |  
+| word-break | { normal } |  |  
+| word-spacing | { normal } |  |  
 | word-wrap | { break-word | normal }; |  
 | z-index | <Index> |  |  
 | zoom |  |  |  
@@ -133,7 +152,6 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 }
 @media all and (max-width: 400px){
 }
-
 ```
 
 ## Simple CSS Additions

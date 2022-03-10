@@ -34,6 +34,44 @@
 @media (min-width: 1600px) {}
 ```
 
+## Repsonsive Container That Drops Objects as Size3 decreases
+```css
+/*  Responsive using Size as major display criteria */
+.hidden-xxs, .hidden-xs, .hidden-sm, .hidden-md, .hidden-lg, .hidden-xlg {
+  display: inherit;
+} 
+@media (max-width: 575px) {
+  .hidden-xxs {
+    display: none;
+   } 
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  .hidden-xs {
+    display: none;
+  } 
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-sm {
+    display: none;
+  } 
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-md {
+    display: none;
+  } 
+}
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .hidden-lg {
+    display: none;
+  } 
+}
+@media (min-width: 1600px) {
+  .hidden-xlg {
+    display: none;
+  } 
+}
+```
+
 ## Dark Mode
 ```css
 
