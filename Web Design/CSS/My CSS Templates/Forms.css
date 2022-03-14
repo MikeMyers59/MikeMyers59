@@ -42,18 +42,23 @@ fieldset{
 /* ====== Form ====== */
 
 /* ====== Input ====== */
+input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance:button
+}
 [type=checkbox],
 [type=radio]{
   padding: 0;
 }
 [type=button]:-moz-focusring, 
 [type=reset]:-moz-focusring, 
-[type=submit]:-moz-focusring{
+[type=submit]:-moz-focusring {
   outline:1px dotted ButtonText;
 }
 [type=button]::-moz-focus-inner, 
 [type=reset]::-moz-focus-inner, 
-[type=submit]::-moz-focus-inner{
+[type=submit]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -70,4 +75,7 @@ textarea{
   overflow: auto;
 }
 
+form:first-child {
+  margin-top:0
+}
 

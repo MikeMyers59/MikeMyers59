@@ -15,6 +15,11 @@
 }) ( window, document);
 ```
 
+## Output to Comsole or User
+```javascript
+console.log(<Messgae>);
+```
+
 ## Self Executing Functions
 
 #### OnLoad/Unload Events

@@ -1,5 +1,12 @@
 # CSS Graphics
 
+#### Logo Links
+```html
+<div align="right">
+ <a href="#"><img src="images/<LogoName>.png" alt="" width="100" height="100" align="right"></a>
+</div>
+```
+
 ## Dashed Row Background or Newline Icon
 ![Dashed Row Background](DashBackground.PNG)
 ```css

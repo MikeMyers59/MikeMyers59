@@ -1,6 +1,12 @@
 @charset "UTF-8";
 /* Lists */
 
+dl,
+ol,
+ul {
+  margin:10px 0 0 0
+}
+
 /* Definitions */
 
 dl {
@@ -95,5 +101,17 @@ ul.square-bullets {
 /* List Items */
 li > ul {
   padding-left: 2rem;
+}
+
+/* Modify the List's first child */
+dl:first-child,
+ol:first-child,
+ul:first-child {
+  margin-top:0
+}
+
+li:first-child,
+dt:first-child {
+  margin-top:0
 }
 

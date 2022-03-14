@@ -16,3 +16,7 @@ td {
 	font-size: 9pt;
 }
 
+table:first-child {
+  margin-top:0
+}
+

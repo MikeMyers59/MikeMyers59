@@ -11,17 +11,18 @@ audio,
 canvas,
 img,
 progress,
-video{
+video {
   display: inline-block;
+  vertical-align: baseline;
 }
+
 figcaption,
-figure{
+figure {
   display:block;
 }
 
-
 /* ====== Audio-Video ====== */
-audio:not([controls]){
+audio:not([controls]) {
   display: none;
   height: 0;
 }

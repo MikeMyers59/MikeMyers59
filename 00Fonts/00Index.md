@@ -3,6 +3,12 @@
 [Adobe Fonts](https://fonts.adobe.com/fonts)  
 [Font Awesome Free 5.0.8 ](https://fontawesome.com)  
 
+#### Font Families 
+| Type | List |  
+| --- | --- |  
+| sans-serif | `Droid Sans, Fira Sans, Helvetica Neue, Oxygen, Roboto, Segoe UI, Ubuntu` |  
+
+
 ## Atlassian
 https://aui.atlassian.com/aui/7.8/docs/icons.html 
 CDN Links:

@@ -22,7 +22,7 @@
 [ShadowBox](http://shadowbox-js.com/)  
   - [ShadowBox on GitHub](http://github.com/mjijackson/shadowbox/)  
 [Sizzle.js](http://sizzlejs.com/)  
-[SlickJS](https://github.com/kenwheeler/slick) - carousel 
+[SlickJS](https://github.com/kenwheeler/slick) - carousel; requires jQuery. 
 [SPServices](http://spservices.codeplex.com)
 [StackTraceJS](https://www.stacktracejs.com/)
 [swfobject](http://code.google.com/p/swfobject/)  

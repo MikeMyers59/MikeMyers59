@@ -3,9 +3,18 @@
 [CSS Default Values](https://www.w3schools.com/cssref/css_default_values.asp) 
 [tool tips](https://www.w3schools.com/css/css_tooltip.asp)  
 
+#### Common External Stylesheet Link
+```html
+<link rel="stylesheet" href="style.css" />
+```
+
 #### To Check Out
+currentColor - is this a stnadard value in a browser?
+
 ```css
-behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
+<ASelector> { 
+  behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
+}
 ```
 
 #### Training Available
@@ -25,6 +34,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | ms- | Microsoft |  
 | mso- | Microsoft Office | 
 | ss- | SymbolSet Standard |  
+| SP | SharePoint |  
 | UI- | jQuery-UI |  
 
 ## Attributes
@@ -78,6 +88,7 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | max-width | <Size> |  |  
 | min-width | <Size> |  |  
 | opacity | <Percent> |  |  
+| outline | `1px dotted ButtonText` |  |  
 | outline-offset | <Size> |  |  
 | overflow | [ auto \| hidden \| scroll \| visible ] |  |  
 | overflow-x | [ auto \| hidden \| scroll ] |  |  
@@ -89,7 +100,8 @@ behavior: url('/homepages/comp_sys_sup/include/css/PIE.htc');
 | stroke-dashoffset | { <Size> } | --- |  
 | table-layout | { fixed } |  |  
 | text-align | { center \| left \| right \| start } | --- |  
-| text-decoration| { none \| underline }; |   |  
+| text-decoration | { none \| underline }; |   |  
+| text-decoration-skip <BR> -webkit-text-decoration-skip | { object }; |   |  
 | text-overflow | ellipsis |  |  
 | text-rendering | { auto } |  |  
 | text-shadow <Top> <Right> <Bottom> <Color> | { none }; | `text-shadow: -2px 2px 4px #ccc;` |  

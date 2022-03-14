@@ -1,0 +1,25 @@
+/* Text modifications */
+@charset 'UTF-8';
+
+cite:before {
+  content:"\2014 \2009"
+}
+
+blockquote {
+  border-left:1px solid #dfe1e6;
+  color:#7a869a;
+  margin-left:19px;
+  padding:10px 20px
+}
+
+blockquote > cite {
+  display:block;
+  margin-top:10px
+}
+
+blockquote:first-child,
+p:first-child,
+pre:first-child {
+  margin-top:0
+}
+
