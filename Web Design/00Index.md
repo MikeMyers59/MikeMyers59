@@ -11,3 +11,14 @@
 [Smarter Way to Learn (Mark Myers)](http://www.ASmarterWayToLearn.com)  
 [Web Tool Kit](http://www.webtoolkit.info/)   
 
+
+## Common Links & Script Calls
+```html
+<link type="text/css" href="css/font-awesome.css" rel="Stylesheet">
+<link type="text/css" href="css/jquery-ui.custom.css" rel="Stylesheet" />
+<link type="text/css" href="css/jquery-ui.gdeb.css" rel="Stylesheet" />
+
+<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
+<script type="text/javascript" src="js/jquery-ui.custom.min.js"></script>
+```
+

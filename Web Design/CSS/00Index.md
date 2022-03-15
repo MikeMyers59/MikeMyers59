@@ -17,6 +17,8 @@ currentColor - is this a stnadard value in a browser?
 }
 ```
 
+![CSSInternalVSExternal](CSSInlineVSExternal.PNG)
+
 #### Training Available
 [The Missing Semester of Your CS Education](https://missing.csail.mit.edu/) 
 - Data files on [GitHub](https://github.com/missing-semester/missing-semester)
