@@ -24,11 +24,11 @@
 
 html {
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif; /* 1 */
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 12pt;
   line-height: 1.0;
-  -ms-text-size-adjust: 100%; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 2 */
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 /* Remove default margin. */
@@ -50,9 +50,9 @@ body {
   box-sizing: inherit;
 }
 
-/* ANCHORS */
+/* ANCHORS or LINKS */
 a {
-  background-color: transparent;
+  background: transparent;
   cursor: pointer;
   outline-width: 0;
   padding: 1px;
@@ -65,12 +65,14 @@ a:link {
 }
 a:active {
   color:red; 
+  outline: 0;
 }
 a:visited {
   color:purple; 
 }
 a:hover {
   color:orange; 
+  outline: 0;
 }
 
 /**
@@ -114,47 +116,10 @@ h5 {
   font-size: 1.2rem;
 }
 
-/* PX Headers 
-  h1{font-size:36px;}
-  h2{font-size:30px;}
-  h3{font-size:24px;}
-  h4{font-size:20px;}
-  h5{font-size:18px;}
-  h6{font-size:16px;}
-*/
+/* RULES */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
 
-/* ====== Text Modifications ====== */
-abbr[title]{
-  border-bottom: none;
-  text-decoration: underline;
-  text-decoration: underline dotted;
-}
-code,
-kbd,
-pre,
-samp{
-  font-family: monospace;
-  font-size: 1em;
-}
-dfn{
-  font-style: italic;
-}
-mark{
-  background:#ff0;
-  color:#000;
-}
-small{
-  font-size: 80%;
-}
-sub,sup{
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sub{
-  bottom: -0.25em;
-}
-sup{
-  top: -0.5em;
-}

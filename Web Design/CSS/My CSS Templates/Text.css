@@ -1,8 +1,21 @@
 /* Text modifications */
 @charset 'UTF-8';
 
-cite:before {
-  content:"\2014 \2009"
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
 }
 
 blockquote {
@@ -21,5 +34,42 @@ blockquote:first-child,
 p:first-child,
 pre:first-child {
   margin-top:0
+}
+
+cite:before {
+  content:"\2014 \2009"
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+pre {
+  overflow: auto;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
 }
 

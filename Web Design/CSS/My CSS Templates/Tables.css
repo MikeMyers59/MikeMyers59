@@ -2,7 +2,9 @@
 /* Tables */
 
 table{
+  border-collapse: collapse;
 	border-radius: 4px 4px 0px 0px;
+  border-spacing: 0;
 }
 
 tr {
@@ -10,10 +12,11 @@ tr {
 	font-size: 9pt;
 }
 
-td {
+td,th {
 	border-radius: 0px 0px 4px 4px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 9pt;
+  padding: 0;
 }
 
 table:first-child {
