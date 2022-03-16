@@ -1,0 +1,149 @@
+@charset 'UTF-8';
+
+/* Common Styles */
+.center {
+  text-align: center;
+}
+
+/* Bread Crumbs are horizontal single level menus. 
+Typically used for footers. Alternately, A breadcrumb 
+navigation provide links back to each previous page 
+the user navigated through, and shows the user's 
+current location in a website.                        */
+
+.breadcrumb {
+  font-size: 0.875em;
+  font-weight: bold;
+  margin: 0 0 1.14286em !important;
+  overflow: hidden;
+  margin-bottom: 1.28571em;
+}
+.breadcrumb a, .breadcrumb span {
+  color: #081f49;
+  display: inline-block;
+  text-decoration: underline;
+}
+.breadcrumb a:hover {
+  text-decoration: none;
+}
+.breadcrumb li {
+  display: inline;
+  padding-right: 0.35714em;
+}
+.breadcrumb > li + li::before {
+  display: none;
+}
+
+ /* Style the list */
+ ul.breadcrumb {
+  padding: 10px 16px;
+  list-style: none;
+  background-color: #eee;
+}
+
+/* Display list items side by side */
+ul.breadcrumb li {
+  display: inline;
+  font-size: 18px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+} 
+
+@media (min-width: 61.25em) {
+  .breadcrumb {
+    padding-left: 1.5em;
+  }
+}
+
+/* Example HTML
+<ul class="breadcrumb">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Pictures</a></li>
+  <li><a href="#">Summer 15</a></li>
+  <li>Italy</li>
+</ul>
+*/
+
+/* Pagination */
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  border: 1px solid #ddd;
+  color: black;
+  float: left;
+  margin: 0 4px; /* 0 is for top and bottom. Feel free to change it */
+  padding: 8px 16px;
+  text-decoration: none;
+}
+.pagination a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #ddd;
+}
+
+.pagination a {
+  border-radius: 5px;
+  transition: background-color 1s;
+}
+
+.pagination a.active {
+  border-radius: 5px;
+}
+
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/* Pagination Example HTML
+<h2>Simple Pagination</h2>
+
+<div class="center">
+  <div class="pagination">
+  <a href="#">&laquo;</a>
+  <a href="#">1</a>
+  <a href="#" class="active">2</a>
+  <a href="#">3</a>
+  <a href="#">4</a>
+  <a href="#">5</a>
+  <a href="#">6</a>
+  <a href="#">&raquo;</a>
+  </div>
+</div>
+
+<p>Next/Previous buttons:</p>
+<div class="pagination">
+  <a href="#">❮</a>
+  <a href="#">❯</a>
+</div>
+*/
+
