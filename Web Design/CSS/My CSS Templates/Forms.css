@@ -5,6 +5,7 @@ button,
 input,
 select,
 textarea{
+  color: inherit;
   font: inherit;
   margin: 0; 
 }
@@ -31,6 +32,11 @@ button::-moz-focus-inner{
 button:-moz-focusring{
   outline:1px dotted ButtonText;
 }
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
 
 /* ====== Fieldset ====== */
 fieldset{
@@ -42,11 +48,22 @@ fieldset{
 /* ====== Form ====== */
 
 /* ====== Input ====== */
+input {
+  line-height: normal;
+}
+
 input[type=button],
 input[type=reset],
 input[type=submit] {
   -webkit-appearance:button
 }
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
 [type=checkbox],
 [type=radio]{
   padding: 0;
@@ -62,6 +79,14 @@ input[type=submit] {
   border-style: none;
   padding: 0;
 }
+
+/* Legend */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
 
 /* ====== Option Group ====== */
 optgroup{
@@ -79,3 +104,27 @@ form:first-child {
   margin-top:0
 }
 
+#options {
+	width: 100%;
+	border-top: 1px solid #D7E1EC;
+	border-bottom: 1px solid #D7E1EC;
+	background: #ffffff;
+	padding: 6px 0px 6px 0px;
+	clear: both;
+}
+
+.option {
+  border-top: 1px dotted #999; 
+  padding-top: 6px;
+  margin: 4px 5px 0px 100px;
+}
+.first-option {
+  padding-top: 1px; 
+  margin: 0px 5px 10px 100px;
+}
+.label {
+  display: block; 
+  float: left; 
+  width: 100px; 
+  font-weight: bold;
+}
