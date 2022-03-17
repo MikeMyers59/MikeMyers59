@@ -14,3 +14,19 @@ if (!window.<ObjectName>) {
 }
 ```
 
+## Process the Errors
+```javascript
+ProcErr = function(e){
+  var c=console;
+  if(c && c.log && c.error){
+    c.log('Error running batched script.');
+    c.error(e);
+  }
+}
+try {
+}
+catch(e){
+  ProcErr(e)
+};
+```
+
