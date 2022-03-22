@@ -73,3 +73,9 @@ sub {
   bottom: -0.25em;
 }
 
+/* ===========Text Decoration=========== */
+.tdNone { text-decoration: none; }
+
+/* ===========Text Overflow=========== */
+.toEllipsis { text-overflow: ellipsis; }
+

@@ -1,4 +1,4 @@
-# Constants
+# Constants & Common Variables
 
 ### Common Browser/Navigator Objects
 ```javascript
@@ -7,6 +7,7 @@ var d = document;
 var e = error;
 var s = screen;
 var w = window;
+var wSize = w.width();
 ```
 
 ## Base64

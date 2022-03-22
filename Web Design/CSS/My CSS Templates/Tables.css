@@ -7,6 +7,15 @@ table{
   border-spacing: 0;
 }
 
+th,
+td,
+tr,
+thead,
+tbody {
+  border-color: #ccc;
+  background: #fff;
+}
+
 tr {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 9pt;

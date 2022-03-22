@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Colors & Opacity
   Alerts     - "alert-"
   Background - "bg-"
@@ -6,6 +7,14 @@
   Microsoft  - "ms-"
   Text       - "text-"
 */
+
+:root{
+  --color333:    "#333";        /* var(color333) */
+  --color707070: "#707070";
+  --color999:    "#999";
+  --colorF0F0F0: "#f0f0f0";
+  --colorFFF:    "#fff";
+}
 
 /* ====== Opacity ====== */
 .opacity-off {

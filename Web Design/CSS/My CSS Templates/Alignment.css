@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Alignment */
 
 .block-center {
@@ -15,34 +16,35 @@
   display: block;
 }
 
-.float-left {
-	float:left;
-}
+/* =========Float========== */
+.float-left,
+.fLeft        { float: left;                           }
+.float-middle { margin-left: auto; margin-right: auto; }
+.float-right,
+.fRight       { float: right;                          }
 
-.float-middle {
-	margin-left: auto;
-	margin-right: auto;
-}
+/* ===========Overflow=========== */
+.ofHide { overflow: hidden; }
 
-.float-right {
-	float:right;
-}
+/* ===========Position=========== */
+.pFixed    { position: fixed;    }
+.pRelative { position: relative; } 
 
-.text-center, .tx-center {
-	text-align: center;
-}
+/* ===========Text Align=========== */
+.text-center, 
+.tx-center,
+.taCenter { text-align: center; }
+.text-left, 
+.tx-left,
+.taLeft   { text-align: left;    }
+.text-justify, 
+.tx-justify,
+.taJust   { text-align: justify; }
+.text-right, 
+.tx-right,
+.taRight  { text-align: right;  }
 
-.text-justify, .tx-justify {
-  text-align:justify
-}
-
-.text-left, .tx-left {
-	text-align: left;
-}
-
-.text-right, .tx-right {
-	text-align: right;
-}
+/* ==========Vertical Alignment========== */
 
 .vertical-center{
 	height: 75px;
@@ -68,4 +70,9 @@
 .vertical-superscript, .va-sup {
 	vertical-align: super;
 }
+
+/* ==========White Space========== */
+.wsNormal { white-space: normal; } 
+.wsWrap   { white-space: wrap;   }
+.wsNoWrap { white-space: nowrap; } 
 

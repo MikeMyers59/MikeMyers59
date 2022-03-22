@@ -1,28 +1,31 @@
 @charset "UTF-8";
 
-/* Display */
+/* =========Clear========== */
+.cBoth  { clear: both;  }
+.cLeft  { clear: left;  }
+.cRight { clear: right; }
 
-.hidden, .invisible {
-  display: none;
-  visibility: hidden;
-}
-.unhidden, .visible {
-  display: block; 
-  visibility: visible;
-}
-.show-block {
-  display:block;
-}
-.show-inline-block {
-  display:inline-block;
-}
-.show-flex {
-  display:flex;
-}
-.table-cell {
-  display: table-cell;
-}
-.table {
-  display: table;
-}
+/* =========Cursor========== */
+.cHand    { cursor: hand;    }
+.cPointer { cursor: pointer; }
+
+/* ==========Display========== */
+.hidden, 
+.invisible,
+.Hide         { display: none; visibility:hidden            }
+.unhidden, 
+.visible, 
+.Show         { display: inherit; visibility: visible;      }
+.ShowBlock    { display: block; visibility: visible;        }
+.ShowBlkInl   { display: inline-block; visibility: visible; }
+.ShowTCell    { display: table-cell; visibility: visible;   }
+.ShowFlex     { display: flex; visibility: visible;         }
+.ShowIinline  { display: inline; visibility: visible;       }
+.ShowTable    { display: table; visibility: visible;        }
+
+.show-block        { display:block;        }
+.show-inline-block { display:inline-block; }
+.show-flex         { display: flex;        }
+.table-cell        { display: table-cell;  }
+.table             { display: table;       }
 
