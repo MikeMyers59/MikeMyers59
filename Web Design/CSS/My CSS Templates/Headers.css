@@ -32,3 +32,35 @@ h6:first-child {
   margin-top:20px
 }
 
+/* Handy Header */
+.handy-header {
+    cursor: copy;
+    visibility: hidden;
+    position: absolute;
+    margin-left: -20px;
+    padding-right: 4px;
+}
+
+h1 .handy-header, 
+h2 .handy-header {
+    margin-top: 6px;
+}
+
+h3 .handy-header {
+    margin-top: 2px;
+}
+
+h4 .handy-header, 
+h5 .handy-header {
+    margin-top: 1px;
+}
+
+h1:hover .handy-header,
+h2:hover .handy-header,
+h3:hover .handy-header,
+h4:hover .handy-header,
+h5:hover .handy-header,
+h6:hover .handy-header {
+  visibility: visible;
+}
+

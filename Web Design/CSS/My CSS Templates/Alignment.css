@@ -24,11 +24,13 @@
 .fRight       { float: right;                          }
 
 /* ===========Overflow=========== */
-.ofHide { overflow: hidden; }
+.ofHide { overflow: hidden;  }
+.ofShow { overflow: visible; }
 
 /* ===========Position=========== */
 .pFixed    { position: fixed;    }
 .pRelative { position: relative; } 
+.pStatis   { position: static;   }
 
 /* ===========Text Align=========== */
 .text-center, 

@@ -20,14 +20,12 @@ translate(-50%,-50%)
   --VarName: "Value";
 }
 
-
 .border0 {
   border: 0;
 }
 .margin0 {
   margin: 0;
 }
-
 
 .container{
   width:1100px;

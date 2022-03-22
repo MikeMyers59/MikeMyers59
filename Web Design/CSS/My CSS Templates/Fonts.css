@@ -117,7 +117,15 @@ px	em
   font-family:serif
 }
 
-/* ====== Letter Spacing ====== */
+/* ==========Font Weight========== */
+.font200    { font-weight: 200;    }
+.font400    { font-weight: 400;    }
+.font600    { font-weight: 600;    }
+.font800    { font-weight: 800;    }
+.fontBold   { font-weight: bold;   }
+.fontBolder { font-weight: bolder; }
+
+/* ==========Letter Spacing========== */
 .ls-normal{
   letter-spacing: 0px;
 }
