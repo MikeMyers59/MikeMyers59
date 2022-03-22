@@ -1,5 +1,10 @@
 # JavaScript Window Object Snippets
 
+## Properties
+```javascript
+window.location.href
+```
+
 ```javascript
 // Add an Event Listener or Attach an Event
 if (window.addEventListener) {
