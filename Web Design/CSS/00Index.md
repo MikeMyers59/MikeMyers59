@@ -32,7 +32,7 @@ currentColor - is this a stnadard value in a browser?
 | -webkit | on MAC: Chrome, Safari, etc |  
 | aui- | Atlassian User Interface |  
 | fa- | FontAwesome |  
-| lb- | LightBos |  
+| lb- | LightBox |  
 | ms- | Microsoft |  
 | mso- | Microsoft Office | 
 | ss- | SymbolSet Standard |  
@@ -136,6 +136,17 @@ currentColor - is this a stnadard value in a browser?
 
 -mox  Namespace for Mozilla (FireFox)  
 -webkit Namespace for Microsoft (CrEdge)  
+
+
+## Language
+```css
+[lang|=en]{
+  /* Changes based on the English Language */
+}
+ [lang|=ja]{
+  /* Changes based on the Japanese Language */
+}
+```
 
 ## Pseudo Selectors
 | Attribute | Options |  
