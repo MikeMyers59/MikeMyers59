@@ -1,5 +1,9 @@
 # Handling the Document Object Model (DOM)
 
+'''javascript
+var pageTitleElement = document.getElementById('pagetitle');
+```
+
 ## Change a DOM Element’s Style
 ```javascript
   <ObjectName>.style = "<StyleKeyValueList>";
