@@ -37,6 +37,13 @@ video {
   max-height: 80vh;
 }
 
+.video-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .youtube-wrapper {
   position: relative;
   height: 0;
