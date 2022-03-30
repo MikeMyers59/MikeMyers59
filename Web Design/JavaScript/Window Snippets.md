@@ -35,3 +35,15 @@ function closeMe(){
 }
 ```
 
+## Resize Window
+```javascript
+var scr_w = screen.availWidth;
+var scr_h = screen.availHeight;
+
+if (scr_w != window.width || scr_h != window.height) {
+     window.resizeTo(scr_w, scr_h);
+     window.moveTo(0, 0);
+}
+```
+
+
