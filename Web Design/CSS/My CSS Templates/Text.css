@@ -73,6 +73,17 @@ sub {
   bottom: -0.25em;
 }
 
+/* ===========Text Alignment=========== */
+.tacenter{
+  text-align: center;
+}
+.taleft{
+  text-align: left;
+}
+.taright{
+  text-align: right;
+}
+
 /* ===========Text Decoration=========== */
 .tdNone { text-decoration: none; }
 
