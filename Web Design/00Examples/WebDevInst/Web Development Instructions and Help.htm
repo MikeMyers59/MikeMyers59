@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html><head>
+<title>Web Development Instructions and Help</title>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://www.ebnet.gdeb.com/favicon.png" type="image/png">
+<link rel="shortcut icon" href="https://www.ebnet.gdeb.com/favicon.ico" type="image/x-icon">
+<link type="text/css" href="Web%20Development%20Instructions%20and%20Help_files/gdeb.css" rel="Stylesheet">
+<link type="text/css" href="Web%20Development%20Instructions%20and%20Help_files/menu.css" rel="Stylesheet">
+<link type="text/css" href="Web%20Development%20Instructions%20and%20Help_files/font-awesome.css" rel="Stylesheet">
+<link type="text/css" href="Web%20Development%20Instructions%20and%20Help_files/jquery-ui.css" rel="Stylesheet">
+<link type="text/css" href="Web%20Development%20Instructions%20and%20Help_files/jquery-ui_002.css" rel="Stylesheet">
+
+<!--<link type="text/css" href="/jquery/jquery_plugins/jquery_datatables_latest/css/demo_page.css" rel="Stylesheet" />-->
+<!--<link type="text/css" href="/jquery/jquery_plugins/jquery_datatables_latest/css/demo_table.css" rel="Stylesheet" />-->
+<!--<link type="text/css" href="/jquery/jquery_plugins/jquery_datatables_latest/datatables.min.css" rel="Stylesheet" />-->
+<!--<link type="text/css" href="/jquery/jquery_plugins/jquery_datatables_latest/extras/TableTools/media/css/TableTools.css" rel="Stylesheet" />-->
+
+<script type="text/javascript" src="Web%20Development%20Instructions%20and%20Help_files/es6-promise.js"></script>
+<script type="text/javascript" src="Web%20Development%20Instructions%20and%20Help_files/jquery.js"></script>
+<script type="text/javascript" src="Web%20Development%20Instructions%20and%20Help_files/jquery-ui.js"></script>
+<!--<script type="text/javascript" src="/jquery/jquery_plugins/jquery_datatables_latest/datatables.min.js"></script>-->
+<!--<script type="text/javascript" src="/jquery/jquery_plugins/jquery_datatables_latest/extras/TableTools/media/js/TableTools.min.js"></script>-->
+<!--<script type="text/javascript" src="/jquery/jquery_latest/jquery.min.js?v=4f252523d4af0b478c810c2547a63e19"></script>-->
+<script type="text/javascript" src="Web%20Development%20Instructions%20and%20Help_files/jquery-migrate.js"></script>
+<!--<script type="text/javascript" src="/jquery/jquery_ui_latest/js/jquery-ui.custom.min.js?v=0f85afafa9731e71ae7cf77c926f68db"></script>-->
+<script type="text/javascript" src="Web%20Development%20Instructions%20and%20Help_files/mustache.js"></script>
+<script type="text/javascript" src="Web%20Development%20Instructions%20and%20Help_files/menu.js"></script>
+<script type="text/javascript" src="Web%20Development%20Instructions%20and%20Help_files/gdeb.js"></script>
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<!--[if lt IE 9]>  
+  <script>  
+    document.createElement("header" );   
+    document.createElement("footer" );   
+    document.createElement("section");    
+    document.createElement("aside"  );   
+    document.createElement("nav"    );   
+    document.createElement("article");    
+    document.createElement("hgroup" );    
+    document.createElement("time"   );   
+  </script>  
+  <noscript>  
+     <strong>Warning !</strong>  
+     Because your browser does not support HTML5, some elements are simulated using JScript.   
+     Unfortunately your browser has disabled scripting. Please enable it in order to display this page.   
+  </noscript>  
+<![endif]-->
+<link href="Web%20Development%20Instructions%20and%20Help_files/prism.css" type="text/css" rel="stylesheet">
+<script language="javascript" src="Web%20Development%20Instructions%20and%20Help_files/faq.js"></script>
+</head>
+<body>
+<header>
+    <div id="univ-header-container" class="univ-header-container-closed">
+        <div id="univ-header" class="univ-header-closed">
+                <div class="univ-header-column">
+                    <h3>Help Desk Infomation</h3>
+                    <ul class="no-style">
+                        <li><b>EB Production Support:</b> 860-433-5864</li>
+                        <li><b>EBIT Help Desk:</b> 860-433-HELP (4357)</li>
+                        <li><a href="https://sn.ebnet.gdeb.com/sp"><button class="red-button">Service Now</button></a></li>
+                    </ul>
+                </div>
+                <div class="univ-header-column">
+                    <h3>Employee Directory Search</h3>
+                <form id="simpleSearch" class="simpleSearch" name="phonebook" action="/ed/" method="get" target="_blank">
+                    <table>
+                      <tbody><tr>
+                        <td>Last:</td><td><input type="text" name="lname" size="15"></td>
+                        <td>Badge:</td><td><input type="text" name="badge" size="15"></td>
+                      </tr>
+                      <tr>
+                        <td>First:</td><td><input type="text" name="fname" size="15"></td>
+                        <td>Dept:</td><td><input type="text" name="dept" size="15"></td>
+                      </tr>
+                      <tr>
+                        <td>Middle:</td><td><input type="text" name="mname" size="15"></td>
+                        <td>Phone:</td><td><input type="text" name="phone_combined" size="15"></td>
+                      </tr>
+                    </tbody></table>
+                    <div align="center">
+                      <input name="Submit" type="submit" class="button" value="Submit">
+                      <input name="Reset" type="Reset" class="button" id="Reset" value="Reset">
+                      <a href="https://www.ebnet.gdeb.com/ed/">Advanced Search</a>
+                    </div>
+                </form>
+                </div>
+                <div class="univ-header-column">
+                    <h3>Intranet Search</h3>
+                    <form id="intranetSearch" method="get" action="/search" class="zoom_searchform" target="_blank">
+                        <input type="hidden" name="zoom_sort" value="0">
+                        <input type="hidden" name="zoom_xml" value="0">
+                        <input type="hidden" name="zoom_and" value="0">
+                        <input type="hidden" name="zoom_per_page" value="10">
+                        <input type="hidden" name="zoom_cat[]" value="-1">
+                        <input type="text" name="zoom_query" size="20" id="zoom_searchbox" class="zoom_searchbox">
+                        <button title="Search"><span class="fa fa-search"></span></button>
+                    </form>
+                    <h3>Wiki Search</h3>
+                    <form id="wikiSearch" method="get" action="https://wiki.ebnet.gdeb.com/Main/WebSearch" target="_blank">
+                        <input type="hidden" name="scope" value="all">
+                        <input type="hidden" name="web" value="all">
+                        <input type="hidden" name="recurse" value="on">
+                        <input type="text" name="search">
+                        <button title="Search"><span class="fa fa-search"></span></button>
+                    </form>
+                </div>
+                <div id="univ-header-news" class="univ-header-news">
+                    <h3>Announcements &amp; News</h3>
+                    <table id="newsTable" class="no-style">
+                        <tbody><tr>
+  <td valign="top" nowrap="nowrap" bgcolor="#ffffff" align="center">
+	<br>
+  </td>
+</tr>
+                    </tbody></table>
+                </div>            
+        </div>
+    </div>
+    <div class="header">
+        <span id="show-univ" class="fa fa-chevron-down fa-2x centered-text right"></span>
+        <p class="gdeb-logo">
+        <a href="https://homeport.ecms.gdeb.com/">
+        <img src="Web%20Development%20Instructions%20and%20Help_files/gdeb-logo-white.png">
+        </a>
+        </p>
+        <h1 id="siteTitle" class="right"></h1>
+    </div>
+</header>
+
+<div class="pageheader">
+<h1 id="pagetitle" class="pagetitle">Web Development Instructions and Help</h1>
+</div>
+<script>
+  document.getElementById('pagetitle').innerText = document.title;
+</script> 
+<script>
+// escapes html tags in prep for pretty print, you must do SSIs manually
+$(document).ready( function () {
+	$( 'code' ).each(function() {
+	var test = $(this).html();
+	var res = test.replace(/</g,"&lt;");
+	$(this).html(res);
+	})
+});
+
+
+$(document).ready( function() { 
+var ToC =
+  "<nav role='navigation' class='table-of-contents'>" +
+    "<h2>On this page:</h2>" +
+    "<ul>";
+
+var newLine, el, title, link;
+
+$(".content h1").each(function() {
+
+  el = $(this);
+  title = el.text();
+  link = "#" + el.attr("id");
+
+  newLine =
+    "<li>" +
+      "<a href='" + link + "'>" +
+        title +
+      "</a>" +
+    "</li>";
+
+  ToC += newLine;
+
+});
+
+ToC +=
+   "</ul>" +
+  "</nav>";
+  
+$("#toc-container").html(ToC);
+});
+</script>
+<div class="content">
+	<div id="toc-container" class="toc right"><nav role="navigation" class="table-of-contents"><h2>On this page:</h2><ul><li><a href="#web-terminology">Web Terminology</a></li><li><a href="#getting-started">Getting Started</a></li><li><a href="#available-tools">Available Tools</a></li><li><a href="#requirements-guidelines">Interface Requirements and Guidelines</a></li><li><a href="#access-controls">Access Controls</a></li><li><a href="#intranet-styles">Intranet Styles and Templates</a></li><li><a href="#eb-stylesheet">The Electric Boat Stylesheet</a></li><li><a href="#additional-features">Additional Features</a></li><li><a href="#advanced">Advanced</a></li></ul></nav></div>
+	<h1 id="web-terminology">Web Terminology</h1>
+	<ul>
+		<li><b>Intranet:</b> The internal Electric Boat network.</li>
+		<li><b>Internet:</b> The World Wide Web - (External to Electric Boat's network).</li>
+		<li><b>Samba:</b> The software used to connect computers running 
+Microsoft Windows to Unix systems.  It is what is used to map a drive 
+letter on your local PC to the directories on the Intranet web servers.</li>
+		<p>Typical web development is done across multiple environments to 
+facilitate updates and changes while only providing approved/published 
+content to the general users of a site.</p>
+		<li><b>Development:</b> Constantly in flux.  This is where all changes and new content originates.</li>
+		<li><b>Stage:</b> No updates are done directly in stage.  It is meant 
+to represent the Production environment for testing.  Once content is 
+determined to be stable it is moved to Stage for final review before 
+moving to Production.</li>
+		<li><b>Production:</b> The final product.  Any updates to Production have already been applied and reviewed in Development and Stage.</li>
+	</ul>
+	<h1 id="getting-started">Getting Started</h1>
+		
+            <h2>Approvals</h2>
+                <p>Have your manager email the EB Webmaster at <a href="mailto:webmaster@gdeb.com">webmaster@gdeb.com</a>
+ to request a web site. This request should include the purpose of the 
+site as well as the names and badges of the employees who will create 
+and maintain the site.</p>
+            <h2>Required Accounts and Group Setup</h2>
+            <ol>
+                <li>As the person responsible for the web site (Intranet
+ individual, department, or special interest group), you must have a 
+valid Web Development ID and password and your windows ID and web 
+development ID must be mapped in the Samba mapping file.</li>
+                <li>If you do not have what is needed in the previous step, contact the EB Webmaster <a href="mailto:webmaster@gdeb.com">webmaster@gdeb.com</a>
+ to have an account set up for you.  Be sure to provide to us what the 
+Web Development ID will be used for, and your Windows ID.  The EB 
+Webmaster will submit a request in ServiceNow on your behalf, that must 
+be aproved by your manager, to have your account created.</li>
+                <li>After you receive your Web development ID and password, e-mail the EB Webmaster at <a href="mailto:webmaster@gdeb.com">webmaster@gdeb.com</a>
+ to request a web site on the Development server. Specify the name and 
+web development ID of the person who will be responsible for this web 
+site development and maintenance.</li>
+                <li>If you will have more than one person maintaining your web pages, you should have a Unix group created.  E-mail the <a href="mailto:webmaster@gdeb.com">EB Webmaster</a>
+ with each employee's name, badge, and Web Development ID, as well as a 
+group name (eight characters or less) and the EB Webmaster will submit a
+ request in ServiceNow to have the group created.
+			</li></ol>
+            <h2>Connecting to the Web Server</h2>
+            <p>Once the web directory is created for you, and you have 
+had your IDs placed in the Samba mapping file, you will need to map a 
+drive to access the files on the web server.</p>
+                    <ol>
+                        <li>Double click on the "This PC" (Windows Explorer) icon on your desktop.</li>
+						<li>Click on "Computer" in the menu.
+                        </li><li>Click on Map Network Drive (from the menu).</li>
+                        <li>If you do not already have the W drive 
+mapped, it is the best choice for this drive mapping. Note and remember 
+which "Drive:" letter you are using.</li>
+                        <li>In the "Folder:" section, type <span class="monospace">\\samba\web</span>.</li>
+                        <li>Click on the Reconnect at logon checkbox. Then click Finish button.</li>
+                        <li>Click the Finish button.</li>
+                        <li>You should see your newly mapped drive in Windows Explorer.</li>
+                    </ol>
+                <p>Now you may develop and test your web pages on the EBC Intranet web development server.</p>
+                <blockquote class="note-block-warning"><b>Note:</b> To 
+properly view your web pages you must open them by the URL.  Do not open
+ files directly from Windows Explorer as the request will not actually 
+be processed by the web server.  Example: <a href="https://www-dev.ebnet.gdeb.com/homepages/departments/604">https://www-dev.ebnet.gdeb.com/homepages/departments/604</a> <b>NOT</b> from <span class="monospace">W:\internal\dev\www-dev\homepages\departments\604</span>.</blockquote>
+            <h2>Common Site Locations</h2>
+                <p>Department pages are located at <a href="https://www-dev.ebnet.gdeb.com/homepages/departments/">https://www-dev.ebnet.gdeb.com/homepages/departments/</a> and under the directory <span class="monospace">W:\internal\dev\www-dev\homepages\departments</span> (<span class="monospace">/gdbin/www-dev/homepages/departments/</span>).</p>
+                <p>Special interest groups are located at the following locations depending on their classifications:</p>
+                    <ul>
+                        <li>/homepages/groups</li>
+                        <li>/homepages/organizations</li>
+                        <li>/homepages/projects</li>
+                    </ul>
+                <p>The webmaster will let you know your path.</p>
+            <h2>Site Styles and Icons</h2>
+                <p>Please be aware that Intranet websites are required 
+to use the Electric Boat Intranet Styles and Templates.  See the 
+instructions below for information on using them.</p>
+                <p>We recently obtained a new set of icons.  Please check out our <a href="https://www.ebnet.gdeb.com/include/font-awesome/">set of icons</a> before you download any of your own.</p>
+            <h2>Moving to Production</h2>
+            <ol>
+                <li>Once you are satisfied with your web site/page in Development, email the EB Webmaster at <a href="mailto:webmaster@gdeb.com">webmaster@gdeb.com</a>
+ to have the Stage directory created. We will create the directory for 
+you in Stage after we have reviewed your site in development.  We will 
+not create the directory in Stage if we find obvious problems with your 
+site in Development.</li>
+                <li>Once we have created the directory on the Stage 
+server you will copy the contents of your site from the Development 
+server to the Stage server.</li>
+                <li>Once you are satisfied with your web site/page in Stage, email the EB Webmaster at <a href="mailto:webmaster@gdeb.com">webmaster@gdeb.com</a>
+ to have the Production directory created.  We will create the directory
+ for you in Production after we have reviewed your site in Stage.  We 
+will not create the directory in Production if we find obvious problems 
+with your site in Stage.  This is unlikely as you should have corrected 
+all problems in Development.</li>
+                <li>Once we have created the directory on the Production
+ server you will copy the contents of your site from the Stage server to
+ the Production server.
+                </li><li>The EB Webmaster will create a link from the 
+Department or Project or Groups/Organizations page on request only after
+ you site has been copied to Production and you have verified that the 
+site is working properly.</li>
+            </ol>
+	<p class="note-block">If you create or are creating software for EB's use in-house, you must go to the <a href="https://www.ebnet.gdeb.com/homepages/projects/cm/">EB Software Configuration Management Home Page and Catalog</a> to fill out the appropriate paperwork and be Secure Code trained.</p>
+			
+	<h2>Internet Facing Websites</h2>
+	<p>Websites that are accessible through the Internet have additional requirements.  Please see <a href="https://www.ebnet.gdeb.com/instructions/internet.html">Setting up an Internet Web Site</a> for more information.</p>	
+	
+</div>
+<div class="content">
+	<h1 id="available-tools">Available Tools</h1>
+	<h2>Text Editors and IDEs</h2>
+	<ul>
+		<li><b>Notepad++:</b> (recommended) A free Open Source code editor 
+which supports several programming languages running under the Microsoft
+ Windows environment</li>
+		<li><b>Adobe Dreamweaver:</b> To get Dreamweaver you must submit an IT Service Request.  The cost of this software will be charged to your department.
+	</li></ul>
+	<h2>Graphical Editors</h2>
+	<ul>
+		<li><b>GIMP:</b> GIMP is an open source image processing tool much like Adobe Photoshop</li>
+		<li><b>Inkscape:</b> Inkscape is an open source image processing tool for editing vector images</li>
+	</ul>
+</div>
+<div class="content">
+	<h1 id="requirements-guidelines">Interface Requirements and Guidelines</h1>
+	<ul>
+	   <li>Use the <a href="#intranet-styles">Electric Boat Intranet Styles and Templates</a> as the basis for your site.</li>
+	   <li>The use of animated images and pop-ups are discouraged.</li>
+	   <li>There should be limited usage of frames.</li>
+		  <li>Do not frame other people's sites, especially external sites.</li>
+	   <li>Each page's lettering and images should be legible.</li>
+
+	   <li>Approved icons can be found <a href="https://www.ebnet.gdeb.com/include/font-awesome">here</a>.</li>
+	</ul>
+	<h1 id="access-controls">Access Controls</h1>
+	<ul>
+	   <li>Intranet websites are accessible by all EB users and visitors with a US-CT-EB01 account.</li>
+	   <li>Newport News (NNS) users have access to select pages.  Additions
+ to the NNS access list must be approved by the CIO.  To view the NNS 
+home page click <a href="https://www.ebnet.gdeb.com/ad/?type=nns" target="_blank">here</a>.</li>
+	   <li>To restrict access to a website by Windows Groups (Active Directory) contact the <a href="mailto:webmaster@gdeb.com">EB Webmaster</a>.</li>
+	   <li>If your website contains FOUO or NOFORN you must have a properly
+ named folder containing all correctly labelled files.  You must contact
+ the <a href="mailto:webmaster@gdeb.com">EB Webmaster</a> to properly secure your folders.</li>
+	 </ul>
+</div>
+<div class="content">	 
+	<h1 id="intranet-styles">Intranet Styles and Templates</h1>	
+	<h2 id="framework">Why have a standardized framework?</h2>
+	<h3 id="framework-consistency">Consistency</h3>
+	<p>Using a standardized set of styles creates a uniform and consistent 
+feel across the Intranet.  A consistent feel helps users recognize 
+similar elements (like buttons or navigation menu) on different sites 
+and pages making it easier for them to get around sites they have never 
+visited before.</p>
+	<h3 id="framework-ease-of-use">Ease of Use</h3>
+	<p>Having a clearly defined set of styles and templates also makes it 
+easier on those creating sites on the Intranet.  You do not have to 
+worry about developing a basic look and feel of a website and can focus 
+on content, not style (such as complementary colors).</p>
+	<p>Getting help is easier too.  Since this has been setup by the EBIT 
+Webmasters, it is much easier for us to troubleshoot a problem you are 
+having or make suggestions on the best way to implement an idea you may 
+have.</p>
+	<p>The Electric Boat Intranet Styles and Templates are designed to be basic and straightforward for use by non-IT employees.</p>
+	<p>The Intranet Styles and Templates are also easily expandable to 
+provide the functions of a more robust framework.  For more complex 
+features check out the Advanced section.</p>
+	<blockquote>The Intranet Styles and Templates will continue to be updated and refined.  Feedback is most welcome.</blockquote>
+	<h2 id="page-structure">Standard Page Structure</h2>
+	<p>Below is an overview of a bare-bones HTML file that utilizes the standardized templates and styles.</p>
+	<form method="get" action="/include/template.zip">
+	<button type="submit">Download the latest template</button>
+	</form>
+	<p>The file has five primary sections:</p>
+		<ul>
+			<li>HTML Header</li>
+			<li>Header</li>
+				<ul>
+					<li>Main Header</li>
+					<li>Page Header (optional)</li>
+				</ul>
+			<li>Navbar (optional)</li>
+			<li>Content</li>
+			<li>Footer</li>			
+		</ul>
+        <pre class=" language-markup"><code class=" language-markup"><span class="token doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Web Development Instructions and Help<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/header/stylesheet.html" --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/header.html" --&gt;</span>
+<span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/pageheader.html" --&gt;</span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>content<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/footer.html" --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">&gt;</span></span></code>
+</pre>
+
+	<h3 id="html-header">The HTML Header</h3>
+	<p>Here you set the tile of your page within the Title tag.</p>
+	<p>The standardized stylesheet for the Electric Boat Intranet is 
+included by default.  This file includes a number of resources covered 
+in a later section.</p>
+	<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Web Development Instructions and Help<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/header/stylesheet.html" --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span></code></pre>
+	<h3 id="the-header">The Header</h3>
+	<p>The header for the page is broken into two parts.</p>
+	<h4 id="main-header">Main Header</h4>
+	<p>The main header file includes the GDEB logo and general search box for the Electric Boat Intranet.</p>		
+	<pre class=" language-markup"><code class=" language-markup"><span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/header.html" --&gt;</span></code></pre>
+	<h4 id="page-header">Page Header (optional)</h4>
+	<p>The page header file automatically places the page title at the top 
+of the page.  This helps with creating a consistent look and letting 
+users know where they are.</p>	
+	<pre class=" language-markup"><code class=" language-markup"><span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/pageheader.html" --&gt;</span></code></pre>	
+	<h3 id="navbar">Navbar (optional)</h3>
+	<p>For the navbar we use what is called a 'mega-menu.'  Rather than 
+just a simple dropdown list it can also contain text for detailed 
+descriptions, images, and forms.</p>
+	<p>In order to use the navbar you will have to create one in your 
+site's directory and include it in all of your pages.  Below is an 
+example statement for including a navbar for fictional department 999.  A
+ basic navbar example is included in the latest templates download.</p>
+	<pre class=" language-markup"><code class=" language-markup"><span class="token comment" spellcheck="true">&lt;!--#include virtual="/homepages/departments/999/custom/navbar.html" --&gt;</span></code></pre>
+	<p>Checkout the <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/">Computer Systems Support</a> page for a good example of a navbar that uses many different formats for the menu drop downs.</p>
+	<h4 id="navbar-structure">Navbar Structure</h4>
+	<p>The navbar is setup as an unordered list where each list item is a dropdown menu.</p>
+	<p>Each list item has the following elements:</p>
+	<ul>
+		<li>An &lt;a&gt; element with the class 'drop.'  The text for the &lt;a&gt; is the title of the dropdown menu. </li>
+		<li>A &lt;div&gt; element with the class specifying the width of the 
+dropdown menu.  This element will contain all of the columns for the 
+dropdown menu.</li>
+		<li>An appropriate number of &lt;div&gt; elements with the classes specifying the width of the columns.</li>			
+	</ul>
+	<p>Below is an example dropdown menu list item with a width of 2 columns:</p>
+<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>li</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>drop<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>2 Column<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>dropdown_2columns<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col_2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span>2 Column<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>col_2<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>This menu spans two columns.  This menu spans two columns.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>li</span><span class="token punctuation">&gt;</span></span></code></pre>
+	<h3 id="content-desc">Content</h3>
+	<p>All page content should be placed in a &lt;div&gt; element with the 
+class 'content.'  All styles are based around page content being place 
+in a content div.  Multiple content divs can be used if you would like 
+to create separate blocks of content.</p>
+	<h3 id="footer-desc">The Footer</h3>
+	<p>The footer file automatically places the copyright notification, 
+server questions notification, and last updated date of the page at the 
+bottom of the page.</p>
+	<p>Follow the setup instructions below to automatically add your contact information to every page on your site.</p>
+	<ol>
+		<li>Open the site-stylesheet.html file in your custom directory</li>
+		<li>Update the path of the site-contact.js file to match the path to you site</li>
+		<h5>site-stylesheet.html</h5>
+        <pre class=" language-markup"><code class=" language-markup"><span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/include/custom/site-contact.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+		<pre class=" language-markup"><code class=" language-markup"><span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>text/javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/homepages/departments/999/custom/site-contact.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>			
+		<li>Open the site-contact.js file in your custom directory.</li>
+		<li>Update the siteContact variable to the email address of your site's point of contact</li>
+        <li>Update the siteMessage variable with the message you would like displayed above the site's point of contact.</li>
+        <li>Update the siteTitle variable with the name of the site.</li>
+		<h5>site-contact.js</h5>
+	<pre class=" language-javascript"><code class=" language-javascript">document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> siteContact <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> siteMessage <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> siteTitle <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>siteContact <span class="token operator">!</span><span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'pcontainer'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">'block'</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'pcontainer'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'Page PoC: &lt;a href="mailto:'</span> <span class="token operator">+</span> siteContact <span class="token operator">+</span> <span class="token string">'"&gt;'</span> <span class="token operator">+</span> siteContact <span class="token operator">+</span> <span class="token string">'&lt;/a&gt;'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>siteMessage <span class="token operator">!</span><span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'sitemessage'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">'block'</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'sitemessage'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> siteMessage<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>siteTitle <span class="token operator">!</span><span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'siteTitle'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> siteTitle<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+
+	<pre class=" language-javascript"><code class=" language-javascript">document<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">"DOMContentLoaded"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span>event<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> siteContact <span class="token operator">=</span> <span class="token string">'poc@gdeb.com'</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> siteMessage <span class="token operator">=</span> <span class="token string">'Department specific disclaimer or message'</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> siteTitle <span class="token operator">=</span> <span class="token string">'Department 999'</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>siteContact <span class="token operator">!</span><span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'pcontainer'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">'block'</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'pcontainer'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">'Page PoC: &lt;a href="mailto:'</span> <span class="token operator">+</span> siteContact <span class="token operator">+</span> <span class="token string">'"&gt;'</span> <span class="token operator">+</span> siteContact <span class="token operator">+</span> <span class="token string">'&lt;/a&gt;'</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>siteMessage <span class="token operator">!</span><span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'sitemessage'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>style<span class="token punctuation">.</span>display <span class="token operator">=</span> <span class="token string">'block'</span><span class="token punctuation">;</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'sitemessage'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> siteMessage<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>siteTitle <span class="token operator">!</span><span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'siteTitle'</span><span class="token punctuation">)</span><span class="token punctuation">.</span>textContent <span class="token operator">=</span> siteTitle<span class="token punctuation">;</span> 
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+		<li>Include your site-stylesheet.html file in all of your site pages</li>
+			<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Web Development Instructions and Help<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/header/stylesheet.html" --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span></code></pre>		
+			<pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>title</span><span class="token punctuation">&gt;</span></span>Web Development Instructions and Help<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>title</span><span class="token punctuation">&gt;</span></span>
+<span class="token comment" spellcheck="true">&lt;!--#include virtual="/include/header/stylesheet.html" --&gt;</span>
+<span class="token comment" spellcheck="true">&lt;!--#include virtual="/homepages/departments/999/custom/site-stylesheet.html" --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">&gt;</span></span></code></pre>
+	</ol>
+</div>
+<div class="content">
+	<h1 id="eb-stylesheet">The Electric Boat Stylesheet</h1>
+	<h2 id="whats-included">What is in /include/header/stylesheet.html?</h2>
+	<p>stylesheet.html includes a number of CSS and JavaScript files.  
+These files are maintained by EBIT.  They can also be used by any other 
+group or department to create a design consistent with the rest of the 
+Electric Boat Intranet.</p>
+	<ul>
+		<li>jQuery &amp; jQuery UI: All the supporting JavaScript and CSS files for using jQuery and jQuery UI are included.</li>
+        <li>An Extensive Icon Set</li>
+		<li>gdeb.css: Is the primary stylesheet for the Intranet.</li>
+		<li>menu.css: Is the separate stylesheet for the Navbar template.</li>
+	</ul>
+	<h3 id="jquery-jqueryui">jQuery &amp; jQuery UI</h3>
+	<p>You can find all you need to know about jQuery and jQuery UI at <a href="http://api.jquery.com/">http://api.jquery.com/</a> and <a href="http://api.jqueryui.com/">http://api.jqueryui.com/</a>.</p>
+    <h3 id'="icon-set">Icon Set</h3>
+    <p>Using the icon set is extremely simple.  Create a &lt;span&gt; element and set the class to <span class="monospace">fa fa-iconname</span>.  The icons will adapt automatically with the font styles of the element the &lt;span&gt; is placed within.  See our <a href="https://www.ebnet.gdeb.com/include/font-awesome">Icon Set page</a> for a listing of all available icons and detailed instructions.</p>
+    <pre class=" language-markup"><code class=" language-markup"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>fa fa-users<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span></code></pre>
+    <p>renders as:</p><p><span class="fa fa-users"></span></p>
+	<h3 id="gdeb-css">gdeb.css</h3>
+	<p class="note-block">Not all the styles in gdeb.css are listed below; 
+only the classes you will most likely require to build your site.  Feel 
+free to look through the <a href="https://www.ebnet.gdeb.com/include/css/gdeb.css">whole stylesheet</a> if it interests you.</p>
+    <p class="note-block">For those who plan on adding additional CSS to
+ your site please note that the default box-sizing model is set to 
+'border-box.'  This means that the width of an element includes the 
+padding and border.  It does not include the margin.  This means an 
+element with a width set to 200px, padding of 5px, and a border of 1px 
+will still only be 200px in width on the page.  This allows for easy 
+layout of a page without having to finely adjust widths depending on 
+varying borders and padding.</p>
+	<h4 id="general-colors">General Color Classes</h4>
+	<ul>
+		<li>white-text - Apply for white text</li>
+		<li>white - Apply for white background</li>
+		<li>black-text - Apply for black (technically dark gray) text</li>
+		<li>black - Apply for dark gray background</li>
+		<li>red-text - Apply for red text</li>
+		<li>red - Apply for red background</li>
+		<li>green-text - Apply for green text</li>
+		<li>green - Apply for green background</li>
+	</ul>
+	<h4>Being GD, blue is our primary color:</h4>
+	<ul>
+		<li>dark-blue - Apply for dark blue background</li>
+		<li>dark-blue-text - Apply for dark blue text</li>
+		<li>dark-blue-border - Apply for dark blue border</li>
+		<li>medium-blue - Apply for medium blue background</li>
+		<li>medium-blue-text - Apply for medium blue text</li>
+		<li>medium-blue-border - Apply for dark blue border</li>
+		<li>light-blue - Apply for light blue background</li>
+		<li>light-blue-text - Apply for light blue text</li>
+		<li>light-blue-border - Apply for dark blue border</li>
+	</ul>
+	<h4 id="element-styles">Element Styles</h4>
+	<ul>
+		<li>body - The Arial font is applied to all body contents.  Default 
+font-size is set to 14px.  All element font sizes are set relative to 
+this using em</li>
+		<li>p - Default font-size</li>
+	</ul>
+	<h4 id="content-styles">Content Styles</h4>
+	<ul>
+		<li>content - provides a centered block for page content</li>
+		<li>content-style -  provides the styles of the content element but without the fixed width and centering</li>
+	</ul>
+	<h4 id="table-styles">Table Styles</h4>
+	<ul>
+		<li>alt-rows - Applying this class makes rows in the table alternate between white and light blue</li>
+	</ul>
+	<h4 id="bullet-list-styles">Bullet List Styles</h4>
+	<h4 id="unordered-lists">Unordered Lists</h4>
+	<ul>
+		<li>no-bullets - List with no styles</li>
+		<li>circle-bullets -  List with hollow circles</li>
+		<li>square-bullets - List with solid squares</li>
+	</ul>
+	<h4 id="ordered-lists">Ordered Lists</h4>
+	<ul>
+		<li>upper-roman-bullets - List with uppercase Roman Numerals</li>
+		<li>lower-roman-bullets - List with lowercase Roman Numerals</li>
+		<li>upper-alpha-bullets - List with uppercase letters</li>
+		<li>lower-alpha-bullets - List with lowercase letters</li>
+		<li>numbered-bullets - List with numbers</li>
+	</ul>
+	<h4 id="positional-classes">Positional Classes</h4>
+	<ul>
+		<li>left - floats an element left</li>
+		<li>middle - aligns an element to be horizontally centered in the parent based on its width</li>
+		<li>right - floats an element right</li>
+		<li>centered - aligns an element to be horizontally centered in the parent with a max-width of 90% of the parent's width</li>
+		<li>centered-text - center aligns text</li>
+		<li>vertical-center - center aligns vertically</li>
+		<li>vertical-middle - The element is placed in the middle of the parent element</li>
+		<li>vertical-top - The top of the element is aligned with the top of the tallest element on the line</li>
+		<li>vertical-bottom - The bottom of the element is aligned with the lowest element on the line</li>
+		<li>vertical-subscript - Aligns the element as if it was subscript</li>
+		<li>vertical-superscript - Aligns the element as if it was superscript</li>
+	</ul>
+	<h4 id="column-clases">Column Classes</h4>
+	<ul>
+		<li>column-container - All columns must be placed within a 
+column-container &lt;div&gt; element.  The column-container allows the 
+columns to scale properly themselves without being affected by other 
+content on a page</li>
+		<li>column-of-two - Place two &lt;div&gt;s with this class in a column-container to create two equally sized columns</li>
+		<li>column-of-three -  Place three &lt;div&gt;s with this class in a column-container to create three equally sized columns</li>
+		<li>column-of-four -  Place four &lt;div&gt;s with this class in a column-container to create four equally sized columns</li>
+	</ul>
+	<h4 id="misc-elements">Miscellaneous Elements</h4>
+	<ul>
+		<li>note-block - applies the default style for blockquote elements to any element</li>
+	</ul>
+	<h3 id="menu-css">menu.css</h3>
+	<p class="note-block">Not all the styles in menu.css are listed below; 
+only the classes you will most likely require to build your site.  Feel 
+free to look through the <a href="https://www.ebnet.gdeb.com/include/css/menu.css">whole stylesheet</a> if it interests you.</p>
+	<h4 id="menu-dropdowns">Dropdown Menus</h4>
+	<p>The following classes are used to set the width of a dropdown menu.</p>
+	<ul>
+		<li>dropdown_1column - Sets a dropdown menu width of 1 column</li>
+		<li>dropdown_2columns - Sets a dropdown menu width of 2 columns</li>		
+		<li>dropdown_3columns - Sets a dropdown menu width of 3 columns</li>		
+		<li>dropdown_4columns - Sets a dropdown menu width of 4 columns</li>		
+		<li>dropdown_5columns - Sets a dropdown menu width of 5 columns</li>				
+	</ul>
+    <p>Dropdowns will adjust to be left or right justified automatically based on position and width of the browser window.</p>
+	<h4 id="menu-columns">Column Widths</h4>
+	<p>The following classes are used to set the width of individual column elements within a dropdown menu.</p>
+	<ul>
+		<li>col_1 - Sets a column width of 1 column.</li>
+		<li>col_2 - Sets a column width of 2 columns.</li>
+		<li>col_3 - Sets a column width of 3 columns.</li>
+		<li>col_4 - Sets a column width of 4 columns.</li>
+		<li>col_5 - Sets a column width of 5 columns.</li>		
+	</ul>
+</div>
+<div class="content">
+	<h1 id="additional-features">Additional Features</h1>
+	<h2>F.A.Q. Accordion</h2>
+	<p>Quickly turn all divs on a page with the class 'faq-accordion' into jQuery UI accordions.</p>
+	<ol>
+		<li>Include the faq.js file in your header</li>
+			<pre class=" language-markup"><code class=" language-markup"><span class="token script language-javascript"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">language</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>javascript<span class="token punctuation">"</span></span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>/include/js/faq.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></span></code></pre>
+
+		<li>Create your accordion element and its contents</li>
+			<pre class=" language-markup"><code class=" language-markup">	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>faq-accordion centered<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Accordion One<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Content. Content. Content. Content.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>	
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h3</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>Accordion Two<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h3</span><span class="token punctuation">&gt;</span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span>
+			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">&gt;</span></span>Content. Content. Content. Content. Content. Content. Content. Content. Content. Content. Content. Content. Content. Content.<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">&gt;</span></span>	
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span></code></pre>
+		<li>The above example renders as:</li></ol>
+	<div class="faq-accordion centered ui-accordion ui-widget ui-helper-reset" role="tablist">
+		<h3 href="#" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Accordion One</h3>
+		<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="true">
+			<p>Content. Content. Content. Content.</p>		
+		</div>
+		<h3 href="#" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="-1"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Accordion Two</h3>
+		<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true">
+			<p>Content. Content. Content. Content. Content. Content. Content. 
+Content. Content. Content. Content. Content. Content. Content. Content. 
+Content. </p>	
+		</div>		
+	</div>
+</div>
+<div class="content">
+	<h1 id="advanced">Advanced</h1>
+	<h2 id="adv-javascript">Available JavaScript Libraries</h2>
+	<h3 id="adv-jquery">jQuery &amp; jQuery UI</h3>
+    <h3 id="adv-mustache">Mustache</h3>
+	<h3 id="adv-highcharts">High Charts</h3>    
+	<h3 id="adv-prism">Prism</h3>
+	<h3 id="adv-shadowbox">Shadowbox</h3>
+</div>
+<script type="text/javascript" src="Web%20Development%20Instructions%20and%20Help_files/prism.js"></script>
+   <footer id="footer" class="footer">
+
+<p class="sitemessage" id="sitemessage"></p>
+<p class="pcontainer" id="pcontainer"></p>
+<a href="https://www.ebnet.gdeb.com/policy/">Copyright © General Dynamics Electric Boat 1996-2022.</a> |
+Send WWW server questions to:  <a href="mailto:webmaster@gdeb.com">webmaster@gdeb.com</a> |
+
+        Updated
+        on:
+        Wednesday, July 15, 2015
+</footer>
+
+
+
+</body></html>
