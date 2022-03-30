@@ -26,3 +26,12 @@ window.scrollTo(<Xpos>, <YPos>);
 }, <mSeconds>);
 ```
 
+## Close a Window
+```javascript
+function closeMe(){
+  myWin = window.self;
+  myWin.opener = window.self;
+  myWin.close();
+}
+```
+
