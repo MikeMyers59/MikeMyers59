@@ -32,7 +32,22 @@ td,th {
   padding: 0;
 }
 
+table {
+  border: 1px solid #CCC;
+  border-collapse: collapse;
+}
 table:first-child {
   margin-top:0
+}
+
+/* Cell Size */
+.td15{
+  width: 15%;
+}
+.td50{
+  width: 50%;
+}
+.td70{
+  width: 70%;
 }
 
