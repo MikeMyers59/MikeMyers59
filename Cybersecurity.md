@@ -22,11 +22,14 @@ Cloud computing is essentially the offering of an application or service that is
 #### What risks are there for cloud use at home?
 Cloud computing brought home users a way to use their data across multiple devices and made it available on the go.  The inherent problems that exist for that level of availability are many.  You may not think your data is at that great of risk, but you must remember, that someone is always looking to get easy score of data and use it maliciously.   Here are some of the types of attacks that actors use:
 
-| Attack Type | Description | 
+| Terminology | Description | 
 | --- | --- |  
-| Phishing | used to steal sensitive information (credit card data, usernames, and passwords, etc.) from users. The attackers pretend to be a trustworthy entity (usually by copying the look and feel of a big brand) to trick the victims into revealing their confidential data. |  
 | Exploit Kits | Exploit kits (EKs) are computer programs designed to find flaws, weaknesses or mistakes in software apps and use them to gain access into a system or a network. |  
+| Misconfiguration | Simply failing to validate your security or privacy settings in apps such as video conferencing could potentially expose your chats to eavesdroppers. |  
 | Password Sniffing | This is a tactic used by cyber criminals to harvest passwords. They do this through monitoring and snooping in on network traffic to retrieve password data. |  
+| Phishing | used to steal sensitive information (credit card data, usernames, and passwords, etc.) from users. The attackers pretend to be a trustworthy entity (usually by copying the look and feel of a big brand) to trick the victims into revealing their confidential data. |  
+| Vulnerabilities | Humans are fallible, and so is their code. Check your devices to ensure they are up to date with their security patches and/or firmware from trusted sources. |  
+| Zero Trust | a foundational security tenet that no actor, system, network or service operating outside or within the security perimeter should be trusted automatically |  
 
 These are just a few of the many attacks that can be used to capture your data.  So remember to encrypt, use complex passwords, use Multi Factor Authentication (MFA) when available and be vigilant.  Know what your clicking on or responding to and don't give your information out.
 
