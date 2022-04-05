@@ -16,6 +16,8 @@ Alternates:
 <SCRIPT src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" type="text/javascript" ></SCRIPT>
 ```
 
+$('html').removeClass('no-js').addClass('js');
+
 ### jQuery Document Loaded Enclosure
 Use this enclosure for any actions that need to occur after the DOM is loaded.
 ```javascript

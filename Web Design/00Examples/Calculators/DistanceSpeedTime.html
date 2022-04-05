@@ -1,0 +1,224 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Distance, Speed and Time Calculator </title>
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.0)" />
+<link href="css/D400.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Original:  Gary Nicholson (nicholsongary@hotmail.com) -->
+<!-- Web Site:  http://homepages.ihug.co.nz/~gazzanic/ -->
+
+<!-- This script and many more are available free online at -->
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Begin
+function calculatetime(form) {
+//  get conversion factors from selected options
+var i = form.distunits.selectedIndex;
+var distunitsvalue = form.distunits.options[i].value; 
+var j = form.speedunits.selectedIndex;
+var speedunitsvalue = form.speedunits.options[j].value;
+//  calculate time in seconds    
+form.secondvalue.value = (form.distvalue.value * distunitsvalue) / (form.speedvalue.value * speedunitsvalue);
+//  convert to hours, minutes, seconds    
+form.hourvalue.value = parseInt(form.secondvalue.value / 3600);
+form.secondvalue.value = form.secondvalue.value - (form.hourvalue.value * 3600);
+form.minutevalue.value = parseInt(form.secondvalue.value / 60);
+form.secondvalue.value = parseInt(form.secondvalue.value - (form.minutevalue.value * 60));
+return true;
+}
+function calculatedistance(form) {
+//  get conversion factors from selected options
+var i = form.distunits.selectedIndex;
+var distunitsvalue = form.distunits.options[i].value; 
+var j = form.speedunits.selectedIndex;
+var speedunitsvalue = form.speedunits.options[j].value;
+//  convert time to seconds
+var temp = ((parseFloat(form.hourvalue.value) * 3600) + (parseFloat(form.minutevalue.value) * 60) + parseFloat(form.secondvalue.value));
+//  calculated distance
+form.distvalue.value = ((form.speedvalue.value * speedunitsvalue) * temp) / distunitsvalue; 
+return true;
+}
+function calculatespeed(form) {
+//  get conversion factors from selected options
+var i = form.distunits.selectedIndex;
+var distunitsvalue = form.distunits.options[i].value; 
+var j = form.speedunits.selectedIndex;
+var speedunitsvalue = form.speedunits.options[j].value;
+//  convert time to seconds
+var temp = ((parseFloat(form.hourvalue.value) * 3600) + (parseFloat(form.minutevalue.value) * 60) + parseFloat(form.secondvalue.value));
+//  calculate speed
+form.speedvalue.value = ((form.distvalue.value * distunitsvalue)  / (temp * speedunitsvalue)); 
+return true;
+}
+function clearcell(cell) {
+cell.value = "";
+return true;
+}
+//  End -->
+</script>
+
+</head>
+
+<BODY>
+<strong><font face="arial, helvetica, sans-serif" color="#3399cc" size="4">Time from Distance and Speed</strong><font><p>
+<form>
+<table>
+<tr>
+<td>Enter distance value and unit:</td> 
+<td><input type=text name=distvalue size=15 value="1" onfocus="clearcell(distvalue)"></td>
+<td><select name=distunits>
+<option value=1>Metres
+<option value=0.001>Millimetres
+<option value=0.01>Centimetres
+<option value=1000>Kilometres
+<option value=0.0254>Inches
+<option value=0.3048>Feet
+<option value=0.9144>Yards
+<option value=1.8288>Fathoms
+<option value=1609.344>Statute Miles
+<option value=1852>Nautical Miles
+<option value=9460000000000000>Light Year
+</select>
+</td>
+</tr>
+<tr>
+<td>Enter speed value and units:</td> 
+<td><input type=text name=speedvalue size=15 value="1" onfocus="clearcell(speedvalue)"></td>
+<td><select name=speedunits>
+<option value=1>Metres per Second
+<option value=0.277777777777777777777777777777777777>Kilometre per Hour
+<option value=0.3048>Feet per Second
+<option value=0.00508>Feet per Minute
+<option value=0.01524>Yard per Minute
+<option value=0.44704>Statute Mile per Hour
+<option value=0.514444444444>Knot
+</select></td>
+</tr>
+</table>
+<table>
+<tr>
+<td>Time is:</td>
+<td><input type=text name=hourvalue size=5 value="" readonly></td>
+<td>Hours</td>
+<td><input type=text name=minutevalue size=5 value="" readonly></td>
+<td>Minutes</td>
+<td><input type=text name=secondvalue size=5 value="" readonly></td>
+<td>Seconds</td>
+</tr>
+</table>
+<input type=button value="Calculate" onClick='calculatetime(this.form)'>
+</form>
+<hr>
+<h4>Distance from Speed and Time</h4>
+<form>
+<table>
+<tr>
+<td>Enter speed value and units:</td> 
+<td><input type=text name=speedvalue size=15 value="1" onfocus="clearcell(speedvalue)"></td>
+<td><select name=speedunits>
+<option value=1>Metres per Second
+<option value=0.277777777777777777777777777777777777>Kilometre per Hour
+<option value=0.3048>Feet per Second
+<option value=0.00508>Feet per Minute
+<option value=0.01524>Yard per Minute
+<option value=0.44704>Statute Mile per Hour
+<option value=0.514444444444>Knot
+</select></td>
+</tr>
+</table>
+<table>
+<tr>
+<td>Enter time:</td>
+<td><input type=text name=hourvalue size=5 value="0" onfocus="clearcell(hourvalue)"></td>
+<td>Hours</td>
+<td><input type=text name=minutevalue size=5 value="0" onfocus="clearcell(minutevalue)"></td>
+<td>Minutes</td>
+<td><input type=text name=secondvalue size=5 value="0" onfocus="clearcell(secondvalue)"></td>
+<td>Seconds</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>Distance is (select unit before calculating):</td> 
+<td><input type=text name=distvalue size=15 value="" readonly></td>
+<td><select name=distunits>
+<option value=1>Metres
+<option value=0.001>Millimetres
+<option value=0.01>Centimetres
+<option value=1000>Kilometres
+<option value=0.0254>Inches
+<option value=0.3048>Feet
+<option value=0.9144>Yards
+<option value=1.8288>Fathoms
+<option value=1609.344>Statute Miles
+<option value=1852>Nautical Miles
+<option value=9460000000000000>Light Year
+</select>
+</td>
+</tr>
+</table>
+<input type=button value="Calculate" onClick="calculatedistance(this.form)">
+</form>
+<hr>
+<strong><font face="arial, helvetica, sans-serif" color="#3399cc" size="4">Speed from Distance and Time</strong></font><p>
+<form>
+<table>
+<tr>
+<td>Enter distance value and unit:</td> 
+<td><input type=text name=distvalue size=15 value="1" onfocus="clearcell(distvalue)"></td>
+<td><select name=distunits>
+<option value=1>Metres
+<option value=0.001>Millimetres
+<option value=0.01>Centimetres
+<option value=1000>Kilometres
+<option value=0.0254>Inches
+<option value=0.3048>Feet
+<option value=0.9144>Yards
+<option value=1.8288>Fathoms
+<option value=1609.344>Statute Miles
+<option value=1852>Nautical Miles
+<option value=9460000000000000>Light Year
+</select>
+</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>Enter time:</td>
+<td><input type=text name=hourvalue size=5 value="0" onfocus="clearcell(hourvalue)"></td>
+<td>Hours</td>
+<td><input type=text name=minutevalue size=5 value="0" onfocus="clearcell(minutevalue)"></td>
+<td>Minutes</td>
+<td><input type=text name=secondvalue size=5 value="0" onfocus="clearcell(secondvalue)"></td>
+<td>Seconds</td>
+</tr>
+</table>
+<table>
+<tr>
+<td>Speed is (select units before calculating):</td> 
+<td><input type=text name=speedvalue size=15 value="1" readonly></td>
+<td><select name=speedunits>
+<option value=1>Metres per Second
+<option value=0.277777777777777777777777777777777777>Kilometre per Hour
+<option value=0.3048>Feet per Second
+<option value=0.00508>Feet per Minute
+<option value=0.01524>Yard per Minute
+<option value=0.44704>Statute Mile per Hour
+<option value=0.514444444444>Knot
+</select></td>
+</tr>
+</table>
+<input type=button value="Calculate" onClick="calculatespeed(this.form)">
+</form>
+
+<p><center>Calculate the time, distance, or speed given any two of the pieces of information.
+</center><p>
+
+<!-- Script Size:  8.56 KB -->
+
+</body>
+</html>

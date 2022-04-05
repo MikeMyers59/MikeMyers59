@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<HEAD>
+<title>Acceleratin Math Calculator</title>
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.0)" />
+<link href="css/D400.css" rel="stylesheet" type="text/css">
+<SCRIPT LANGUAGE="JavaScript">
+function initArray() {
+this.length = initArray.arguments.length;
+for (var i = 0; i < this.length; i++) {
+this[i] = initArray.arguments[i];
+   }
+}
+var isn08 = new initArray("4b","5b","8b","8b");
+isn08[0] = "~01~10.01~236~30.036~4118.11~50.03281~6118.11~70.02237~80.01944~9";
+isn08[1] = "~0100~11~23600~33.6~411811~53.281~611811~72.237~81.944~9";
+isn08[2] = "~00.02778~10.0002778~21~30.001~43.281~50.0009113~63.281~70.0006214~80.00054~9";
+isn08[3] = "~027.78~10.2778~21000~31~43281~50.9113~63281~70.6214~80.54~9";
+isn08[4] = "~00.008467~10.00008467~20.3048~30.0003048~41~50.0002778~61~70.0001894~80.0001646~9";
+isn08[5] = "~030.48~10.3048~21097~31.097~43600~51~63600~70.6818~80.4572~9";
+isn08[6] = "~00.008467~10.00008467~20.3048~30.0003048~41~50.0002778~61~70.0001894~80.0001646~9";
+isn08[7] = "~044.7~10.447~21609~31.609~45280~51.467~65280~71~80.8690~9";
+isn08[8] = "~051.44~10.5144~21852~31.852~46076~51.688~66076~71.151~81~9";
+function accCon() {
+for (var i = 0; i < 9; i++) {
+if (document.isnform08.acci[i].checked) {
+acci = i;
+accinm = document.isnform08.acci[i].value;
+   }
+}
+for (var i = 0; i < 9; i++) {
+if (document.isnform08.acco[i].checked) {
+acco = i;
+acconm = document.isnform08.acco[i].value;
+   }
+}
+useri = document.isnform08.accinp.value;
+if (useri == 0) {
+useri = 1;
+document.isnform08.accinp.value = useri;
+}
+mulstr = isn08[acci];
+picker = "~" + acco;
+ps = mulstr.indexOf(picker);
+acco++;
+picker = "~" + acco;
+ps1 = mulstr.indexOf(picker);
+mulstr = mulstr.substring((ps + 2),ps1);
+ps = (useri * mulstr);
+picker = "";
+picker += ps
+ps1 = picker.indexOf(".");
+if (ps1 > -1) {
+ps = ps + .000001;
+picker = "";
+picker += ps;
+ps2 = picker.indexOf("e");
+if (ps2 < 0) {
+picker = picker.substring(0,(ps1 + 6));
+}
+if (ps2 == 0 || ps2 > 0) {
+ps3 = picker.indexOf("00000");
+if (ps3 > 0) {
+picker = picker.substring(0,ps3 + 1) + picker.substring(ps2,picker.length);
+      }
+   }
+}
+picker = useri + " " + accinm + " = " + picker + " " + acconm
+document.isnform08.accout.value = picker;
+}
+// End -->
+</SCRIPT>
+</HEAD>
+<BODY>
+<br>
+<CENTER>
+<TABLE BORDER=1 WIDTH=486>
+<TR><TD COLSPAN=10 ALIGN=CENTER><FORM NAME="isnform08"><FONT COLOR="blue"><B>Acceleration Math Related</B></FONT></TD></TR>
+<TR><TD COLSPAN=10 VALIGN=TOP><FONT SIZE=1><B>First, type the number you wish converted here: </B>
+<INPUT TYPE="text" NAME="accinp" SIZE=30 VALUE="" onChange="accCon();"><BR><B>Then, click radio buttons for desired conversion:</FONT></TD></TR>
+<TR><TD ALIGN=CENTER><FONT COLOR="red" SIZE=1><B>From:</B></FONT></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>cm/sec/sec<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="cm/sec/sec" CHECKED onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>m/sec/sec<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="m/sec/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>m/hr/sec<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="m/hr/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>km/hr/sec<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="km/hr/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>ft/hr/sec<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="ft/hr/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>ft/sec/sec<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="ft/sec/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>ft/min/min<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="ft/min/min" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>mi/hr/sec<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="mi/hr/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>knots/sec<BR>
+<INPUT TYPE="radio" NAME="acci" VALUE="knots/sec" onClick = ""></TD></TR>
+<TR><TD ALIGN=CENTER><FONT COLOR="red" SIZE=1><B>To:</B></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>cm/sec/sec<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="cm/sec/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>m/sec/sec<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="m/sec/sec" CHECKED onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>m/hr/sec<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="m/hr/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>km/hr/sec<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="km/hr/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>ft/hr/sec<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="ft/hr/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>ft/sec/sec<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="ft/sec/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>ft/min/min<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="ft/min/min" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>mi/hr/sec<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="mi/hr/sec" onClick = ""></TD>
+<TD ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>knots/sec<BR>
+<INPUT TYPE="radio" NAME="acco" VALUE="knots/sec" onClick = ""></TD>
+</TR>
+<TR>
+<TD COLSPAN=10 ALIGN=CENTER VALIGN=TOP><FONT SIZE=1>
+<INPUT TYPE="button" VALUE=" Click for Conversion " onClick="accCon();">
+<INPUT TYPE="reset" VALUE=" Reset Values "><BR>
+<INPUT TYPE="text" NAME="accout" SIZE=60 VALUE="" onClick="accCon();">
+</FONT></TD>
+</TR>
+</FORM>
+</TABLE>
+</CENTER>
+
+<p><center>
+<font face="arial, helvetica" size="-2">Free JavaScripts provided<br>
+by <a href="http://javascriptsource.com">The JavaScript Source</a></font>
+</center><p>
+
+<!-- Script Size:  5.70 KB  -->
+</body>
+</html>

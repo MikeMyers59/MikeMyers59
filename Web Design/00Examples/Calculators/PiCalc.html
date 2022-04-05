@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Pi Calculator</title>
+<meta http-equiv="Page-Enter" content="blendTrans(Duration=1.0)" />
+<link href="css/D400.css" rel="stylesheet" type="text/css">
+<script>
+
+function roundnum(pinum){
+
+var numtimes=0;
+
+var currentpower=1;
+
+var currentround;
+
+while (numtimes<rounding.options.selectedIndex) {currentpower=currentpower*10;numtimes=numtimes+1;}
+
+currentround=Math.round(pinum*currentpower)/currentpower;
+
+return currentround;
+
+}
+
+function show(what){
+
+showfield.innerHTML=what;
+
+}
+
+function workcircle(){
+
+if (circleradius.value=="") circleradius.value="0";
+
+var pinum=roundnum(Math.PI*circleradius.value*circleradius.value);
+
+show("The area of a circle with a radius of "+circleradius.value+":<br><input type=text size=20 value="+pinum+"> units squared.");
+
+}
+
+function workcircle2(){
+
+if (circleradius.value=="") circleradius.value="0";
+
+var pinum=roundnum(2*Math.PI*circleradius.value);
+
+show("The circumference of a circle with a radius of "+circleradius.value+":<br><input type=text size=20 value="+pinum+"> units.");
+
+}
+
+function worksphere(){
+
+if (sphereradius.value=="") sphereradius.value="0";
+
+var pinum=roundnum(4*Math.PI*sphereradius.value*sphereradius.value*sphereradius.value/3)
+
+show("The volume of a sphere with a radius of "+sphereradius.value+":<br><input type=text size=20 value="+pinum+"> units cubed.");
+
+}
+
+function worksphere2(){
+
+if (sphereradius.value=="") sphereradius.value="0";
+
+var pinum=roundnum(4*Math.PI*sphereradius.value*sphereradius.value);
+
+show("The surface area of a sphere with a radius of "+sphereradius.value+":<br><input type=text size=20 value="+pinum+"> units squared.");
+
+}
+
+function workcylinder(){
+
+if (cylinderradius.value=="") cylinderradius.value="0";
+
+if (cylinderheight.value=="") cylinderheight.value="0";
+
+var pinum=roundnum(Math.PI*cylinderradius.value*cylinderradius.value*cylinderheight.value);
+
+show("The volume of a cylinder with a base radius of "+cylinderradius.value+" and a height of "+cylinderheight.value+":<br><input type=text size=20 value="+pinum+"> units cubed.");
+
+}
+
+function workcylinder2(){
+
+if (cylinderradius.value=="") cylinderradius.value="0";
+
+if (cylinderheight.value=="") cylinderheight.value="0";
+
+var pinum=roundnum((2*Math.PI*cylinderradius.value*cylinderradius.value)+(2*Math.PI*cylinderradius.value*cylinderheight.value));
+
+show("The surface area of a cylinder with a base radius of "+cylinderradius.value+" and a height of "+cylinderheight.value+":<br><input type=text size=20 value="+pinum+"> units squared.");
+
+}
+
+function workcone(){
+
+if (coneradius.value=="") coneradius.value="0";
+
+if (coneheight.value=="") coneheight.value="0";
+
+var pinum=roundnum(Math.PI*coneradius.value*coneradius.value*coneheight.value/3);
+
+show("The volume of a cone with a base radius of "+coneradius.value+" and a height of "+coneheight.value+":<br><input type=text size=20 value="+pinum+"> units cubed.");
+
+}
+
+function workcone2(){
+
+if (coneradius.value=="") coneradius.value="0";
+
+if (coneheight.value=="") coneheight.value="0";
+
+var pinum=roundnum(Math.PI*coneradius.value*Math.sqrt((coneheight.value*coneheight.value)+((coneradius.value/2)*(coneradius.value/2))));
+
+show("The surface area of a cone with a base radius of "+coneradius.value+" and a height of "+coneheight.value+":<br><input type=text size=20 value="+pinum+"> units squared.");
+
+}
+
+</script>
+</head> 
+<body>
+
+
+<!-- This script and many more are available free online at -->
+
+<!-- The JavaScript Source!! http://javascript.internet.com -->
+
+<!-- Original:  Ben Joffe -->
+
+<!-- Web Site:  http://www.joffe.tk/ -->
+
+<hr>
+
+
+
+<table align=center border="0" cellpadding="0" cellspacing="0"><tr><td>
+
+
+
+<p>Round to <select size="1" id="rounding">
+
+  <option>0</option>
+
+  <option>1</option>
+
+  <option selected>2</option>
+
+  <option>3</option>
+
+  <option>4</option>
+
+  <option>5</option>
+
+  <option>6</option>
+
+  <option>7</option>
+
+  <option>8</option>
+
+  <option>9</option>
+
+</select> decimal points. </p>
+
+
+
+<p><b>Circle<br>
+
+</b>Radius: <input type="text" size=14 name=circleradius maxlength=10 onKeypress="if (event.keyCode < 46 || event.keyCode > 57 || event.keyCode==47) event.returnValue = false;">
+
+<input type="button" value="Area" onclick=workcircle()>
+
+<input type="button" value="Circumference" onclick=workcircle2()></p>
+
+<p><b>Sphere</b><br>
+
+Radius: <input type="text" size=14 name=sphereradius onKeypress="if (event.keyCode < 46 || event.keyCode > 57 || event.keyCode==47) event.returnValue = false;">
+
+<input type="button" value="Volume" onclick=worksphere()> <input type="button" value="Surface Area" onclick=worksphere2()></p>
+
+<p><b>Cylinder</b><br>
+
+Radius of base: <input type="text" size=14 name=cylinderradius onKeypress="if (event.keyCode < 46 || event.keyCode > 57 || event.keyCode==47) event.returnValue = false;">
+
+height: <input type="text" size=14 name=cylinderheight onKeypress="if (event.keyCode < 46 || event.keyCode > 57 || event.keyCode==47) event.returnValue = false;">
+
+<input type="button" value="Volume" onclick=workcylinder()> <input type="button" value="Surface Area" onclick=workcylinder2()></p>
+
+<p><b>Cone</b><br>
+
+Radius of base: <input type="text" size=14 name=coneradius onKeypress="if (event.keyCode < 46 || event.keyCode > 57 || event.keyCode==47) event.returnValue = false;">
+
+ height: <input type="text" size=14 name=coneheight onKeypress="if (event.keyCode < 46 || event.keyCode > 57 || event.keyCode==47) event.returnValue = false;">
+
+<input type="button" value="Volume" onclick=workcone()> <input type="button" value="Surface Area" onclick=workcone2()></p>
+
+</td></tr></table>
+
+<hr>
+
+<p id=showfield align="center"></p>
+
+
+
+
+</body>
+</html>

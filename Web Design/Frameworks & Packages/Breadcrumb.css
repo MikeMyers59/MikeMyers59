@@ -1,0 +1,29 @@
+.breadcrumb {
+    font-size: 0.875em;
+    font-weight: bold;
+    margin: 0 0 1.14286em !important;
+    overflow: hidden;
+    margin-bottom: 1.28571em;
+  }
+  @media (min-width: 61.25em) {
+    .breadcrumb {
+      padding-left: 1.5em;
+    }
+  }
+  .breadcrumb > li + li::before {
+    display: none;
+  }
+  .breadcrumb li {
+    display: inline;
+    padding-right: 0.35714em;
+  }
+  .breadcrumb a, .breadcrumb span {
+    color: #081f49;
+    display: inline-block;
+    text-decoration: underline;
+  }
+  .breadcrumb a:hover {
+    text-decoration: none;
+  }
+
+  
