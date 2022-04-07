@@ -1,0 +1,27 @@
+@font-face {
+	font-family: 'UNormal';
+	src: url('normal-webfont.eot');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UNormal';
+	src: url(//:) format('no404'), url('normal-webfont.woff') format('woff'), url('normal-webfont.ttf') format('truetype'), url('normal-webfont.svgz#webfontP3GqjzvI') format('svg'), url('normal-webfont.svg#webfontP3GqjzvI') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UBold';
+	src: url('bold-webfont.eot');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'UBold';
+	src: url(//:) format('no404'), url('bold-webfont.woff') format('woff'), url('bold-webfont.ttf') format('truetype'), url('bold-webfont.svgz#webfont9MFgBiMz') format('svg'), url('bold-webfont.svg#webfont9MFgBiMz') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
