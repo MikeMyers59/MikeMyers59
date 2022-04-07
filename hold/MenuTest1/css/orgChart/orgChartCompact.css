@@ -1,0 +1,177 @@
+#jOrgChart table {/* reset width */
+	width: auto;
+}
+
+/* Draw the lines */
+#jOrgChart .line {
+	height: 20px;
+	width : 4px;
+}
+
+#jOrgChart .down {
+	background-color: black;
+	margin          : 0px auto;
+}
+
+#jOrgChart .top {
+	border-top: 3px solid black;
+}
+
+#jOrgChart .left {
+	border-left: 2px solid black;
+    float      : none;
+}
+
+#jOrgChart .right {
+	border-left: 0px solid black;
+    float      : none;
+}
+
+#jOrgChart .vertical-line {
+	background-color: black;
+	height          : 100%;
+	margin-left     : -4px;
+	width           : 4px;
+}
+
+/* node cell */
+#jOrgChart td {
+	border-style  : none;
+    padding       : 0;
+    text-align    : center;
+	vertical-align: top;
+}
+
+#jOrgChart td .node-cell {
+    width: 200px;
+}
+
+/* The node */
+#jOrgChart .node-cell span .content {
+    background-color: transparent;
+    border-style    : none;
+}
+
+#jOrgChart .node {
+	border			: 1px solid black;
+	display         : inline-block;
+    margin          : 0 2px;
+	width           : 190px;
+	z-index         : 10;
+}
+
+#jOrgChart .compact-name {
+    display  : inline-block;
+    font-size: 0;
+}
+
+#jOrgChart .compact-name::first-letter {
+    font-size: medium;
+}
+
+#jOrgChart .compact-name::after {
+    content  : '.';
+    font-size: medium;
+}
+
+#jOrgChart .node .content .phone {
+	display: block;
+}
+
+/* support vertical draw child nodes */
+#jOrgChart .node.vertical {
+    float: left;
+}
+
+#jOrgChart .node.vertical span .content {
+    background-color: transparent;
+    border-style    : none;
+    padding         : 5px 5px 5px 5px;
+}
+
+#jOrgChart .node.vertical span .content .expanded {
+    display: none;
+}
+
+#jOrgChart .cover {
+	margin-top : -6px;
+	margin-left: -5px;
+    position   : absolute;
+}
+
+/* Vertical drawing styles */
+#jOrgChart .multi-tree {
+	float : left;
+    margin: 0;
+}
+
+#jOrgChart .multi-tree .content {
+	background-color: #f1f8fd;
+    text-decoration : none;
+	width           : 120px;
+}
+
+#jOrgChart .multi-tree span {
+    text-decoration : none;
+}
+
+#jOrgChart .multi-tree .content-span .content  {
+    display: block;
+	padding: 0;
+	top    : .95em;
+}
+
+#jOrgChart .multi-tree .content-span .content .name {
+	display: inline-block;
+	float  : left;
+	width  : 50%;
+}
+
+#jOrgChart .multi-tree .content-span .content .phone {
+	display: inline-block;
+	float  : right;
+}
+
+#jOrgChart .multi-tree ul, .multi-tree li {
+	list-style-type: none;
+	margin         : 0;
+	padding        : 0;
+}
+
+#jOrgChart .multi-tree ul li {
+	text-align: left;
+}
+
+#jOrgChart .multi-tree ul li .content-span .content {
+	padding-top: 5px;
+	font-size  : small;
+    width      : 190px;
+}
+
+#jOrgChart .multi-tree ul li .content-span span.compact-name {
+    display  : inline-block;
+    font-size: 0;
+}
+
+#jOrgChart .multi-tree ul li .content-span span.compact-name::first-letter {
+    font-size: small;
+}
+
+#jOrgChart .multi-tree ul li .content-span span.compact-name::after {
+    content  : '.';
+    font-size: small;
+}
+
+#jOrgChart .multi-tree ul li .content-span .content .expanded {
+	display: none;
+}
+
+#jOrgChart .multi-tree ul li ul li {
+	border-left: 1px dashed black; /* vertical node connector line */
+    margin     : 0 0 0 1.2em;
+}
+
+/* if node is last then need to remove left connector */
+#jOrgChart .multi-tree li.last ul li {
+	border: none;
+}

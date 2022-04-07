@@ -1,0 +1,25 @@
+#headerTable {
+    border-style: none;
+    min-height  : 6px;
+    width       : 100%;
+}
+
+#headerTable td {
+    line-height: 18px;
+    padding  : 0px;
+    word-wrap: break-word;
+}
+
+#DERow, #departmentRow, #sortRow, #checkRow, #org, #chart, #deptDirectorDiv, #userInfo {
+    display: none;
+}
+
+.deptListTable {
+    display: none;
+}
+
+#chart {
+    background-color: #EBF2F7;
+    padding         : 20px 0px;
+    overflow-x      : auto;
+}
