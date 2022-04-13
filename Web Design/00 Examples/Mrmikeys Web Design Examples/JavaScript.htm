@@ -1,0 +1,364 @@
+<HTML>
+
+<HEAD>
+  <TITLE>JavaScript Examples Page</TITLE>
+
+  <STYLE>
+    A:Linked {Color: blue}
+    A:Visited {Color: magenta}
+    A:Active {Color: red}
+    A:Hover {Color: orange}
+    ADDRESS { Color: grey; Font-Size: 8pt }
+    CAPTION { Color: darkgreen; font: 14pt Arial Black }
+    TD { Color: green; Font: 12pt Arial Black }
+    H2 { Color: blue; Font: 22pt "Times New Roman"}
+    H3 { Color: blue; Font: 16pt "Times New Roman" }
+    TD.loancalculator { Color: black; Font: 12pt "Arial" }
+  </STYLE>
+
+<!-- This section loads the reusable JavaScript Code files. They can be viewed with Notepad -->
+
+<SCRIPT LANGUAGE="JavaScript">
+<!-- Begin
+  var agree=confirm("The following Mr Mikey's Page contains javascript excerpts.  You must have JavaScript enabled to view this page...");
+  if (agree)
+    document.write("");
+  else
+    history.go(-1);
+// End of Pre-alert Statement-->
+</SCRIPT>
+
+<SCRIPT src="./Scripts/blinkingmessage.js" LANGUAGE="JavaScript"></SCRIPT>
+<SCRIPT src="./Scripts/simpleclock.js" LANGUAGE="JavaScript"></SCRIPT>
+<SCRIPT src="./Scripts/BgChanger.js" LANGUAGE="JavaScript"></SCRIPT>
+<SCRIPT src="./Scripts/ErrorCheck.js" LANGUAGE="JavaScript"></SCRIPT>
+<SCRIPT src="./Scripts/EMail.js" LANGUAGE="JavaScript"></SCRIPT>
+<SCRIPT src="./scripts/LoanCalculator.js" LANGUAGE="JavaScript"></SCRIPT>
+
+</HEAD>
+
+<BODY onLoad="startclock(); onLoad="startclock2()"; timerONE=window.setTimeout; flash();">
+<!-- onLoad="startclock(); timerONE=window.setTimeout;" is required for the Basic Clock Example -->
+<!-- onLoad="startclock2();" is required for the Countdown Clock Example -->
+<!-- onload="flash();" is required for the Flashing Message Example -->
+
+  <A NAME="TOP"></A>
+  <H2 align=center>MrMikey's Example Page:<BR>JavaScript Examples Page</H2>
+
+<P>The following examples are available:
+<UL>
+  <LI><A HREF="#clock">Basic Clock</A></LI>
+  <LI><A HREF="#cdown">A Countdown Timer</A></LI>
+  <LI><A HREF="#blink">Blinking Message</A></LI>
+  <LI><A HREF="#linking">Linking Listbox</A></LI>
+  <LI><A HREF="#button">Button Example</A></LI>
+  <LI><A HREF="#changing">Document Background Changing</A></LI>
+  <LI><A HREF="#error">Error Checking Example</A></LI>
+  <LI><A HREF="#email">EMail Form Example</A></LI>
+  <LI><A HREF="#Calculator">A Webpage Calculator</A></LI>
+</UL>
+
+  <CENTER><B>The following is an embedded Javascript Sample:<br>
+    <SCRIPT LANGUAGE="JavaScript">
+      <!--Display the Date -->
+      today=new Date();
+      date="Today's Date: " + (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getYear();
+      document.write(date);
+    </SCRIPT>
+  </B></CENTER><br>
+
+Note: You can view this source and see how I did them. To see how to block quick access to the view source, try my <A href="./NoRightClick.htm">NoRightClick Javascript</A> page.
+
+<HR>
+
+<A NAME="clock"></A><H3>A Basic Clock</H3>
+<P>An example of the Date() function and several get() object methods. A timer stop routine is required for dynamis updating of the display. This Java Script Example combines the use of functions in the Head Section and inline script in the Body tag.</P>
+
+  <CENTER><FORM NAME="clock" onSubmit="0">
+    Clock: <INPUT TYPE="text" NAME="face" SIZE=11 VALUE="">
+  </FORM></CENTER>
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+<HR>
+
+<A NAME="CDown"></A><H3>A Countdown CLock</H3>
+<P>An example of the document object and Form tag. A message is written to the form and then cleared. This Java Script Example combines the use of functions in the Head Section and Inline script in the Body tag.</P>
+
+  <CENTER><b>Year 2000 Countdown; Are you READY?
+  <form><input type="button" value="Check This!" onClick="save()"></form></b>
+  <script>
+    function save(){alert('It is coming soon!! My Birthday is Near!  Get my gift before it is too late.')}
+  </script>
+    <TABLE>
+      <TR><TD><b>
+        <form name="frm">
+        <div align=center align=middle>
+          <input type="textarea" name="left" size=60 value="Java">
+        </div></form>
+      </b></TD></TR>
+    </table>
+  </center>
+
+  <SCRIPT LANGUAGE="JavaScript">
+  <!-- Display a count down clock based on the event Year 2000 -->
+  var Temp22;
+  var timerID2 = null;
+  var timerRunning2 = false;
+  function showtime2() {
+    now = new Date();
+    var CurHour2 = now.getHours();
+    var CurMinute2 = now.getMinutes();
+    var CurMonth2 = now.getMonth();
+    var CurDate2 = now.getDate();
+    var CurYear2 = now.getYear();
+    var CurSecond2 = now.getSeconds();
+    now = null;
+    Hourleft2 = 23 - CurHour2
+    Minuteleft2 = 59 - CurMinute2
+    Secondleft2 = 59 - CurSecond2
+    var Yearleft2 = CurYear - CurYear2
+    var Monthleft2 = 11 - CurMonth2
+    var Dateleft2 = 29 - CurDate2
+    if (Yearleft2!=1) {var ys="s"} else {var ys=""};
+    if (Monthleft2!=1) {var mos="s"} else {var mos=""}
+    if (Dateleft2!=1) {var ds="s"} else {var ds=""}
+    if (Hourleft2!=1) {var hs="s"} else {var hs=""}
+    if (Minuteleft2!=1) {var mis="s"} else {var mis=""}
+    if (Secondleft2!=1) {var ss="s"} else {var ss=""}
+    Temp32=Yearleft2+' year'+ys+', '+Monthleft2+' month'+mos+', '+Dateleft2+' day'+ds+', '+Hourleft2+' hour'+hs+', '+Minuteleft2+' minute'+mis+', '+Secondleft2+' second'+ss
+    document.frm.left.value=Temp3;
+    timerID2 = setTimeout("showtime2()",1000);
+    timerRunning2 = true;
+  }
+  function stopclock2 () {
+    if(timerRunning2)
+    clearTimeout(timerID2);
+    timerRunning2 = false;
+  }
+  function startclock2 () {
+    // Make sure the clock is stopped
+    stopclock2();
+    showtime2();
+  }
+  </script><!- Countdown Clock Display -->
+
+<hr>
+<A NAME="Blink"></A><H3>A Blinking Message</H3>
+<P>An example of the document object and Form tag. A message is written to the form and then cleared. This Java Script Example combines the use of functions in the Head Section and Inline script in the Body tag.</P>
+
+  <CENTER><FORM NAME="message" onSubmit="0">
+    Message: <INPUT TYPE="text" NAME="face" SIZE=42 VALUE="">
+  </FORM></CENTER>
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+<HR>
+
+<A NAME="linking"></A><H3>A Linking Listbox Example</H3>
+<P>Here is an example of Inline JavaScript in a Listbox. Selection of the options will send you off the same as a link! The "This" oject is used for self referencing the form.
+
+<!-- Linking LinkBox: Change the VALUES to your favorite links! -->
+<!-- When the User selects an item, it will automatically jump to that link indicated in the VALUE= attribute of the Option Tag. -->
+<CENTER>
+<BR>
+<FORM>
+Select an item: <SELECT NAME="clicklist" onChange="top.location.href=this.form.clicklist.options[this.form.clicklist.selectedIndex].value">
+  <OPTION value="./JavaScript.htm">Stay Here!
+  <OPTION SELECTED VALUE="http://www.coffeecup.com/editor">CoffeeCup Editor
+  <OPTION VALUE="http://www.netscape.com">Netscape
+  <OPTION VALUE="http://www.microsoft.com">Microsoft
+  <OPTION VALUE="http://www.infoseek.com">Infoseek
+</SELECT>
+<P>
+</FORM>
+</CENTER>
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+<hr>
+
+<A NAME="button"></A><H3>A Button Example</H3>
+<P>This example uses a button so the browser [IE 5.0 and Netscape 4.0 and greater!] can start an action. In the first case, it will cause the users HTML Editor (commonly Notepad) to open and load this HTML document. In the second case, it will attempt to close the current browser. [IE 5.0 will ask the user to confirm if options are setup for maximum security.] The third button displays an alert. The last button shows how to use a Form tag's action attribute. It will reload this page. With a little practice, anything can be done with buttons!
+
+<!-- Buttons 1 and 2 use the onClick() call, while the third button uses the action attribute of the form tag. -->
+<CENTER><FORM>
+<INPUT TYPE="BUTTON" VALUE="View Source" 
+onClick= 'window.location = "view-source:" + window.location.href'>
+<INPUT TYPE="BUTTON" VALUE="Close Window" onClick="window.close(self)">
+<INPUT TYPE="button" NAME="myButton" Value="Click Here!" onClick="myAlert()">
+</FORM>
+
+<!-- This is a button that takes you where you want to go.-->
+<form action="./JavaScript.htm"><input type=submit value="Reload Page"></form></CENTER>
+
+<CENTER><a href="javascript:location.reload()" target="_self">Alternate Reload Method</A></CENTER>
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+<HR>
+
+<A NAME="changing"></A><H3>A Document Background Changing Example</H3>
+<P>This shows how you can affect the document in the load process. I've used buttons to cause the changes, but they scripts can be put within script tags in the body section for dynmaic, automatic changes.
+
+<CENTER><FORM>
+<INPUT TYPE="BUTTON" VALUE="  Black to Red  " 
+onClick= 'bgChanger("000000","FF0000",25);'>
+<INPUT TYPE="BUTTON" VALUE="  Red to Black  " onClick='bgChanger("FF0000","000000",25);'><BR>
+<INPUT TYPE="BUTTON" VALUE="Black to Purple" 
+onClick= 'bgChanger("000000","AA00EE",25);'>
+<INPUT TYPE="BUTTON" VALUE="Purple to Black" onClick='bgChanger("AA00EE","000000",25);'><BR>
+<INPUT TYPE="BUTTON" VALUE="  Black to Blue  " 
+onClick= 'bgChanger("000000","0000FF",25);'>
+<INPUT TYPE="BUTTON" VALUE="  Blue to Black  " onClick='bgChanger("0000FF","000000",25);'><BR>
+<INPUT TYPE="BUTTON" VALUE=" White to Black " onClick='bgChanger("FFFFFF","000000",25);'>
+<INPUT TYPE="BUTTON" VALUE=" Black to White " onClick='bgChanger("000000","FFFFFF",25);'>
+</FORM></CENTER>
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+<HR>
+
+<A NAME="Error"></A><H3>Error Checking Example</H3>
+<P>This is an example of how JavaScript can be used to error check the data being entered in a form as you leave the field using the onBlur() event. Click in the box and then click outside. An alert will occur if nothing is entered. Enter a value in the box and then click outside and no alert occurs. Try testing the entry for a range of values before leaving and you now have error checking!
+
+<CENTER><FORM>
+  Enter Value: <INPUT TYPE="text" NAME="myField" VALUE="" onBlur="checkInput(this)">
+</FORM></CENTER>
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+<HR>
+
+<A NAME="Email"></A><H3>E-Mail Form Example</H3>
+<P>This example uses a form to create an email message.  The data created is then modified and submitted to the mail service. For this to work, you must be online and connected to your mail server, i.e. signed or logged in.
+
+<FORM name="ccform" method="post" "action="mailto:you@yourprovider.com?subject=Message"
+ enctype="text/plain">
+<TABLE BORDER=2 bgColor=#dddddd cellpadding=10>
+  <CAPTION>Send E-Mail to Webmaster:</CAPTION>
+  <TR>
+    <TD>
+<!-- Change you@yourprovider.com in the form action attribute to the appropriate address to recieve all of the generated email. -->
+<INPUT type=hidden name="Message">
+<B>Name: </B><INPUT type="text" size=25 name="name" onChange="emailmsg()">
+<B>Phone: &nbsp;&nbsp;</B><INPUT type="text" size=25 name="phone" onChange="emailmsg()">
+<BR><B>Email: </B><INPUT type="text" size=25 name="email" onChange="emailmsg()">
+<B>Subject: </B><INPUT type="text" size=25 name="subject" onChange="emailmsg()">
+<BR><B>Message: </B><BR><TEXTAREA rows=10 cols=64 wrap="auto" name=message onChange="emailmsg()"></TEXTAREA>
+    </TD>
+  </TR>
+  <TR>
+    <TD align=center>
+<INPUT type=submit value="Send Message" onClick="emailmsg()">
+    </TD>
+  </TR>
+</TABLE>
+</FORM>
+<!-- End of E-Mail Form JavaScript-->
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+<HR>
+
+<A NAME="Calculator"></A><H3>A Calculator for Webpages!</H3>
+<P>Just another calculator for the webpage!
+
+<!-- A Simple Calculator -->
+<!-- Instructions: Just put the script and this form anywhere on your webpage between the body section and you will have a calculator for your visitors!  -->
+<CENTER>
+<FORM name="Keypad" action="">
+<B>
+<TABLE  bgColor=#e7e7e7 border=2 width=50 height=60 cellpadding=1 cellspacing=5>
+<TR>
+  <TD colspan=3 align=middle><input name="ReadOut" type="Text" size=11 value="0" width=100%></TD>
+  <TD><input name="btnClear" type="Button" value="  C  " onclick="Clear()"></TD>
+  <TD><input name="btnClearEntry" type="Button" value=" CE " onclick="ClearEntry()"></TD>
+</TR>
+<TR>
+  <TD><input name="btnSeven" type="Button" value="  7  " onclick="NumPressed(7)"></TD>
+  <TD><input name="btnEight" type="Button" value="  8  " onclick="NumPressed(8)"></TD>
+  <TD><input name="btnNine" type="Button" value="  9  " onclick="NumPressed(9)"></TD>
+  <TD><input name="btnNeg" type="Button" value=" +/- " onclick="Neg()"></TD>
+  <TD><input name="btnPercent" type="Button" value="  % " onclick="Percent()"></TD>
+</TR>
+<TR>
+  <TD><input name="btnFour" type="Button" value="  4  " onclick="NumPressed(4)"></TD>
+  <TD><input name="btnFive" type="Button" value="  5  " onclick="NumPressed(5)"></TD>
+  <TD><input name="btnSix" type="Button" value="  6  " onclick="NumPressed(6)"></TD>
+  <TD align=middle><input name="btnPlus" type="Button" value="  +  " onclick="Operation('+')"></TD>
+  <TD align=middle><input name="btnMinus" type="Button" value="   -   " onclick="Operation('-')"></TD>
+</TR>
+<TR>
+  <TD><input name="btnOne" type="Button" value="  1  " onclick="NumPressed(1)"></TD>
+  <TD><input name="btnTwo" type="Button" value="  2  " onclick="NumPressed(2)"></TD>
+  <TD><input name="btnThree" type="Button" value="  3  " onclick="NumPressed(3)"></TD>
+  <TD align=middle><input name="btnMultiply" type="Button" value="  *  " onclick="Operation('*')"></TD>
+  <TD align=middle><input name="btnDivide" type="Button" value="   /   " onclick="Operation('/')"></TD>
+</TR>
+<TR>
+  <TD><input name="btnZero" type="Button" value="  0  " onclick="NumPressed(0)"></TD>
+  <TD><input name="btnDecimal" type="Button" value="   .  " onclick="Decimal()"></TD>
+  <TD colspan=2></TD>
+  <TD><input name="btnEquals" type="Button" value="  =  " onclick="Operation('=')"></TD>
+</TR>
+</TABLE>
+</B>
+</FORM>
+</CENTER>
+
+<!-- Calculator.js is the Javascript file used to program the calculator and can be veiwed using Notepad -->
+<SCRIPT src="./Scripts/calculator.js" LANGUAGE="JavaScript"></SCRIPT>
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+
+<HR>
+<H3>Loan Calculator</H3></CENTER>
+
+<SPAN class="LoanCalculator">
+  <FORM >
+    <TABLE WIDTH="460" BORDER="0" CELLSPACING="4" CELLPADDING="4">
+      <TR>
+        <TD COLSPAN="2">Enter values in the fields below to find out how much your payments would be given the amount of the loan, the annual interest rate, and the term of the loan.  Use the Tab key on your keyboard after each entry to move from one field to the other.</TD>
+      </TR>
+      <TR>
+        <TD class=LoanCalculator><LI><B>Loan  Amount</B>(Example: 999.99)</TD>
+        <TD><INPUT TYPE=TEXT NAME=principal VALUE="" SIZE=9 onChange="computeField(this)"></TD>
+      </TR>
+      <TR>
+        <TD class=LoanCalculator><LI><B>Annual Interest Rate(%)</B></FONT></TD>
+        <TD><INPUT TYPE=TEXT NAME=interest  SIZE=9 onChange="computeField(this)"></TD>          
+      </TR>   
+      <TR>
+        <TD  class=LoanCalculator><LI><B>Term of Loan in Months</B></FONT></TD>
+        <TD><INPUT TYPE=TEXT NAME=payments  SIZE=9 onChange="computeField(this)"></TD>
+      </TR>
+      <TR>
+        <TD class=LoanCalculator><LI><B>Your Calculated Monthly Payment</B></FONT></TD>
+        <TD><INPUT TYPE=TEXT NAME=payment SIZE=9 onChange="computeField(this)"></TD>
+      </TR>
+      <TR>                            
+        <TD COLSPAN="2" ALIGN="CENTER"><INPUT type=submit name="Clear" VALUE="Clear" onClick("javascript:void clearForm(document.forms[0])"><INPUT TYPE="HIDDEN" NAME="payment_required" VALUE="A value for monthly payment is required"></TD>
+      </TR>
+    </table>
+
+    <INPUT TYPE="hidden" NAME="principal_required" VALUE="Please enter a value for the principal amount of your loan.">
+    <INPUT TYPE="hidden" NAME="interest_required" VALUE="Please enter a value for your annual intrest rate.">
+    <INPUT TYPE="hidden" NAME="payments_required" VALUE="Please enter a value for the number of payments in years.">
+    <INPUT TYPE="hidden" NAME="payment_required" VALUE="Please enter a value for your monthly payment.">
+  </form>
+
+<CENTER><B><A HREF="#TOP">Return to Top</A></B></CENTER>
+
+<!-- My Bragging Area!!! -->
+  <HR><CENTER><ADDRESS>&copy;<A href="mailto:mrmikey59@hotmail.com" style="font-size: 8pt">Michael R. Myers</a>! Last updated:
+  <SCRIPT LANGUAGE="JavaScript">
+  <!--
+    document.write(document.lastModified);
+    // -->
+  </SCRIPT>
+  </ADDRESS></CENTER>
+</BODY>
+
+</HTML>

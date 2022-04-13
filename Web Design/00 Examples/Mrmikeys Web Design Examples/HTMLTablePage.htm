@@ -1,0 +1,198 @@
+<HTML>
+
+<HEAD>
+  <TITLE>HTML Examples Page</TITLE>
+  <META content="text/html; charset=iso-8859-1" http-equiv=Content-Type>
+  <STYLE>
+    .credits { color: darkgrey; font:10pt Times New Roman; }
+    A:link { font:12pt Times New Roman; color:blue}
+    A:visited { font:12pt Times New Roman; color:green}
+    A:active { font:12pt Times New Roman; color:red}
+    A:hover { color: orange }
+    BODY { BACKGROUND-IMAGE: url(../Background.gif);
+           FONT-FAMILY: Arial, Helvetica, Univers, 'Zurich BT', sans-serif; }
+<!-- Header Style --}
+    H2 { font:16pt verdana; color: blue; }
+    H3 { font:14pt verdana; color: darkgreen; }
+<!-- Table Style -->
+    H4, CAPTION { font:14pt verdana; color: red; }
+    TFOOT { font:8pt verdana; color: darkred; }
+    THEAD { color: darkgray; }
+    P { color: black; FONT-FAMILY: Arial, Helvetica, Univers }
+    MARQUEE { FONT: 24pt Arial Black; COLOR="#ffff00"; WIDTH: 430; HEIGHT: 44 }
+ </STYLE>
+
+<script language="javascript">
+var scrlStr="Scrolling Status String Value goes here!"
+var width=140;
+var strLen=scrlStr.length;
+var pos=1-width;                
+function scroll() {
+    var scroll = "";                
+
+    pos++;                          
+    if(pos == strLen)              
+       pos =1 - width;            
+    if(pos<0){                   
+         for(var i=1;i<=Math.abs(pos);i++)
+           scroll=scroll+" ";  
+       scroll=scroll+scrlStr.substring(0,width-i+1);
+    }
+    else
+        scroll=scroll+scrlStr.substring(pos,pos+width);
+    window.status=scroll;         
+    setTimeout("scroll()",75);    
+}
+// place onLoad="scroll();" in the body or frameset tag to activate ->
+</script>
+
+</HEAD>
+
+<BODY onLoad="scroll();">
+
+<A name=topOfPage></A>
+<H2 align=center>MrMikey's HTML Examples:<BR>HTML Tables</H2>
+
+<P>Tables are a method of easily displaying boring data so that it will be easier to interpret.  Data is displayed in rows and columns much like a spreadsheet. Several tags are required to make tables. The following are required for HTML 3.0 - 3.2 Tables:
+
+<UL>
+  <LI>&lt;TABLE&gt;...&lt;/TABLE&gt; - used to enclose the entire table.
+  <LI>&lt;CAPTION&gt;...&lt;/CAPTION&gt; - used to enclose the Caption, also known as Title, of a table.
+  <LI>&lt;TR&gt;...&lt;/TR&gt; - used to separate the Table Rows and may include either Table Header or Table Data tags.
+  <LI>&lt;TH&gt;...&lt;/TH&gt; - used to separate the Table Header, creating the individual cell headers.
+  <LI>&lt;TD&gt;...&lt;/TD&gt; - used to separate the Table Data, creating the individual cells.
+</UL>
+
+<P>An example of the HTML 3.0 - 3.2 Table follows:
+
+<HR>
+
+<CENTER><TABLE border=2 cellPadding=2 cellSpacing=2 width="50%">
+<CAPTION>HTML 3.0 - 3.2 Table</CAPTION>
+  <TR>
+    <TH>Header 1</TH>
+    <TH>Header 2</TH>
+  </TR>
+  <TR>
+    <TD>Cell 1-1</TD>
+    <TD>Cell 1-2</TD>
+  </TR>
+  <TR>
+    <TD>Cell 2-1</TD>
+    <TD>Cell 2-2</TD>
+  </TR>
+  <TR>
+    <TD>Cell 3-1</TD>
+    <TD>Cell 3-2</TD>
+  </TR>
+</TABLE></CENTER>
+
+<HR>
+
+<P>The HTML 4.0 Table adds numerous features. The following tags are used for HTML 4.0 Tables:
+
+<UL>
+  <LI>&lt;TABLE&gt;...&lt;/TABLE&gt; - used to enclose the entire table.
+  <LI>&lt;CAPTION&gt;...&lt;/CAPTION&gt; - used to enclose the Caption, also known as Title, of a table.
+  <LI>&lt;THEAD&gt;...&lt;/THEAD&gt; - used to enclose the Table Head section of a table which contains Table Rows. This section must precede the Table Body section.
+  <LI>&lt;TFOOT&gt;...&lt;/TFOOTD&gt; - used to enclose the Table Footer section of a table which contains Table Rows. This section must precede the Table Body section.
+  <LI>&lt;TBODY&gt;...&lt;/TBODY&gt; - used to enclose the Table Body section of a tablewhich contains Table Rows.
+  <LI>&lt;TR&gt;...&lt;/TR&gt; - used to separate the Table Rows and  includes  Table Data tags.
+  <LI>&lt;TD&gt;...&lt;/TD&gt; - used to separate the Table Data, creating the individual cells.
+</UL>
+
+<P>An example of the HTML 4.0 Table follows:
+
+<HR>
+
+<CENTER><TABLE border=2 cellPadding=2 cellSpacing=2 width="50%">
+<CAPTION>HTML 4.0 Table</CAPTION>
+<THEAD>
+  <TR>
+    <TD>Header 1</TD>
+    <TD>Header 2</TD>
+  </TR>
+</THEAD>
+<TFOOT>
+  <TR>
+    <TD colspan=2 align=center>This is a Table Footer</TD>
+  </TR>
+</TFOOT>
+<TBODY>
+  <TR>
+    <TD>Cell 1-1</TD>
+    <TD>Cell 1-2</TD>
+  </TR>
+  <TR>
+    <TD>Cell 2-1</TD>
+    <TD>Cell 2-2</TD>
+  </TR>
+  <TR>
+    <TD>Cell 3-1</TD>
+    <TD>Cell 3-2</TD>
+  </TR>
+</TBODY>
+</TABLE></CENTER>
+
+<HR>
+
+<P>Tables can also be nested within other tables as data. This can lead to elaborate setups and be a cause of confusion to the Source Generator and the browser. The following is an example of a nested table with no borders:
+
+<HR>
+
+<CENTER><TABLE border=0 cellPadding=0 cellSpacing=0 width="65%">
+<CAPTION>HTML 4.0 Nested Table</CAPTION>
+<THEAD>
+  <TR>
+    <TD>Header 1</TD>
+    <TD>Header 2</TD>
+    <TD>Table 2</TD>
+  </TR>
+</THEAD>
+<TFOOT>
+  <TR>
+    <TD colspan=3 align=center>This is a Table Footer</TD>
+  </TR>
+</TFOOT>
+<TBODY>
+  <TR>
+    <TD>Cell 1-1</TD>
+    <TD>Cell 1-2</TD>
+    <TD rowspan=3>
+      <TABLE border=0 cellPadding=0 cellSpacing=0>
+        <TR>
+          <TD>N-Cell 1-1</TD>
+          <TD>N-Cell 1-2</TD>
+        </TR>
+        <TR>
+          <TD>N-Cell 2-1</TD>
+          <TD>N-Cell 2-2</TD>
+        <TR>
+          <TD>N-Cell 3-1</TD>
+          <TD>N-Cell 3-2</TD>
+        </TR>
+        </TR>
+      </TABLE>
+    </TD>
+  </TR>
+  <TR>
+    <TD>Cell 2-1</TD>
+    <TD>Cell 2-2</TD>
+  </TR>
+  <TR>
+    <TD>Cell 3-1</TD>
+    <TD>Cell 3-2</TD>
+  </TR>
+</TBODY>
+</TABLE></CENTER>
+
+<HR>
+
+<P>For ease of generation, HTML Tables should be limited to nesting of 2 deep to prevent confusion. View source to see the HTML tags required for this page.
+
+<HR>
+<!-- Credits and Copywrite statements go at the end of the page -->
+<CENTER><SPAN class=credits>© 2001 <A href="mailto:mrmikey59@hotmail.com">Michael R. Myers</A>, a <a href="http://www.privatecitizen.org/">Private Citizen</a> of the United States of America.</SPAN></CENTER>
+
+</BODY>
+</HTML>
