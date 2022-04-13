@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+  <TITLE>Photo Gallery </TITLE> 
+
+<SCRIPT language="JavaScript">
+var TlxPgNm='pgoto_gallery';
+</SCRIPT>
+
+</HEAD>
+<BODY BGCOLOR="#000000" TEXT="#F7F7FF" bgproperties="fixed" background="e6d203a3.jpg" LINK="#FF0000" ALINK="#000400" VLINK="#FF0000">
+
+<h1>Test Test </h1>
+
+<script>
+var message="In your dreams baby.\n\nContents & Graphics Copyright ©Miss Lizz\nOur work is not Public Domain, and should NOT be taken from this site."; // Message for the alert box
+// Don't edit below!
+function click(e) {
+if (document.all) {
+  alert("Doc.all");
+if (event.button == 2) {
+alert(message);
+return false;
+}
+}
+if (document.layers) {
+ alert("Doc.layers");
+if (e.which == 3) {
+alert(message);
+return false;
+}
+}
+}
+if (document.layers) {
+document.captureEvents(Event.MOUSEDOWN);
+}
+console.log(document.all);
+document.onmousedown=click();
+</script>
+
+Test Test 
+
+</BODY>
+</HTML>
