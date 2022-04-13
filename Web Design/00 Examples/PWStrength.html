@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+<title>Mike's Fun with HTML</title>
+<meta http-equiv="Content-Type"
+content="text/html; charset=UTF-8" />
+<SCRIPT LANGUAGE="JavaScript">
+
+function valuate(pwd) {
+var t=pwd.value;
+var id=getStrength(t);
+var message=new Array(4);
+message[0]="Password too short!";
+message[1]="Password poor!";
+message[2]="Password medium!";
+message[3]="Password strong!";
+var myColor=new Array(4);
+myColor[0]="black";
+myColor[1]="red";
+myColor[2]="orange";
+myColor[3]="green";
+var setWidth=300;
+var setHeight=15;
+var myPWD=document.getElementById("showStrength");
+myPWD.style.fontSize="15px";
+myPWD.style.color=myColor[id];
+myPWD.style.width=setWidth + "px";
+myPWD.style.height=setHeight + "px";
+myPWD.style.lineHeight=setHeight + "px";
+myPWD.style.textIndent="20px";
+myPWD.innerHTML="Strength: " + message[id];
+}
+
+function getStrength(p){
+if(p.length < 4){
+return 0;
+}
+var level = 0;
+if (p.match(/[a-z]/ig)){
+level++;
+}
+if (p.match(/[0-9]/ig)){
+level++;
+}
+if (p.match(/(.[^a-z0-9])/ig)){
+level++;
+}
+if (p.length < 6 && level > 0){
+level--;
+}
+return level
+}
+
+
+</script>
+</head>
+
+
+
+<body>
+
+<H1> Password Strength Check </H1>
+<center>
+<form name="myPWTest">
+  <label for="pwd1">Password</label>
+  <input type="Password" name="pwd1" onBlur="valuate(this)" />
+</form>
+<div id="showStrength"></div> </center>
+
+
+
+</body>
+</html>
