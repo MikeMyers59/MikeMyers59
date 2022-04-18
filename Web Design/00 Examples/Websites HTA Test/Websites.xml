@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<websites>
+  <Website>
+    <Name>Google</Name>
+    <Link>www.google.com</Link>
+    <LastAccess>2019-01-10</LastAccess>
+    <Notes>This is the Search Engine.</Notes>
+  </Website>
+  <Website>
+    <Name>Dog Pile</Name>
+    <Link>www.dogpile.com</Link>
+    <LastAccess>2019-01-10</LastAccess>
+    <Notes>This is the alternate search engine.</Notes>
+  </Website>
+  <Website>
+    <Name>Microsoft</Name>
+    <Link>www.microsoft.com</Link>
+    <LastAccess>2001-01-01</LastAccess>
+    <Notes>Windows OS &amp; Office Resources</Notes>
+  </Website>
+  <Website>
+    <Name>Bing</Name>
+    <Link>www.bing.com</Link>
+    <LastAccess>2001-01-01</LastAccess>
+    <Notes>An alternate search engine, has best images.</Notes>
+  </Website>
+</websites>

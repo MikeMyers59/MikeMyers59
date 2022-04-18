@@ -1,0 +1,142 @@
+<html>
+<head>
+
+<title>Properties Test</title>
+<style type="text/css">
+
+body {
+  margin-top:0;
+  padding-top:0;
+  /*min-width:800px;*/
+}
+
+#d2 {
+   visibility: visible;
+   background-color: #ccccff;
+   position: absolute;
+   top: 10px; left: 110px;
+   width: 100px; height:100px;
+}
+
+#d3 {
+   position: relative;
+   top: 10px;
+   left: 210px;
+   background-color: cyan
+ }
+
+#d4 {
+   position:relative;
+   top:120px;
+}
+</style>
+
+<script language="JavaScript" type="text/javascript">
+var doc;        // where to write our output to
+function setDocument() {
+    if (window.document) {
+        doc = window.document;
+    }
+    else {
+        doc = document;
+    } 
+}
+
+function showProperties( divName )
+{
+    var styleObject;
+    var bg, v;
+        styleObject = document.getElementById( divName ).style;
+    
+    if (styleObject != null)
+    {
+        v = (styleObject.visibility == "") ? "\"\"" : styleObject.visibility;
+        doc.writeln("visibility: " +
+           v + "<br>");
+
+        doc.writeln("background-color: " + bg + "<br>");
+
+        doc.write("left, top, width, height: ");
+        doc.write( styleObject.left == "" ? "\"\"" : styleObject.left );
+        doc.write(", ");
+        doc.write( styleObject.top == "" ? "\"\"" : styleObject.top );
+        doc.write(", ");
+        doc.write( styleObject.width == "" ? "\"\"" : styleObject.width );
+        doc.write(", ");
+        doc.write( styleObject.height == "" ? "\"\"" : styleObject.height );
+        doc.writeln("<br>");
+    }
+    else
+    {
+        doc.writeln( "Style object is null." );
+    }
+}
+</script>
+</head>
+
+<body bgcolor="#ffffff">
+
+<HR>
+<div id="d1" style="background-color: #ccffcc;
+   position: absolute;
+   top: 10px; left: 10px;
+   width:100px; height: 100px;">
+<tt>&lt;div&gt;</tt> with <tt>&lt;style&gt;</tt> inside
+tag. Height and width are 100px.
+</div>
+
+<HR>
+<div id="d2">
+<tt>&lt;div&gt;</tt> obtaining style from
+<tt>&lt;style&gt;</tt> element. Height
+and width are 100px.
+</div>
+
+<HR>
+<div id="d3">
+another <tt>&lt;div&gt;</tt> obtaining style from
+<tt>&lt;style&gt;</tt> element. (no width
+or height)
+</div>
+
+<HR> 
+<div id="d4">
+<script language="JavaScript">
+document.writeln("<p>Your current browser is: \&#147;" + navigator.appName
+      + "\&#148;<br> Version: " + navigator.appVersion + "<br>");
+document.write("This script has categorized your browser as ");
+document.writeln(".</p>");
+setDocument();
+</script>
+<p>
+<h3>Properties for <tt>&lt;div&gt;</tt> one</h3>
+<p>
+<script language="JavaScript">
+    showProperties( "d1" );
+</script>
+</p>
+
+<h3>Properties for <tt>&lt;div&gt;</tt> two</h3>
+<p>
+<script language="JavaScript">
+    showProperties( "d2" );
+</script>
+</p>
+
+<h3>Properties for <tt>&lt;div&gt;</tt> three</h3>
+<p>
+<script language="JavaScript">
+    showProperties( "d3" );
+</script>
+</p>
+
+<h3>Properties for <tt>&lt;div&gt;</tt> four (this area)</h3>
+<p>
+<script language="JavaScript">
+    showProperties( "d4" );
+</script>
+</p>
+</div>
+
+</body>
+</html>

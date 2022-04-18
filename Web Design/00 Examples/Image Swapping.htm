@@ -1,0 +1,132 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+
+<HEAD>
+  <TITLE>Local Command Logos</TITLE>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+<SCRIPT language="JavaScript">
+<!--
+timeID = 10;
+stcnt = 16;
+msg = "This Page is using JavaScript to change the Status line! ";
+tmsg = new Array(32);
+  tmsg[0]=msg;
+  blnk = "                ";
+  for (i=1; i<32; i++)
+  {
+  b = blnk.substring(0,i);
+  tmsg[i]="";
+  for (j=0; j<msg.length; j++) tmsg[i]=tmsg[i]+msg.charAt(j)+b;
+        }
+
+function wiper()
+{
+  ct = new Date();
+  h = "0"+ct.getHours();
+  m = "0"+ct.getMinutes();
+  s = "0"+ct.getSeconds();
+  h = h.substring(h.length-2,h.length+1);
+  m = m.substring(m.length-2,m.length+1);
+  s = s.substring(s.length-2,s.length+1);
+  cl = "Current Time  "+h+":"+m+":"+s+"   ";
+  if (stcnt > -1) str = tmsg[stcnt]; else str = tmsg[0];
+  if (stcnt-- < -40) stcnt=31;
+  status = cl+str;
+  clearTimeout(timeID);
+  timeID = setTimeout("wiper()",1000);
+}
+// -->
+
+</SCRIPT><!- in BODY Tag: onload="wiper()" ->
+
+<SCRIPT language="JavaScript" type="text/javascript">
+<!--
+function go(location)
+{
+  pub = window.open(location,"pub");
+  if (pub.opener == null) pub.opener = opener;
+  pub.opener.name = "opener";
+  pub.focus();
+}
+// End of Go Function -->
+</SCRIPT>
+
+<SCRIPT language="JavaScript" type="text/javascript">
+<!-- Preload Images and Define Display Images (dispImage).
+{ 
+  mygraphic0=new Image(); mygraphic0.src="./logos/733Logo.jpg";
+  mygraphic1=new Image(); mygraphic1.src="./logos/CPFLogo.gif"; 
+  mygraphic2=new Image(); mygraphic2.src="./logos/"; 
+  mygraphic3=new Image(); mygraphic3.src="./logos/CSG9Logo.gif";
+  mygraphic4=new Image(); mygraphic4.src="./logos/SubaseBangorLogo.gif";
+  mygraphic5=new Image(); mygraphic5.src="./logos/CSG2Logo.jpg";
+  mygraphic6=new Image(); mygraphic6.src="./logos/NRNWLogo.jpeg";
+  mygraphic7=new Image(); mygraphic7.src="./logos/NavyLeagueLogo.jpg";
+}
+
+function dispImage(num)
+{
+  if (num=="0") document.rightside.src=mygraphic0.src;
+  if (num=="1") document.rightside.src=mygraphic1.src;
+  if (num=="2") document.rightside.src=mygraphic2.src;
+  if (num=="3") document.rightside.src=mygraphic3.src;
+  if (num=="4") document.rightside.src=mygraphic4.src;
+  if (num=="5") document.rightside.src=mygraphic5.src;
+  if (num=="6") document.rightside.src=mygraphic6.src;
+  if (num=="7") document.rightside.src=mygraphic7.src;
+}
+
+// End of Display Image -->
+</SCRIPT>
+
+</HEAD>
+
+<BODY onload="wiper()">
+
+<CENTER>
+<table border="3" width="75%">
+  <CAPTION><h2>Command Logos</h2></CAPTION>
+  <TR>
+    <TH COLSPAN=2 ROWSPAN=1>
+      Select Title from the left to display the Logo:
+    </TH>
+  </TR>
+  <tr>
+    <td width="50%"><a href="javascript:go('Menu1.htm')" onmouseover="dispImage(0); return true;">USS NEVADA SSBN 733 Logo</a>
+    </td>
+    <td rowspan="8" width="50%" align="center"><a href="javascript:alert('Please use the links to the left to launch a specific product.')" return true;"><img src="./logos/base.jpg" alt="Display images here!" border="0" width="253" height="280" name="rightside"></a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="javascript:go('Menu2.htm')" onmouseover="dispImage(1); return true;">CINCPACFLT Logo</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="javascript:go('Menu3.htm')" onmouseover="dispImage(2); return true;">COMSUBPAC Logo</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="javascript:go('Menu4.htm')" onmouseover="dispImage(3); return true;">COMSUBGRU Nine Logo</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="javascript:go('Menu5.htm')" onmouseover="dispImage(4); return true;">Subase Bangor Logo</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="javascript:go('Menu6.htm')" onmouseover="dispImage(5); return true;">COMSUBGRU Two Logo</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="javascript:go('Menu7.htm')" onmouseover="dispImage(6); return true;">Navy Region NW Logo</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%"><a href="javascript:go('Menu8.htm')" onmouseover="dispImage(7); return true;">Navy League Logo</a>
+    </td>
+  </tr>
+</table></CENTER>
+
+</BODY>
+</HTML>
