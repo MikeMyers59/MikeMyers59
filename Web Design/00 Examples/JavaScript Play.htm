@@ -1,4 +1,6 @@
-<HTML>
+<!DOCTYPE html>
+
+<HTML dir="ltr" lang="en-US">
 
 <HEAD>
   <TITLE>JavaScript Examples Page</TITLE>
@@ -33,7 +35,7 @@
 
 </HEAD>
 
-<BODY onLoad="startclock(); onLoad="startclock2()"; timerONE=window.setTimeout; flash();">
+<BODY onLoad="startclock2(); timerONE=window.setTimeout; flash();" >
 <!-- onLoad="startclock(); timerONE=window.setTimeout;" is required for the Basic Clock Example -->
 <!-- onLoad="startclock2();" is required for the Countdown Clock Example -->
 <!-- onload="flash();" is required for the Flashing Message Example -->
@@ -56,7 +58,7 @@
 
   <CENTER><B>The following is an embedded Javascript Sample:<br>
     <SCRIPT LANGUAGE="JavaScript">
-      <!--Display the Date -->
+      // Display the Date
       today=new Date();
       date="Today's Date: " + (today.getMonth()+1) + "/" + today.getDate() + "/" + today.getYear();
       document.write(date);
