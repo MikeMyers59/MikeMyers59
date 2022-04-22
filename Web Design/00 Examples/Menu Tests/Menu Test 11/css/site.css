@@ -1,0 +1,35 @@
+/* Site.css */
+
+:root {
+  --burnt-orange: #ff6122;  /* Status Bar */
+}
+
+/* ================Reset================= */
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ===============Classes================ */
+.border3 {
+  border: solid;
+  border-size: 3px;
+}
+.center {
+  text-align: center;
+}
+
+/* ===================IDs================ */
+
+/* Bottom Status */
+#Status{
+  background-color: #ff6122;
+  font-weight: bold;
+  text-align: center;
+}
+#Status a:link,
+#Status a:visited,
+#Status a:active,
+#Status a:hover{
+  color: #ff0;
+}
