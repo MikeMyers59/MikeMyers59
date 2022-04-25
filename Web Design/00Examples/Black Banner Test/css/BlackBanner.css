@@ -1,0 +1,305 @@
+@font-face {
+  font-family: Arial,sans-serif;
+  font-weight: 400;
+  font-style: normal
+}
+
+.counter {
+  color: #ff0;
+  visibility: hidden;
+  font-size: .7em;
+  font-weight: bold;
+  padding-left: 5px;
+  padding-right: 5px
+}
+.counter: link,
+.counter: visited,
+.counter: hover,
+.counter: active {
+  text-decoration: none;
+  color: #ff0
+}
+.dropDown {
+  position: relative;
+  display: inline-block
+}
+.statusDropDownContents {
+padding: 12px 16px;
+text-decoration: none;
+display: none;
+white-space: nowrap;
+position: absolute;
+min-width: 300px;
+max-height: 200px;
+min-height: 24px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+z-index: 1;
+background-color: #000;
+color: #fff;
+left: -20px;
+
+}
+#itDropDownContents, #ResDropDownContents, #MyLinksDropDownContents {
+padding: 12px 16px;
+text-decoration: none;
+display: none;
+position: absolute;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+z-index: 1;
+color: #fff;
+background-color: #000;
+top: 21px
+}
+#itDropDownContents {
+font-size: 13px
+width: 300px;
+}
+#ResDropDownContents {
+font-size: 13px
+width: 300px;
+}
+#MyLinksDropDownContents {
+font-size: 13px
+width: 400px;
+}
+#MyLinksMenu {
+border: none;
+background-color: #000
+}
+#hostId {
+padding: 5px;
+display: none;
+position: absolute;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+z-index: 1;
+color: #fff;
+background-color: #8f8f8a;
+width: 25px;
+top: 21px;
+font-size: 13px
+}
+.imgMyLinks {
+height: 30px;
+width: 20px;
+margin-right: 5px
+}
+#ResourceMenu,#ITMenu {
+border: none
+}
+.dropDown: hover #itDropDownContents,.dropDown: hover #ResDropDownContents,.dropDown: hover #MyLinksDropDownContents,.dropDown: hover #hostId,.dropDown: hover .statusDropDownContents {
+display: block
+}
+#BlackBanner {
+background-color: #000;
+color: #fff;
+display: flex;
+width: 100%;
+flex-wrap: nowrap;
+min-height: 0;
+line-height: normal !important;
+height: 22px
+}
+.BannerLink: link,.BannerLink: visited,.BannerLink: hover,.BannerLink: active {
+color: #fff !important;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 14px;
+text-decoration: none;
+padding-left: 3px;
+padding-top: 2px;
+padding-bottom: 2px
+}
+#BlackBanner img {
+margin-top: 3px;
+height: 15px;
+vertical-align: auto !important
+}
+#nycuIcon {
+width: 20px
+}
+.ui-menu-item {
+background-color: #000;
+color: #fff
+}
+.ui-menu-item a: link,.ui-menu-item a: visited,.ui-menu-item a: hover,.ui-menu-item a: active {
+color: #fff
+}
+#MyLinks: link,#MyLinks: visited,#MyLinks : hover,#MyLinks : active {
+color: #ff0
+}
+#BlackBanner p {
+margin-top: 0;
+padding: 2px;
+font-family: Arial,Helvetica,sans-serif;
+font-size: 14px;
+margin-left: 3px;
+margin-right: 3px;
+height: 8px
+}
+#itDropDownContents a,.statusDropDownContents a {
+text-decoration: none;
+color: #fff;
+font-size: 13px;
+\height: 40px;
+
+}
+#itDropDownContents p {
+height: auto
+}
+.ms-dialog .ms-Breadcrumb {
+display: none
+}
+#breadCrumb {
+right: 30px;
+text-align: right;
+position: absolute;
+max-width: 1000px
+}
+li.ms-Breadcrumb-listItem: first-child a {
+padding-left: 0
+}
+.ms-Breadcrumb.is-overflow .ms-Breadcrumb-overflow {
+display: inline
+}
+.ms-Breadcrumb-chevron {
+font-size: 17px;
+color: #fff;
+vertical-align: top;
+margin: 10px 0
+}
+.ms-Breadcrumb-list {
+display: block;
+white-space: nowrap;
+padding: 0;
+margin: 0
+}
+.ms-Breadcrumb-list .ms-Breadcrumb-listItem {
+list-style-type: none;
+vertical-align: top;
+margin: 0;
+padding: 0;
+display: inline-block
+}
+.ms-Breadcrumb-list .ms-Breadcrumb-listItem: last-of-type .ms-Breadcrumb-chevron {
+display: none
+}
+.ms-Breadcrumb-overflow {
+display: none;
+position: relative;
+margin-right: -4px
+}
+.ms-Breadcrumb-overflow .ms-Breadcrumb-overflowButton {
+font-size: 12px;
+display: inline-block;
+color: #0078d7;
+margin-right: -4px;
+padding: 12px 8px 3px;
+cursor: pointer
+}
+.ms-Breadcrumb-overflowMenu {
+display: none;
+position: absolute
+}
+.ms-Breadcrumb-overflowMenu.is-open {
+display: block;
+top: 36px;
+left: 0;
+box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+background-color: #fff;
+border: 1px solid #c8c8c8;
+z-index: 5
+}
+.ms-Breadcrumb-overflowMenu: before {
+position: absolute;
+box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+top: -6px;
+left: 6px;
+content: ' ';
+width: 16px;
+height: 16px;
+-webkit-transform: rotate(45deg);
+transform: rotate(45deg);
+background-color: #fff
+}
+.ms-Breadcrumb-overflowMenu .ms-ContextualMenu {
+border: none;
+box-shadow: none;
+position: relative;
+width: 190px
+}
+.ms-Breadcrumb-overflowMenu .ms-ContextualMenu.is-open {
+margin-bottom: 0
+}
+.ms-Breadcrumb-itemLink,.ms-Breadcrumb-overflowButton {
+text-decoration: none;
+outline: transparent
+}
+.ms-Breadcrumb-itemLink: hover,.ms-Breadcrumb-overflowButton: hover {
+cursor: pointer;
+color: #ff69b4
+}
+.ms-Breadcrumb-itemLink: not(: hover) {
+color: #fff
+}
+.ms-Breadcrumb-itemLink: focus,.ms-Breadcrumb-overflowButton: focus {
+outline: 1px solid #767676;
+color: #ff69b4
+}
+.ms-Breadcrumb-itemLink: active,.ms-Breadcrumb-overflowButton: active {
+outline: transparent;
+background-color: #c8c8c8
+}
+.ms-Breadcrumb-itemLink {
+font-size: 14px;
+font-weight: 400;
+display: inline-block;
+padding: 0 4px;
+max-width: 160px;
+white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+margin-top: 2px
+}
+.ms-Breadcrumb span: hover {
+cursor: default;
+background: none;
+color: #fff
+}
+.ms-Breadcrumb a: hover {
+text-decoration: none
+}
+.ms-Breadcrumb a: visited {
+text-decoration: none
+}
+i.ms-Icon.ms-Icon--ChevronRight: before {
+content: '>'
+}
+i.ms-Breadcrumb-chevron.ms-Icon.ms-Icon--ChevronRight {
+margin: 5px 0
+}
+
+.ms-Icon {
+-moz-osx-font-smoothing: grayscale;
+-webkit-font-smoothing: antialiased;
+display: inline-block;
+font-family: Arial;
+font-style: normal;
+font-weight: 400;
+line-height: 1;
+speak: none
+}
+
+/* ===========================Responsive============================= */
+@media screen and (max-width: 479px) {
+  .ms-Breadcrumb-itemLink {
+    font-size: 14px;
+    max-width: 116px
+  }
+  .ms-Breadcrumb-chevron {
+    margin-top: 4px
+  }
+  .ms-Breadcrumb-overflow .ms-Breadcrumb-overflowButton {
+    padding-top: 5px;
+    padding-bottom: 3px
+  }
+}
+

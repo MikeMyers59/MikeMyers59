@@ -1,0 +1,227 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+
+  <TITLE>Black Banner Test</TITLE>
+
+  <LINK href="css/BlackBanner.css" type="text/css" rel="Stylesheet">
+
+  <SCRIPT src="scripts/BlackBanner.js" type="text/javascript">
+
+<SCRIPT language="JavaScript">
+// Test Area
+var Version = "1.0.0.0"
+
+</SCRIPT>
+
+<style>
+
+html, body {
+  background-color: #f0f0f0;
+  margin: 2px;
+  padding: 0;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 6px;
+  padding: 2px;
+}
+
+.container {
+  background-color: #e0e0e0;
+  border: solid;
+  padding: 0;
+}
+
+.notice {
+  color: #000;
+  font-size: 0.7em;
+  padding: 0 0 0 0;
+}
+
+/* ==========================Header========================== */
+.header {
+  background-color: #e0e0e0;
+  border: 1px solid #555;
+  min-height: 60px;
+}
+
+.header h1 {
+  font-size: 2.0em;
+  text-align: center;
+}
+
+/* ==========================Top Menu======================== */
+.topMenu {
+  background-color: #e0e0e0;
+  position: sticky; /* Make it stick to top */
+  top: 0;
+  width: 100%;
+}
+
+.topMenu ul {
+  border: 1px solid #555;
+  color: black;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.topMenu li {
+  border-right: 1px solid #bbb;
+  display: block;
+  float: left;
+}
+
+/* Move the last menu item to the right! 
+.topMenu li:last-child {
+  border-left: 1px solid #bbb;
+  display: block;
+  float: right;
+}  */
+
+.topMenu li a {
+  display: block;
+  color: #000;
+  min-width: 100px;
+  padding: 4px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.topMenu li a:hover {
+  background-color: #04AA6D;
+  color: black;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.dropdown {
+  background-color: #e0e0e0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: inline-block;
+}
+
+.dropdown-content {
+  background-color: inherit;
+  display: none;
+  position: absolute;
+  min-width: 100px;
+}
+
+.dropdown-content a {
+  border: 1px solid #bbb;
+  display: inline-block;
+  text-align: left !important;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #04AA6D;
+}
+
+
+@media screen and (max-width: 600px) {
+  .topMenu li {
+    float: none;
+  }
+}
+
+/* =========================Text Modifications======================== */
+/* =====Status ====== */
+.redStatus {
+  border: solid;
+  color: #f00;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 1em;
+  max-width: 300px;
+  padding: 0.5em 0;
+  text-align: center;
+}
+.yellowStatus {
+  border: solid;
+  color: #ff0;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 1em;
+  max-width: 300px;
+  padding: 0.5em 0;
+  text-align: center;
+}
+.greenStatus {
+  border: solid;
+  color: #008000;
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 1em;
+  max-width: 300px;
+  padding: 0.5em 0;
+  text-align: center;
+}
+</style>
+
+</HEAD>
+
+<BODY>
+
+<div class="header">
+  <h1> Mike's Black Banner Test Page</h1>
+</div>
+
+<div class="topMenu">
+  <ul>
+    <li><a href="#" >Notices</a></li>
+    <li class="dropdown">
+      <a href="javascript:void(0);" class="dropbtn">Resources</a>
+      <div class="dropdown-content">
+        <a href="#">Resource 1</a>
+        <a href="#">Resource 2</a>
+        <a href="#">Resource 3</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0);" class="dropbtn">Contacts</a>
+      <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
+    </li>
+    <li class="dropdown">
+      <a href="javascript:void(0);" class="dropbtn">About</a>
+      <div class="dropdown-content">
+        <a href="#">Version</a>
+        <a href="#">Help Wiki</a>
+      </div>
+    </li>
+  </ul>
+</div>  <!-- End of Top Menu -->
+
+<h3>Notices Example</h3>
+<div id="notices" class="container">
+  <h2> Notices: </h2>
+  <div class="redStatus"> Warning 
+    <P class="notice"> Don't do stupid stuff! </P>
+  </div>
+  <div class="yellowStatus"> Caution 
+    <P class="notice"> Be careful when someone else does stupid stuff! </P>
+  </div>
+  <div class="greenStatus"> Go-Go-Go 
+    <P class="notice"> Keep up the good work! </P>
+  </div>
+</div>  <!-- End of Notices Container -->
+
+</BODY>
+
+</HTML>
