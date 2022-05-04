@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="Content-Language" content="en-US">
+<meta name="viewport" content="width=1280">
+
+<title>Page Layout Test 1</title>
+
+<link href="css/contemporary_extended.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/ces_header_fixed.css">
+
+<!-- jQuery - required to support NavBar - required to support NavBar -->
+<script src="scripts/jqueryv3.6.0.js" type="text/javascript"></script>
+<!-- jQuery Plug-In SmartMenus jQuery Plugin - v0.9.7 -->
+<script src="scripts/jquery_002.js" type="text/javascript"></script>
+
+<script src="scripts/InitExtendedNavBar.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="scripts/ces_header_fixed.js"></script>
+
+<style>
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+}
+
+.user-interaction a span {
+  background-image: url("/images/sprite-tools.gif");
+}
+
+#Banner {
+  margin: 0;
+  padding: 0;
+  width: 100%
+}
+#Banner h1 {
+  background: url("images/SkyBanner.png") no-repeat;
+  top: -40px;
+  padding: 10px;
+  width: 100%
+}
+
+#Footer {
+  background-color: #fffff;
+  border: solid;
+  padding: 10px;
+}
+
+#MainContainer {
+  background-color: #fffff;
+  border: solid;
+  padding: 10px;
+}
+  
+</style>
+
+</head>
+
+<body background="images/underwater.png">
+
+<div id="Banner" aria-label="Banner">
+  <h1>Page Layout Test 1</h1>
+</div> <!-- End of Banner -->
+
+<div role="navigation" aria-label="Main menu">
+  <div role="application" class="c-glbl-nav">
+    <nav>
+	  <div id="PageTools" class="tools">
+          <ul id="main-menu" class="smenu sm navTabs" role="menubar" data-smartmenus-id="16516770425096008">
+            <li class="active" aria-current="true" role="presentation">
+              <a href="javascript:void(0);" id="nav-" data-tag="" data-testid="nav-item-" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="0" class="has-submenu"><span class="sub-arrow">+</span>Home</a>
+              <ul class="navTabs-subTabList" role="menu" aria-labelledby="nav-" aria-hidden="true">
+                <li aria-current="page" role="presentation">
+                  <a href="#" role="menuitem" tabindex="-1" data-tag="" data-testid="nav-item-">Welcome</a>
+                </li>
+              </ul>
+            </li>
+            <li role="presentation">
+              <a href="javascript:void(0);" id="nav-" data-tag="" data-testid="nav-item-" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1" class="has-submenu"><span class="sub-arrow">+</span>Profile</a>
+            <ul class="navTabs-subTabList sm-nowrap" role="menu" aria-labelledby="nav-" style="width: auto; min-width: 10em; max-width: 20em; top: -9999px; left: 0px; margin-left: 0px; margin-top: 0px; display: none;" aria-hidden="true">
+                <li role="presentation">
+                  <a href="#" role="menuitem" tabindex="-1" data-tag="" data-testid="nav-item-">View My Bio</a>
+                </li>
+              </ul>
+            </li>
+            <li role="presentation">
+              <a href="javascript:void(0);" id="nav-" data-tag="" data-testid="nav-item-" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1" class="has-submenu"><span class="sub-arrow">+</span>Learning</a>
+            <ul class="navTabs-subTabList sm-nowrap" role="menu" aria-labelledby="nav-" style="width: auto; min-width: 10em; max-width: 20em; top: -9999px; left: 0px; margin-left: 0px; margin-top: 0px; display: none;" aria-hidden="true">
+                <li role="presentation">
+                  <a href="#" role="menuitem" tabindex="-1" data-tag="" data-testid="nav-item-">Browse for Training</a>
+                </li>
+                <li role="presentation">
+                  <a href="#" role="menuitem" tabindex="-1" data-tag="" data-testid="nav-item-">Events Calendar</a>
+                </li>
+              </ul>
+            </li>
+            <li role="presentation">
+              <a href="javascript:void(0);" id="nav-" data-tag="" data-testid="nav-item-" role="menuitem" aria-haspopup="true" aria-expanded="false" tabindex="-1" class="has-submenu"><span class="sub-arrow"></span>Reports</a>
+              <ul class="navTabs-subTabList sm-nowrap" role="menu" aria-labelledby="nav-" style="width: auto; min-width: 10em; max-width: 20em; top: -9999px; left: 0px; margin-left: 0px; margin-top: 0px; display: none;" aria-hidden="true">
+                <li role="presentation">
+                  <a href="#" role="menuitem" tabindex="-1" data-tag="" data-testid="nav-item-">Report A</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+      </div> <!-- End of Page Tools -->
+      <div id="UserTools" class="tools">
+              <ul class="user-interaction">
+                <li class="avatar">
+				  <a id="header_headerFixed_hlAvatar" title="View My Bio" href="#">
+				    <img id="header_headerFixed_imgAvatar" src="images/nophoto.png" alt="" style="border-width:0px;">
+					<span style="display:none">Universal Profile</span>
+                  </a>
+                </li>
+                <li class="settings" id="settingscontainer">
+	              <a id="optionsbtn" title="Basic Settings" href="javascript:void(0);" onmouseover="userInteractionOptions.ShowDropdown('settingsDd',false);" onmouseleave="userInteractionOptions.HideDropdown('settingsDd');" role="button" aria-label="Basic Settings" aria-expanded="false" aria-haspopup="true" aria-controls="settingsDd" onclick="userInteractionOptions.ShowHideDropdown('settingsDd');">
+				    <span style="display:none">options dropdown</span>
+                  </a>
+                  <ul id="settingsDd" class="cso-hdr-dd" onmouseout="userInteractionOptions.HideDropdown('settingsDd');" onmouseover="userInteractionOptions.showDDLPopup(this);" aria-expanded="false" aria-hidden="true" aria-labelledby="optionsbtn" role="menu">
+                    <li class="item" role="presentation">
+                      <a href="#" id="header_headerFixed_ctl01_HelpLink2" tabindex="-1" role="menuitem" target="_blank" title="Help">
+					    <span id="header_headerFixed_ctl01_HelpSpan2">Help</span>
+					  </a>
+                    </li>
+                    <li class="item" role="presentation">
+                      <a tabindex="-1" role="menuitem" href="#">
+                        <span><span data-tag="lbLogout" id="header_headerFixed_lbLogout">Log Out</span></span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+      </div> <!-- End of User Tools -->
+    </nav>
+  </div>
+</div>  <!-- End of Navigation -->
+
+<HR>
+
+<div id="MainContainer" style="padding:1px;">
+  <div style="width:100%;" id="container0">
+    container0 contents
+  </div>
+</div> <!-- End of MainContainer -->
+
+<HR>
+
+<div id="Footer" role="contentinfo">
+ Footer
+</div>  <!-- End of Footer -->
+
+</body>
+
+</html>

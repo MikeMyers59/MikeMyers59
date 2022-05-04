@@ -1,0 +1,1196 @@
+.columnHeaderLink {
+	color:Black;
+}
+.columnHeaderLink:hover {
+	text-decoration:none;
+}
+.columnHeaderLinkText {
+	padding-right:5px;
+	cursor:pointer;
+}
+.columnHeaderLinkText:hover {
+	text-decoration:underline;
+}
+.imgNoUnderline {
+	text-decoration:none;
+	cursor:pointer;
+	vertical-align:middle;
+}
+.imgNoUnderline:hover {
+	text-decoration:none;
+}
+.error {
+	font-size:9pt;
+	font-family:Arial;
+	font-weight:normal;
+	color:#E70000;
+}
+.errorbold {
+	font-family:verdana, san-serif;
+	font-size:10px;
+	font-weight:bold;
+	color:#E70000;
+}
+.left {
+	width:5px;
+	height:5px;
+	vertical-align:top;
+	margin:0;
+	margin-top:-5px;
+	padding:0;
+	float:left;
+}
+.right {
+	width:5px;
+	height:5px;
+	vertical-align:top;
+	margin:0;
+	margin-top:-5px;
+	padding:0;
+	float:left;
+}
+.float-left {
+	float:left;
+}
+#dir-rtl .float-left {
+	float:right;
+}
+.align-right {
+	float:right;
+}
+#dir-rtl .align-right {
+	float:left;
+}
+.center {
+	padding-left:10px;
+	padding-right:10px;
+	float:left;
+}
+.header1bg {
+	white-space:nowrap;
+	width:auto;
+	overflow:hidden;
+}
+.header1bg .navInactive, .header1bg .navActive, .header1bg .inactiverollover {
+	float:left;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-right:1px;
+	margin-bottom:0;
+	white-space:nowrap;
+}
+.navsub a {
+	padding:3px;
+}
+.inactiveTable {
+}
+.legendtable {
+	background-color:#eaeaea;
+}
+.searchlegend {
+	background-color:#eaeaea;
+}
+.messagelegend {
+	background-color:#eaeae0;
+	position:relative;
+	padding:2px 4px 2px 4px;
+}
+.legend {
+	background-color:#eaeaea;
+	float:right;
+	clear:both;
+	padding:2px 4px;
+	margin-bottom:1em;
+	line-height:25px;
+}
+.legend img {
+	border:none;
+	vertical-align:middle;
+	line-height:25px;
+}
+.inboxlegend {
+	background-color:#eaeaea;
+	padding:2px 4px 2px 4px;
+}
+body {
+	background-color:#FFFFFF;
+	margin-top:0;
+}
+hr {
+	height:1;
+	color:#000000;
+}
+.bodyhdr {
+	font-family:arial, trebuchet ms, sans-serif;
+	font-size:12px;
+	font-weight:bold;
+}
+.helpLinkValues {
+	padding-right:0px;
+	padding-left:0px;
+	padding-bottom:0px;
+	margin:0px;
+	padding-top:0px;
+}
+.progressPopup {
+	border:1px solid black;
+	background-color:#ffffff;
+	padding:8px;
+}
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	height:100%;
+}
+.warning {
+	color:Red;
+	font-weight:bold;
+}
+/*
+ * SEARCH BOX - OLD
+ */
+.SearchBox {
+	height:20px;
+}
+.SearchBox span {
+	line-height:20px;
+	vertical-align:middle;
+	padding-right:4px;
+}
+.SearchBox input {
+	line-height:14px;
+	height:16px;
+	border:1px solid #c4c4c4;
+}
+.SearchBox a {
+	line-height:20px;
+	height:20px;
+	padding:0px 4px;
+	text-decoration:none;
+	cursor:pointer;
+}
+.SearchBox a:hover {
+	text-decoration:underline;
+}
+.SearchBox a.submit {
+	display:block;
+	width:25px;
+	height:20px;
+	padding:0px;
+	margin-left:4px;
+}
+.SearchBox a.submit:hover {
+	text-decoration:none;
+}
+/*
+ * SEARCH BOX - NEW
+ */
+.SearchBoxNew {
+	height:20px;
+}
+.SearchBoxNew span {
+	line-height:20px;
+	vertical-align:middle;
+	padding-right:4px;
+}
+.SearchBoxNew input {
+	line-height:14px;
+	height:16px;
+	border:1px solid #c4c4c4;
+	font-family:Arial;
+	font-size:8.5pt;
+	font-weight:normal;
+}
+.SearchBoxNew a {
+	line-height:20px;
+	font-family:Verdana;
+	font-size:10px;
+	font-weight:normal;
+	/*color:#666666;*/
+	padding:4px;
+	text-decoration:none;
+	cursor:pointer;
+}
+.SearchBoxNew a:hover {
+	text-decoration:none;
+}
+.SearchBoxNew a.submit {
+	display:block;
+	line-height:20px;
+	height:20px;
+	background-position:right top;
+	color:#666666;
+	padding:0px 4px;
+	text-decoration:none;
+	cursor:pointer;
+	text-align:center;
+}
+.SearchBoxNew a.submit:hover {
+	color:black;
+	text-decoration:none;
+}
+fieldset, .fieldSetDiv {
+	border:1px solid #999;
+}
+fieldset legend, .fieldSetLegend {
+	font-weight:bold;
+	color:#555;
+}
+.fieldSetDiv {
+	padding:5px;
+	margin:2px;
+}
+.fieldSetLegend {
+	background-color:#fff;
+	margin-left:3px;
+	padding:0px 2px;
+}
+.testEngine-questionTitle {
+	font-weight:bold;
+	color:#555;
+}
+@media screen {
+	.fieldSetLegend {
+		margin-top:-12px;
+		float:left;
+	}
+}
+@media print {
+	.fieldSetDiv {
+		border:none;
+	}
+	.fieldSetLegend {
+		border-bottom:1px solid #999;
+	}
+	.printable {
+		display:block !important;
+	}
+}
+.MultiSelectDropDown {
+	background-color:#ffffff;
+	border:1px solid #7f9db9;
+	line-height:16px;
+	vertical-align:middle;
+	cursor:default;
+	position:relative;
+	display:inline-block;
+	overflow:hidden;
+}
+.MultiSelectDropDown-label {
+	font-weight:normal;
+	white-space:nowrap;
+	overflow:hidden;
+	float:left;
+	height:16px;
+	margin:0 1px;
+}
+.MultiSelectDropDown-img {
+	position:absolute;
+	right:0;
+	top:0;
+	width:17px;
+	height:16px;
+	background-position:left top;
+	background-color:#fff;
+}
+.MultiSelectDropDown:hover .MultiSelectDropDown-img {
+	background-position:left -16px;
+}
+.MultiSelectDropDown-list {
+	border:1px solid #777777;
+	background-color:#ffffff;
+	z-index:10000;
+}
+/* Panel Profile (begin)*/
+.PanelProfile {
+}
+.PanelProfile_title {
+	height:108px;
+}
+/*Total width=657px */
+.PanelProfile_titleLeft {
+	background:url(../../images/dialog/profile/orgL.jpg) no-repeat left top;
+	width:29px;
+}
+.PanelProfile_titleMiddle {
+	background:url(../../images/dialog/profile/orgM.jpg);
+	width:581px;
+}
+.PanelProfile_titleRight {
+	width:47px; /*background:url(../../images/dialog/profile/orgR.jpg) no-repeat left top;*/
+}
+.PanelProfile_contentLeft {
+	width:27px;
+	background-repeat:repeat-y; /*background-image:url(../../images/dialog/profile/orgLmid.jpg);*/
+}
+.PanelProfile_contentMiddle {
+	/*width:581px; 	height:400px;*/ /*background-color:White;*/
+}
+.PanelProfile_contentRight {
+	width:38px;
+	background-image:url(../../images/dialog/profile/orgRmid.jpg); /*background-repeat:repeat-y;*/
+}
+.PanelProfile_footer {
+	width:100%;
+	line-height:1px;
+}
+.PanelProfile_footerLeft {
+	width:29px;
+	height:20px; /*background:url(../../images/dialog/profile/orgLbot.jpg) no-repeat left top;*/
+}
+.PanelProfile_footerMiddle {
+	width:581px; /*background:url(../../images/dialog/profile/orgMbot.jpg);*/
+}
+.PanelProfile_footerRight {
+	width:38px; /*background:url(../../images/dialog/profile/orgRbot.jpg) no-repeat left top;*/
+}
+/* Panel Profile (end)*/
+.FancyBreadCrumbs_Cell {
+	height:17px;
+	position:relative;
+	background-image:url(../../images/fancyBreadCrumbs/br_mid.jpg);
+	background-repeat:repeat-x;
+}
+.FancyBreadCrumbs_CellRight {
+	width:1px;
+	background-image:url(../../images/fancyBreadCrumbs/br_right.jpg);
+	background-repeat:no-repeat;
+}
+.FancyBreadCrumbs_CellLeft {
+	width:1px;
+	z-index:9999;
+	position:relative;
+	background-image:url(../../images/fancyBreadCrumbs/br_left.jpg);
+	background-repeat:no-repeat;
+}
+.FancyBreadCrumbs_Table {
+	background-image:url(../../images/fancyBreadCrumbs/br_mid.jpg);
+	height:17px;
+	position:absolute;
+	background-position:0px -0px;
+	background-repeat:repeat-x;
+	font-size:8pt;
+	font-family:Arial;
+}
+/*._idCard2 begin*/
+.idCard2_content {
+	table-layout:fixed;
+}
+.idCard2_titleMiddle {
+	width:190px;
+	background:url(../../images/IdCards/IdCard2/TopMiddle.png) repeat-x;
+	height:15px;
+}
+.idCard2_titleLeft {
+	width:16px;
+	background:url(../../images/IdCards/IdCard2/TopLeft.png) repeat-x;
+}
+.idCard2_titleRight {
+	width:16px;
+	background:url(../../images/IdCards/IdCard2/TopRight.png) repeat-x;
+}
+.idCard2_contentLeft {
+	background:url(../../images/IdCards/IdCard2/MiddleLeft.png) repeat-y;
+	width:16px;
+}
+.idCard2_contentRight {
+	background:url(../../images/IdCards/IdCard2/MiddleRight.png) repeat-y;
+	width:16px;
+}
+.idCard2_footer {
+	width:100%;
+	line-height:1px;
+	height:15px;
+}
+.idCard2_footerLeft {
+	width:16px;
+	height:15px;
+	background:url(../../images/IdCards/IdCard2/BottomLeft.png) no-repeat;
+}
+.idCard2_footerRight {
+	width:16px;
+	height:15px;
+	background:url(../../images/IdCards/IdCard2/BottomRight.png) no-repeat;
+}
+/*A blank panel in case, we have the panel but just want it to render normally*/
+.blankPanel_content {
+	width:100%;
+}
+.blankPanel_title {
+	display:none;
+}
+.placeHolder_idCard2 {
+}
+/*ID cards begin*/
+/*.photo_idCard1:in dynamic content*/
+.name_idCard1 {
+	position:absolute;
+	font-weight:bold;
+	text-align:left;
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	width:139px;
+	left:70px;
+	top:16px;
+	font-size:10pt;
+	font-family:verdana,arial,verdana,trebuchet ms,sans-serif;
+}
+.position_idCard1 {
+	text-align:left;
+	margin-top:2px;
+	position:absolute;
+	left:70px;
+	top:30px;
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	width:139px;
+	font-size:9pt;
+	font-family:verdana,arial,verdana,trebuchet ms,sans-serif;
+}
+.placeHolder_idCard1 {
+	display:none;
+	visibility:hidden;
+	text-align:left;
+	margin-top:2px;
+	position:absolute;
+	left:70px;
+	top:42px;
+	display:block;
+	overflow:hidden;
+	width:139px;
+}
+.idCard1_ {
+	width:226px;
+}
+.idCardPanel {
+}
+.photo_idCard2 {
+	width:25px;
+	height:29px; /*float:left;     	position:relative;*/
+	top:0px;
+	margin-left:6px;
+}
+.name_idCard2 {
+	padding-left:5px;
+	font-weight:bold;
+	text-align:left;
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	width:130px;
+}
+.position_idCard2 {
+	padding-left:5px;
+	text-align:left;
+	margin-top:2px;
+	display:block;
+	overflow:hidden;
+	white-space:nowrap;
+	font-size:10px;
+	width:130px;
+}
+.delete_idCard2 {
+	position:absolute;
+	top:3px;
+	right:7px;
+	width:16px;
+	height:16px; /*    	left:220px;*/ /*		left:220px; (ie6)*/ /*    	left:257px; (ff)*/
+}
+/*idCards End*/
+/* For Core/UserControls/Steps.ascx */
+.Steps_background {
+	background-image:url(../../images/whitebox.png);
+	background-repeat:repeat-x;
+	text-align:center;
+	vertical-align:middle;
+	height:60px;
+	font-size:14pt;
+	font-weight:bold;
+	color:#545555;
+}
+/* Org Chart Display Properties */
+/*.OrgDisplayProperties - in dynamic content folder*/
+.OrgDisplayProperties {
+	background-color:White;
+}
+.OrgDisplayProperties_content {
+	table-layout:fixed;
+	width:93%;
+}
+.OrgDisplayProperties_contentLeft {
+	width:12px;
+	background-image:url(../../images/OrgChartDisplayProperties/OrgDetailsPanelLeft.png);
+	background-repeat:repeat-y;
+	background-position:left;
+}
+.OrgDisplayProperties_contentMiddle {
+	/*padding:0px;*/
+	overflow:auto;
+}
+.OrgDisplayProperties_contentRight {
+	width:16px;
+	background-image:url(../../images/OrgChartDisplayProperties/OrgDetailsPanelRight.png);
+	background-repeat:repeat-y;
+	background-position:right;
+}
+.OrgDisplayProperties_title {
+	width:93%;
+	height:6px;
+	padding:0px;
+	font-size:1px;
+}
+.OrgDisplayProperties_titleLeft {
+	background-image:url(../../images/OrgChartDisplayProperties/OrgDetailsPanelHeaderLeft.png);
+	background-position:top right;
+	width:12px;
+	background-repeat:no-repeat;
+}
+.OrgDisplayProperties_titleMiddle {
+	background-image:url(../../images/OrgChartDisplayProperties/OrgDetailsPanelHeaderMiddle.png);
+	background-repeat:repeat-x;
+	background-position:top;
+}
+.OrgDisplayProperties_titleRight {
+	background-image:url(../../images/OrgChartDisplayProperties/OrgDetailsPanelHeaderRight.png);
+	background-repeat:no-repeat;
+	background-position:top left;
+	width:13px;
+}
+.OrgDisplayProperties_footer {
+	/*height:1px;*/
+	width:93%;
+}
+.OrgDisplayProperties_footerLeft {
+	background-image:url(../../images/OrgChartDisplayProperties/OrgDetailsPanelFooterLeft.png);
+	width:18px;
+	height:16px;
+}
+.OrgDisplayProperties_footerMiddle {
+	background-image:url(../../images/OrgChartDisplayProperties/OrgDetailsPanelFooterMiddle.png);
+	background-repeat:repeat-x;
+	background-position:bottom;
+}
+.OrgDisplayProperties_footerRight {
+	background-image:url(../../images/OrgChartDisplayProperties/OrgDetailsPanelFooterRight.png);
+	width:16px;
+}
+.UserPhotoContainer {
+	background:transparent url(../../images/connect/photo_bg.gif) no-repeat scroll left top;
+	padding:15px 17px;
+}
+.highlightedStepText {
+	font-weight:bold;
+	font-size:9pt;
+	font-family:Arial;
+	color:#ffffff;
+}
+.SuccessorBox {
+	background:transparent url(../../images/icon/SuccessorBox.png) no-repeat scroll left top;
+}
+.SuccessorBoxSmall {
+	background:transparent url(../../images/icon/SuccessorBoxSmall.png) no-repeat scroll left top;
+}
+.SuccessorNameSmall {
+	padding-left:3px;
+	color:#545555;
+	font-weight:bold;
+	font-size:9px;
+	text-align:left;
+	display:block;
+	white-space:nowrap;
+	overflow:hidden;
+	width:100px;
+}
+.SuccessorPositionSmall {
+	padding-left:3px;
+	color:#545555;
+	text-align:left;
+	margin-top:2px;
+	display:block;
+	overflow:hidden;
+	white-space:normal;
+	font-size:9px;
+	width:100px;
+	height:24px;
+}
+.EmptyCssClass {
+}
+a.spellCheckButton {
+	background-image:url(../../images/button/spellcheck.gif);
+	width:25px;
+	height:22px;
+	line-height:22px;
+	display:inline-block;
+}
+a.spellCheckButton:hover {
+	background-image:url(../../images/button/spellcheck-h.gif);
+	text-decoration:none;
+}
+a.spellCheckButton:active {
+	background-image:url(../../images/button/spellcheck-d.gif);
+}
+/* prevent table row mouseover effects from messing up ajax calendars */
+.ajax__calendar td {
+	background-color:transparent !important;
+	border:none !important;
+}
+/* fix for IE8 that causes prev/next arrows to be unclickable */
+.ajax__calendar_prev, .ajax__calendar_next {
+	position:relative;
+}
+.FormTable {
+	border-collapse:collapse;
+}
+/*.FormTable td
+{
+	padding:6px;
+}  do not re-add this.*/
+.FormTable-Header {
+	vertical-align:top;
+	text-align:right;
+}
+#dir-rtl .FormTable-Header {
+	text-align:left;
+}
+.Form-Buttons {
+	text-align:right;
+	padding:6px;
+	margin-top:20px;
+}
+#dir-rtl .Form-Buttons {
+	text-align:left;
+}
+.processBreadcrumbs {
+	display:inline-block;
+	margin-bottom:10px;
+	white-space:nowrap;
+}
+.processBreadcrumbs ul {
+	padding:0;
+	margin:0;
+	list-style-type:none;
+	text-decoration:none;
+}
+.processBreadcrumbs li {
+	display:inline-block;
+	zoom:1;
+	*display:inline;
+	vertical-align:top;
+}
+.processBreadcrumbs li a.CsLinkButton {
+	font-size:14px !important;
+}
+.processBreadcrumbs .leftEdge,
+.processBreadcrumbs .rightEdge {
+	width:10px;
+	font-size:13px;
+	line-height:32px;
+	background-repeat:no-repeat;
+}
+.processBreadcrumbs .leftEdge {
+	background-position:left top;
+}
+#dir-rtl .processBreadcrumbs .leftEdge {
+	background-position:right top;
+}
+.processBreadcrumbs .rightEdge {
+	background-position:right top;
+}
+#dir-rtl .processBreadcrumbs .rightEdge {
+	background-position:left top;
+}
+.processBreadcrumbs .breadcrumbStep {
+	padding:0 10px;
+	line-height:32px;
+	background-repeat:repeat-x;
+	background-position:left -33px;
+}
+.processBreadcrumbs .breadcrumbStep.active {
+	background-repeat:repeat-x;
+	background-position:left -66px;
+}
+.processBreadcrumbs .breadcrumbStep.last span {
+	background-image:none !important;
+	padding-right:0 !important;
+}
+#dir-rtl .processBreadcrumbs .breadcrumbStep.last span {
+	padding-left:0 !important;
+}
+.processBreadcrumbs .breadcrumbStep.active span {
+	color:#4F4F4F !important;
+}
+.processBreadcrumbs .breadcrumbStep span {
+	display:block;
+	color:#999999;
+	text-transform:uppercase;
+	font-weight:bold;
+	font-family:Arial;
+	font-size:14px;
+	background-repeat:no-repeat;
+	background-position:right -99px;
+	padding-right:60px;
+}
+.processBreadcrumbs .breadcrumbStep a span.text, .processBreadcrumbs .breadcrumbStep a:hover span.text {
+	text-decoration:none !important;
+	color:#336698;
+}
+#dir-rtl .processBreadcrumbs .breadcrumbStep span {
+	background-position:left -132px;
+	padding-left:60px;
+	padding-right:0;
+}
+.toolbar {
+	/*background:-moz-linear-gradient(center top , #ffffff, #dedede) repeat scroll 0 0 transparent;*/
+	/*margin:0px -8px 1em -8px;*/
+	padding:8px;
+	margin-bottom:1.25em;
+	border-bottom:1px solid #aaa;
+	overflow:auto;
+	zoom:1;
+}
+.RadComboBox_Default .rcbInputCell .rcbEmptyMessage {
+	color:#555555;
+	font-style:normal;
+	font-family:verdana,arial,verdana,trebuchet ms,sans-serif;
+	font-size:10px;
+}
+.lightSectionHeader {
+	color:#BFBFBF;
+}
+.talentProfileWaterMarkRow {
+	display:none;
+}
+.talentProfileWaterMarkSecondRow {
+	display:none;
+}
+.talentProfilePopupOuter #infoIcon {
+	text-align:left;
+	background-color:White;
+	position:absolute;
+	/*position:fixed;*/
+	left:506px;
+	top:0px;
+}
+.addressLines {
+	border-left:1px solid rgb(213, 213, 213);
+	vertical-align:middle;
+	width:35%;
+	vertical-align:top;
+}
+.addressLinesPrint {
+	vertical-align:middle;
+	width:35%;
+	vertical-align:top;
+}
+.addressLinesWithNoFields {
+	border-left:0px solid rgb(213, 213, 213) !important;
+	vertical-align:middle;
+	width:75% !important;
+	vertical-align:top;
+}
+.addressLines label {
+	display:block;
+	padding-left:20px;
+	padding-right:20px;
+}
+.talentProfileUserProfileFields {
+}
+.talentProfileUserProfileFields #tblRptKeyValues {
+	width:310px;
+}
+.talentProfileUserProfileFields #tdFieldName {
+	width:95px;
+}
+.talentProfileUserProfileFieldsNoAddress #tdFieldName {
+	width:120px;
+}
+.talentProfileUserProfileFieldsNoAddress #tblRptKeyValues {
+	width:485px;
+}
+.TpHr {
+	height:1px;
+	/* solid*/
+	background-color:#C6BDAA;
+	color:#C6BDAA;
+}
+.tpPositioning {
+	position:absolute;
+	/*position:fixed;*/
+}
+.modalPopupBackgroundOver {
+	z-index:9999999;
+	background-color:Gray;
+	filter:alpha(opacity=50);
+	opacity:0.5;
+	height:100%;
+}
+.modalPopupBackgroundDisabled {
+	z-index:9999999;
+	background-color:Transparent;
+	opacity:0;
+	display:none;
+	visibility:hidden;
+}
+.SearchColumnHeader {
+	text-align:left;
+}
+#dir-rtl .SearchColumnHeader {
+	text-align:right;
+}
+/***** clearfix *****/
+#wikiPanel .clearfix:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+#wikiPanel .clearfix {
+	display:inline-block;
+}
+/* Hides from IE-mac \*/
+* html .clearfix {
+	height:1%;
+}
+#wikiPanel .clearfix {
+	display:block;
+}
+/* End hide from IE-mac */
+#wikiPanel .clearfix {
+	height:1%;
+}
+#wikiPanel .clearfix {
+	display:block;
+}
+#topWikipanel {
+	white-space:normal;
+}
+/* Panel Tab/button */
+#topWikipanel .tab {
+	background:url(./images/tab_b.png) repeat-x 0 0;
+	height:42px;
+	position:relative;
+	top:0;
+	z-index:999;
+}
+#topWikipanel .tab ul.login {
+	display:block;
+	position:relative;
+	float:none;
+	clear:right;
+	height:42px;
+	width:auto;
+	font-weight:bold;
+	line-height:42px;
+	margin:0;
+	right:0;
+	color:white;
+	font-size:80%;
+	text-align:center;
+}
+#topWikipanel .tab ul.login li.left {
+	background:url(./images/tab_l.png) no-repeat left 0;
+	height:42px;
+	width:30px;
+	padding:0;
+	margin:0;
+	display:block;
+	float:left;
+}
+#topWikipanel .tab ul.login li.right {
+	background:url(./images/tab_r.png) no-repeat left 0;
+	height:42px;
+	width:30px;
+	padding:0;
+	margin:0;
+	display:block;
+	float:left;
+}
+#topWikipanel .tab ul.login li {
+	text-align:left;
+	padding:0 6px;
+	display:block;
+	float:left;
+	height:42px;
+	background:url(./images/tab_m.png) repeat-x 0 0;
+	font-family:Arial;
+	font-size:12px;
+}
+#topWikipanel .tab ul.login li a {
+	color:#15ADFF;
+}
+#topWikipanel .tab ul.login li a:hover {
+	color:white;
+}
+#topWikipanel .tab .sep {
+	color:#414141;
+}
+#topWikipanel .tab a.open, .tab a.close {
+	height:20px;
+	line-height:20px !important;
+	padding-left:30px !important;
+	cursor:pointer;
+	display:block;
+	width:100px;
+	position:relative;
+	top:11px;
+}
+#topWikipanel .tab a.open {
+	background:url(./images/bt_open.png) no-repeat left 0;
+}
+#topWikipanel .tab a.close {
+	background:url(./images/bt_close.png) no-repeat left 0;
+}
+#topWikipanel .tab a:hover.open {
+	background:url(./images/bt_open.png) no-repeat left -19px;
+}
+#topWikipanel .tab a:hover.close {
+	background:url(./images/bt_close.png) no-repeat left -19px;
+}
+/* sliding panel */
+#topWikipanel {
+	position:absolute; /*Panel will overlap  content */
+	/*position:relative;*/ /*Panel will "push" the content down */
+	top:0;
+	width:99%;
+	z-index:999;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+#wikiPanel {
+	width:100%;
+	height:270px;
+	color:#999999;
+	background:#272727;
+	overflow:hidden;
+	position:relative;
+	z-index:3;
+	opacity:1;
+	filter:alpha(opacity=80);
+	display:none;
+}
+#wikiPanel h1 {
+	font-size:1.6em;
+	padding:5px 0 10px;
+	margin:0;
+	color:white;
+}
+#wikiPanel h2 {
+	font-size:1.2em;
+	padding:10px 0 5px;
+	margin:0;
+	color:white;
+}
+#wikiPanel p {
+	margin:180px 0;
+	padding:0;
+}
+#wikiPanel a {
+	text-decoration:none;
+	color:#15ADFF;
+}
+#wikiPanel a:hover {
+	color:white;
+}
+#wikiPanel .content {
+	width:99%;
+	padding-top:15px;
+	padding-left:10px;
+	text-align:left;
+	font-size:0.85em;
+}
+#wikiPanel .content .left {
+	width:280px;
+	float:left;
+	padding:0 15px;
+	border-left:1px solid #333;
+}
+#wikiPanel .content .right {
+	border-right:1px solid #333;
+}
+#wikiPanel .content form {
+	margin:0 0 10px 0;
+}
+#wikiPanel .content label {
+	float:left;
+	padding-top:8px;
+	clear:both;
+	width:280px;
+	display:block;
+}
+#wikiPanel .icon {
+	height:32px;
+	width:32px;
+	background:url(images/wiki.png) no-repeat left top;
+	padding-left:0px;
+	padding-right:5px;
+}
+#wikiPanel .icon-cnt {
+	padding-right:5px;
+	padding-bottom:10px;
+}
+#wikiPanel span {
+	display:inline-block;
+	vertical-align:middle;
+}
+#wikiPanel .btn {
+	float:right;
+}
+.dateSelectorCalendarButton {
+	background:url(../../images/icon/icon_calendar.gif) no-repeat right center;
+}
+#dir-rtl .dateSelectorCalendarButton {
+	background-position:left center;
+}
+/* notification */
+.cs-notification {
+	background-color:#F8EDAE;
+	border:1px solid #E0C37D;
+	margin-left:auto;
+	margin-right:auto;
+	width:30%;
+	text-align:center;
+	padding:5px;
+	box-shadow:0 1px 2px #BABABA;
+	filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=0, OffY=2, Color='#BABABA', Positive='true');
+}
+.cs-notificationHeader {
+	padding:3px;
+}
+.cs-notificationDetail {
+	padding:5px;
+	text-align:left;
+	border-top:1px solid #E0C37D;
+}
+/*RadEditor IE7 fix*/
+.reToolbar.Windows7 {
+	*float:none;
+}
+/*** BEGIN Succession Inactive User ***/
+.InactiveSuccessorClass .SuccessorPositionSmall {
+	height:12px;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
+.InactiveSuccessorClass .SuccessorBoxSmall {
+	background: url("../../images/icon/SuccessorBoxSmallInactive.png") no-repeat scroll left top transparent;
+}
+.InactiveSuccessorClass .spInactive {
+	color:#f00;
+	display:block;
+	font-size:10px;
+	margin-top:-2px;
+	padding-left:3px;
+}
+.InactiveSuccessorClass .spInactive2 {
+	color:#f00;
+}
+.InactiveSuccessorClass img.userImage {
+	filter:url('../js/lib/grayscale/filters.svg#grayscale'); /* Firefox 3.5+ */
+	filter:gray; /* IE6-9 */
+	-webkit-filter:grayscale(1); /* Webkit Nightlies & Google Chrome Canary */
+}
+/*** END Succession Inactive User ***/
+
+.cs-trans-icon img {
+	border: none;
+}
+
+.translatorControlTable tr > td { 
+    padding-bottom: 10px; 
+}
+
+.translatorControlTable tr > td input { 
+    height: 50px;
+}
+
+
+.textBoxInline { 
+    display: inline !important; 
+}
+
+
+.leftPadding {
+    padding-left:10px; 
+}
+
+.rightPadding {
+    padding-right:10px; 
+}
+
+
+ .bottomPadding {
+    padding-bottom:10px; 
+}
+
+ 
+.topPadding {
+    padding-top:10px; 
+}
+
+
+ input[type="file"]{
+     font-size: 12px !important;
+ }
+
+ 
+ .topMargin {
+    margin-top:10px; 
+}
+
+fieldset.testEngine-question {
+    border: 0;
+    padding: 0;
+    margin: 0;
+}
+
+fieldset.testEngine-question legend {
+    margin-bottom: 0.5rem;
+	width:100%;
+}
+
+.singleBoolRadios, 
+.singleBoolLabels {
+    display: inline-block;
+}
+.singleBoolData {
+    padding: 2px 0 8px 2px;
+}
+.singleBoolRadios {
+    padding: 2px 0 2px 10px;
+}
+
+/* RadEditor Full Screen Fix */
+.RadEditor.reFullScreen {
+    position: absolute !important;
+    z-index: 3000 !important;
+}
+
+.training-form-question {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+.training-form-question .question-text {
+    font-weight: bold;
+}
+.training-form-question .question-value {
+    padding-bottom: 5px;
+}
+.training-form-question .comment, .comment-label {
+    padding: 1px;
+}
+
+.horiz-radio-group .item {
+    display: inline-block;
+    width: 100px;
+    padding: 4px;
+    text-align: center;
+}
+.horiz-radio-group .item .item-label {
+    padding-bottom: 4px;
+}
