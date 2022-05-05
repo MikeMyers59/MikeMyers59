@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en-US">
+
+<head>
+
+<meta http-equiv="X-UA-Compatible" content="IE=11">
+<meta http-equiv="Content-type" content="text/html; charset=UTF-8">
+
+<title>Page Layout Test 2</title>
+
+<script type="text/javascript" src="scripts/jquery1.11.2.js"></script>
+<script type="text/javascript" src="scripts/homeport.js"></script>
+<script type="text/javascript" src="scripts/mega.js"></script>
+<script type="text/javascript" src="scripts/my_quick_links.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/corev15.css">
+<link rel="stylesheet" type="text/css" href="css/w3.css">
+<link rel="stylesheet" type="text/css" href="css/HomePORT.css">
+<link rel="stylesheet" type="text/css" href="css/mega-menu.css">
+
+</head>
+
+<body>
+
+<div id="m-topHeader">
+  <div id="a-gdLogo">
+    <a href="#"><img id="PageLogo" src="images/HomePort.ico"></a>
+  </div>
+  <div class="m-statusLinks w3-hide-small">
+    <ul>
+      <li><a href="#">Online Applications</a></li>
+      <li><a href="#">Homeport Help</a></li>
+    </ul>
+  </div>
+</div> <!-- End of m-topHeader -->
+
+
+<form method="post" action="/Pages/default.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm">
+
+<div id="s4-workspace" style="height: 954px; width: 1561px;">
+            <div id="s4-bodyContainer">
+                <div class="custom-wrapper">
+				
+<header class="ms-dialogHidden">
+					
+<div id="m-bottomHeader">
+
+  <div class="a-homeportLogo" id="a-homeportLogoText">
+    <a href="#">Page Layout 2</a>
+  </div>
+  
+  <div id="o-weatherSearchWelcome">
+    <div id="m-weather" class="w3-hide-small w3-hide-medium">
+      <div id="m-weatherDropdown">
+        <button type="button" class="w3-button w3-transparent" onclick="weather_dropdown()">
+          <span id="a-weatherLocationLabel">Bremerton, WA</span>
+          <span style="height:4px;width:7px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust ms-viewselector-arrow ms-menu-stdarw ms-core-menu-arrow">
+            <img src="images/spcommon.png" alt="Open Menu" style="position: absolute; left: -60px; top: -212px;">
+          </span>
+        </button>
+        <div id="m-weatherDropdownContainer" class="w3-dropdown-content w3-bar-block">
+          <a class="w3-bar-item w3-button" href="javascript:select_weather('brwa')" id="a-brwaButton">Bremerton, WA</a>
+          <a class="w3-bar-item w3-button" href="javascript:select_weather('hi')" id="a-hiButton">Honolulu, HI</a>
+          <a class="w3-bar-item w3-button" href="javascript:select_weather('kbga')" id="a-kbgaButton">Kings Bay, GA</a>
+        </div>
+                                    </div>
+                                    <div id="m-todayWeather" class="m-weatherInfo">
+                                        <img id="a-todayWeatherIcon" class="a-weatherIcon" src="EB%20Homeport_files/04d.png">
+                                        <div>
+                                            <span>Today</span>
+                                            <div id="a-todayWeatherForecast" class="a-weatherData">58°F/38°F</div>
+                                        </div>
+                                        <div id="m-todayWeatherTooltip" style="right: 765px;">
+                                            <div class="m-weatherForecast">
+                                                <div>
+                                                    <img id="a-todayIconForecast" class="a-weatherIcon" src="EB%20Homeport_files/04d.png">
+                                                </div>
+                                                <div>
+                                                    <div id="a-todayWeather" class="a-weatherTitle"><span id="a-todayWeatherValue" class="a-largeWeather">43°</span>F</div>
+                                                    <div id="a-todayWeatherStatus" class="a-weatherTitle">Clouds</div>
+                                                    <div id="a-todayWeatherTime">as of <span id="a-todayWeatherTimeValue">6:00 AM</span></div>
+                                                </div>
+                                                <div>
+                                                    <div><span class="a-weatherTitle">Wind:</span> <span id="a-todayWeatherWind">1 mph Southwest</span></div>
+                                                    <div><span class="a-weatherTitle">Humidity:</span> <span id="a-todayWeatherHumidity">90</span>%</div>
+                                                    <!--<div>Precipitation: <span id="a-todayWeatherPrecipitation"></span></div>-->
+                                                    <a class="a-seeMoreWeatherLink" href="https://www.msn.com/en-us/weather/today/bremertonwashingtonunited-states/we-city?q=bremerton-washington">See more online</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="m-tomorrowWeather" class="m-weatherInfo">
+                                        <img class="a-tomorrowIconForecast a-weatherIcon" src="EB%20Homeport_files/04d.png" title="overcast clouds">
+                                        <div>
+                                            <span>Tomorrow</span>
+                                            <div id="a-tomorrowWeatherForecast" class="a-weatherData">59°F/40°F</div>
+                                        </div>
+                                        <div id="m-tomorrowWeatherTooltip" style="right: 702px;">
+                                            <div class="m-weatherForecast">
+                                                <div>
+                                                    <img class="a-tomorrowIconForecast a-weatherIcon" src="EB%20Homeport_files/04d.png" title="overcast clouds">
+                                                </div>
+                                                <div>
+                                                    <div id="a-tomorrowWeatherStatus" class="a-weatherData">overcast clouds</div>
+                                                    <!--<div id="a-tomorrowWeatherPrecipitation" class="a-weatherData"></div>-->
+                                                    <a class="a-seeMoreWeatherLink" href="https://www.msn.com/en-us/weather/today/bremertonwashingtonunited-states/we-city?q=bremerton-washington">See more online</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+  <label for="a-mobileMenuCheckbox" class="w3-hide-medium w3-hide-large">
+    <div id="m-mobileMenuButton">
+      <i class="fas fa-bars fa-3x w3-text-white"></i>
+    </div>
+  </label>
+								
+<div id="m-welcome" class="w3-hide-small">
+  <div data-name="SignIn">Welcome Michael Reddig Myers </div>
+</div>
+  
+  </div>
+</div> <!-- End of m-topHeader -->
+										
+</header>
+
+
+<div id="o-navigationBody">
+
+<div id="o-navigation" class="ms-dialogHidden">
+  <nav class="w3-animate-left">
+    <div id="m-navigationbuttons">
+      <div class="m-megaMenuItemContainer w3-hide-medium w3-hide-large">
+        <button onclick="location.href='/'" class="a-megaMenuItemButton w3-button" type="button">Home</button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'o-navigationAboutUs')" class="a-megaMenuItemButton w3-button" type="button">About Us</button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'o-navigationDropmenu1')" class="a-megaMenuItemButton w3-button" type="button">Dropmenu 1</button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'o-navigationDropmenu2')" class="a-megaMenuItemButton w3-button" type="button">Dropmenu 2</button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'o-navigationDropmenu3')" class="a-megaMenuItemButton w3-button" type="button">Dropmenu 3<br class="w3-hide-small"></button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'o-navigationDropmenu4')" class="a-megaMenuItemButton w3-button" type="button">Dropmenu 4<br class="w3-hide-small"></button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'o-navigationDropmenu5')" class="a-megaMenuItemButton w3-button" type="button">Dropmenu 5</button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'o-navigationDropmenu6')" class="a-megaMenuItemButton w3-button" type="button">Dropmenu 6</button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'o-navigationSampleMenu')" class="a-megaMenuItemButton w3-button" type="button">Sample Menu<br class="w3-hide-small"> Template</button>
+      </div>
+      <div class="m-megaMenuItemContainer">
+        <button onclick="megamenu_open(this,'0-navigationLinksMenu')" class="a-megaMenuItemButton w3-button" type="button">Links<br class="w3-hide-small"></button>
+      </div>
+    </div>  <!-- End of Navigation Buttons -->
+  </nav>
+</div>  <!-- End of o-navigation --> 
+
+<div id="o-mainContent" class="customBodyHolder" data-name="ContentPlaceHolderMain">
+  <div id="o-navigationLinks" class="ms-dialogHidden">
+
+<div id="o-navigationAboutUs" class="o-navigationSubcontainer w3-hide">
+  <div id="o-AboutUsMenu" class="o-navigationPanel">
+    <div class="m-navigationPanelMainLinks">
+      Hold for about us links.
+	</div>
+  </div>
+</div>
+
+<div id="o-navigationDropmenu1" class="o-navigationSubcontainer w3-hide">
+  <div id="o-dropMenu1" class="o-navigationPanel">
+    <div class="m-navigationPanelMainLinks">
+      Hold for dropmenu1 links.
+	</div>
+  </div>
+</div>
+
+<div id="o-navigationDropmenu2" class="o-navigationSubcontainer w3-hide">
+  <div id="o-dropMenu2" class="o-navigationPanel">
+    <div class="m-navigationPanelMainLinks">
+      Hold for dropmenu2 links.
+	</div>
+  </div>
+</div>
+
+<div id="o-navigationDropmenu3" class="o-navigationSubcontainer w3-hide">
+  <div id="o-dropMenu3" class="o-navigationPanel">
+    <div class="m-navigationPanelMainLinks">
+      Hold for dropmenu3 links.
+	</div>
+  </div>
+</div>
+
+<div id="o-navigationDropmenu4" class="o-navigationSubcontainer w3-hide">
+  <div id="o-dropMenu4" class="o-navigationPanel">
+    <div class="m-navigationPanelMainLinks">
+      Hold for dropmenu4 links.
+	</div>
+  </div>
+</div>
+
+<div id="o-navigationDropmenu5" class="o-navigationSubcontainer w3-hide">
+  <div id="o-dropMenu6" class="o-navigationPanel">
+    <div class="m-navigationPanelMainLinks">
+      Hold for dropmenu5 links.
+	</div>
+  </div>
+</div>
+
+<div id="o-navigationDropmenu6" class="o-navigationSubcontainer w3-hide">
+  <div id="o-dropMenu6" class="o-navigationPanel">
+    <div class="m-navigationPanelMainLinks">
+      Hold for dropmenu6 links.
+	</div>
+  </div>
+</div>
+
+<!-- ============================Sample Menu Template============================================================ -->
+
+<div id="o-navigationSampleMenu" class="o-navigationSubcontainer w3-hide">
+  <div id="o-sampleMenu" class="o-navigationPanel">
+  
+  <!-- main links -->
+  <div class="m-navigationPanelMainLinks">
+	[Menu Items List]
+  </div>
+  <!-- Picture -->
+  <div class="a-navigationMenuImage a-navigationMenuThreeColumn w3-hide-small w3-hide-medium">
+    <img src="images/HomePort.ico">
+  </div>
+
+  </div>
+</div>
+
+<!-- ============================Links Menu============================================================ -->
+<div id="0-navigationLinksMenu" class="o-navigationSubcontainer w3-hide">
+  <div id="o-LinksMenu" class="o-navigationPanel">
+
+  <!-- Links List -->  
+    <div class="m-navigationPanelMainLinks">
+  
+     <!-- Left Column -->
+    <div class="m-navigationPanelLinks a-navigationMenuOneColumn">
+      <button type="button" class="a-closeNavigationButton w3-button w3-hide-medium w3-hide-large">Close ×</button>
+      <div class="a-panelHeading">Business Partners</div>
+        <a class="a-navigationPanelLink w3-button" href="http://nns.huntingtoningalls.com/">Newport News Shipbuilding (NNS)</a>
+      <div class="a-panelHeading">Navy Shipyards</div>
+        <a class="a-navigationPanelLink w3-button" href="http://www.navsea.navy.mil/Home/Shipyards/Norfolk.aspx">Norfolk Naval Shipyard, VA</a>
+        <a class="a-navigationPanelLink w3-button" href="http://www.navsea.navy.mil/Home/Shipyards/PHNS-IMF/">Pearl Harbor Naval Shipyard and Intermediate Maintenance Facility, HI</a>
+        <a class="a-navigationPanelLink w3-button" href="http://www.navsea.navy.mil/Home/Shipyards/Portsmouth.aspx">Portsmouth Naval Shipyard, ME</a>
+        <a class="a-navigationPanelLink w3-button" href="http://www.navsea.navy.mil/Home/Shipyards/PSNS-IMF.aspx">Puget Sound Naval Shipyard and Intermediate Maintenance Facility, WA</a>
+	</div>
+	
+     <!-- Right Column -->
+    <div class="m-navigationPanelLinks a-navigationMenuOneColumn">
+      <div class="a-panelHeading">Tools</div>
+        <a class="a-navigationPanelLink w3-button" href="#">Calculators</a>
+      <div class="a-panelHeading">General Dynamics (GD) Business Units</div>
+        <a class="a-navigationPanelLink w3-button" href="http://www.gd.com/">General Dynamics</a>
+        <button onclick="open_subnavigation('m-aerospacePanel')" class="a-navigationButton w3-button" type="button">>>> Aerospace ></button>
+        <button onclick="open_subnavigation('m-combatSystemsPanel')" class="a-navigationButton w3-button" type="button">>>> Combat Systems ></button>
+        <button onclick="open_subnavigation('m-informationSystemsTechnologyPanel')" class="a-navigationButton w3-button" type="button">>>> Information Systems and Technology ></button>
+        <button onclick="open_subnavigation('m-marineSystemsPanel')" class="a-navigationButton w3-button" type="button">>>> Marine Systems ></button>
+        <a class="a-navigationPanelLink w3-button" href="http://investorrelations.gd.com/stock-information/share-price-center">>>> Stock Information</a>
+    </div>
+	
+  </div> <!-- End of Links List -->
+
+  <!-- Kick Out Panels -->
+  
+  <div class="m-navigationPanelSublinks a-navigationMenuTwoColumn w3-hide">
+    <div class="m-navigationPanelSublinksPanels">
+      <div id="m-aerospacePanel" class="m-navigationPanelSublinksPanel">
+        <button onclick="close_subnavigation('m-aerospacePanel')" type="button" class="w3-button">Close ×</button>
+        <span class="a-subPanelHeading">Aerospace</span>
+        <hr>
+        <a class="a-subPanelLink" href="http://www.gulfstream.com/">Gulfstream</a>
+        <a class="a-subPanelLink" href="http://www.jetaviation.com/">Jet Aviation</a>
+      </div>
+    </div>
+    <div class="m-navigationPanelImages w3-hide-small w3-hide-medium">
+      <!-- Optional Image -->
+    </div>
+  </div>
+  
+  <div class="m-navigationPanelSublinks a-navigationMenuTwoColumn w3-hide">
+    <div class="m-navigationPanelSublinksPanels">
+      <div id="m-combatSystemsPanel" class="m-navigationPanelSublinksPanel">
+        <button onclick="close_subnavigation('m-combatSystemsPanel')" type="button" class="w3-button">Close ×</button>
+        <span class="a-subPanelHeading">Combat Systems</span>
+        <hr>
+        <a class="a-subPanelLink" href="http://www.gdels.com/">European Land Systems</a>
+        <a class="a-subPanelLink" href="http://www.gdls.com/">Land Systems</a>
+        <a class="a-subPanelLink" href="http://www.gd-ots.com/">Ordnance and Tactical Systems</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="m-navigationPanelSublinks a-navigationMenuTwoColumn w3-hide">
+    <div class="m-navigationPanelSublinksPanels">
+      <div id="m-informationSystemsTechnologyPanel" class="m-navigationPanelSublinksPanel">
+        <button onclick="close_subnavigation('m-informationSystemsTechnologyPanel')" type="button" class="w3-button">Close ×</button>
+        <span class="a-subPanelHeading">Information Systems and Technology</span>
+        <hr>
+        <a class="a-subPanelLink" href="http://www.gdit.com/">Information Technology</a>
+        <a class="a-subPanelLink" href="http://gdmissionsystems.com/">Mission Systems</a>
+      </div>
+    </div>
+  </div>
+  
+  <div class="m-navigationPanelSublinks a-navigationMenuTwoColumn w3-hide">
+    <div class="m-navigationPanelSublinksPanels">
+      <div id="m-marineSystemsPanel" class="m-navigationPanelSublinksPanel">
+        <button onclick="close_subnavigation('m-marineSystemsPanel')" type="button" class="w3-button">Close ×</button>
+        <span class="a-subPanelHeading">Marine Systems</span>
+        <hr>
+        <a class="a-subPanelLink" href="http://www.gdbiw.com/">Bath Iron Works</a>
+        <a class="a-subPanelLink" href="http://www.gdeb.com/">Electric Boat</a>
+        <a class="a-subPanelLink" href="https://eblanding.com/referral-radar/">>>> EB Landing</a>
+        <a class="a-subPanelLink" href="https://fairwaterstore.com/">>>> Fairwater Store</a>		
+        <a class="a-subPanelLink" href="http://www.gdbenefits.com/">>>> GD Service Center (Fidelity NetBenefits)</a>
+        <a class="a-subPanelLink" href="http://www.nassco.com/">NASSCO</a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Place an Image on the drop banner -->
+  <div class="a-navigationMenuImage a-navigationMenuTwoColumn w3-hide-small w3-hide-medium">
+    <img src="EB%20Homeport_files/External%2520Collaboration.jpg" style="width: 250px;">
+  </div>
+
+</div> <!-- End of o-LinksMenu -->
+
+</div> <!-- End of 0-navigationLinksMenu -->
+
+</div>  <!-- End of o-navigationLinks -->
+
+  <span id="PlaceHolderPageTitleInTitleArea-header" class="ms-dialogHidden" style="display:none;">
+    <h1 id="pageTitle" class="ms-core-pageTitle">
+      <span id="DeltaPlaceHolderPageTitleInTitleArea"></span>
+    </h1>
+    <div id="DeltaHorizontalQuickLaunch" class="ms-core-navigation ms-belltown-quicklaunch" role="navigation">
+  	  <div class="ms-quicklaunchouter">
+        <div class="ms-quickLaunch"></div>
+      </div>
+    </div>
+  <br>
+  </span>
+
+  <div id="sideNavBox" class="ms-dialogHidden ms-forceWrap ms-noList">
+    <div id="DeltaPlaceHolderLeftNavBar" class="ms-core-navigation" role="navigation">
+      <div class="ms-core-listMenu-verticalBox">
+        <a id="ctl00_PlaceHolderLeftNavBar_PlaceHolderQuickLaunchBottom_idNavLinkViewAll" accesskey="3" class="ms-core-listMenu-item ms-core-listMenu-heading" href="#"><span class="ms-splinkbutton-text">Site Contents</span></a>                                   
+      </div>                             
+    </div>
+  </div>
+  
+</div> <!-- End of o-mainContent -->
+                             
+</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+
+                </div>
+                <!--END customWrapper-->
+            </div>
+            <!--END s4-bodyContainer-->
+        </div>
+        <!--END s4-workspace-->
+
+</form>
+
+<noscript>
+  <div id="noscriptStatement">
+    Your browser does not have JavaScript enabled. Please turn on JavaScript and try again.
+  </div>
+</noscript>
+
+</body>
+
+</html>

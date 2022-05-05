@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<head>
+
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Slide Out Menu Test</title>
+
+<!-- Link Style Sheets -->
+<link rel="stylesheet" type="text/css" href="css/w3.css">
+<link rel="stylesheet" type="text/css" href="css/HomePORT.css">
+
+<!-- Link Scripts -->
+<script type="text/javascript" src="scripts/jquery1.11.2.js"></script>
+<script type="text/javascript" src="scripts/homeport.js"></script>
+<script type="text/javascript" src="scripts/my_quick_links.js"></script>
+
+</head>
+
+<body>
+  
+<section id="content" class="content">  
+
+<!-- Slideout Buttons & Menus - requies FontAwesome for icons 
+Requires:
+  - FontAwesome - for the icons on the buttons
+  - my_quick_links.js  - MyLink Utilities
+  - homeport.js - opens the slideouts
+  - HomePORT.css - styles menu
+  - jquery1.11.2.js
+  - fgimg.png - for green plus.
+-->
+
+  <!-- My Links Slideout --> 
+  <button class="w3-button a-drawer ms-dialogHidden" onclick="w3_open('m-quickLinkDrawer')" type="button" id="a-quickLinkDrawer" style="right: -30px; display: inline-block;">
+    <i class="fas fa-link"></i>
+    MY LINKS
+  </button>
+  <div class="w3-sidebar w3-bar-block w3-animate-right o-homeportDrawer ms-dialogHidden" id="m-quickLinkDrawer" style="display: none;">
+    <button class="w3-button a-closeButton" type="button">Close ×</button>
+    <h2>My Links</h2>
+    <div>
+      <div id="myQuickLinkContent">
+	    <table class="ms-listviewtable"></table>
+		<span id="a-addLinkSpan">
+	      <hr>
+	      <a href="#" id="a-addQuickLink">
+            <span style="height:10px;width:10px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust">
+	        <img src="images/fgimg.png" alt="" style="left:-0px !important;top:-32px !important;position:absolute;"></span>
+		    &nbsp;ADD A LINK
+	      </a>
+	    </span>
+	    <br>
+	    <i>You can add up to 20 quick links.</i>
+	    <br>
+	    <i>For additional information see the <a href="#">instructions</a></i>
+	  </div>
+	</div>
+  </div>
+  
+  <!-- IT Help Slideout --> 
+  <button class="w3-button a-drawer ms-dialogHidden" onclick="w3_open('m-itHelpDrawer')" type="button" id="a-itHelpDrawer" style="right: -25px; display: inline-block;">
+    <i class="fas fa-desktop"></i>
+    &nbsp;IT HELP
+  </button>
+  <div class="w3-sidebar w3-bar-block w3-animate-right o-homeportDrawer ms-dialogHidden" id="m-itHelpDrawer" style="display: none;">
+    <button class="w3-button a-closeButton" type="button">Close ×</button>
+    <div class="w3-left">
+      <h2>Help Desk</h2>
+      <p>800-GET-HELP (800-438-4357)</p>
+      <div class="m-drawerHelpButtons">
+        <a class="a-drawerHelpButton" href="#">Service Portal</a>
+      </div>
+      <h2>Information Technology (IT)</h2>
+      <p>Please visit the <a href="#">Computer System Support</a> and <a href="#">Information Technology Homepage</a> for detailed responsibilities. Popular topics include:</p>
+      <ul>
+        <li><a href="#">Adobe Connect</a></li>
+        <li><a href="#">Information Security</a></li>
+        <li><a href="#">Outlook and Email Wiki</a></li>
+        <li><a href="#">Printer and Plotter Setup</a></li>
+      </ul>
+    </div>
+    <div class="w3-right">
+      <h2>Production Support</h2>
+      <p>Problems with CAD, Printers, and Production  Control Systems.</p>
+      <h2>Telephone Systems</h2>
+      <p>See <a href="#">Telecommunication Resources</a></p>
+      <br>
+      <h2>IT Service Portal</h2>
+      <ul>
+        <li>Report a problem.</li>
+        <li>Live chat with a service center agent.</li>
+        <li>Submit a service request or check status.</li>
+        <li><a href="#">Quick Guide to Choosing Services</a></li>
+      </ul>
+      <a href="mailto:#">Training Support</a>
+    </div>
+  </div>
+  
+  <!-- Security Slideout --> 
+  <button class="w3-button a-drawer ms-dialogHidden" onclick="w3_open('m-securityDrawer')" type="button" id="a-securityDrawer" style="display: inline-block;">
+    <i class="fas fa-shield-alt"></i>
+    &nbsp;SECURITY
+  </button>
+  <div class="w3-sidebar w3-bar-block w3-animate-right o-homeportDrawer ms-dialogHidden" id="m-securityDrawer" style="display: none;">
+    <button class="w3-button a-closeButton" type="button">Close ×</button>
+    <div>  
+      <h2>Insider Threats</h2>
+      <div class="m-drawerHelpButtons" style="width:300px;">
+        <a class="a-drawerHelpButton" href="#">Report an Insider Threat</a>
+      </div>
+      <a href="#">Learn more about Insider Threats</a>
+
+      <h2 style="margin-top:20px;">Suspicious Contacts</h2>
+      <div class="m-drawerHelpButtons" style="width:300px;">
+        <a class="a-drawerHelpButton" href="#">Report a Suspicious Contact</a>
+      </div>
+      <h2 style="margin-top:20px;">Adverse Information</h2>
+      <div class="m-drawerHelpButtons" style="width:300px;">
+        <a class="a-drawerHelpButton" href="#">Report Adverse Information</a>
+      </div>
+      <a href="#">Learn about Adverse Information</a>
+      <h2 style="margin-top:32px;">Security Website</h2>
+      <a href="#">Industrial Security Compliance (ISC)</a>
+    </div>
+  </div> <!-- End of m-securityDrawer -->
+  
+</div>                             
+</div>
+  
+</section>
+
+</body>
+</html>

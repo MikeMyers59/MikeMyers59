@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <META http-equiv="cache-control" content="no-cache">
+  
+  <title>Sprite Test</title>
+
+<!-- Link Style Sheets -->
+
+<!-- Link Scripts -->
+
+<style>
+
+.folderUp {
+  background: url(images/fgimg.png) 0 -16px;
+  height: 16px;
+  margin: 0 0 0 20px;
+  width: 16px;
+}
+
+.help {
+  background: url(images/fgimg.png) 0 -245px;
+  height: 16px;
+  margin: 0 0 0 20px;
+  width: 19px;
+}
+
+.help2 {
+  background: url(images/spintl.png) 0px 0;
+  height: 16px;
+  margin: 0 0 0 16px;
+  width: 16px;
+}
+
+.help2disabled {
+  background: url(images/spintl.png) -18px 0;
+  height: 16px;
+  margin: 0 0 0 16px;
+  width: 16px;
+}
+
+.info {
+  background: url(images/fgimg.png) 0 -270px;
+  height: 16px;
+  margin: 0 0 0 20px;
+  width: 18px;
+}
+
+</style>
+
+</HEAD>
+
+<BODY>
+
+<h3>spcommon.png</h3>
+Open Menu Arrow:
+<span style="height:4px;width:7px;position:relative;display:inline-block;overflow:hidden;"><img src="images/spcommon.png" style="position: absolute; left :-86px; top: -259px;"></span>
+<br>
+
+From Sprite:
+<img src="images/spcommon.png" style="border-style:solid;margin: 0 0 0 20px;">
+
+<hr>
+
+<h3>spintl.png</h3>
+Help: <div class="help2"></div>
+Help Disabled: <div class="help2disabled"></div>
+
+From Sprite:
+<img src="images/spintl.png" style="border-style:solid;margin: 0 0 0 20px;">
+
+<hr>
+
+<br>
+<h3>fgimg.png</h3>
+Up One Folder: <div class="folderUp"></div>
+Help: <div class="help"></div>
+Info: <div class="info"></div>
+Green Plus: <span style="height:10px;width:10px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust">
+<img src="images/fgimg.png" alt="" style="left:-0px;top:-32px;position:absolute;"></span><br>
+
+From Sprite: 
+  <img src="images/fgimg.png" style="border-style:solid;margin: 0 0 0 20px;">
+
+<hr>
+
+<br>
+<h3>searchresultui.png</h3>
+<style>
+.ms-srch-sb-searchImg {
+  left:-35px;
+  top:-57px;
+  position:absolute;
+}
+
+</style>
+Search, Small: <span style="height:17px;width:17px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust">
+<img src="images/searchresultui.png" style="left:-3px; top:-70px; position:absolute;"></span><br> 
+Search, Large: <span style="height:27px;width:25px;position:relative;display:inline-block;overflow:hidden;" class="s4-clust">
+<img src="images/searchresultui.png" style="left:-58px; top:-3px; position:absolute;"></span><br> 
+From Sprite: <img src="images/searchresultui.png" style="border-style:solid;margin: 0 0 0 20px;">
+</BODY>
+
+</HTML>
