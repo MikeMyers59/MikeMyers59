@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<title>Page Layout 5</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    font: normal 100% "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+    background: #568150 url(images/burst.png) no-repeat center -100px;
+}
+
+.maincontainer {
+  background-color: transparent;
+  padding: 5px;
+}
+
+.small {
+  font-size: 0.5em;
+}
+
+@media (max-width: 850px){
+  #topbar{  width: 100%;  }
+  #ddtoptabs{  width: 100%;  margin: 0;  }
+  #leftcolumn{  margin: 0;  display: none;  position: fixed;  height: 100%;  top: 0;  left: 0;  border-right: 2px solid #eee;  box-shadow: 5px 0 5px gray;  }
+  #leftcolumn #mobilehide{  display: none;  }  
+  #middlecolumn{  width: 100%;  margin: 0;  padding-right: 10px;  border-width: 0;  box-sizing: border-box;  }
+  #bottomarea{  width: auto;  box-sizing: border-box;  }  
+  #bottomright{  float: none;  width: 100%;  padding: 0;  }  
+  #bottomleft{  width: 100%;  padding: 0;  }
+  #contentfooter{  margin: auto;  }
+}
+@media (max-width: 650px){
+  #logodiv{  display: none;  }
+}
+
+</style>
+
+</head>
+
+<body>
+
+<style>
+/* ######### Top Section ######### */
+#logodiv {
+  margin: 5px;
+  width: 350px;
+}
+#logodiv img {
+  padding: 10px;
+}
+#topbar {
+  width: 100%;
+  position: relative;
+  margin: auto;
+  color: black;
+}
+#toprightdiv {
+  width: 350px;
+  font: bold 11px arial, sans-serif;
+  float: right;
+  text-align: right;
+  margin: 10px 15px 0 0;
+}
+#toprightdiv a {
+  text-decoration: none;
+  color: white;
+  margin-right: 4px;
+  letter-spacing: 0.1pt;
+}
+#toprightdiv a:hover {
+  color: yellow;
+  text-decoration: underline;
+}
+#toptabs {
+  width: 970px;
+  margin: 0 auto;
+}
+#toptabs ul {
+  margin: 0;
+  padding: 0;
+  font: bold 14px Arial;
+  list-style-type: none;
+}
+#toptabs li {
+  display: inline;
+  margin: 0;
+}
+#toptabs li:first-child {
+  display: inline;
+  margin-left: 1px;
+}
+
+#toptabs li a {
+  float: left;
+  display: block;
+  text-decoration: none;
+  margin: 0;
+  padding: 9px 8px;  /*padding inside each tab*/
+  color: white;
+  border-bottom-width: 0;
+  margin-right: 7px;
+  background: #425945;
+  border-radius: 7px 7px 0 0;
+  /*background of tabs (default state)*/
+}
+#toptabs li a:visited {
+  color: white;
+}
+#toptabs li a:hover {
+  background: #282828;
+  /*background of tabs for hover state, plus tab with "selected" class assigned to its LI */
+  border-color: black;
+}
+</style>
+
+<div id="topbar">
+
+<div id="toprightdiv"> 
+  <div id="toprightMenu">
+    <a href="#">Advanced Search</a>|
+    <a href="#">Usage Terms</a>|
+    <a href="#">Submit</a>|
+    <a href="#">Contact</a>
+  </div>
+</div>  <!-- End of Top Right Division -->
+
+<div id="logodiv">
+  <a href="#"><img src="images/mylogo.gif" alt="Logo/Brand" border="0"></a>
+</div>  <!-- End of Logo/Brand -->
+
+<div id="toptabs">
+  <ul>
+  <li><a href="#"><span>Home</span></a></li>
+  <li><a href="#"><span>CSS Home</span></a></li>
+  <li><a href="#"><span>Blog</span></a></li>
+  <li><a href="#"><span>Tools</span></a></li>
+  <li><a href="#"><span>Forums</span></a></li>
+  </ul>
+</div>  <!-- End of the Drop Tabs -->
+
+<div id="TabLineSpacer"></div>
+
+</div> <!-- End of TopBar -->
+
+<style>
+
+#MainContent {
+  border: 1px solid #dadada;
+  dislay: flex;
+  margin: 0 5px;
+}
+#MainContent .titlebar {
+  background-color: transparent;
+  color: #c0c0c0;
+  font-weight: bold;
+  margin: 1em 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5pt;
+  font-size: 110%;
+  padding-left: 18px;
+  text-align: center;
+}
+</style>
+
+<div id="MainContent" class="maincontainer">
+<!-- contains the columns -->
+
+  <div class="titlebar">
+  Main Container 
+  </div>
+
+<style>
+.breadcrumbs {
+  background-color: transparent;
+  color: #c0c0c0;
+  font-family: "Courier New", monospace;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 0 10px;
+  text-decoration: none;
+}
+.breadcrumbs a {
+  color: #c0c0c0;
+  text-decoration: none;
+  padding: 0 5px 0 0;
+}
+.breadcrumbs a:hover {
+  background-color: blue;
+  text-decoration: underline;
+}
+</style>
+  
+  <h3 class="breadcrumbs">
+  <span>Breadcrumbs: </span>
+  <a href="#">Start Page</a>|
+  <a href="#">Subpage 1</a>|
+  <span> Current Page</span>
+  </h3> 
+
+  <hr>
+
+<style>
+#columnsContainer {
+  display:flex;
+}
+</style>
+
+<div id="columnsContainer">
+
+<style>
+/* ######### Left column ######### */
+#leftcolumn {
+  background-color: transparent;
+  border: 1px solid #dadada;
+  width: 250px;
+  padding: 0 0 0 5px;
+  }
+
+#leftcolumn .titlebar {
+  font-weight: bold;
+  color: #c0c0c0;
+  border-bottom: 1px solid #7b9bc4;
+  margin: 1em 0;
+  text-transform: uppercase;
+}
+
+#leftcolumn p {
+  color: #c0c0c0;
+}
+
+#mobilehide {
+  color: #c0c0c0;
+}
+
+</style>
+  
+<div id="leftcolumn"> 
+  <div class="titlebar">Left Column Container</div>
+  <p>Menu links...</p>
+  <div id="mobilehide">[Mobile Hide Area]</div>
+</div>  <!-- End of Left Column -->
+
+<style>
+/* ######### Middle column ######### */
+
+#middlecolumn {
+  background-color: transparent;
+  border: 1px solid #dadada;
+  border-left: 1px solid #C3C3C3;
+  padding: 0;
+  width: 100%;
+}
+#middlecolumn p {
+  color: #c0c0c0;
+  padding-left: 5px;
+}
+#middlecolumn .titlebar {
+  background-color: transparent;
+  border-bottom: 1px solid #7b9bc4;
+  color: #c0c0c0;
+  font-weight: bold;
+  margin: 1em 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5pt;
+  font-size: 110%;
+  padding-left: 18px;
+}
+</style>
+
+<div id="middlecolumn">
+  <div class="titlebar">Middle Column Container</div>
+  <p>Middle Column Information.</p>
+
+</div> <!-- End of Middle Column -->
+
+<style>
+/* ######### Right column ######### */
+#rightcolumn {
+  background-color: transparent;
+  border: 1px solid #dadada;
+  color: #c0c0c0;
+  width: 200px;
+  padding: 0 0 0 5px;
+}
+
+#rightcolumn .titlebar {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5pt;
+  font-size: 110%;
+  padding-left: 18px;
+  border-bottom: 1px solid #dadada;
+}
+
+#rightcolumn .newscontainer {
+  border: 1px solid #dadada;
+  background-color: lightyellow;
+  margin-bottom: 1em;
+  padding: 5px;
+  font-size: 90%;
+}
+</style>
+
+<div id="rightcolumn">
+  <div class="titlebar">Right Column Container</div>
+  <p>Right Column Information.</p>
+
+</div> <!-- End of Right Column -->
+
+</div> <!-- End of columnsContainer -->
+
+</div> <!-- End of Main Container -->
+  
+<style>
+#middlearea {
+  background-color: transparent;
+  border: 1px solid #dadada;
+  color: #c0c0c0;
+  margin: 0 5px;
+}
+#middlearea .titlebar {
+  background-color: transparent;
+  color: #c0c0c0;
+  margin: 2px 0 0 0;
+  text-align: center;
+}
+#middlearea p {
+  color: #c0c0c0;
+  margin: 8px 0;
+  padding: 0 0 0 5px;
+}
+</style>
+
+<div id="middlearea">  
+  <div class="titlebar">Middle Area Container</div>
+  <p>Middlearea information.</p>
+</div> <!-- End of the Upper Area -->
+
+<style>
+/* ######### Bottom Area ######### */
+#bottomarea {
+  display: flex;
+  margin: 0 5px;
+}
+
+#bottomleft, 
+#bottomright {
+  border: 1px solid #dadada;
+  margin: 0;
+  padding: 0 0 0 5px;
+}
+
+#bottomleft {
+  padding-right: 0;
+  width: 75%;
+}
+
+#bottomright {
+  font-size: 90%;
+  padding-left: 0;
+  width: 25%;
+}
+
+#bottomleft p,
+#bottomright p {
+  color: #c0c0c0;
+  margin: 8px 0;
+  padding: 0 0 0 5px;
+}
+
+#bottomleft .titlebar,
+#bottomright .titlebar {
+  background-color: transparent;
+  color: #c0c0c0;
+  margin: 2px 0 0 0;
+  text-align: center;
+}
+</style>
+
+<div id="bottomarea">  
+  <div id="bottomleft">
+  <div class="titlebar">Bottom Left Container</div>
+	<p>BL Information</p>
+  </div>
+  <div id="bottomright">
+  <div class="titlebar">Bottom Right Container</div>
+	<p>BR Information</p>
+  </div>
+</div> <!-- End of Bottom Area -->
+
+<style>
+/* ######### Footer Area ######### */
+#footerarea {
+  border: 1px solid #dadada;
+  color: #c0c0c0;
+  background: #3d5c38;
+  margin: 0 5px;
+  height: 50px;
+}
+#footerarea .titlebar {
+  background-color: transparent;
+  color: #c0c0c0;
+  padding: 2px 0 0 0;
+  text-align: center;
+}
+</style>
+
+<div id="footerarea"> 
+  <div class="titlebar">Footer Area</div>
+  <div class="maincontainer">
+  <span class="small">Footer Information</span>
+  </div>
+</div> <!-- End of footerarea -->
+
+</body>
+
+</html>
