@@ -1,0 +1,40 @@
+.starcontainer {
+    filter: progid:DXImageTransform.Microsoft.alpha(opacity=100);
+    width: 100%;
+}
+
+.starclass {
+    cursor: pointer;
+    cursor: hand;
+}
+
+.scoreinfo {
+    background-color: white;
+}
+
+.scoreinfoalt {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    padding: 8px 14px;
+    margin-top: -15px;
+    background: transparent url(circle.gif) no-repeat center center;
+    font-size: 90%;
+}
+
+.scoreinfo sub {
+    font-size: 110%;
+}
+
+.scoreinfoalt sub {
+    font-size: 100%;
+}
+
+.tipmessage {
+    font-size: 100%;
+    position: absolute;
+    background-color: lightyellow;
+    visibility: hidden;
+    border: 1px solid black;
+    padding: 1px 3px;
+}
