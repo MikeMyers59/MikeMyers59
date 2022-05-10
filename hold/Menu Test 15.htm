@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>DD Color Tab II</title>
+
+<script type="text/javascript" src="scripts/scripts.js"></script>
+
+<style type="text/css">
+
+#invertedtabs{
+margin-left: 4px;
+padding: 0;
+width: 100%;
+background: transparent;
+voice-family: "\"}\"";
+voice-family: inherit;
+padding-left: 5px;
+}
+
+#invertedtabs ul{
+font: bold 11px Arial, Verdana, sans-serif;
+margin:0;
+margin-bottom: 1em; /*margin between menu and rest of content*/
+padding:0;
+list-style:none;
+}
+
+#invertedtabs li{
+display:inline;
+margin:0 2px 0 0;
+padding:0;
+text-transform:uppercase;
+line-height: 1.5em;
+}
+
+#invertedtabs a{
+float:left;
+color: white;
+background: #8b0000 url(media/color_tabs_left2.gif) no-repeat left bottom;
+margin:0 2px 0 0;
+padding:0 0 0 3px;
+text-decoration:none;
+letter-spacing: 1px;
+}
+
+#invertedtabs a span{
+float:left;
+display:block;
+background: transparent url(media/color_tabs_right2.gif) no-repeat right bottom;
+padding:3px 9px 3px 6px;
+}
+
+#invertedtabs a span{
+float:none;
+}
+
+
+#invertedtabs a:hover{
+background-color: #d50509;
+}
+
+#invertedtabs a:hover span{
+background-color: #d50509;
+}
+
+#invertedtabs #current a, #invertedtabs #current span{ /*currently selected tab*/
+background-color: #d50509;
+}
+
+#invertedtabsline{
+clear: both;
+padding: 0;
+width: 100%;
+height: 8px;
+line-height: 8px;
+background: #8b0000;
+border-bottom: 1px solid #fff; /*Remove this to remove border between bar and tabs*/
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="invertedtabsline">&nbsp;</div>
+
+<div id="invertedtabs">
+<ul>
+<li style="margin-left: 1px"><a href="#" title="Home"><span>Home</span></a></li>
+<li><a href="#" title="New"><span>New</span></a></li>
+<li id="current"><a href="#" title="Revised"><span>Revised</span></a></li>
+<li><a href="#" title="Tools"><span>Tools</span></a></li>	
+<li><a href="#" title="DHTML Forums"><span>Forums</span></a></li>	
+</ul>
+</div>
+
+<br style="clear: left" />
+<style>
+textarea.codecontainer {
+    border: 1px dashed gray;
+    width: 98%;
+    height: 150px;
+    background-color: #EFEFEF;
+    margin-top: 1em;
+    clear: left;
+    padding-left: 5px;
+}
+
+.clearfix:after {
+    /*Clear floats hack: http://positioniseverything.net/easyclearing.html*/
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-table;
+}
+
+.codetitle {
+    padding-left: 19px;
+    background: white url(squarebullet2.png) center left no-repeat;
+}
+.selectcode {
+    margin-top: 1em;
+}
+
+.selectcode a.tabs {
+    border: 1px solid gray;
+    border-bottom-width: 0;
+    padding: 0 4px;
+    text-decoration: none;
+    color: navy;
+    margin-right: 3px;
+}
+
+.selectcode a.tabs:visited, .selectcode a.tabs:active {
+    color: navy;
+}
+
+.selectcode a.tabs:hover {
+    background-color: #EFEFEF;
+    color: navy;
+}
+</style>
+<p><b class="codetitle">The Code:</b></p>
+<form>
+<div class="selectcode">
+  <a href="#selectcode" class="tabs" rel="0">Select Code</a> 
+  <a href="#expandcode" class="tabs" rel="0" rev="156 defaultHeight">Expand</a>
+</div>
+<textarea class="codecontainer">The Code goes here</textarea>
+</form>
+
+
+<style>
+#footermenu {
+    margin: 0;
+    padding: 0;
+    float: right;
+    font-size: 90%;
+}
+
+#footermenu ul {
+    margin: 0;
+    padding-left: 0;
+    float: left;
+    font-weight: bold;
+    border: 1px solid #DFDFDF;
+    border-width: 1px 0;
+}
+
+#footermenu ul li {
+    display: inline;
+}
+
+#footermenu ul li a {
+    float: left;
+    color: gray;
+    font-weight: bold;
+    padding: 2px 6px 4px 6px;
+    text-decoration: none;
+    background: #f3f5fb url(menudivide.gif) top right repeat-y;
+}
+
+#footermenu ul li a:hover {
+    color: #565656;
+    background-color: #F3F3F3;
+    border-bottom: 4px solid gray;
+    padding-bottom: 0;
+}
+</style>
+
+<div id="footermenu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">New</a></li>
+    <li><a href="#">Revised</a></li>
+    <li><a href="#">DHTML Menus</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</div>  
+
+</body>
+
+</html>
