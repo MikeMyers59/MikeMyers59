@@ -1,0 +1,697 @@
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 2;
+    font: normal 100% "Lucida Grande", "Trebuchet MS", Verdana, Helvetica, sans-serif;
+    background: #568150 url(http://www.dynamicdrive.com/eeincludes/burst.png) no-repeat center -100px;
+}
+
+div.sideadbsa {
+    /* bsa stuff */
+    margin-bottom: 1em;
+}
+
+code.blockcode {
+    display: block;
+    padding: 5px;
+    border: 1px solid gray;
+    width: 400px;
+    background-color: white;
+}
+
+code {
+    background-color: lightyellow;
+}
+
+pre, p.codearea {
+    background-color: #EFEFEF;
+    font-size: 13px;
+    width: 98%;
+    border: 1px dashed gray;
+    padding: 5px;
+}
+
+p.codearea {
+    margin: 10px 0;
+}
+
+textarea.codecontainer {
+    border: 1px dashed gray;
+    width: 98%;
+    height: 150px;
+    background-color: #EFEFEF;
+    margin-top: 1em;
+    clear: left;
+    padding-left: 5px;
+}
+
+.selectcode {
+    margin-top: 1em;
+}
+
+.selectcode a.tabs {
+    border: 1px solid gray;
+    border-bottom-width: 0;
+    padding: 0 4px;
+    text-decoration: none;
+    color: navy;
+    margin-right: 3px;
+}
+
+.selectcode a.tabs:visited, .selectcode a.tabs:active {
+    color: navy;
+}
+
+.selectcode a.tabs:hover {
+    background-color: #EFEFEF;
+    color: navy;
+}
+
+.submitform p {
+    margin: 10px 0;
+}
+
+.submitform .inputbox {
+    width: 300px;
+    border: 1px solid gray;
+}
+
+.submitform textarea {
+    width: 450px;
+    height: 150px;
+    border: 1px solid gray;
+}
+
+.submitform .formbuttons {
+    border: 1px solid black;
+}
+
+.codetitle {
+    padding-left: 19px;
+    background: white url(squarebullet2.png) center left no-repeat;
+}
+
+.codeimages img {
+    border: 1px dashed gray;
+    margin-right: 8px;
+}
+
+a:link {
+    color: #aa2716
+}
+
+a:visited {
+    color: #821F11
+}
+
+a:hover, a:active {
+    color: red;
+}
+
+a:link {
+    color: #d82412
+}
+
+a:visited {
+    color: #a12115
+}
+
+.maincontainer {
+    position: relative;
+    z-index: 100;
+    width: 960px;
+    padding-left: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: 2px solid #e0e0e0;
+    border-width: 0 2px;
+}
+
+* html #.maincontainer {
+    /*IE only */
+    width: 935px;
+    /*IE 5*/
+    w\idth: 950px;
+    /*IE 6*/
+}
+
+.header {
+    font-size: 120%;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.comment {
+    background: #fdf6cd;
+    background: -moz-linear-gradient(bottom, #fdf6cd, #f7edb8);
+    background: -webkit-gradient(linear, center bottom, center top, from(#fdf6cd), to(#f7edb8));
+    width: 460px;
+    padding: 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    position: relative;
+}
+
+.comment .downarrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 30px;
+    top: 100%;
+    z-index: 0;
+    border-color: #fdf6cd transparent transparent transparent;
+    /*top, right, bottom, and left border*/
+    border-style: solid;
+    border-width: 12px;
+    /*width of each border*/
+}
+
+.commentfooter {
+    padding-left: 58px;
+    padding-top: 3px;
+    margin-bottom: 2em;
+    font-size: 90%;
+    color: #4A4A4A;
+}
+
+/* ######### Top Section ######### */
+#topbar {
+    width: 100%;
+    position: relative;
+    margin: auto;
+    color: black;
+}
+
+#logodiv {
+    width: 350px;
+}
+
+#logodiv img {
+    padding: 10px;
+}
+
+#toprightdiv {
+    width: 350px;
+    font: bold 11px arial, sans-serif;
+    float: right;
+    text-align: right;
+    margin: 10px 15px 0 0;
+}
+
+#toprightdiv a {
+    text-decoration: none;
+    color: white;
+    margin-right: 4px;
+    letter-spacing: 0.1pt;
+}
+
+#toprightdiv a:hover {
+    color: yellow;
+}
+
+#toprightdiv #topform {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 5px;
+}
+
+#toprightdiv #keywords {
+    border: 1px solid gray;
+    width: 210px;
+    background: #FBFCFA;
+    font: 12px verdana, sans-serif;
+    color: #443;
+    padding: 5px;
+    outline: none;
+    margin-right: 5px;
+}
+
+#toprightdiv #keywords:focus {
+    border: 1px solid black;
+}
+
+#toprightdiv #topformbutton {
+    cursor: pointer;
+    margin-top: 5px;
+    border: outset 1px #ccc;
+    background: #999;
+    font-size: 14px;
+    color: black;
+    padding: 3px;
+    border-radius: 9px;
+    background: white;
+}
+
+#ddtoptabs {
+    width: 970px;
+    margin: 0 auto;
+}
+
+#ddtoptabs ul {
+    margin: 0;
+    padding: 0;
+    font: bold 14px Arial;
+    list-style-type: none;
+}
+
+#ddtoptabs li {
+    display: inline;
+    margin: 0;
+}
+
+#ddtoptabs li a {
+    float: left;
+    display: block;
+    text-decoration: none;
+    margin: 0;
+    padding: 9px 8px;
+    /*padding inside each tab*/
+    color: white;
+    border-bottom-width: 0;
+    margin-right: 7px;
+    background: #425945;
+    border-radius: 7px 7px 0 0;
+    /*background of tabs (default state)*/
+}
+
+#ddtoptabs li a:visited {
+    color: white;
+}
+
+#ddtoptabs li a:hover, .mattblacktabs li.selected a {
+    background: #282828;
+    /*background of tabs for hover state, plus tab with "selected" class assigned to its LI */
+    border-color: black;
+}
+
+#ddtoptabsline {
+    clear: both;
+    padding: 0;
+    width: 100%;
+    height: 2px;
+    line-height: 8px;
+    background: black;
+}
+
+#ddtoptabsline .leftarrow, #ddtoptabsline .rightarrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 100%;
+    z-index: 0;
+    border-color: black transparent transparent transparent;
+    /*top, right, bottom, and left border*/
+    border-style: solid;
+    border-width: 8px;
+    /*width of each border*/
+}
+
+#ddtoptabsline .rightarrow {
+    left: auto;
+    right: 0;
+}
+
+/* ######### Left column ######### */
+#leftcolumn {
+    background-color: white;
+    clear: left;
+    width: 168px;
+    margin-right: 5px;
+    float: left;
+    margin-top: 1em;
+}
+
+.ddmarkermenu {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.ddmarkermenu li {
+    padding-bottom: 6px;
+}
+
+.ddmarkermenu li a {
+    color: #aa2716;
+    background: url(arrowbullet.gif) no-repeat center left;
+    display: block;
+    padding: 2px 0;
+    padding-left: 19px;
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px solid #dadada;
+    font-size: 90%;
+}
+
+.ddmarkermenu li a:visited {
+    color: #aa2716;
+}
+
+.ddmarkermenu a:hover {
+    background-color: #F3F3F3;
+    color: #aa2716;
+}
+
+.listmenu {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 0;
+}
+
+.listmenu li {
+    padding-bottom: 6px;
+}
+
+.listmenu li a {
+    text-decoration: none;
+    background: url(bullet.png) no-repeat center left;
+    padding-left: 19px;
+    display: block;
+    font-size: 90%;
+    border-bottom: 1px solid #dadada;
+}
+
+.listmenu a:hover {
+    background-color: #F3F3F3;
+}
+
+.listmenu2 li a {
+    background: url(commentbullet.png) no-repeat top left;
+}
+
+#leftcolumn .titlebar {
+    font-weight: bold;
+    background: black url(titlebg.jpg) repeat-x top left;
+    color: white;
+    border-bottom: 1px solid #7b9bc4;
+    margin: 1em 0;
+    text-transform: uppercase;
+    padding: 2px;
+    padding-left: 10px;
+}
+
+div.bsaleft div.bsap {
+    border: none !important;
+    width: 165px !important;
+    margin-top: 1em;
+}
+
+div.bsaleft div.bsap div {
+    padding: 0 !important;
+}
+
+div.bsaleft div.bsap div.bsa_it_ad {
+    border: none;
+}
+
+div.bsaleft div.bsap span {
+    text-align: left !important;
+    position: static !important;
+}
+
+div.bsaleft div.bsap span.bsa_it_p {
+    margin-top: 4px;
+    text-align: right !important;
+}
+
+/* ######### Middle column ######### */
+#middlecolumn {
+    background-color: transparent;
+    width: 587px;
+    float: left;
+    border-left: 1px solid #C3C3C3;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 1em;
+    padding-bottom: 1em;
+}
+
+.headers {
+    border: 1px solid #BBB;
+    border-bottom: 1px solid gray;
+    width: 99%;
+    background: url(chromebg.gif) center center repeat-x;
+    margin-left: 0;
+    padding: 2px 0 2px 5px;
+    text-align: left;
+    font-size: 120%;
+}
+
+.headers img {
+    float: right;
+    margin-right: 5px;
+    padding-top: 5px;
+}
+
+.headers span, .headers a.bar {
+    padding: 5px 0;
+    padding-left: 0;
+}
+
+.headers a.bar {
+    /*background: transparent url(arrowbullet2.gif) no-repeat center right;*/
+    text-decoration: none;
+    /*padding-right: 18px;*/
+    color: #273565;
+}
+
+.headers a:visited, .headers a:active {
+    color: #273565;
+}
+
+.headers a:hover {
+    color: blue;
+}
+
+.screenshots {
+    float: left;
+    width: 150px;
+    height: 95px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 1em;
+    font-size: 90%;
+}
+
+html>body .screenshots {
+    /*Non IE rule*/
+    /* margin-right: 35px; */
+}
+
+.screenshots div {
+    background: white url(thumbback.jpg) top left no-repeat;
+    padding: 2px 7px 5px 2px;
+    position: relative;
+}
+
+.screenshots div a img {
+    border: 1px solid gray;
+    width: 100%;
+    height: auto;
+}
+
+.screenshots a:hover img {
+    border-color: black;
+}
+
+.screenshots a:hover {
+    /*IE fix*/
+    color: black;
+}
+
+.screenshots a {
+    text-decoration: none;
+    padding-left: 3px;
+}
+
+.csslisting {
+    clear: left;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.csslisting .floatbox {
+    float: left;
+    background: white url(thumbback.jpg) no-repeat top left;
+    width: 155px;
+}
+
+.csslisting .floatbox img {
+    border: 1px solid gray;
+    margin-bottom: 10px;
+}
+
+.csslisting .floatbox a:hover img {
+    border-color: black;
+}
+
+.csslisting .floatbox a:hover {
+    /*IE fix*/
+    color: gray;
+}
+
+* html .csslisting .floatbox {
+    /* IE 3px hack*/
+    width: 152px
+}
+
+* html .csslisting p {
+    /* IE 3px hack*/
+    height: 1%;
+}
+
+.csslisting p {
+    margin-left: 155px;
+    font-size: 90%;
+    line-height: 1.5;
+}
+
+* html .csslisting p {
+    /* IE offset to the left 3px hack*/
+    margin-left: 152px;
+}
+
+.csslisting p b {
+    font-size: 110%;
+}
+
+#blogcontainer {
+    font-size: 90%;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+#blogcontainer .title {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding: 0;
+}
+
+#blogcontainer .info {
+    color: gray;
+    margin-top: 1px;
+}
+
+#blogcontainer p {
+    margin: 8px 0;
+}
+
+div.info + p:first-letter {
+    font-size: ;
+    float: left;
+    font: bold 180% Arial;
+    margin-right: 3px;
+}
+
+/* ######### Right column ######### */
+#rightcolumn {
+    background-color: white;
+    width: 170px;
+    float: left;
+    margin-top: 1em;
+}
+
+#middlecolumn .titlebar, #rightcolumn .titlebar {
+    font-weight: bold;
+    margin: 1em 0;
+    text-transform: uppercase;
+    letter-spacing: 1.5pt;
+    color: #686868;
+    font-size: 110%;
+    padding-left: 18px;
+    border-bottom: 1px solid #dadada;
+    background: white url(squarebullet.png) center left no-repeat
+}
+
+#rightcolumn .titlebar {
+    margin-top: 10px;
+}
+
+#rightcolumn .newscontainer {
+    border: 1px solid #dadada;
+    background-color: lightyellow;
+    margin-bottom: 1em;
+    padding: 5px;
+    font-size: 90%;
+}
+
+/* ######### Site Footer ######### */
+#contentfooter {
+    font-size: 11px;
+    font-family: Verdana;
+    padding-bottom: 1em;
+    margin-left: 173px;
+    clear: both;
+}
+
+#footerarea {
+    clear: left;
+    background: #3d5c38;
+    padding-top: 15px;
+    text-align: center;
+    height: 50px;
+}
+
+#footermenu {
+    margin: 0;
+    padding: 0;
+    float: right;
+    font-size: 90%;
+}
+
+#footermenu ul {
+    margin: 0;
+    padding-left: 0;
+    float: left;
+    font-weight: bold;
+    border: 1px solid #DFDFDF;
+    border-width: 1px 0;
+}
+
+#footermenu ul li {
+    display: inline;
+}
+
+#footermenu ul li a {
+    float: left;
+    color: gray;
+    font-weight: bold;
+    padding: 2px 6px 4px 6px;
+    text-decoration: none;
+    background: #f3f5fb url(menudivide.gif) top right repeat-y;
+}
+
+#footermenu ul li a:hover {
+    color: #565656;
+    background-color: #F3F3F3;
+    border-bottom: 4px solid gray;
+    padding-bottom: 0;
+}
+
+.clearfix:after {
+    /*Clear floats hack: http://positioniseverything.net/easyclearing.html*/
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {
+    display: inline-table;
+}
+
+/* Hides from IE-mac \*/
+* html .clearfix {
+    height: 1%;
+}
+
+.clearfix {
+    display: block;
+}
+
+/* End hide from IE-mac */
