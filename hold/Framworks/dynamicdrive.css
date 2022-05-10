@@ -1,0 +1,385 @@
+code.blockcode {
+  display: block;
+  padding: 5px;
+  border: 1px solid gray;
+  width: 400px;
+  background-color: white;
+}
+
+code {
+  background-color: lightyellow;
+}
+
+pre, p.codearea {
+  background-color: #EFEFEF;
+  font-size: 13px;
+  width: 98%;
+  border: 1px dashed gray;
+  padding: 5px;
+}
+
+p.codearea {
+  margin: 10px 0;
+}
+
+.submitform p {
+  margin: 10px 0;
+}
+
+.submitform .inputbox {
+  width: 300px;
+  border: 1px solid gray;
+}
+
+.submitform textarea {
+  width: 450px;
+  height: 150px;
+  border: 1px solid gray;
+}
+
+.submitform .formbuttons {
+  border: 1px solid black;
+}
+
+.codeimages img {
+  border: 1px dashed gray;
+  margin-right: 8px;
+}
+
+a:link {
+  color: #aa2716
+}
+
+a:visited {
+  color: #821F11
+}
+
+a:hover, a:active {
+  color: red;
+}
+
+a:link {
+  color: #d82412
+}
+
+a:visited {
+  color: #a12115
+}
+
+.header {
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.comment {
+  background: #fdf6cd;
+  background: -moz-linear-gradient(bottom, #fdf6cd, #f7edb8);
+  background: -webkit-gradient(linear, center bottom, center top, from(#fdf6cd), to(#f7edb8));
+  width: 460px;
+  padding: 10px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.comment .downarrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 30px;
+  top: 100%;
+  z-index: 0;
+  border-color: #fdf6cd transparent transparent transparent;
+  /*top, right, bottom, and left border*/
+  border-style: solid;
+  border-width: 12px;
+  /*width of each border*/
+}
+
+.commentfooter {
+  padding-left: 58px;
+  padding-top: 3px;
+  margin-bottom: 2em;
+  font-size: 90%;
+  color: #4A4A4A;
+}
+
+#toprightdiv #topform {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 5px;
+}
+
+#toprightdiv #keywords {
+  border: 1px solid gray;
+  width: 210px;
+  background: #FBFCFA;
+  font: 12px verdana, sans-serif;
+  color: #443;
+  padding: 5px;
+  outline: none;
+  margin-right: 5px;
+}
+
+#toprightdiv #keywords:focus {
+  border: 1px solid black;
+}
+
+#toprightdiv #topformbutton {
+  cursor: pointer;
+  margin-top: 5px;
+  border: outset 1px #ccc;
+  background: #999;
+  font-size: 14px;
+  color: black;
+  padding: 3px;
+  border-radius: 9px;
+  background: white;
+}
+
+#ddtoptabsline {
+  clear: both;
+  padding: 0;
+  width: 100%;
+  height: 2px;
+  line-height: 8px;
+  background: black;
+}
+
+#ddtoptabsline .leftarrow, 
+#ddtoptabsline .rightarrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  top: 100%;
+  z-index: 0;
+  border-color: black transparent transparent transparent;
+  /*top, right, bottom, and left border*/
+  border-style: solid;
+  border-width: 8px;
+  /*width of each border*/
+}
+
+#ddtoptabsline .rightarrow {
+  left: auto;
+  right: 0;
+}
+
+.ddmarkermenu {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.ddmarkermenu li {
+  padding-bottom: 6px;
+}
+
+.ddmarkermenu li a {
+  color: #aa2716;
+  background: url(arrowbullet.gif) no-repeat center left;
+  display: block;
+  padding: 2px 0;
+  padding-left: 19px;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid #dadada;
+  font-size: 90%;
+}
+
+.ddmarkermenu li a:visited {
+  color: #aa2716;
+}
+
+.ddmarkermenu a:hover {
+  background-color: #F3F3F3;
+  color: #aa2716;
+}
+
+.listmenu {
+  list-style-type: none;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.listmenu li {
+  padding-bottom: 6px;
+}
+
+.listmenu li a {
+  text-decoration: none;
+  background: url(bullet.png) no-repeat center left;
+  padding-left: 19px;
+  display: block;
+  font-size: 90%;
+  border-bottom: 1px solid #dadada;
+}
+
+.listmenu a:hover {
+  background-color: #F3F3F3;
+}
+
+.listmenu2 li a {
+  background: url(commentbullet.png) no-repeat top left;
+}
+
+
+div.bsaleft div.bsap {
+  border: none !important;
+  width: 165px !important;
+  margin-top: 1em;
+}
+
+div.bsaleft div.bsap div {
+  padding: 0 !important;
+}
+
+div.bsaleft div.bsap div.bsa_it_ad {
+  border: none;
+}
+
+div.bsaleft div.bsap span {
+  text-align: left !important;
+  position: static !important;
+}
+
+div.bsaleft div.bsap span.bsa_it_p {
+  margin-top: 4px;
+  text-align: right !important;
+}
+
+.headers {
+  border: 1px solid #BBB;
+  border-bottom: 1px solid gray;
+  width: 99%;
+  background: url(chromebg.gif) center center repeat-x;
+  margin-left: 0;
+  padding: 2px 0 2px 5px;
+  text-align: left;
+  font-size: 120%;
+}
+
+.headers img {
+  float: right;
+  margin-right: 5px;
+  padding-top: 5px;
+}
+
+.headers span, .headers a.bar {
+  padding: 5px 0;
+  padding-left: 0;
+}
+
+.headers a.bar {
+  /*background: transparent url(arrowbullet2.gif) no-repeat center right;*/
+  text-decoration: none;
+  /*padding-right: 18px;*/
+  color: #273565;
+}
+
+.headers a:visited, .headers a:active {
+  color: #273565;
+}
+
+.headers a:hover {
+  color: blue;
+}
+
+.screenshots {
+  float: left;
+  width: 150px;
+  height: 95px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 1em;
+  font-size: 90%;
+}
+
+html>body .screenshots {
+  /*Non IE rule*/
+  /* margin-right: 35px; */
+}
+
+.screenshots div {
+  background: white url(thumbback.jpg) top left no-repeat;
+  padding: 2px 7px 5px 2px;
+  position: relative;
+}
+
+.screenshots div a img {
+  border: 1px solid gray;
+  width: 100%;
+  height: auto;
+}
+
+.screenshots a:hover img {
+  border-color: black;
+}
+
+.screenshots a {
+  text-decoration: none;
+  padding-left: 3px;
+}
+
+.csslisting {
+  clear: left;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.csslisting .floatbox {
+  float: left;
+  background: white url(thumbback.jpg) no-repeat top left;
+  width: 155px;
+}
+
+.csslisting .floatbox img {
+  border: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.csslisting .floatbox a:hover img {
+  border-color: black;
+}
+
+.csslisting .floatbox a:hover {
+  /*IE fix*/
+  color: gray;
+}
+
+* html .csslisting .floatbox {
+  /* IE 3px hack*/
+  width: 152px
+}
+
+* html .csslisting p {
+  /* IE 3px hack*/
+  height: 1%;
+}
+
+.csslisting p {
+  margin-left: 155px;
+  font-size: 90%;
+  line-height: 1.5;
+}
+
+* html .csslisting p {
+  /* IE offset to the left 3px hack*/
+  margin-left: 152px;
+}
+
+.csslisting p b {
+  font-size: 110%;
+}
+
+div.info + p:first-letter {
+  font-size: ;
+  float: left;
+  font: bold 180% Arial;
+  margin-right: 3px;
+}
