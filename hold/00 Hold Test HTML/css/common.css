@@ -1,0 +1,658 @@
+
+/* common.css */
+/*
+   bd-	border
+   bg-	bscground
+   c-	cursor
+   f-	font
+   fl-	float
+   ls-	list style
+   m-	margin
+   p-	position
+   txt- text
+   va-	vertical align
+   w-	width
+*/
+
+/* Base for starting modular font scale
+   px	em
+   ===	======
+     2	 0.125
+     4	 0.25
+     8	 0.5
+    12	 0.75
+    14	 0.875
+    16	 1
+    20 	 1.25
+    32	 2
+    36	 2.25
+    64	 4
+   128	 8
+   256	16
+   512	32
+
+*/
+
+/* Color Names Available
+		#RRBBGG				RR, GG, & BB are red green  & blue with values from 00-FF.
+		rgb(RR,GG,BB)		RR, GG, & BB are red green  & blue with values from 0-255.
+		rgba(RR,GG,BB,aa)	aa- alpha channel (opacity) with values 0.0 to 1.0.   
+   Color			Hexadecimal		RGB
+   -----			-----------		---
+   currentColor		n/a				n/a
+   black			#000			rgb(0, 0, 0)
+   blue				#00f			rgb(0, 0, 255)
+   darkgoldenrod	
+   dimgray
+   cadetblue
+   chartreuse
+   dimgray
+   gainsboro
+   green			#0f0			rgb(0, 255, 0)
+   grey
+   lightgrey
+   lightsteelblue
+   navy
+   red				#f00			rgb(255, 0, 0)
+   silver			#c0c0c0	
+   white			#fff			rgb(255, 255, 255)
+   whitesmoke
+   yellow			
+*/
+
+/* Importing External CSS Example */
+/* 
+   @import url( css/Breadcrumbs.css );
+*/
+
+:root {
+  --blackish: 		#343434;
+  --dark-blue:		#0272A7;
+  --green1: 		#019875;
+  --light-blue:		#f1f8fd;
+  --maroon: 		#9b301c;
+  --medium-blue:	#5EAEFF;
+  --navyblue: 		rgb(0, 56, 107);
+  --orange: 		#f04f23; 
+  --peach: 			#34495e;
+  --red1: 			#D9534F;
+  --softblack:		#242526;
+  --yellow1: 		#DFD300;
+  --yelloworange: 	rgb(255, 184, 88);
+}
+
+.new-green-text {
+    color: #07B48E;
+}
+}
+
+/* Resets */ 
+* { 
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  outline: none;
+}
+
+fieldset {
+}
+
+form {
+  margin: 0px; padding: 0px;
+}
+
+html, body {
+  background: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {  font-size: 2.4em; }
+h2 {  font-size: 2.0em; }
+h3 {  font-size: 1.8em; }
+h4 {  font-size: 1.6em; }
+h5 {  font-size: 1.4em; }
+h6 {  font-size: 1.2em; }
+
+img {
+  border: 0px currentColor; border-image: none;
+}
+
+input {
+}
+
+legend {
+}
+
+p {
+  cursor: text;
+  margin: 0;
+  padding: 0;
+}
+
+.hide {
+  display:none;
+  visibility: hidden;
+}
+
+.nav-button {
+  border-width: 2px; border-style: solid; border-color: rgb(102, 153, 204) navy navy rgb(102, 153, 204); margin: 1px; padding: 3px 8px; text-align: center; color: rgb(255, 255, 255); font-family: Arial; font-size: 10px; font-weight: bold; cursor: pointer; background-color: rgb(70, 130, 180);
+}
+
+.spacer {
+  Margin: 20px 0;
+  Padding: 10px 0;
+}                          /* <div class="spacer"></div> Quickly add 30px space between other elements. */
+
+.visible {
+  visibility: visible;
+}
+
+/* ================Clear Fix=============== */
+.clear {
+  clear: both;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearleft {
+  clear:left;
+}
+.clearright {
+  clear:right;
+}
+
+/* ====================================Anchors================================= */
+a {
+  font-weight: bold;
+  color: #00529B;
+  text-decoration: none;
+  cursor: pointer;
+}
+a[disabled] {
+  color: #999 !important;
+  cursor: default;
+}
+a[disabled]:hover {
+  text-decoration:none;
+}
+a.bigLink {
+  font-weight: bold;
+  font-size: 11pt;
+  font-family: Arial;
+  color: #00529B;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.colorLink:hover {
+  text-decoration: underline;
+}
+a.link {
+  font-weight: bold;
+  font-size: 9pt;
+  font-family: Arial;
+  /*color: #3280A7;*/
+  color: #00529B;
+  text-decoration: none;
+  cursor: pointer;
+}  
+a.link:hover {
+  text-decoration: underline;
+}
+a.plain {
+  text-decoration:none;
+}
+a.plain:hover {
+  text-decoration:underline;
+}
+a.quickLink {
+  display: block;
+  background-attachment: left top;
+  background-repeat: no-repeat;
+  padding-left: 48px;
+  margin-right: 8px;
+  height: 33px;
+  line-height: 34px;
+  border-bottom: 1px solid #cccccc;
+  text-align: left;
+  font-family: "Century Gothic";
+  font-size: 11pt;
+  font-weight: normal;
+  color: #234567;
+  background-position: 8px center;
+}
+a.SmallLink {
+}
+
+/* ================================Blockquote================================= */
+blockquote {
+  width:75%;
+  margin:5px auto;
+  color: black;
+  padding:3px 10px 1px 60px;
+  border-left:8px solid #34495e ;
+  line-height:1.6;
+  position: relative;
+  background:#FABD00;
+}
+
+blockquote::before {
+  font-family:Arial;
+  content: "\201C";
+  color:#34495e;
+  font-size:4em;
+  position: absolute;
+  left: 10px;
+  top:-10px;
+}
+
+blockquote p {
+  font-size:120%;
+}
+
+/* ==================================Borders================================== */
+/* border[-*]: <size> <type> <color>; 
+   <size>: { thin | thick | 9999px }
+   <type>: { dashed | dotted | solid }
+   <color>: { currentColor | #FFFFFF | rgb() | rgba() }
+*/
+
+.bd-dimgray {
+  border: 1px solid dimgray;
+}
+.bd-none {
+  border: none;
+}
+.bd-lightsteelblue {
+  border: 1px solid lightsteelblue;
+}
+
+/* ================================Background================================= */
+/*
+   background: [<Color>] [<url()] [<repeat>] [scroll] [<position>];
+   background-color: { <color> | transparent }
+   background-position: <position>
+   <color>: { currentColor | #FFFFFF | rgb() | rgba() }
+   <repeat> { repeat-x | repeat-y | no-repeat }
+   <position>: { bottom | center | left | left bottom | left top | right | 
+                 right top | right  bottom | top | <xPos> <yPos> }
+*/
+.bg-whitesmoke {
+  background: whitesmoke;
+}
+
+/* ===============================Containers================================== */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.flex-70 { width: 620px; max-width:100%;}
+.flex-50 { width: 445px; max-width:100%;}
+.flex-60 { width: 534px; max-width:100%;}
+.flex-40 { width: 356px; max-width:100%;}
+.flex-30 { width: 267px; max-width:100%;}
+
+/* ==================================Cursor=================================== */
+.c-pointer {
+  cursor: pointer;
+}
+
+/* ==================================Display=================================== */
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.hide {
+  display: none;
+  visibility: hidden;
+}
+.inline {
+  display: inline;
+}
+.inline {
+  display: inline-block;
+}
+.d-listitem {
+  display: list-item;
+}
+.nocontent {
+  content:"";
+}
+.show {
+  display: block;
+  visibility: visible;
+}
+.table {
+  display:table;
+}
+
+/* ==================================Float===================================== */
+.fl-right {
+  float: right;
+}
+.fl-left {
+  float: left;
+}
+.fl-middle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ==================================Fonts===================================== */
+/* 
+   f-f	font family
+   f-s	font size (px)
+   f-w	font weight
+   
+   Monospace: 'Monotype.com', "Courier New", Courier
+   San-Serif: Arial, Helvetica, 'Open Sans', "Segoe UI", Tahoma, "trebuchet ms", Verdena
+   Serif: "Times New Roman"
+   <size> { inherit }
+   <weight>: { bold | bolder | normal }
+*/
+
+.f-fmonospace {  font-family: "Courier New", monospace;}
+.f-fsanserif {  font-family: Arial, Helvetica, sans-serif;}
+.f-fserif {  font-family: "Times New Roman", serif;}
+
+.f-s10, .f-small {  font-size: 10px;}
+.f-s12, .f-normal {  font-size: 12px;}
+
+.f-wbold {  font-weight: bold;}
+
+/* Font Style */
+.f-italic {
+  font-style:italic;
+}
+
+/* ==================================Lists===================================== */
+
+/* Templates
+<ol class="lower-alpha-bullets"> </ol>
+<ol class="upper-alpha-bullets"> </ol>
+<ol class="lower-roman-bullets"> </ol>
+<ol class="upper-roman-bullets"> </ol>
+<ol class="numbered-bullets" ></ol>	
+
+<ul class="no-bullets"> </ul>
+<ul class="circle-bullets"> </ul>
+<ul class="square-bullets"> </ul>
+*/
+
+ol, ul, li, dl, dt, dd {
+  margin: 0;
+  padding: 0;
+}
+
+.ls-none {
+  list-style: none;
+}
+
+/* ==============Definition List======================== */
+
+dl {
+  margin-left: 10px;
+}
+dt {
+  margin-left: 15px;
+  font-weight: bold;
+  color:#0272A7;
+}
+dd {
+
+}
+
+/* ============Ordered List================ */
+
+ol {
+  line-height: 25px;  
+}
+.upper-roman-bullets {
+  list-style-type: upper-roman;
+  line-height: 25px;  
+}
+.lower-roman-bullets {
+  list-style-type: lower-roman;
+  line-height: 25px;  
+}
+.upper-alpha-bullets {
+  list-style-type: upper-alpha;
+  line-height: 25px;  
+}
+.lower-alpha-bullets {
+  list-style-type: lower-alpha;
+  line-height: 25px;  
+}
+.numbered-bullets {
+  list-style-type: decimal;
+  line-height: 25px;  
+}
+
+/* ============Unordered List============== */
+
+ul {
+  line-height: 25px;
+}
+.no-bullets {
+  list-style-type: none;
+  line-height: 25px;
+}
+.circle-bullets {
+  list-style-type: circle;
+  line-height: 25px;  
+}
+.square-bullets {
+  list-style-type: square;
+  line-height: 25px;  
+}
+.no-style {
+  list-style-type: none;
+  margin-left: 0; 
+  padding-left: 0;
+  line-height: 25px;  
+}
+
+/* ==================================Margin==================================== */
+.marginreset {
+  margin: 0;
+}
+.m-10x10 {
+  margin: 10px 10px;
+}
+
+/* ===================================Menus==================================== */
+
+/* ============Pager=========== */
+.pager {
+  background: rgb(243, 244, 246);
+  padding: 0px 0px 7px;
+  font-size: 12px;
+}
+.pager .currentPage {
+  text-align: right;
+}
+.pager .button {
+  margin: -4px 2px;
+}
+.pager table {
+  margin: 0px;
+  padding: 0px;
+}
+
+/* =================================Overflow=================================== */
+/*
+   overflow:	{ auto | hidden | visible }
+   overflow-x:	{ auto | hidden | visible }
+   overflow-y:	{ auto | hidden | visible }
+   text-overflow: { ellipsis };
+*/
+
+/* =================================Padding==================================== */
+/*
+   padding: <top> <right> <bottom> <left>
+   padding: <top> <right-left> <bottom>
+   padding: <top-bottom> <right-left>
+   padding <all>
+   p-	padding (all)
+   p-b  padding bottom
+   p-l  padding left
+   p-r  padding rightt
+   p-t  padding top
+   P-99x99 padding top-bottom by left-right
+*/
+.p-20 {
+  padding: 20px;
+}
+.p-l20 {
+  padding-left: 20px;
+}
+.p-r5 {
+  padding-right: 5px;
+}
+.p-r20 {
+  padding-right: 20px;
+}
+
+/* =================================Position=================================== */
+/*
+   position: { absolute | fixed | relative | static }
+*/
+.p-absolute {  position: absolute;}
+.p-fixed {  position: fixed;}
+.p-relative {  position: relative;}
+
+/* ===============================Shadows===================================== */
+/*
+   box-shadow: none;
+   box-shadow: 0 1px 0 #0070d3 inset;
+   box-shadow: 0 1px 3px #777777 inset, 0 1px 2px #999999;
+   text-shadow: 0 1px 1px #000911;
+*/
+
+
+/* ===================================Tables=================================== */
+table {
+  empty-cells:show;
+  margin: 0px; 
+  padding: 0px;
+}
+th, td {
+  text-align: left;
+}
+
+/* ===================================Text==================================== */
+.selected {
+  background-color: yellow;
+}
+.txt-center p {   text-align: center;}
+
+.txt-lower {  text-transform: lowercase;}
+.txt-overline {  text-decoration: overline;}
+.txt-strike {  text-decoration: strike;}
+.txt-underline {  text-decoration: underline;}
+.txt-upper {  text-transform: uppercase;}
+
+/* Text Colors */
+.txt-blue, .txt-info {  color: blue;}
+.txt-red, .txt-danger, .txt-error {  color: red;}
+
+/* ==============================Vertical Align================================ */
+/* 
+   va-	vertical align
+*/
+
+.va-bottom {
+  vertical-align: bottom;
+}
+.va-middle {
+  vertical-align: middle;
+}
+.va-textbottom {
+  vertical-align:text-bottom;
+}
+.va-top {
+  vertical-align: top;
+}
+
+/* ===================================Width==================================== */
+.w-25 {  width: 25px;}
+.w-30 {  width: 30px;}
+.w-35 {  width: 35px;}
+.w-40 {  width: 40px;}
+.w-45 {  width: 45px;}
+.w-50 {  width: 50px;}
+.w-55 {  width: 55px;}
+.w-60 {  width: 60px;}
+.w-65 {  width: 65px;}
+.w-70 {  width: 70px;}
+.w-75 {  width: 75px;}
+.w-80 {  width: 80px;}
+.w-85 {  width: 85px;}
+.w-90 {  width: 90px;}
+.w-100 {  width: 100px;}
+.w-110 {  width: 110px;}
+.w-135 {  width: 135px;}
+.w-150 {  width: 150px;}
+.w-155 {  width: 155px;}
+.w-165 {  width: 165px;}
+.w-170 {  width: 170px;}
+.w-175 {  width: 175px;}
+.w-195 {  width: 195px;}
+.w-225 {  width: 225px;}
+.w-235 {  width: 235px;}
+.w-300 {  width: 300px;}
+.w-320 {  width: 320px;}
+.w-350 {  width: 350px;}
+.w-370 {  width: 370px;}
+.w-400 {  width: 400px;}
+.w-435 {  width: 435px;}
+.w-600 {  width: 600px;}
+.w-610 {  width: 610px;}
+.w-full {  width:100%;}
+
+@media print  {
+  .NoPrint {  display: none; }
+}
+  
+@media screen {
+
+}
+
+/*Laptop/Desktop*/
+@media screen and (min-width: 1200px) {
+}
+
+/*Tablet and Laptop/Desktop Size*/
+@media screen and (min-width: 768px) {
+}
+
+/*Tablet Size*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<head>
+
+  <META http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+  <title>Test Web Page</title>
+
+<!-- Link Style Sheets -->
+  <link type="text/css" href="css/base.css" rel="Stylesheet">
+  <link type="text/css" href="css/menu.css" rel="Stylesheet">
+  <link type="text/css" href="css/pagelayout.css" rel="Stylesheet">
+  <link type="text/css" href="css/style.css" rel="stylesheet">
+   
+<!-- Link Scripts -->
+  <script type="text/javascript" src="script/jquery.js"></script>
+  <script type="text/javascript" src="script/menu.js"></script>
+
+</head>
+
+<body>
+  
+<section id="content" class="content">  
+  <button>Test Button</button>
+
+<hr>
+
+<h3>Container Examples</h3>
+<style>
+@media (max-width: 616px) { 
+.app-container > div {margin:0;}
+}
+.large-container > div {
+ grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+}
+
+.large-container > div > a > div{
+ font-size: 18px;
+ height:100px;
+ line-height: 100px;
+}
+
+.large-container > div > a > div > span {
+ top:130px;
+ left:-40px;
+}
+
+.small-container > div {
+ grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+}
+
+.small-container > div > a > div{
+ font-size: 14px;
+ height:50px;
+ line-height: 50px;
+}
+
+.small-container > div > a > div > span {
+ top:80px;
+ left:-80px;
+}
+</style>
+<div id="products">
+
+<div class="app-container large-container"><div>
+  <a href="#">
+    <div>Large Container 1
+	  <span>
+	    <h3>Large Container 1</h3>
+		<p>Description text for Largel Container 2.</p>
+	  </span>
+	</div>
+  </a>
+  <a href="#">
+    <div>Large Container 2
+	  <span>
+	    <h3>Large Container 2</h3>
+		<p>Description text for Largel Container 1.</p>
+	  </span>
+	</div>
+  </a>
+</div></div>  <!-- End of Large Container Example -->
+
+<br>
+
+<div class="app-container small-container"><div>
+  <a href="#">
+    <div>Small Container 1
+      <span>
+        <h3>Small Container 1</h3>
+        <p>Description text for Small Container 1.</p>
+      </span>
+    </div>
+  </a>
+  <a href="#">
+    <div>Small Container 2
+      <span>
+        <h3>Small Container 2</h3>
+        <p>Description text for Small Container 2.</p>
+      </span>
+    </div>
+  </a>
+  <a href="#">
+    <div>Small Container 3
+      <span>
+        <h3>Small Container 3</h3>
+        <p>Description text for Small Container 3.</p>
+      </span>
+    </div>
+  </a>
+</div></div>  <!-- End of Small Container Example -->
+
+</div>
+
+<hr>
+
+<h3>Table Example</h3>     
+<table class="alt-rows">
+  <tr>
+    <th>Header 1</th><th>Header 2</th><th>Header 3</th><th>Header 4</th>
+  </tr>
+  <tr>
+    <td>This is a cell</td><td>This is another cell.</td><td>This is a cell</td><td>This is another cell.</td>
+  </tr>
+  <tr>
+    <td>This is a cell</td><td>This is another cell.</td><td>This is a cell</td><td>This is another cell.</td>
+  </tr>
+  <tr>
+    <td>This is a cell</td><td>This is another cell.</td><td>This is a cell</td><td>This is another cell.</td>
+  </tr>
+  <tr>
+    <td>This is a cell</td><td>This is another cell.</td><td>This is a cell</td><td>This is another cell.</td>
+  </tr>
+</table>
+
+</section>
+
+<div id="footer">
+  <div class="container">
+    <div class="copyright"><a href="#">© 2022</a></div>
+    <div class="notice"><a href="#">Contact Us</a></div>
+  </div>
+</div>
+
+</body>
+</html>
