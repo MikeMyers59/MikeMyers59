@@ -17,3 +17,14 @@ The most important reason to set up a credit freeze is to prevent credit fraud i
 ### Set Up Fraud Alerts
 If you simply fear that someone might initiate fraud against you, but it hasn't happened yet, you don't need to freeze your credit -- setting up fraud alerts will most likely be effective enough, according to the Federal Trade Commission. And this is a good idea regardless of whether you have already experienced fraud.
 
+## Identify eMail Scams
+
+Indicators that an email, text message, or website is fake:  
+1.	When hovering a mouse over a link, the destination web address does not match the web address a user intends to visit.
+2.	An email, text message, website, or phone call has an unusual or urgent request for information.
+3.	The images are blurry, altered, or slightly different colors than the legitimate versions.
+4.	Misspelled words, grammar issues, or a slight change in the language used, compared to the legitimate version of the website.
+5.	The web page or email does not display important company information, such as company contact information.
+6.	A deal that seems too good to be true
+**Source**: NCIS Multiple Threat Alert Center (MTAC)
+
