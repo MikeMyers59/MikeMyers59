@@ -1,6 +1,0 @@
-<!ELEMENT Websites (website+)>
-  <!ELEMENT website (Name, Link, LastAccess, Notes)>
-    <!ELEMENT Name (#PCDATA)>
-    <!ELEMENT Link (#PCDATA)>
-    <!ELEMENT LastAccess (#PCDATA)>
-    <!ELEMENT Notes (#PCDATA)>
