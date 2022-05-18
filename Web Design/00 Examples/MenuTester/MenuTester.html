@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv=X-UA-Compatible content="IE=11"> 
+
+  <title>Menu Tester</title>
+
+  <link href="css/MTester.css" rel="stylesheet" type="text/css">
+	
+<style>
+
+/* ====================================Containers================================== */
+.container {
+  background-color: #d0ffff;  /* light cyan */
+  display: block;
+ /* background: linear-gradient(to right, #000048 0%, #0000ff 100%); /* dark blue to blue */
+  margin: 0;
+  overflow: hidden;
+  padding: 5px;
+}
+
+/* ======================================Header==================================== */
+.header {
+  color: #FFF;
+  background-color: #000;
+  display: flex;
+  height: 100px;
+  position: relative;
+  right: 0px;
+  bottom: 0px;
+}
+.header p {  /* Subheader */
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  font-size: 30px;
+  font-variant: small-caps;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 15px;
+}
+/* setting up main background image of the three submarines (for homepage)*/
+.headerImage {
+  background-image: url(image.JPG);
+  background-repeat: no-repeat;
+  height: 100px;
+  margin: 24px 5px 0 5px;  /* Change the first value to align the image top with the header banner text top. */
+  position: relative;
+  border-bottom: 4px solid #1b9bff; 
+}
+
+/* ======================================Footer==================================== */
+.footer {
+  background-color: #CCC;
+  color: #000;
+  font-size: 12px;
+  margin-top: 0px;
+  margin-bottom: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  position: relative;
+  text-align: center;
+  top: 0px;
+}
+
+/* ===================Styling of columns, from main homepage======================= */
+/* Place these columns in a container. Use only one set per container */
+
+/* Column Set 1 with 3 columns. */
+.centerColumn {
+  width: 250px;
+  float: left;
+}
+.leftColumn {
+  width: 322px;
+  float: left;
+}
+.rightColumn {
+  width: 322px;
+  float: right:
+}
+.centerColumn, .rightColumn {
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+/* Column Set 2 with 2 columns: wide left, narrow right. */
+.leftColumn2{
+  width: 575px;
+  float: left;
+}
+.rightColumn2{
+  width: 350px;
+  float: right;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="Header" class="container">
+
+  <div class="header">
+    <div class="headerImage">
+      <img src="images/MRM.PNG" alt="MRM Logo">
+    </div>
+    <h1>Main Header</h1>
+    <p>Subheader</p>
+  </div>
+ 
+</div> <!-- End of Header Container --> 
+ 
+<div id="Menu" class="container">
+
+  <div id="cssmenu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Menu2</a></li>
+      <li><a href="#">Menu3</a></li>
+      <li><a href="#">Menu4</a></li>
+      <li><a href="#">Menu5</a></li>
+	</ul>
+  </div>  <!-- End of CSS Menu -->
+
+</div> <!-- End of Menu Container -->  
+
+	
+<div id="MainContent" class="container">
+
+</div> <!-- End of Main Content Container -->
+  
+<div id="columns" class="container">
+
+  <div class="leftColumn2">
+    <center>
+      <h2>Left Column!</h2>
+    </center>
+  </div>  
+
+  <div class="rightColumn2">
+    <center>
+      <h2>Right Column!</h2>
+    </center>
+  </div>
+
+</div> <!-- End of Columns Container -->
+
+</div>
+
+<div id="Footer" class="footer">
+  <p>FOOTER</p>
+</div>
+
+</body>
+
+</html>

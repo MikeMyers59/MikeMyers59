@@ -28,3 +28,15 @@ Indicators that an email, text message, or website is fake:
 6.	A deal that seems too good to be true
 **Source**: NCIS Multiple Threat Alert Center (MTAC)
 
+## Phone & Tablet App Precautions
+
+Below are precautions that personnel can take to help safeguard sensitive information while using a mobile device:
+- Read the "terms and conditions" associated with each app
+- Research the background information of apps and companies who develop them
+- Only download apps from trusted sources
+- Only allow permissions that are necessary for each app.  For example, a photo editing app should not require access to a user's GPS location
+- Only download apps that are necessary and delete apps that are no longer needed
+- Limit the amount of personal and financial data that is stored on apps
+- Read app reviews prior to downloading
+- Use different username and password combinations for different online services and apps, and change the passwords often
+**Source**:  NCIS Multiple Threat Alert Center (MTAC)
