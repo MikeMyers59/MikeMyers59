@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+
+<head>
+
+  <title>Page Layout 10</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
+
+  <link href="images/favicon.ico" rel="shortcut icon" id="favicon" >
+
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+</head>
+
+<style>
+
+body, html {
+  background-color: #54839F;  /* bluegreen */
+  background-color: #e0ffff;  /* Light Cyan */
+  font-family : Calibri, Arial, Helvetica, sans-serif; 
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.8em;
+}
+
+img {
+  border: none;
+}
+
+/* ==Lists======================== */
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 15%;
+  background: linear-gradient(to right, #000048 0%, #0000ff 100%);
+  border    : 1px solid #013B6C;
+  border-radius: 0 10px 10px 0;
+  position: absolute;
+  height: 75%;
+  overflow: auto;
+  z-index: 1;
+}
+
+li a {
+  display: block;
+  color: whitesmoke;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+li a.active {
+  background-color: #0000c8;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #0000ff;
+  color: white;
+}
+
+.right {
+  float: right;
+}
+
+/* ====================Header======================  */
+.header {
+  background: #000048;
+  background: linear-gradient(to right, #000048 0%, #0000ff 100%);
+  color: white;
+  margin: 0;
+  padding: 0 10px;
+}
+.header h1 {
+  margin: 0 10px;
+  padding: 0;
+}
+.header img {
+  padding: 0 10px;
+}
+.header p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.header .leftLogo {
+  float: left;
+  margin: 13px 0;
+}
+.header .rightLogo {
+  float: right;
+  margin: 13px 0;
+  transform: scaleY(-1) scaleX(-1);  /* Flip the icon in both planes */
+}
+
+.subheader {
+  font-size: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* =============================NavBar=============================== */
+.navbar {
+  background: #0000ff;  /* blue */
+  color: white;
+  min-height: 30px;
+} 
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  padding: 0 3px;
+}
+
+.pageheader {
+  color: black;
+  font-size: 1.8em;
+  font-weight: bold;
+}
+/* Drop Button */
+
+.dropbtn, .nodropbtn {
+  background-color: #0068C9;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.dropbtn a {
+  color: white;
+}
+
+/* ==dropdown menus */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 150px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 20;
+}
+
+/* Links inside the dropdown */
+.dropdown-content p {
+  color: black;
+  display: block;
+  padding: 1px 1px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.dropdown-content img {
+  color: black;
+  display: block;
+  border: 7px solid #f1f1f1;
+  width: 90%;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: none;
+  text-align: left;
+  display: block;
+}
+
+.dropdown-title {
+  color: black;
+  padding: 6px 8px;
+  text-decoration: underline;
+  text-align: left;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #3D9BFF;
+}
+
+/* =======================Left Menu======================= */
+
+#LeftMenu {
+  float: left;
+}
+
+#LeftMenu ul {
+  background: linear-gradient(to right, #000048 0%, #0000ff 100%);
+  list-style: none;
+  margin    : 0;
+  padding   : 0;
+  width: 205px;
+}
+
+#LeftMenu ul li p {
+  background: linear-gradient(to right, #000048 0%, #0000ff 100%);
+  border-radius : 20px;
+  border-top    : 1px solid #96d1f8;
+  box-shadow    : rgba(0,0,0,1) 0 1px 0;
+  font-size     : 1.5em;
+  color         : white;
+  margin        : 0px;
+  padding       : 3px 5px;
+  text-align    : center;
+  text-decoration: none;
+  vertical-align: middle;
+  width         : 170px;
+}
+
+#LeftMenu ul li a, #leftMenu ul li a:visited {
+  color          : white;
+  text-decoration: none;
+}
+
+#LeftMenu ul li p:hover {
+  background      : #000048;
+  border-top-color: #d00202;
+  color           : #ccc;
+}
+
+#LeftMenu ul li p.active {
+  background      : #1b435e;
+  border-top-color: #1b435e;
+}
+
+/* ===============================Main Body========================== */
+#MainBody {
+  display: flex;
+  margin: 0;
+  min-height: 700px;
+}
+
+#MainContent {
+  display: block;
+  margin: 0 0 0 10px;  
+}
+
+</style>
+
+<body>
+
+<div id="Header" class="header">
+  <img src="images/logo1.png" alt="Left Logo" class="leftLogo">
+  <img src="images/logo1.png" alt="Right Logo" class="rightLogo">
+  <h1>The Header</h1>
+  <div class="subheader">This is the subheader!</div>
+</div>  <!--End of header-->
+
+<div id="TopNavBar" class="navbar">
+  <a href="#" class="nodropbtn">Home</a>
+  <a href="#" class="nodropbtn" title="Calendars">Calendar</a>
+  <div class="dropdown">
+    <button class="dropbtn">News &#9660</button>
+    <div class="dropdown-content">
+      <div class="dropdown-title"> Local News </div>
+      <a href="https://www.q13fox.com/local-news" target="_blank">Q13 Seattle Fox News</a>
+      <div class="dropdown-title"> National News </div>
+      <a href="https://www.cnn.com" target="_blank">CNN</a>
+      <a href="https://www.abcnews.com" target="_blank">ABC News</a>
+      <a href="https://www.cbsnews.com" target="_blank">CBS News</a>
+      <a href="https://www.foxnews.com" target="_blank">Fox News</a>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button class="dropbtn">Links &#9660</button>
+    <div class="dropdown-content">
+      <div class="dropdown-title">Training </div>
+      <a href="#">Lessons</a>
+      <a href="#">Quizzes</a>
+      <a href="#">Tasks</a>
+    </div>
+  </div> 
+  <a class="nodropbtn right" href="#" title="Change Your Profile"><img src="images/usericon.png" width="20px" alt="User Avatar" align="top"> Profile</a>
+</div>  <!-- End of NavBar -->
+
+<div id="MainBody">
+
+  <div id="LeftMenu">
+    <ul>
+      <li><a href='#'><p>Home</p></a>
+      <li><a href='#'><p>Actions</p></a>
+    </ul>
+  </div> <!-- End of Left Menu -->
+
+  <div id="MainContent">
+
+    <div class="pageheader">
+      Main Content
+    </div>
+    <hr>
+    <div id="Content" class="content">
+      Content goes here!
+    </div>  <!-- End of Content -->
+
+  </div> <!-- End of Main Contnent -->
+
+</div>  <!-- End of Main Body -->
+
+<hr>
+
+<div id="Footer" class="footer">
+  <P class="bold">Footer!</P>
+</div>  <!--END of Footer-->
+
+</body>
+
+</html>
+

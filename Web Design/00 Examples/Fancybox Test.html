@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>FancyBox Demo</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
+  </head>
+
+  <body>
+    <p>
+      <a data-fancybox="gallery" data-src="images/">
+        <img src="images/logo.png">
+      </a>
+
+      <a data-fancybox="gallery" data-src="images/">
+        <img src="images/logo1.png">
+      </a>
+
+      <a data-fancybox="gallery" data-src=images/">
+        <img src="images/useravatar.png">
+      </a>
+    </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+      // Customization example
+      Fancybox.bind('[data-fancybox="gallery"]', {
+        infinite: false
+      });
+    </script>
+  </body>
+</html>

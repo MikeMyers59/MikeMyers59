@@ -1,0 +1,653 @@
+@charset "utf-8";
+/* ### - to be determined! */
+
+:root {
+  --bgColor1: #F1F8FF;
+  --bgColor2: #0068C9;
+  --bluegreen: #54839F;  /* bluegreen */
+}
+
+/* ===================RESET====================== */
+body, 
+html {
+  height : 100%;
+/* it's good practice to zero the margin and padding of the body element to account for differing browser defaults */
+  margin : 0;
+  padding: 0;
+  font-family : Calibri, Arial, Helvetica, Verdana, sans-serif;  /**/
+  font-size: 12px;
+  background-color: #e6f2ff;
+  text-align: left;
+}
+
+html {
+  scrollbar-face-color: #000; 
+  scrollbar-shadow-color: #000; 
+  scrollbar-highlight-color: #000; 
+  scrollbar-3dlight-color: #54839F; 
+  scrollbar-darkshadow-color: #000; 
+  scrollbar-track-color: #000; 
+  scrollbar-arrow-color: #54839F;
+}
+
+/* ==Anchors===================== */
+
+a {
+  font-family: Arial, Helvetica, Sans-Serif;
+  font-size: 12px;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+}
+a:link { color: #fff; font-weight:bold; }
+a:visited {  color: #DCDBF8; }
+a:hover {  color: #f5e617; }
+a:active {  color: #54839F; }
+
+/* ==Fonts======================= */
+.bold {
+  font-weight: bold;
+}
+
+/* ==Tables======================= */
+table,
+td,
+th {
+  color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; 
+  padding: 0;
+}
+
+/* ===================CLASSES===================== */
+
+/*without this, display does not change*/
+.active a:hover > li { 
+  visibility: visible;
+} 
+.center {
+}
+
+.centerblock {
+  margin: auto;
+  width: 50%;
+}
+
+.leftpad {
+  padding-left: 20px;
+}
+
+.contentpadding {
+  padding-left: 20px;
+}
+
+.listformatting {
+  line-height: 150%;
+}
+
+/* ==Containers */
+.container {
+  padding: 30px;
+  margin: 2px 0 2px 0;
+  background: none;
+}
+
+
+ 
+/* ==headers */
+	
+header {
+  background: linear-gradient(to right, #000048 0%, #0000ff 100%);
+  border    : 1px solid #013B6C;
+  color     : #fff;
+  height    : 225px; /* 160px height of header area */
+  position  : sticky;
+  transition: all 0.4s ease;
+  width     : 100%;
+  z-index: 2;
+}
+
+.heading1 {
+  padding: 10px 10px 10px 10px;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.heading2 {
+  padding: 10px 10px 10px 10px;
+  font-size: 1.25em;
+  font-weight: bold;
+}
+
+.heading3 {
+  padding: 10px 10px 10px 10px;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+/* Multimedia (mm-) */
+
+.mm-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+ 
+.mm-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* 16x9 Aspect Ratio */
+.mm-container-16x9 {
+  padding-bottom: 56.25%;
+}
+ 
+/* 4x3 Aspect Ratio */
+.mm-container-4x3 {
+  padding-bottom: 75%;
+}
+
+/* ViewPort */
+
+.width800 {
+max-width: 800px;
+margin: auto;
+}
+
+.width1024 {
+max-width: 1024px;
+margin: auto;
+}
+
+/* tables */
+
+.tablestyle1 {
+  border-collapse: collapse;
+}
+
+.tablestyle1 table {
+  table-layout: auto;
+}
+
+.tablestyle1 th {
+  border: 1px solid #0272a7;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: #0272a7;
+  color: white;
+  text-align: left;
+  font-weight: normal;
+}
+
+.tablestyle1 td {
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+/* ====================IDs======================== */
+
+/* ==Body */
+
+#body {
+  /* background: linear-gradient(to right, #BBD2E5,  white) right no-repeat;  */
+  /* background: #D0E0ED;    light blue   */
+  background: #f8ffff; /* slight tint of blue  */
+  float     : left;
+  width     : 100%;
+}
+
+/* ==Content Section */
+
+#content {
+    margin: 5px 20px;
+}
+
+#content a, #content a:visited {
+    color: #D2EFFF;
+    font-weight: 600;
+}
+
+/* ==Footer Section */
+
+#footer {
+  /* background : #d00202;*/
+  background: linear-gradient(to right, #b00202 0%, #ff0000 100%);
+  background: linear-gradient(to right, #0000c8 0%, #7f7fff 100%);
+  background: linear-gradient(to right, #000048 0%, #0000ff 100%);
+  clear      : both;
+  color      : white;
+  font-size  : small;
+  overflow   : hidden;
+  text-align : center;
+  width      : 100%;
+  white-space: nowrap;
+}
+
+#footer a, 
+#footer a:visited {
+  color:cornflowerblue
+}
+
+/* ==Header Section */
+
+#header {
+  background: linear-gradient(to right, #b00202 0%, #ff0000 100%);
+  background: linear-gradient(to right, #0000c8 0%, #7f7fff 100%);
+  background: linear-gradient(to right, #000048 0%, #0000ff 100%);
+  border    : 1px solid #013B6C;
+  color     : #fff;
+  height    : 100px; /* 160px height of header area */
+  position  : fixed;
+  transition: all 0.4s ease;
+  width     : 100%;
+}
+
+#header #logo {
+  position: absolute;
+  left    : 10px;
+  top     : 10px;
+}
+
+#header #brand {
+  position: absolute;
+  right   : 10px;
+  top     : 5px;
+}
+
+#header #brand #brandImage {
+  display: block;
+  height : 112px;
+  width  : 192px;
+}
+
+#header #headernav {  /*without this, menu is at top of header */
+  bottom     :50px;
+  display    : block;
+  padding    : 2px;
+  position   : absolute;
+  left      : 2px; /*adjusts the placement of the hover menu left-right */
+  white-space: nowrap;
+}
+
+#header ul{
+  list-style: none;
+  margin    : 0;
+  padding   : 0;
+}
+
+#header ul li {
+  border-left : 3px solid white; /* line in between Department Names in Header Menu */
+  display     : inline-block;
+  font-size   : medium;
+  padding-left: 5px;
+  padding-right: 2px;
+}
+
+#header.short {
+  height : 75px;
+  z-index: 99;
+}
+
+#header.short #brand {
+  position: absolute;
+  /* right   : 10px; */
+  right   : 0px;
+  top     : 0px;
+}
+
+#header.short #brand #brandImage {
+  /* float : left; */
+  height: 56px;
+  width : 96px;
+}
+
+#header.short #brand #brandTitle {
+  /* display  : block;
+  float    : right;
+  font-size: large; */
+  display: none;
+}
+
+#header.short  #headernav ul li span {
+  display: none;
+}
+
+
+/* ==Header Navigation, a Menu System */
+#headernav ul {
+  position: absolute;
+  z-index: 597;
+  display: inline-block;
+}
+
+#headernav ul li { /*this adjusts the whole row of departments up or down*/
+  float: top; /* left; top moved whole row of dept names down*/
+  min-height: 15px; /*height of space the department names take up */
+  vertical-align: top; /*middle; bottom kept row on bottom*/
+}
+
+#headernav ul li.hover,#headernav ul li:hover {
+  visibility: visible;
+  position: relative;
+  z-index: 599; 
+  cursor: default;
+  color:#0000ff; /*#3399FF;*/
+}
+
+#headernav ul ul {
+  visibility: hidden; /*visible; */
+  position: fixed;
+  position: absolute;/*changed position, no no no*/
+  float: top; /*added */
+  /*top: 100%;*/
+  left:0; 
+  z-index: 599; 
+  /*width: 100%;*/
+  border-top: 1px solid #1b9bff;
+  text-transform: none;
+  min-width: 200px; /* width of hover bar pre-hover*/
+}
+
+#headernav ul ul li {
+  visibility: hidden; /*made submenu visible */
+  float: top; /* left; no effect*/
+  background: #ffff00; /* added, no effect */
+  position: absolute;/*/ relative;*/
+  width: 200px; /*width of drop-down from hover; 300px sub span width */
+  font-weight: normal;
+}
+
+#headernav ul ul a { 	/* submenu style */
+  float: top; /*left; changed position of span */
+  background: #0000ff; /*#1b9bff; when visible */
+  color: white; /*#FFF; no effect */
+  border: 4px solid #ff82e7;
+  border-top: 0 none;
+  line-height: 100%; /* 150 */
+  padding: 5px 5px;
+}
+
+#headernav ul ul ul {
+  top: 0; 
+  left: auto; 
+  right: -99.5%; 
+  border-top: 0 none; 
+}
+
+#headernav ul li ul { /* uncommented */
+  visibility: visible;
+  position: absolute; /* added */
+  background: #1b9bff; /*#1b9bff; #ff0000*/
+  color: #00ff00; /*added*/
+  top: 0; 
+  left: auto; 
+  right: -99.5%; 
+  min-height: 10px; /*added */
+  border-top: 0 none; 
+}
+
+#headernav ul li ul li { /*added */
+  visibility: visible;
+  position: absolute; /* added */
+  float: left;/*no effect */
+  background: #0000ff; /*#1b9bff; back of submenu*/
+  background: #1b9bff; /* #1b9bff; #ff0000*/
+  color: #0000ff; /*added*/
+  display: block;
+  top: 0px; 
+  left: 0; 
+  right: -99.5%; 
+  min-height: 30px; /*added*/
+  border-top: 0 none; 
+}
+
+#headernav ul li:hover > ul {/*added*/
+  visibility: visible;
+  position: relative; /* added */
+  background: #00ff00;/* #1b9bff;*/
+  color: #00ff00; /*added*/
+  display: block;
+  top: 0; 
+  left: auto; 
+  right: -99.5%; 
+  height: 50px;   /* added */
+  border-top: 0 none; 
+}
+
+/*without this, space for submenu shows, but not text */
+#headernav ul li ul:hover > ul { 
+  visibility: visible;
+}
+
+#headernav ul ul {
+  bottom: 0; 
+  left: 0;
+  margin-top: 0; 
+}
+
+/*top menu */
+#headernav a { 
+  display: block; 
+  line-height: 1em; 
+  text-decoration: none; 
+  background: blue;
+  color: #CBCBCB;
+  padding: 0 1px;
+}
+
+#headernav:after, 
+#headernav ul:after {
+  content: '';
+  display: block;
+  clear: both; 
+}
+
+#headernav > ul > li > a { 
+  visibility: visible;
+  line-height: 15px;  /* 20 top level menu line height*/
+  color: white; /* added, no effect */
+} 
+
+#headernav > ul > li > ul > a{ 
+  visibility: visible;
+  line-height: 40px;  /*20 top level menu height, maybe */
+} 
+
+#headernav > ul > li > ul { 
+  visibility: visible;
+  line-height: 20px;  /* height of drop-down box space after picture */
+} 
+
+#headernav ul ul li:first-child > a {
+  border-top: 1px solid #0082e7; 
+}
+
+#headernav ul ul li:hover > a { 
+  visibility: visible;
+  background: #00f202; /*#35a6ff; back color of submenu first line when hovering, maybe*/
+}
+
+#headernav ul ul li:last-child > a {          
+  border-radius: 0 0 3px 3px;          
+  box-shadow: 0 1px 0 #1b9bff; 
+}        
+
+#headernav ul ul li:last-child:hover > a {
+  border-radius: 0 0 0 3px; 
+}  
+      
+#headernav ul ul li.has-sub > a:after {          
+  content: '+';          
+  position: absolute;          
+  top: 50%;          
+  right: 5px;          
+  margin-top: -8px;
+}
+
+#header #headernav ul li.active {
+  background: #265f86;
+}
+
+#header #headernav ul li:hover { /* hover style including submenu span */
+  visibility: visible;
+  background: #0000ff; /*#28597a;*/
+  background: #1b9bff; /*#28597a;*/
+  color     : #ffffff;
+  width: 50px; /*added */
+  height 50px;/*added*/ */
+}
+
+#header #headernav ul li:hover > ul {
+  visibility: visible;
+  z-index: 599; 
+  display: block;
+  float: top; /* added, no effect */
+  position: relative;   /* added, no effect     */
+  background: #0000ff;/*#28597a;//*/
+  color     : #0; /*#ccc; text color of submenu */
+  right   : 10px; /* margin size from right*/
+  top     : 20px; /*space between Department name and drop-down box with picture*/
+  width: 200px; /* width of line attached to box with manager picture	height 20px;//added */
+  padding: 0px 0px;/*/ added */
+}
+
+#header #headernav ul li span {
+  display: block;
+}
+
+#header #headernav a, #header #headernav a:visited {
+  color          : white;
+  text-decoration: none;
+}
+
+/* ==MiniFlex */
+
+#miniflex {
+  width: 100%;
+  float: left;
+  font-size: small; /* could be specified at a higher level */
+  margin: 0;
+  padding: 0 10px 0 10px;
+  border-bottom: 1px solid #54839F;
+}
+
+#miniflex li {
+  float: left;
+  margin: 0; 
+  padding: 0;
+  display: inline;
+  list-style: none;
+}
+
+#miniflex a:link, #miniflex a:visited {
+  float: left;
+  font-size: 85%;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 0 10px 0 10px;
+  text-decoration: none;
+  color: #54839F;
+}
+
+#miniflex a.active:link, #miniflex a.active:visited, #miniflex a:hover {
+  border-bottom: 4px solid #f5e617;
+  padding-bottom: 2px;
+  color: #f5e617;
+}
+
+/* ==MiniTabs Menu Systems */
+
+#minitabs {
+  margin: 0;
+  padding: 0 0 20px 10px;
+  border-bottom: 0px solid #fff;
+}
+
+#minitabs li {
+  margin: 0; 
+  padding: 0;
+  display: inline;
+  list-style-type: none;
+}
+
+#minitabs a:link, 
+#minitabs a:visited {
+  float: left;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  margin: 0 10px 4px 10px;
+  padding-bottom: 2px;
+  text-decoration: none;
+  color: #FFF;
+}
+
+#minitabs a.active:link, 
+#minitabs a.active:visited, 
+#minitabs a:hover {
+  border-bottom: 2px solid #f5e617;
+  padding-bottom: 2px;
+  background: none;
+  color: #FFF;
+}
+
+/* No Navigation Section */
+#nonav {
+  border     : 0px;
+  margin     : 0px;
+  padding-top: 160px;
+}
+
+/* Navigation Section */
+#nav {
+  /*background-color: #bfcbd7;*/
+  background: linear-gradient(to right, #d00202 0%, #ff0000 100%);
+  background: linear-gradient(to right, #0000c8 0%, #7f7fff 100%);
+  background: linear-gradient(to right, #000048 0%, #0000ff 100%);
+  border          : 1px solid #013B6C;
+  color           : black;
+  font-size       : small;
+  font-weight     : bold;
+  font-family     : Calibri,Arial,Helvetica;
+  padding-top     : 165px;
+  overflow        : hidden;
+  width           : auto;
+  white-space     : nowrap;
+}
+
+#nav ul {
+  float     : left;
+  list-style: none;
+  margin    : 0;
+  padding   : 0;
+}
+
+#nav ul li {
+  border-left: 1px solid black;
+  display    : inline-block;
+  padding    : 0px 7px 0px 7px;
+}
+
+#nav ul li a, #nav ul li a:visited {
+  color          : black;
+  text-decoration: none;
+}
+
+#nav ul li a:hover {
+  background-color: #403428;
+  color           : white;
+}
+
+/* wrapper - contains the header, menu, content and footer sections */
+#wrapper {
+  height: 100%;
+}

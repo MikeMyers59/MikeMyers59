@@ -10,6 +10,29 @@ q:lang(html) {
 }
 ```
 
+## Forms
+
+### Select Menu
+```html
+<h3>HTML SELECT dropdown</h3>
+<select name="LDeptMenu" id="menu1">
+  <option value="" selected="selected">L dept links</option>
+  <option value="https://www.cnn.com">CNN</option>
+  <option value="https://www.abcnews.com">ABC</option>
+  <option value="https://www.cbsnews.com">CBS</option>
+  <option value="https://www.foxnews.com">FOX</option>
+</select>
+```
+The required script:
+```javascript
+var urlmenu = document.getElementById( 'menu1' );
+urlmenu.onchange = function() {
+  if(this.selectedIndex != 0) {
+    window.open( this.options[ this.selectedIndex ].value )
+  };
+};
+```
+
 ## Header
 ```html
 <HEADER id="Header" class="header">
