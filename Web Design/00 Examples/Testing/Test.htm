@@ -1,0 +1,260 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+
+  <TITLE> My Test Page </TITLE>
+
+  <LINK type="text/css" href="test.css" rel="Stylesheet">
+
+  <SCRIPT src="test.js" type="text/javascript">
+
+<SCRIPT language="JavaScript">
+// Test Area
+var Version = "1.0.0.0"
+
+</SCRIPT>
+
+<style>
+
+html {
+  background: #666;  /* dark gray */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #c0c0c0;  /* silver */
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: monospace;
+  margin: 10px 20px;
+  padding: 0.5em 0; 
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h4 {
+  font-size: 1.4em;
+}
+
+hr {
+  width: 90%;
+  color: #ccc;
+  height: 1px;
+}
+
+nav {
+  display: flex;
+} 
+
+#footer {
+  text-align: center;
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.header {
+  color: #555;
+  padding: 4px 10px;
+  font-weight: bold;
+}
+
+.navbar-frame,
+.master-frame, 
+.footer-frame,
+.quickbanner {
+  border: 1px solid #a0ffa0;
+  width: 95%;
+  max-width: 1700px;
+  min-width: 288px;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 3px;
+}
+
+.navbar-frame,
+.master-frame, 
+.footer-frame{
+  background-color: #e0e0e0;
+}
+
+
+/* Footer */
+.footer-frame p {
+  font-size: 0.8em;
+  padding: 0.25em 0; 
+}
+.footerheader {
+  padding-top: 10px;
+}
+.footerlist a {
+  color: #1D5782;
+  text-decoration: none;
+}
+.footerlist a:hover {
+  text-decoration: underline;
+}
+.footerlist li {
+  list-style: none;
+}  
+
+/* Quick Banner */
+
+.quickbanner {
+  background-color: #ffe0e0;
+  text-align: center;
+}
+
+.quickbanner a img {
+  border: none;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* Text Modifications */
+
+.underline {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 480px) {
+  .navbar-frame, .master-frame, .footer-frame { min-width: 100%; }
+}
+
+</style>
+
+<script src="AccountBulletins.js"></script>
+
+<script type="text/javascript">
+    new GD.views.AccountBulletinsShow({
+      GDPRCookiePolicy: {
+        message: "We only use cookies that are necessary for this site to function to provide you with the best experience. The controller of this site may choose to place supplementary cookies to support additional functionality such as support analytics, and has an obligation to disclose these cookies. Learn more in our \u003ca href=\"https://subscriberhelp.granicus.com/s/article/Cookies\" target=\"_blank\" rel=\"noopener noreferrer\"\u003eCookie Statement\u003c/a\u003e.\n",
+        prefix: "WAKITSAP_production-as"
+      },
+      isRelevantBulletinContentEnabled: true,
+      relevantBulletinsUrl: "https://content.govdelivery.com/relevant_bulletins/51818077/bulletins",
+      relevantBulletinsHeading: "You may also be interested in",
+      relevantBulletinImpressionTrackingUrl: "https://lnks.gd/i/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzaGFyZWRfYnVsbGV0aW5faWQiOjUxODE4MDc3LCJ1cmkiOiJyZWxldmFudC1idWxsZXRpbnMtZmVlZDppbXByZXNzaW9uIn0.oDwq_EC5mzybae-i-pqRRYMGOAgxaQmGIcPfoiWo8k0",
+      subscribeHeading: "Subscribe to updates from Kitsap County Washington",
+      subscribeLabel: "Email Address",
+      subscribeText: "e.g. name@example.com",
+      subscribeButtonText: "Subscribe",
+      bulletinSubject: "Youth report on Kingston High School at May 11 meeting",
+      facebookImagePath: "https://content.govdelivery.com/assets/art/share_facebook-91b530a60fb05e3af56bdf009be581bf4a12c2c76869d0977348c57b79e2b5a8.png",
+      twitterImagePath: "https://content.govdelivery.com/assets/art/share_twitter-ce26b5cc22b7873dabd0194c50be633379881724561f6d5c5622215fe4e28a1b.png",
+      linkedinImagePath: "https://content.govdelivery.com/assets/art/share_linkedin-7e860813f5305f5c33e2548305528824a4846e7a8eac4a658d2a003995cdb7a5.png",
+      emailImagePath: "https://content.govdelivery.com/assets/art/share_email-ecb03e091ef7d077856720b5cded62d7a6f89f923e53b9c86f6d4d6f81442b8f.png",
+      trackPageViewURL: "https://api.govdelivery.com/api/service/internal/bulletin_analytics/51818077/page_view",
+      subscribeFormUrl: "https://public.govdelivery.com/accounts/WAKITSAP/subscriber/qualify"
+    }).init();
+</script>
+
+</HEAD>
+
+<BODY onLoad="showTheTime();">
+<a id="top" name="top"></a>
+
+<!-- GDPR Cookie Policy Statement -->
+<style>
+.gdpr-cookie-policy{background:#5e70ab;box-shadow:0 3px 5px 0 rgba(0,0,0,0.1);box-sizing:border-box;color:#fff;font-family:'opensanslight', sans-serif;margin:0;padding:15px 45px 15px 15px;position:relative;text-align:center;top:0;width:100%;z-index:10000}
+.gdpr-cookie-policy a:link,.gdpr-cookie-policy a:visited{color:#fff;font-family:'opensanssemibold', sans-serif;text-decoration:underline}
+.gdpr-cookie-policy a:hover{color:#fff;text-decoration:underline}
+.gdpr-cookie-policy button{position:absolute;border:0;background:transparent;color:#fff;font-size:100%;padding:19px;right:0;top:0}
+.gdpr-cookie-policy button:hover{color:#fff;cursor:pointer}
+</style>
+<div id="gdpr-cookie-policy"></div>  <!-- This needs JS to work -->
+
+<div class="quickbanner">
+  <a href="#"><img alt="News Alert" src="images/newspaper.gif" style="width:30px;"> News Alerts </a>
+</div>
+
+<div class="navbar-frame">
+<style>
+#NavBarBrand {
+  padding: 0 5px;
+}
+#NavBarLeft {
+  padding: 0 5px;
+}
+#NavBarRight {
+  padding: 0 5px;
+}
+</style>
+  <nav id="TopNavBar">
+    <div id="NavBarBrand"> 
+      <img src="images/newspaper.gif" style="width:45px;">
+    </div>
+    <div id="NavBarLeft"> Left </div>
+    <div id="NavBarRight"> Right </div>
+  </nav>
+</div> <!-- End of NavBar Frame -->
+
+<div class="master-frame">
+
+<H1 class="header"> Test Page </H1>
+<hr>
+
+<CENTER>
+<TABLE border=3 bgcolor=CYAN>
+  <TR><TD>
+    <FORM name="clock_form">
+      <INPUT type=TEXT name="clock" SIZE=26>
+    </FORM>
+    <SCRIPT language="JavaScript">
+      clockTick();
+      document.write( Greeting() );
+    </SCRIPT>
+  </TD></TR>
+</TABLE>
+</CENTER>
+
+<a href="#top">Back to Top</a>
+
+</div> <!-- End of Master Frame -->
+
+<div id="footer" class="footer-frame"> 
+  <h4>Footer</h4>
+  <p>Copyright &copy; and Created by Michael R. Myers</p>
+  <ul class="footerlist">
+    <div class="footerheader"> <span class="underline">Local Government: </span>
+      <li><a href="http://www.govdelivery.com/" rel="noopener noreferrer" target="_blank">GovDelivery</a></li>
+      <li>
+        <a href="https://www.kitsapgov.com/" rel="noopener noreferrer" target="_blank">Kitsap County (WA)</a>:&nbsp;
+        <a href="https://www.kitsapgov.com/dis/Pages/callkitsap1.aspx" target="_blank" rel="noopener" style="color: #1D5782;">Contact</a>&nbsp;|&nbsp;
+        <a href="http://kcowa.us/inclweather" target="_blank" rel="noopener">Inclement Weather</a>&nbsp;|&nbsp;
+        <a href="https://www.kitsapgov.com/services/Pages/Roads.aspx" target="_blank" rel="noopener">Road Report</a> [
+        <a href="https://www.kitsapgov.com/services/Pages/Map-RoadReport.aspx" target="_blank" rel="noopener">map</a>] 
+      </li>
+    </div>
+    <div class="footerheader"> <span class="underline">Social Media:</span>
+      <li>
+        <a href="http://www.flickr.com/photos/[USERID]">Flickr</a>&nbsp;|&nbsp;
+        <a href="http://vimeo.com/[USERID]">Vimeo</a>
+      </li>
+    </div>
+    <div class="footerheader"> <span class="underline">News:</span>
+      <li>
+        <a href="http://www.abcnews.com">ABC</a>&nbsp;|&nbsp;
+        <a href="http://www.cnn.com">CNN</a>&nbsp;|&nbsp;
+        <a href="http://www.cbsnews.com">CBS</a>&nbsp;|&nbsp;
+        <a href="http://www.foxnews.com">FOX</a>
+      </li>
+    </div>
+    <li>hold</li>
+  </ul>
+</div> <!-- End of Footer Frame -->
+
+</BODY>
+
+</HTML>
