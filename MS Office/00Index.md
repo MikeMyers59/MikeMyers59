@@ -14,3 +14,13 @@ If the picture does not have a transparent area, you can make one. You can creat
 •	The Set Transparent Color option is available for bitmap pictures that don't already have transparency information. It's also available for some, but not all, clip art.  
 •	To create a transparent area in an animated GIF, use an animated GIF editing program, and then insert the file again.  
 
+
+
+## Outlook Archive Files
+
+| --- | --- |  
+| PST | Personal File Storage |  
+| OST | Outlook File Storage |  
+| OAB | Offline Address Book |  
+**NOTE**: To avoid file corruption, do not let the file size of any PST exceed 1 gigabyte (GB). In addition, it is recommended that you back up PSTs regularly to a removable storage device such as an NMCI external hard drive, a CD, or a DVD.
+

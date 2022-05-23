@@ -74,6 +74,16 @@ translate(-50%,-50%)
 
 Do Not Call List- You can register your numbers cell phones and landlines on the national Do Not Call list at no cost by calling 888-382-1222 or 866-290-4236 (TTY). You must call from the phone number you wish to register.
 
+Home Emergency
+- https://www.navbug.com/washington/kitsap_county_traffic.htm#popmap
+- https://www.pse.com/outage/outage-map
+- https://secure.pscleanair.org/AirQuality/NetworkMap 
+- Bremerton: https://www.bing.com/search?q=98312%20weather&FORM=PRWEHI&refig=af146f355f7b4b67b80eab1c02ed102a&httpsmsn=1 
+- Poulsbo: https://www.bing.com/search?q=98370+weather&qs=WA&pq=98370+weather&sc=5-13&cvid=517CA61710B94410BE7063E744E66742&FORM=QBRE&sp=1
+- https://airnow.gov/index.cfm?action=airnow.local_city&cityid=246 
+
+NBK page: https://www.facebook.com/kitsapnavy/
+
 ### Links
 ```html
 <div>

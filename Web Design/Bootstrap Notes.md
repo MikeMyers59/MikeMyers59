@@ -1,4 +1,6 @@
-# Bootstrap Notes
+# Bootstrap Notes  
+
+How do order and span work?   
 
 - [on GitHub](https://github.com/twbs/bootstrap)  
 - BS 3.4
