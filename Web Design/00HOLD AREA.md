@@ -25,6 +25,16 @@
 - [Mustache]() - `<script type="text/javascript" src="js/mustache.js"></script>`  
 - [Popper.js](https://popper.js.org/) 
 
+- [PrismJS]((http://prismjs.com/)
+  - [Language List](http://prismjs.com/index.html#languages-list)
+  ```html
+  <link href="prism.css" rel="stylesheet" />
+  <script src="prism.js"></script>
+  <pre><code class="language-css">p { color: red }</code></pre>
+  <pre><code class="language-markup">&lt;p class="red">red text &lt;/p></code></pre>
+  <script type="text/plain" class="language-markup"><p>Example</p></script>
+  ```
+
 ### Attributes
 -webkit-appearance	button \| none \| textfield
 -webkit-box-shadow	0 5px 10px rgba(0,0,0,0.2)
