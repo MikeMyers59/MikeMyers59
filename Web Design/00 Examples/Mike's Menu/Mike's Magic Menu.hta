@@ -1,0 +1,269 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<HTML lang="en">
+<HEAD>
+    <title>Mike's Magic Menu [HTA]</title>
+    <META http-equiv="x-ua-compatible" content="ie=9">
+    <HTA:APPLICATION
+	ID="testHTA" 
+	APPLICATIONNAME="MikeMagicMenu" 
+	BORDER="dialog"
+	CAPTION="yes" 
+	MAXIMIZEBUTTON="yes"
+	MINIMIZEBUTTON="yes"
+        SCROLL = "yes"
+	SHOWINTASKBAR="yes" 
+	SYSMENU="yes" 
+        ICON = "599CD-1.ico"
+    />
+
+<STYLE>
+  BODY, HTML { width: 98%; height: 100%; }
+</STYLE>
+
+<SCRIPT text="text\vbscipt" language="VBScript" src=".\Scripts\Common.vbs"> </SCRIPT>
+
+<SCRIPT text="text\vbscipt" language="VBScript">
+dim strHelpDocPath  :  strHelpDocPath = "MikesMenuHelp.docx"
+
+Sub Load()
+  ResizeWindow 1040,800 
+  intPosX = CInt( ( window.screen.width  - document.body.offsetWidth  ) / 2 )
+  intPosY = CInt( ( window.screen.height - document.body.offsetHeight ) / 2 )
+  If intPosX < 0 Then intPosX = 0
+  If intPosY < 0 Then intPosY = 0
+  RelocateWindow intPosX, intPosY
+  startclock()  ' call to a javascript subroutine for the countdown timer!
+End Sub
+
+</SCRIPT>
+
+</HEAD>
+ 
+<BODY background=".\Pictures\BlueSpotty.gif" onLoad = "vbscript:Load()">
+    <A NAME=TopofPage></A>
+
+<TABLE id="TopTable" width = 100% border=thin cellpadding=0 cellspacing=0>
+  <TH colspan=2> <H2>Mike's Magic Menu, an HTA</H2> </TH>
+  <TR id=HeaderRow>
+    <TD id="UpperLeft" align=center width = 30%>
+      <H4>Menu</H4>
+    </TD>
+    <TD id="UpperRight" align=center width = 70%>
+      <H4>Welcome</H4>
+    </TD>
+  </TR>
+  <TR id=FirstRow>
+    <TD id="MiddleLeft">
+      <LABEL> Load a Website: </LABEL><BR>
+      &nbsp;&nbsp;<INPUT type="text" name="myURL" value="Enter a URL!"><BR>
+      &nbsp;&nbsp;<INPUT type="button" onClick="vbscript:openFireFox(myURL.value)" value="In Firefox" />
+      &nbsp;<INPUT type="button" onClick="vbscript:openChrome(myURL.value)" value="In Chrome" />
+      &nbsp;<INPUT type="button" onClick='openEdge(myURL.value)' value="In Edge"><BR>
+      <HR size=2 width=50% align=center noshade>
+      <LABEL>Page Operations: </LABEL><BR>
+      &nbsp;&nbsp;<INPUT type="button" value="Quit" onclick="vbscript:window.close()" />
+      &nbsp;<INPUT type="button" value="Reload" onclick="vbscript:window.load()" />
+      &nbsp;<INPUT type="button" value="Help" onclick="vbscript:RunProgram(strHelpDocPath)" />
+    </TD>
+    <TD id="MiddleRight" align=center>
+      <B>Today is: </B>
+      <SCRIPT language="javascript" text="text/javascript">
+        var monthNames = new Array("January", "February", "March", "April", "May", "June", "July", 
+                             "August", "September", "October", "November", "December"); 
+        var dayNames = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+        var now = new Date();
+        document.writeln(dayNames[now.getDay()] + ", " + monthNames[now.getMonth()] + " " + now.getDate() + ", " + (now.getYear()+1900));
+        var amorpm = (now.getHours() >= 0) && (now.getHours() <= 11) ? "AM" : "PM";
+        var hours = (now.getHours() == 0) ? 12 : (now.getHours() > 12 ? (now.getHours() - 12) : now.getHours());
+        var minutes = now.getMinutes() < 10 ? "0" + now.getMinutes() : "" + now.getMinutes()    
+        document.write(" " + hours + ":" + minutes + " " + amorpm);
+      </SCRIPT>
+      <!- Countdown Clock Display -->
+      <P>
+        <IMAGE src=".\Pictures\rolleyes.gif">
+        <B>It's almost Mike's Birthday! Are you READY?</B>
+        My next birthday is in: 
+        <form name="frmTilBD">
+          <div align=center align=middle>
+            <input type="textarea" name="left" size=60 value="Java">
+          </div>
+        </form>
+      </P>
+      <HR size=2 width=50% align=center noshade>
+      <P>
+        <BLOCKQUOTE id="DailyQuote">“The greatest of faults, I should say, is to be conscious of none.” ~ Thomas Carlyle, philosopher and historian</BLOCKQUOTE>
+      </P>
+    </TD>
+  </TR>
+  <TR id=HeaderRow>
+    <TD id="LowerLeft" align=center width = 30%>
+      <IMAGE id="ComicPic" src=".\Pictures\It's NMCI.jpg" width=300px height=300px >
+    </TD>
+    <TD id="LowerRight" align=left width = 70%>
+      <B>Available IT Help:</B>
+      <P>
+      <SCRIPT text="text/vbscript" language="vbscript">
+        set objNet = CreateObject("WScript.Network")
+        document.write "<B>System Username: </B>" & objNet.UserName & "<BR>"
+        document.write "<B>System Computer Name: </B>" & objNet.ComputerName & "<BR>"
+        set objNav = window.navigator
+        document.write "<B>Browser: </B>" & objNav.appName & "<BR> <B>Browser Version: </B>" & objNav.appVersion & ".<BR>"
+        set objNav = Nothing
+        set objNet = Nothing
+      </SCRIPT>
+      <B>Mike's PSNS Asset Number</B>: 5100808410 <BR>
+      <B>Model:</B> HP ProDesk 600 G3 MT <B>Refreshed</B>: 2018-05.<BR>
+      </P>
+      <P>
+        PSNS Corporate Apps <A href="mailto:PSNS.ITSupport.FCT@navy.mil">Helpdesk</A> or 360-627-2100 <BR>
+        NMCI <A href="mailto:ServiceDesk_Navy@nmci-isf.com">Help Desk</A> or 866-843-6624 Opt 1-1-2<BR>
+        <A href="https://www.Navy311.navy.mil">Navy 311</A>: Chat or 855-NAVY311 [MFOM/SAS]<BR>
+        ORC ECA PKI <A href="mailto:ecahelp@orc.com">Helpdesk</A> or 800-816-5548 [<A href="http://eca.orc.com/troubleshootingFAQ.html">FAQs</A>]<BR>
+        <a href=mailto:PSNS.C800TASO.FCT@navy.mil>TRF TASO</A> or 360-315-2706 <BR>
+        DISA Global Help Desk: 312-850-0032 OPT 2 [Internet/Intranet Connections Problems]
+      </P>
+    </TD>
+  </TR>
+</TABLE>
+
+<SCRIPT language="JavaScript" text="text/javascript">
+// Display a countdown clock based on an event my birthday: 12-30
+  var strDisplay;
+  var timerID = null;
+  var timerRunning = false;
+  
+  function showtime() {
+    now = new Date();
+    var CurHour = now.getHours();
+    var CurMinute = now.getMinutes();
+    var CurMonth = now.getMonth();
+    var CurDate = now.getDate();
+    var CurSecond = now.getSeconds();
+    now = null;
+    Hourleft = 23 - CurHour
+    Minuteleft = 59 - CurMinute
+    Secondleft = 59 - CurSecond
+    var Monthleft = 11 - CurMonth
+    var Dateleft = 29 - CurDate
+    if (Monthleft!=1) {var mos="s"} else {var mos=""}
+    if (Dateleft!=1) {var ds="s"} else {var ds=""}
+    if (Hourleft!=1) {var hs="s"} else {var hs=""}
+    if (Minuteleft!=1) {var mis="s"} else {var mis=""}
+    if (Secondleft!=1) {var ss="s"} else {var ss=""}
+    strDisplay=+Monthleft+' month'+mos+', '+Dateleft+' day'+ds+', '+Hourleft+' hour'+hs+', '+Minuteleft+' minute'+mis+', '+Secondleft+' second'+ ss + '.'
+    document.frmTilBD.left.value=strDisplay;
+    timerID = setTimeout("showtime()",1000);
+    timerRunning = true;
+  }
+  
+  function stopclock () 
+ {
+    if(timerRunning)
+    clearTimeout(timerID);
+    timerRunning = false;
+  }
+ 
+  function startclock () {
+    // Make sure the clock is stopped
+    stopclock();
+    showtime();
+  }
+</SCRIPT>
+
+<CENTER><A HREF=#TopofPage>Return to Top</A></CENTER>
+
+<HR  size=2 width=50% align=center noshade>
+<H3>Links</H3>
+<TABLE border=thin cellpadding=0 cellspacing=0>
+<TH colspan=4>Websites</TH>
+<TR width=25%>
+  <TD width=25%>Work</TD>
+  <TD width=25%>Information Technology</TD>
+  <TD width=25%>TRF</TD>
+  <TD width=25%>Training</TD
+</TR>
+<TR valign=top>
+  <TD><UL>
+    <LI><A href="https://psnsica.psns.navy.mil/">CITRIX Portal</A> [<A href="https://psnsica2.psns.navy.mil/">Alt</A>]</LI>
+    <LI><A href="https://syapps.psns.navy.mil/appsNuc/hitkit/">HITKit</A></LI>
+    <LI><A href="https://lds.psns.navy.mil/LDSr2/Login/Login.aspx">LDS.NET</A></LI>
+    <LI><A href="https://mfom.sscno.nmci.navy.mil/mfom">MFOM (MachCert required)</A></LI>
+    <LI><A href="https://milconnect-pki.dmdc.osd.mil/milconnect/">MilConnect</A>: DMDC/DEERS Support 800-538-9552</LI>
+    <LI><A href="https://r2w.psns.navy.mil/report2web/">Report 2 Web (R2W)</A></LI>
+    <LI><A href="https://rmmco.sscno.nmci.navy.mil/">RMMCO NW (PSNS, TRF)</A></LI>
+    <LI><A href="https://portal.secnav.navy.mil/">SECNAV Portal</A></LI>
+    <LI><A href="https://www.submepp.navy.mil/">SUBMEPP</A></LI>
+  </UL></TD>
+  <TD><UL>
+    <LI><A href="https://ss64.com/ascii.html" onClick= "LogEntry('Accessed ASCII Table')">ASCII Table</A></LI>
+    <LI><A href="https://www.hotwired.com/">Hot Wired Magazine</A></LI>
+    <LI><A href="https://www.webmagazine.com/">Web Magazine</A></LI>
+    <LI><A href="https://www.winzip.com/">WinZip</A></LI>
+    <LI><A href="https://www.w3.org/"> W3 Organization </A></LI>
+    <LI><A href="https://www.superpages.com/">DEX Yellow Superpages</A></LI>
+    <LI><A href="https://www.wolframalpha.com/">Wolfram-Alpha Computational Intelligence</A></LI>
+    <LI><A href="http://www.zdnet.com">ZDNet</A></LI>
+  </UL></TD>
+  <TD><UL>
+    <LI><A href="https://www.homeport.navy.mil/">Navy Homeport</A></LI>
+    <LI><A href="https://homeportnw.psns.navy.mil/">PSNS Homeport</A></LI>
+    <LI><A href="https://homeportnw.psns.navy.mil/sites/c800/default.aspx">TRF Homeport</A></LI>
+  </UL></TD>
+  <TD><UL>
+    <LI><A href="https://www.homeport.navy.mil/training/">Navy Homeport Training</A> (<A href="https://www.homeport.navy.mil/training/tips/pst-faq/">Tips & FAQs</A>)</LI>
+    <LI><A href="https://nmcitraining.skillport.com">NMCI e-Learning [SkillPort]</A> (<A href="mailto:nmci.e-learning@nmci-isf.com">Assistance</A>)</LI>
+    <LI><A href="https://www.NavyCollege.navy.mil">Navy College Center</A>: 877-253-7122</LI>
+  </UL></TD
+</TR>
+<TR width=25%>
+  <TD>Kitsap County</TD>
+  <TD>Media</TD>
+  <TD>Television</TD>
+  <TD>Traffic & Weather</TD
+</TR>
+<TR valign=top>
+  <TD><UL>
+    <LI><A href="https://www.kitsaptransit.org/">Kitsap Transit (Bus/Ferry)</A><BR>
+  </UL></TD>
+  <TD><UL>
+    <LI><A href="https://www.rd.com/">Reader's Digest</A> [<A href="http://www.rd.com/jokes/">Jokes</A>]<BR>
+  </UL></TD>
+  <TD><UL>
+    <LI><A href="http://www.bravotv.com/">Bravo TV</A><BR>
+    <LI><A href="http://www.lifetimetv.com/index.html">Lifetime TV</A>
+    <LI><A href="http://komonews.com/">KOMO News</A>
+  </UL></TD>
+  <TD><UL>
+    <LI><A href="https://airnow.gov/index.cfm?action=airnow.local_city&cityid=246" target="_new">Bremerton Air Quality</A></LI>
+    <LI><A href="https://www.bing.com/search?q=98312%20weather&FORM=PRWEHI&refig=af146f355f7b4b67b80eab1c02ed102a&httpsmsn=1" target="_blank">Bremerton Weather</A></LI>
+    <LI><A href="https://www.localconditions.com/weather-kitsap-county-washington/wa279/traffic.php" target="_blank">Local Traffic Map</A></LI>
+    <LI><A href="https://earthquaketrack.com/v/pnw/recent" target="_blank">PACNW Earthquakes</A></LI>
+    <LI><A href="https://pnsn.org/earthquakes/recent" target="_blank">PNSN Recent Events (Earthquakes)</A></LI>
+    <LI><A href="https://www.pse.com/outage/outage-map" target="_blank">PSE Outage Map</A></LI>
+    <LI><A href="https://secure.pscleanair.org/AirQuality/NetworkMap" target="_blank">Puget Sound Clean Air Status</A></LI>  
+    <LI><A href="https://www.weather.com" target="_blank">Weather</A></LI>
+  </UL></TD
+</TR>
+</TABLE>
+
+<!-- This is the credits section                                                                     -->
+<!-- ----------------------------------------------------------------------------------------------- -->
+    <I><CENTER><B><SMALL>
+      <A HREF=#TopofPage>Return to Top</A>
+      <HR>
+      <ADDRESS>Created by <A href="mailto:michael.r.myers1.ctr@navy.mil?subject=Mike's Menu">Michael R. Myers</A>, Genius at Large - if only in his head!
+      </ADDRESS>
+      <BR>
+      <SCRIPT language="JavaScript">
+      <!--Display the Date -->
+        today=new Date();
+        date="Today's Date: " + (today.getMonth()+1) + "/" + today.getDate() + "/" +   (today.getYear()+1900);
+        document.writeln(date);
+        document.write("Last updated: "+ document.lastModified);
+      // -->
+      </SCRIPT>
+    </SMALL></B></CENTER></I>
+
+</BODY>
+ 
+</HTML>
