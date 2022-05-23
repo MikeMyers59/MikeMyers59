@@ -14,8 +14,6 @@ If the picture does not have a transparent area, you can make one. You can creat
 •	The Set Transparent Color option is available for bitmap pictures that don't already have transparency information. It's also available for some, but not all, clip art.  
 •	To create a transparent area in an animated GIF, use an animated GIF editing program, and then insert the file again.  
 
-
-
 ## Outlook Archive Files
 
 | --- | --- |  
