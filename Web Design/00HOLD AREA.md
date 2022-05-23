@@ -1,5 +1,28 @@
 # HOLD AREA
 
+- [FAQ.css]() - requires jQuery
+  ```html
+  <script type="text/javascript" src="js/faq.js"></script>
+  ```
+- [FontAwesome](http://fontawesome.com) 
+  - [FA Kits](https://fontawesome.com/kits/249fc961f6/)
+  - [FA License](http://fontawesome.com/license)
+  Include this link in the HEAD Section:
+  ```html
+  <link type="text/css" href="css/font-awesome.css" rel="Stylesheet">
+  ```
+  Using the icon set is extremely simple.  Create a <SPAN> element and set the class to fa fa-<IconName>. Calls to the Icons: (FA – FA Free)
+  ```html
+  <SPAN class="fa fa-file-excel-o fa-1x"> </SPAN> - Excel Spreadsheets <BR>
+  <SPAN class="fa fa-file-pdf-o fa-1x"></SPAN> - PDF Documents <BR>
+  <SPAN class="fa fa-folder-open fa-1x"></SPAN> - Folder<BR>
+  <SPAN class="fa fa-shield fa-1x"> </SPAN> - Security Access Limited <BR>
+  ```
+
+- [jQuery API](http://api.jquery.com/)  
+- [jQueryUI](http://jqueryui.com/) - User Interface
+- [jQueryUI API](http://api.jqueryui.com/)  
+- [Mustache]() - `<script type="text/javascript" src="js/mustache.js"></script>`  
 - [Popper.js](https://popper.js.org/) 
 
 ### Attributes
@@ -10,6 +33,16 @@
 -webkit-transition-property	height,visibility
 -webkit-transition-timing-function	ease
 -webkit-user-select	none
+
+### File Locations
+Use the following Folders are used:
+•	<ROOT> - the index, icon files and this document
+•	css – for Style Sheets (css, less, etc.)
+•	files – documents linked within the page
+•	fonts – fonts required to support the page (FontAwesome)
+•	images – the unique pictures used by the site
+•	include – any <INCLUDE> called files
+•	js – the JavaScript files (jQuery, GDEB, Menu, etc.)
 
 ### WebDev Functions
 grayscale(50%)
@@ -56,12 +89,73 @@ translate(-50%,-50%)
 }
 ```
 
+|  Element|Roadmap|Notes |
+| --- | --- | --- | 
+|  Anchor`|`<A href=”UR”L>  </A>`| |
+|  Blockquote|`<BLOCKQUOTE>  </BLOCKQUOTE>`| |
+|  Button|`<BUTTON>  </BUTTON>`| |
+|  Headers|`<H1> </H1>` <br>  `<H2>  </H2>` <br> `<H3>  </H3>` <br> `<H4> </H4>` <br> `<H5> </H5>` <br> `<H6> </H6>` | |
+|  Image|`<IMG src=URL />`| |
+|  Script|`<SCRIPT type="text/javascript" >…</SCRIPT>`|In Head or Body areas. |
+|  Style|`<STYLE type="text/css" >…</STYLE>`|In Head area. |
+
+
+## Anchors
+Referencing Note: “#” refers to the current document (page), so #<Location> will take you to the location in the document. For a location in the document called “_Top”, a <Location> is defined by an Anchor element such as:
+<A name="_top”></A>
+
+
+## Containers
+![Containers](Containers.png) 
+
+|  Element|Roadmap|Notes |
+| --- | --- | --- | 
+|  Division | `<DIV>  </DIV>` | `class="column-container"` <br>  `class="column-of-two"` <br> `class="column-of-three"` |
+|  Article | `<ARTICLE>…</ARTICLE>` | |
+|  Header | `<HEADER>…</HEADER>` | |
+|  Aside | `<ASIDE>…</ASIDE>` | |
+|  Section | `<SECTION>…</SECTION>` | |
+|  Content | `<CONTENT>…</CONTENT>` | |
+|  Footer | `<FOOTER>…</FOOTER>` | |
+|  Navigation | `<NAV>  </NAV>` | |
+|  Paragraph | `<P>  </P>` | `class="centered"` |
+|  Span | `<SPAN></SPAN>` | Used for small area style changes or identification of an area in the document. |
+
 ## Conventions  
 | Source | Convetion Used | Notes |
 | --- | --- | --- |
 | ID Name | #PascalCase |  |
 | Class Name | .camelCase |  |
-| CSS Variable Name | --lowercase |  |
+| CSS Variable Name | --lowercase |  |  
+
+## Head Section
+Set your Icons using in the HEAD Section:
+```html
+<link rel="icon" href=" favicon.png" type="image/png">
+<link rel="shortcut icon" href=" favicon.ico" type="image/x-icon">
+```
+
+Alternately use if the icons aren’t stored in your ROOT directory: 
+```html
+<link rel="icon" href="https://www.ebnet.gdeb.com/favicon.png" type="image/png">
+<link rel="shortcut icon" href="https://www.ebnet.gdeb.com/favicon.ico" type="image/x-icon">
+```
+
+Set your META Data using the following in the HEAD Section:
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+
+Scripts
+```html
+<link type="text/css" href="js/jquery-ui.css" rel="Stylesheet">
+<link type="text/css" href="js/jquery-ui_002.css" rel="Stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery-migrate.js"></script>
+<script type="text/javascript" src="js/jquery-ui.js"></script>
+```
 
 ## Namespace  
 | Namespace | Source| Notes |  

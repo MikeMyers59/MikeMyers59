@@ -17,6 +17,19 @@ Does CSS allow aliasing to combine several classes? No use JS to add/remove clas
 | Text-Align | `text-align: center;` |  
 | Vertical Align | `vertical-align: baseline;` |  
 
+```css
+/* Text Alignment */
+.ta-center{
+  text-align: center;
+}
+.ta-left{
+  text-align: left;
+}
+.ta-right{
+  text-align: right;
+}
+```
+
 ## Background
 ```css
 background-color: #fdfdfd;
@@ -118,6 +131,13 @@ justify-content: { center | flex-end | space-around | space-between | space-even
 page-break-inside: avoid;
 ```
 
+Paragraphs
+```css
+P {
+  display: block;
+}
+```
+
 ## Position
 
 ### Viewport Position
@@ -127,6 +147,27 @@ page-break-inside: avoid;
 | Left	| left: 50%; | 
 | right	| right: 50%; | 
 | Top	| top: 10px; | 
+
+## Tables
+```css
+table {
+  border: 1px solid #CCC;
+  border-collapse: collapse;
+}
+td {
+  border: none;
+}
+
+.td-15{
+  width: 15%;
+}
+.td-50{
+  width: 50%;
+}
+.td-70{
+  width: 70%;
+}
+```
 
 ## Text Modification
 |Attribute | Example |
