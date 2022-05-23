@@ -81,6 +81,7 @@ Home Emergency
 - Bremerton: https://www.bing.com/search?q=98312%20weather&FORM=PRWEHI&refig=af146f355f7b4b67b80eab1c02ed102a&httpsmsn=1 
 - Poulsbo: https://www.bing.com/search?q=98370+weather&qs=WA&pq=98370+weather&sc=5-13&cvid=517CA61710B94410BE7063E744E66742&FORM=QBRE&sp=1
 - https://airnow.gov/index.cfm?action=airnow.local_city&cityid=246 
+- https://www.localconditions.com/weather-kitsap-county-washington/wa279/traffic.php
 
 NBK page: https://www.facebook.com/kitsapnavy/
 
