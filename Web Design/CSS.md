@@ -1,11 +1,12 @@
-# CSS: Cascade Style Sheet
+# CSS: Cascade Style Sheet  
+
+Does CSS allow aliasing to combine several classes? No use JS to add/remove classes!  
 
 #### Pseudo-Class
 |Attribute | Example |
 | --- | --- | 
 | First Child	| :first-child{ } |
 | Last Child	:last-child{ } |
-
 
 ## Align
 |Attribute | Example |
@@ -21,6 +22,11 @@
 background-color: #fdfdfd;
 background-image: radial-gradient(circle, #ddd 1px, rgba(0,0,0,0) 1px); /* dotted background */
 background-size: 1rem 1rem;
+background-color: #FAE042;
+background-color: rgba(250, 224, 66, .2);
+background-color:#172b4d;
+background-color: #7C5A0B;
+background-color: #A77B0E;
 ```
 
 ## Border
@@ -40,7 +46,21 @@ Long Form
   border-top: 0;
   border-right: 1px;
   border-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   border-left: 0;
+```
+
+## Box Sizing
+```css
+box-sizing: border-box;
+```
+
+## Content 
+```css
+content: attr(data-charcode);
+content: attr(char);
+content: "";
 ```
 
 ## Cursor
@@ -93,6 +113,11 @@ display: { block | flex | grid | inline | inline-block | inline-flex };
 justify-content: { center | flex-end | space-around | space-between | space-evenly };
 ```
 
+## Page Break
+```css
+page-break-inside: avoid;
+```
+
 ## Position
 
 ### Viewport Position
@@ -108,4 +133,31 @@ justify-content: { center | flex-end | space-around | space-between | space-even
 | --- | --- | 
 | Text Decoration  | `text-decoration: { overline | underline };` |
 | Text Transform | `text-transform: uppercase;` |
+
+## Text-overflow
+```css
+text-overflow: ellipsis;
+```
+
+## Transform
+```css
+transform: rotate(90deg) translateX(-3px);
+transform: translateY(-2px);
+```
+
+## Transition
+```css
+transition: max-height .25s ease-in-out;
+```
+
+## Unicode
+```css
+unicode-bidi: isolate;
+```
+
+## User Select
+```css
+user-select: none;
+user-select: text;
+```
 

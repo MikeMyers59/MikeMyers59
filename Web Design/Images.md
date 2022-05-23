@@ -1,6 +1,9 @@
 # Images
 
-If you're looking for Pinterest-like presentation of thumbnails of varying heights and/or widths, you'll need to use a third-party plugin such as [Masonry](https://masonry.desandro.com/), [Isotope](https://isotope.metafizzy.co/), or [Salvattore](https://salvattore.js.org/).
+If you're looking for Pinterest-like presentation of thumbnails of varying heights and/or widths, you'll need to use a third-party plugin such as 
+- [Masonry](https://masonry.desandro.com/)
+- [Isotope](https://isotope.metafizzy.co/)
+- [Salvattore](https://salvattore.js.org/)
 
 ## Base64
 
