@@ -51,8 +51,7 @@ Use the following Folders are used:
 •	files – documents linked within the page
 •	fonts – fonts required to support the page (FontAwesome)
 •	images – the unique pictures used by the site
-•	include – any <INCLUDE> called files
-•	js – the JavaScript files (jQuery, GDEB, Menu, etc.)
+•	scripts – the JavaScript files (jQuery, Menu, etc.)
 
 ### WebDev Functions
 grayscale(50%)
