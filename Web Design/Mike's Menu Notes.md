@@ -39,6 +39,13 @@ https://www.envisionreports.com/GD
 245 Summer Street, Boston, MA 02210
 https://www.NetBenefits.com or (800-835-5095)
 
+## Books
+
+#### Free E-Book Sites
+https://freesfonline.de/Authors.html 
+https://wiki.mobileread.com/wiki/E-book_conversion   
+https://www.ebooktemplates101.com  -  Our Microsoft Word Kindle Ebook Template and Videos Will Allow You To Create Perfectly Formatted Kindle Books Quickly And Easily!
+
 ## Magazines
 Hot Wired 	http://www.hotwired.com/
 Navy Times	http://www.navytimes.com
@@ -58,7 +65,7 @@ Ziff-Davis Tips (Weekly):	http://www.zdtips.com
 | KZOK|Seattle|iHeart| | |102.5| https://www.kzok.com/ S: (800) 252-1025 <br> B: (206) 805-1025 <br> http://player.radio.com/listen/station/kzok-1025 <br> http://play.it/stations/KZOK-HD2 |  
 | KJAQ|Seattle|Jack| | |96.5| |http://jackseattle.com/  <br> http://play.it/stations/96.5+JACK+FM |  
 
-### Channel Name
+#### Channel Name
 American History Channel (AHC)
 [Bravo](http://www.bravotv.com/)
 [Weather](http://www.weather.com)
