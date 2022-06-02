@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html><head>
+	<title>Internet Explorer 11 End of Life</title>
+<meta http-equiv="X-UA-Compatible" content="IE=11">
+<link rel="stylesheet" type="text/css" media="screen" href="Internet%20Explorer%2011%20End%20of%20Life_files/jqbanner.css">
+<link rel="stylesheet" href="Internet%20Explorer%2011%20End%20of%20Life_files/comp_sys_sup.css">
+<link rel="stylesheet" href="Internet%20Explorer%2011%20End%20of%20Life_files/comp_sys_sup_menu.css">
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/jquery.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/jquery-ui.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/jqbanner.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/comp_sys_sup.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/userinfo.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/site-contact.js"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+
+	//$('a').click(function(event){
+	//	event.stopPropagation();
+	//});
+	
+	$('.jqb_slides').css('display','block');
+	
+	var x = ($('#content').width()-10)/3;
+    
+	
+	$('#content').resize(function(){
+		var y = $('#content').width().toString()+'px';
+		$('.slide').css('width',y);
+		y = $('#content').width()*0.58055152;
+		y = y.toString()+'px';
+		
+		$('.slideimage').each(function(){
+			$(this).css('width',y);
+			$(this).css('height','180px');
+		});
+		
+		var x = ($('#content').width()-10)/3;
+
+		x = x.toString()+'px';
+		$('.threecol').css('width',x);
+	});
+
+});
+
+(function ($) {
+
+$.fn.hint = function (blurClass) {
+  if (!blurClass) { 
+    blurClass = 'blur';
+  }
+    
+  return this.each(function () {
+    // get jQuery version of 'this'
+    var $input = $(this),
+    
+    // capture the rest of the variable to allow for reuse
+      title = $input.attr('title'),
+      $form = $(this.form),
+      $win = $(window);
+
+    function remove() {
+      if ($input.val() === title && $input.hasClass(blurClass)) {
+        $input.val('').removeClass(blurClass);
+      }
+    }
+
+    // only apply logic if the element has the attribute
+    if (title) { 
+      // on blur, set value to title attr if text is blank
+      $input.blur(function () {
+        if (this.value === '') {
+          $input.val(title).addClass(blurClass);
+        }
+      }).focus(remove).blur(); // now change all inputs to title
+      
+      // clear the pre-defined text when form is submitted
+      $form.submit(remove);
+      $win.unload(remove); // handles Firefox's autocomplete
+    }
+  });
+};
+
+})(jQuery);
+</script>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://www.ebnet.gdeb.com/favicon.png" type="image/png">
+<link rel="shortcut icon" href="https://www.ebnet.gdeb.com/favicon.ico" type="image/x-icon">
+<link type="text/css" href="Internet%20Explorer%2011%20End%20of%20Life_files/gdeb.css" rel="Stylesheet">
+<link type="text/css" href="Internet%20Explorer%2011%20End%20of%20Life_files/menu.css" rel="Stylesheet">
+<link type="text/css" href="Internet%20Explorer%2011%20End%20of%20Life_files/font-awesome.css" rel="Stylesheet">
+<link type="text/css" href="Internet%20Explorer%2011%20End%20of%20Life_files/jquery-ui.css" rel="Stylesheet">
+<link type="text/css" href="Internet%20Explorer%2011%20End%20of%20Life_files/jquery-ui_002.css" rel="Stylesheet">
+
+<!--<link type="text/css" href="/jquery/jquery_plugins/jquery_datatables_latest/css/demo_page.css" rel="Stylesheet" />-->
+<!--<link type="text/css" href="/jquery/jquery_plugins/jquery_datatables_latest/css/demo_table.css" rel="Stylesheet" />-->
+<!--<link type="text/css" href="/jquery/jquery_plugins/jquery_datatables_latest/datatables.min.css" rel="Stylesheet" />-->
+<!--<link type="text/css" href="/jquery/jquery_plugins/jquery_datatables_latest/extras/TableTools/media/css/TableTools.css" rel="Stylesheet" />-->
+
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/es6-promise.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/jquery.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/jquery-ui.js"></script>
+<!--<script type="text/javascript" src="/jquery/jquery_plugins/jquery_datatables_latest/datatables.min.js"></script>-->
+<!--<script type="text/javascript" src="/jquery/jquery_plugins/jquery_datatables_latest/extras/TableTools/media/js/TableTools.min.js"></script>-->
+<!--<script type="text/javascript" src="/jquery/jquery_latest/jquery.min.js?v=4f252523d4af0b478c810c2547a63e19"></script>-->
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/jquery-migrate.js"></script>
+<!--<script type="text/javascript" src="/jquery/jquery_ui_latest/js/jquery-ui.custom.min.js?v=0f85afafa9731e71ae7cf77c926f68db"></script>-->
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/mustache.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/menu.js"></script>
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/gdeb.js"></script>
+<!--[if gte IE 9]>
+  <style type="text/css">
+    .gradient {
+       filter: none;
+    }
+  </style>
+<![endif]-->
+<!--[if lt IE 9]>  
+  <script>  
+    document.createElement("header" );   
+    document.createElement("footer" );   
+    document.createElement("section");    
+    document.createElement("aside"  );   
+    document.createElement("nav"    );   
+    document.createElement("article");    
+    document.createElement("hgroup" );    
+    document.createElement("time"   );   
+  </script>  
+  <noscript>  
+     <strong>Warning !</strong>  
+     Because your browser does not support HTML5, some elements are simulated using JScript.   
+     Unfortunately your browser has disabled scripting. Please enable it in order to display this page.   
+  </noscript>  
+<![endif]-->
+<script language="javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/faq.js"></script>	
+<script type="text/javascript">
+
+	// Firefox 1.0+
+	var isFirefox = typeof InstallTrigger !== 'undefined';
+	
+	// Internet Explorer 6-11
+	var isIE = /*@cc_on!@*/false || !!document.documentMode;
+	
+	// Edge 20+
+	var isEdge = !isIE && !!window.StyleMedia;
+	
+	// Chrome 1 - 79
+	var isChrome = !!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime);
+	
+	// Edge (based on chromium) detection
+	var isEdgeChromium = isChrome && (navigator.userAgent.indexOf("Edg") != -1);
+	
+	function checkBrowser() {
+	
+		if (isFirefox == true) {
+			window.alert("You are using Firefox.");
+		}
+		else if (isIE == true){
+			window.alert("You are using Internet Explorer.");
+		}
+		else if (isEdgeChromium == true){
+			window.alert("You are using Microsoft Edge.");
+		}
+		else if (isChrome){
+			window.alert("You are using Google Chrome.");
+		}
+	}
+	
+	</script>
+</head>
+<body>
+<header>
+    <div id="univ-header-container" class="univ-header-container-closed">
+        <div id="univ-header" class="univ-header-closed">
+                <div class="univ-header-column">
+                    <h3>Help Desk Infomation</h3>
+                    <ul class="no-style">
+                        <li><b>EB Production Support:</b> 860-433-5864</li>
+                        <li><b>EBIT Help Desk:</b> 860-433-HELP (4357)</li>
+                        <li><a href="https://sn.ebnet.gdeb.com/sp"><button class="red-button">Service Now</button></a></li>
+                    </ul>
+                </div>
+                <div class="univ-header-column">
+                    <h3>Employee Directory Search</h3>
+                <form id="simpleSearch" class="simpleSearch" name="phonebook" action="/ed/" method="get" target="_blank">
+                    <table>
+                      <tbody><tr>
+                        <td>Last:</td><td><input type="text" name="lname" size="15"></td>
+                        <td>Badge:</td><td><input type="text" name="badge" size="15"></td>
+                      </tr>
+                      <tr>
+                        <td>First:</td><td><input type="text" name="fname" size="15"></td>
+                        <td>Dept:</td><td><input type="text" name="dept" size="15"></td>
+                      </tr>
+                      <tr>
+                        <td>Middle:</td><td><input type="text" name="mname" size="15"></td>
+                        <td>Phone:</td><td><input type="text" name="phone_combined" size="15"></td>
+                      </tr>
+                    </tbody></table>
+                    <div align="center">
+                      <input name="Submit" type="submit" class="button" value="Submit">
+                      <input name="Reset" type="Reset" class="button" id="Reset" value="Reset">
+                      <a href="https://www.ebnet.gdeb.com/ed/">Advanced Search</a>
+                    </div>
+                </form>
+                </div>
+                <div class="univ-header-column">
+                    <h3>Intranet Search</h3>
+                    <form id="intranetSearch" method="get" action="/search" class="zoom_searchform" target="_blank">
+                        <input type="hidden" name="zoom_sort" value="0">
+                        <input type="hidden" name="zoom_xml" value="0">
+                        <input type="hidden" name="zoom_and" value="0">
+                        <input type="hidden" name="zoom_per_page" value="10">
+                        <input type="hidden" name="zoom_cat[]" value="-1">
+                        <input type="text" name="zoom_query" size="20" id="zoom_searchbox" class="zoom_searchbox">
+                        <button title="Search"><span class="fa fa-search"></span></button>
+                    </form>
+                    <h3>Wiki Search</h3>
+                    <form id="wikiSearch" method="get" action="https://wiki.ebnet.gdeb.com/Main/WebSearch" target="_blank">
+                        <input type="hidden" name="scope" value="all">
+                        <input type="hidden" name="web" value="all">
+                        <input type="hidden" name="recurse" value="on">
+                        <input type="text" name="search">
+                        <button title="Search"><span class="fa fa-search"></span></button>
+                    </form>
+                </div>
+                <div id="univ-header-news" class="univ-header-news">
+                    <h3>Announcements &amp; News</h3>
+                    <table id="newsTable" class="no-style">
+                        <tbody><tr>
+  <td valign="top" nowrap="nowrap" bgcolor="#ffffff" align="center">
+	<br>
+  </td>
+</tr>
+                    </tbody></table>
+                </div>            
+        </div>
+    </div>
+    <div class="header">
+        <span id="show-univ" class="fa fa-chevron-down fa-2x centered-text right"></span>
+        <p class="gdeb-logo">
+        <a href="https://homeport.ecms.gdeb.com/">
+        <img src="Internet%20Explorer%2011%20End%20of%20Life_files/gdeb-logo-white.png">
+        </a>
+        </p>
+        <h1 id="siteTitle" class="right">Computer Systems Support</h1>
+    </div>
+</header>
+
+<ul id="menu">
+
+  <li class=""><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/" style="cursor: pointer;" class="drop">Home</a><!-- Begin Home Item -->
+    <div class="dropdown_2columns"><!-- Begin 2 columns container -->
+
+      <div class="col_2">
+        <h2><span class="fa fa-home"></span> Welcome</h2>
+      </div>
+
+      <div class="col_2">
+        <p>Welcome to the Computer Systems Support website. Here you can
+ find general information about Electric Boat Information Technology</p>
+        <p> If you cannot find something you're looking for please use the 'Suggestions' tab.</p>
+      </div>
+
+    </div><!-- End 2 columns container -->
+  </li><!-- End Home Item -->
+
+  <li class=""><a class="drop">IT Requests</a><!-- Begin 4 columns Item -->
+    <div class="dropdown_4columns"><!-- Begin 4 columns container -->
+
+      <div class="col_4">
+        <h2><span class="fa fa-shopping-cart"></span> IT Requests</h2>
+      </div>
+
+      <div class="col_1">
+        <h3>Service Requests</h3>
+        <a href="https://sn.ebnet.gdeb.com/sp" target="_blank">Service Portal</a>
+<!--    <a href="/homepages/comp_sys_sup/include/html/service_requests/service_request_system/status.html">Status Dashboard</a>
+        <a href="/homepages/comp_sys_sup/include/html/service_requests/service_request_system/monthly_reports.html">Monthly Reports</a> -->
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/service_requests/service_request_system/">SR Info</a>
+      </div>
+
+      <div class="col_1">
+        <h3>CWO</h3>
+        <a href="notes://GROTON9/EB/cwo.nsf">Database Link</a>
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/service_requests/CWO/">CWO Info</a>
+      </div>
+
+      <div class="col_1">
+        <h3>CSAR</h3>
+        <a href="notes://GROTON9/EB/csar1.nsf">Database Link</a>
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/systems_access/CSAR/">CSAR Info</a>
+      </div>
+
+      <div class="col_1">
+        <h3>DPRB</h3>
+        <a href="notes://GROTON9/EB/pppd2000.nsf">PPD Link</a>
+        <a href="https://www.ebnet.gdeb.com/homepages/departments/604/DPRB/?applid=ebnet" target="_blank">DPRB Guide</a>
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/service_requests/DPRB/">DPRB Info</a>
+      </div>
+
+      <div class="col_1">
+        <h3>COFRACE</h3>
+        <a href="notes://GROTON9/EB/pppd2000.nsf">COFRACE Link</a>
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/service_requests/COFRACE/">COFRACE Info</a>
+      </div>
+
+      <div class="col_1">
+        <h3>Lotus Notes</h3>
+        <a href="notes://GROTON9/85256276006F5203/">Lotus Notes Email License Requests</a>
+      </div>
+
+      <div class="col_1">
+        <h3>Cloud Request</h3>
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/CloudRequest.docx">Cloud Request</a>
+      </div>
+
+    </div><!-- End 4 columns container -->
+  </li><!-- End 4 columns Item -->
+
+  <li class=""><a class="drop">Software</a><!-- Begin 3 columns Item -->
+    <div class="dropdown_3columns"><!-- Begin 3 columns container -->
+
+      <div class="col_3">
+          <h2><span class="fa fa-terminal"></span> Software</h2>
+      </div>
+
+	    <div class="col_1">
+        <h3>Assessment</h3>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/software_assessment/risk_assessment/status.html">RA Status</a>
+				<a href="https://www.ebnet.gdeb.com/homepages/departments/604/rastatus/">RA DB</a>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/software_assessment/risk_assessment/">RA Info</a>
+				<a href="https://wiki.ebnet.gdeb.com/BusinessLab/BusinessLabResourceRequest" target="_blank">Business Lab Req</a>
+				<a href="notes://GROTON9/EB/pppd2000.nsf" target="_blank">Project Planning</a>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/software_assessment/landesk_deployment/">LanDesk</a>
+      </div>
+
+      <div class="col_1">
+        <h3>Catalog</h3>
+        <ul>
+          <li><a href="https://ora.ebnet.gdeb.com:4443/pls/APPL/!display.form?app_name=PRODUCT%20CATALOG">COTS Catalog</a></li>
+          <li><a href="https://www.ebnet.gdeb.com/homepages/projects/cm/">In-House Catalog</a></li>
+		  <li><a href="https://wiki.ebnet.gdeb.com/EBIPG/SelfDeployableSoftware">Self Deployable Software</a></li>
+          <li><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/software_catalog/">Software Cat Info</a></li>
+        </ul>
+      </div>
+
+      <div class="col_1">
+        <h3>Licenses</h3>
+          <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/licenses/">Licenses Homepage</a>
+      </div>
+
+      <div class="col_3">
+        <h2>About the Product Catalog</h2>
+      </div>
+
+      <div class="col_3">
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/software_catalog/"><span class="fa fa-book fa-5x img_left"></span></a>
+        <p>The EB Product Catalog is part of an on-going effort by EBIT 
+(D604) to develop and maintain a centralized list of offered devices, 
+services, and software.  Currently the product catalog offers in-depth 
+information pertaining to COTS software titles.<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/software_catalog/">Read more...</a></p>
+
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/software_assessment/risk_assessment/"><span class="fa fa-shield fa-5x img_left"></span></a>
+        <p>The COTS software risk assessment process was implemented to 
+prevent production system interruption due to the deployment of new 
+software.  Key areas of software form, fit, and function are evaluated 
+for business and security requirements during this process. <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/software_assessment/risk_assessment/">Read more...</a></p>
+      </div>
+
+    </div><!-- End 3 columns container -->
+  </li><!-- End 3 columns Item -->
+
+  <li class=""><a class="drop">Hardware </a>
+  	<div class="dropdown_1column">
+      <div class="col_1">
+        <h2><span class="fa fa-desktop"></span> Hardware</h2>
+      </div>
+      <div class="col_1">
+        <a href="https://wiki.ebnet.gdeb.com/EBIPG/PCHardware">Hardware Resources</a>
+        <a href="https://wiki.ebnet.gdeb.com/EBIPG/TabletGuide">Latitude Tablet Guide</a>
+        <a href="https://www.ebnet.gdeb.com/homepages/departments/604/pc_refresh/">PC Refresh</a>
+        <a href="https://www.ebnet.gdeb.com/homepages/departments/604/printer_refresh/">Printing/Plotting Devices</a>
+      </div>
+  	</div>
+  </li>
+
+  <li class=""><a class="drop">Systems, Storage, &amp; Access</a><!-- Begin 5 columns Item -->
+    <div class="dropdown_5columns"><!-- Begin 5 columns container -->
+
+      <div class="col_3">
+        <h2><span class="fa fa-cubes"></span> Systems</h2>
+      </div>
+
+      <div class="col_2">
+        <h2><span class="fa fa-database"></span> Storage</h2>
+      </div>
+
+  		<div class="col_1">
+  			<h3>Intranet</h3>
+  			<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/groups/web/adobe_connect.html">Adobe Connect</a>
+  			<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/groups/web/ActiveX/ActiveX_Controls_Training.pdf">ActiveX Controls</a>
+  			<a href="https://wiki.ebnet.gdeb.com/">Electric Boat Wiki</a>
+  			<a href="https://www.ebnet.gdeb.com/instructions/">Web Development</a>
+  			<a href="https://awstats.ebnet.gdeb.com/">Web Statistics</a>
+				<h3>User Agreements</h3>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/BroadbandCardUserAgreement.docx">Broadband Card Agreement</a>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/BlackberryUserAgreement.docx">Blackberry Agreement</a>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/GENERAL_COMPUTER_USER_ACCESS_AGREEMENT.pdf">General User Agreement</a>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/iOSUserAgreement.docx">iOS iPad/iPhone Agreement</a>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/RemovableMediaUserAgreement.pdf">Removable Media Agreement</a>
+				<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/WindowsTabletAgreement.docx">Windows Tablet Agreement</a>
+				
+  		</div>
+
+      <div class="col_2">
+  			<h3>Information Systems</h3>
+          <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/pages/ccn/">Common Classified Network</a>
+		  <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/pages/systems_access/wifi/">Wi-Fi Networking</a>
+          <a href="https://www.ebnet.gdeb.com/homepages/groups/autocad/">AutoCAD Users Group</a>
+          <a href="https://www.ebnet.gdeb.com/homepages/departments/604/cadsys/">CAD Systems</a>
+          <a href="https://wiki.ebnet.gdeb.com/DOORS/WebHome">DOORS</a>
+          <a href="https://wiki.ebnet.gdeb.com/Dept604/IPDELinks">IPDE</a>
+  			<h3>Application Gateway</h3>
+					<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/pages/groups/nns/citrix-reporter.html">Citrix Trouble Reporter</a>
+          <a href="https://wiki.ebnet.gdeb.com/EBIPG/ApplicationGateway">Help and Information</a>
+          <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/pages/systems_access/appgw/">Resources Status</a>
+      </div>
+
+      <div class="col_2">
+        <h3>Network Storage</h3>
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/systems_access/data_storage/">Network Storage Info</a>
+      </div>
+
+      <div class="col_5">
+        <h2><span class="fa fa-lock"></span> Access</h2>
+      </div>
+
+      <div class="col_1">
+		<h3>New Hires</h3>
+			<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/systems_access/user_lookup/">New Hire Lookup Tool</a>
+        <h3>CSAR</h3>
+          <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/systems_access/CSAR/">CSAR Info</a>
+      </div>
+
+      <div class="col_1">
+        <h3>User Groups</h3>
+          <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/systems_access/data_storage/">User Groups Info</a>
+          <a href="https://adsu.ebnet.gdeb.com/">Group Mgmnt Tool</a>
+      </div>
+
+      <div class="col_1">
+        <h3>ORC Certificates</h3>
+          <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/systems_access/orc_certificates/">ORC Certificates Info</a>
+          <a href="https://wiki.ebnet.gdeb.com/EBIPG/DODCertificates">ORC Certificates Guide</a>
+      </div>
+
+      <div class="col_1">
+        <h3>SP 9-7</h3>
+          <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/systems_access/sp97/">SP 9-7 Info</a>
+      </div>
+
+      <div class="col_1">
+        <h3>SP 9-25</h3>
+          <a href="https://www.ebnet.gdeb.com/homepages/departments/604/applicationowners/">Application Owners</a>
+          <a href="https://www.ebnet.gdeb.com/homepages/departments/604/dataowners/">Data Owners</a>
+      </div>
+
+    </div><!-- End 5 columns container -->
+  </li><!-- End 5 columns Item -->
+
+  <li><a class="drop">Contact</a>
+
+    <div class="dropdown_5columns">
+              <div class="col_5">
+          <h2><span class="fa fa-comments"></span> Contact EBIT By Topic</h2> <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/pages/contact">View contact page</a>
+          <i>Select a topic to find out who to contact.</i><button class="right" id="resetContacts">Reset</button>
+        </div>
+        <div class="col_1">
+          <button id="assetManagement" class="contactTopic grey-button">Asset Management</button>
+          <button id="businessLab" class="contactTopic grey-button">Business Lab</button>
+          <button id="ccn" class="contactTopic grey-button">CCN</button>
+          <button id="cloudassessments" class="contactTopic grey-button">Cloud Assessments</button>
+        </div>
+        <div class="col_1">
+          <button id="networkStorage" class="contactTopic grey-button">Network Storage</button>
+		  <button id="ngen" class="contactTopic grey-button">NGEN</button>
+          <button id="pcRefresh" class="contactTopic grey-button">PC Refresh</button>          
+          <button id="pkiCertificates" class="contactTopic grey-button">PKI Certificates</button>          
+        </div>
+        <div class="col_1">
+		  <button id="printers" class="contactTopic grey-button">Printers</button>
+          <button id="riskAssessments" class="contactTopic grey-button">Risk Assessments</button>
+          <button id="securityExceptions" class="contactTopic grey-button">Security Exceptions</button>
+          <button id="serviceRequests" class="contactTopic grey-button">Service Requests</button>
+        </div>
+        <div class="col_1">
+		  <button id="smartPhone" class="contactTopic grey-button">Smart Phone</button>
+          <button id="sp97" class="contactTopic grey-button">SP 9-7</button>
+		  <button id="techstop" class="contactTopic grey-button">Tech Stop</button>
+          <button id="vpn" class="contactTopic grey-button">VDI/VPN</button>
+          
+        </div>
+        <div class="col_1">
+		  <button id="webMaster" class="contactTopic grey-button">Webmaster</button>
+          <button id="wifi" class="contactTopic grey-button">Network / Wi-Fi</button>
+          <button id="wiki" class="contactTopic grey-button">Wiki</button>
+        </div>
+		
+		<!-- Business Infrastructure -->
+        <div class="col_5">
+          <h2><span class="fa fa-comments"></span> Contact The Business Infrastructure Team</h2>
+        </div>
+        <div class="col_1">
+          <button id="angelamock" class="contactPerson grey-button">Angela Mock</button>
+		  <button id="bensmith" class="contactPerson grey-button">Benjamin Smith</button>
+          <button id="bobspencer" class="contactPerson grey-button">Bob Spencer</button>
+          <button id="brettpetrow" class="contactPerson grey-button">Brett Petrow</button>
+        </div>
+        <div class="col_1">
+		  <button id="caracormier" class="contactPerson grey-button">Cara Cormier</button>
+		  <button id="colesilvia" class="contactPerson grey-button">Cole Silvia</button>
+          <button id="ernievetelino" class="contactPerson grey-button">Ernie Vetelino</button>
+          <button id="espenlauter" class="contactPerson grey-button">Espen Lauter</button>
+          
+        </div>
+        <div class="col_1">
+		  <button id="harisobed" class="contactPerson grey-button">Haris Obed</button>
+          <button id="jeffparker" class="contactPerson grey-button">Jeff Parker</button>
+          <button id="katledesma" class="contactPerson grey-button">Kat Ledesma</button>
+          <button id="matthewkaczynski" class="contactPerson grey-button">Matthew Kaczynski</button>
+        </div>
+        <div class="col_1">
+          <button id="michaelkeegan" class="contactPerson grey-button">Michael Keegan</button>
+          <button id="nathanmccarron" class="contactPerson grey-button">Nathan McCarron</button>
+          <button id="ryancarlo" class="contactPerson grey-button">Ryan Carlo</button>
+          <button id="ryandixe" class="contactPerson grey-button">Ryan Dixe</button>
+        </div>
+        <div class="col_1">
+          <button class="grey-button green-button">Primary</button>
+          <button class="grey-button yellow-button">Secondary</button>
+        </div>
+		<br>
+		<br>
+		<!-- Security Compliance-->
+		<div class="col_5">
+          <h2><span class="fa fa-comments"></span> Contact The Security Engineering &amp; Compliance Team</h2>
+        </div>
+        <div class="col_1">
+          <button id="andreadiorio" class="contactPerson grey-button">Andrea DiOrio</button>
+		  <button id="andrewbentley" class="contactPerson grey-button">Andrew Bentley</button>
+        </div>
+        <div class="col_1">
+		  <button id="bronwyngallagher" class="contactPerson grey-button">Bronwyn Gallagher</button>
+		  <button id="francoispelletier" class="contactPerson grey-button">Francois Pelletier</button>
+        </div>
+        <div class="col_1">
+		  <button id="luismadrid" class="contactPerson grey-button">Luis Madrid</button>
+		  <button id="lynnepickett" class="contactPerson grey-button">Lynne Pickett</button>
+        </div>
+        <div class="col_1">
+          <button class="grey-button green-button">Primary</button>
+          <button class="grey-button yellow-button">Secondary</button>
+        </div>
+		<br>
+		<br>
+		<!-- div that calls the contact card function -->
+		<div id="contactDetails" class="col_5">
+        </div>
+		
+		<!-- Management Buttons-->
+		<div class="col_5">
+          <h2><span class="fa fa-comments"></span> Management</h2>
+        </div>
+		<div class="col_1">
+          <button id="daneldridge" class="contactPerson grey-button">Dan Eldridge (Business Infrastructure Manager)</button>
+		</div>
+        <div class="col_1">
+          <button id="tomlewon" class="contactPerson grey-button">Tom Lewon (Business Infrastructure Supervisor)</button>
+        </div>
+        <div class="col_1">
+          <button id="bryanyoung" class="contactPerson grey-button">Bryan Young (Security Engineering &amp; Compliance Supervisor)</button>
+        </div>
+        
+		<!-- Group Links-->
+        <div class="col_5">
+          <h2><span class="fa fa-group"></span> Groups</h2>
+        </div>
+
+        <div class="col_2">
+          <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/groups/bcp_dr/">BCP/DR</a>
+          <a href="https://wiki.ebnet.gdeb.com/EBIPG/BusinessLab">Business Lab</a>
+          <a href="mailto:diskrequest@gdeb.com?Subject=Comp%20Sys%20Sup%20-%20Disk%20Requests">Disk Requests</a>
+        </div>
+        <div class="col_2">
+          <a href="mailto:ebitsrreviewteam@gdeb.com?Subject=Comp%20Sys%20Sup%20-%20Service%20Requests">Service Requests</a>
+          <a href="mailto:webmaster@gdeb.com">Webmaster</a>
+        </div>
+
+        <div class="col_5">
+          <h2><span class="fa fa-external-link"></span> Related Groups</h2>
+        </div>
+
+        <div class="col_2">
+		  <nobr><a href="https://homeport.ecms.gdeb.com/km/Pages/Home.aspx">Knowledge Management Services / Homeport</a></nobr> 
+          <a href="https://www.ebnet.gdeb.com/homepages/projects/cm/">SCM</a>
+        </div>
+
+<script type="text/javascript" src="Internet%20Explorer%2011%20End%20of%20Life_files/contact.js"></script>
+    </div>
+
+  </li>
+  <li><a class="drop">Help</a>
+    <div class="dropdown_4columns">
+
+      <div class="col_2">
+        <h2><span class="fa fa-exclamation-triangle"></span> Help Desk Information</h2>
+      </div>
+
+      <div class="col_2">
+        <h2><span class="fa fa-graduation-cap"></span> Training</h2>
+      </div>
+
+  		<div class="col_2">
+  			<p>All CAD, ER/JCALS, Design process, and Canon Printer related problems should be referred to the EB Production Support group.</p>
+  			<p>All other production related computer system problems should be referred to the Help Desk.</p>
+  			<p><b>EB Production Support:</b> 860-433-5864</p>
+  			<p><b>EBIT Help Desk:</b> 860-433-HELP (4357)</p>
+  		</div>
+
+  		<div class="col_2">
+  			<a href="https://wiki.ebnet.gdeb.com/MicrosoftOffice2010/TrainingAndSupport/WebHome">Office 2010</a>
+  			<a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/GENERAL_COMPUTER_USER_ACCESS_AGREEMENT.pdf">Computer Agreement</a>
+  			<a href="https://wiki.ebnet.gdeb.com/EBIPG/NewHireSetupInstructions">New Hire Setup</a>
+  			<a href="https://www.ebnet.gdeb.com/training/GDMarine_training/LMS_Course_Materials/(PS_45)_EB_Information_Security_Awareness/NOLMS/Information%20Security%20Awareness.htm">Information Security</a>
+        <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/groups/web/Internet/">Website Blocks / Requesting Unblock</a>
+  		</div>
+
+	  </div>
+  </li>
+  <li><a class="drop">Suggestions</a>
+    <div class="dropdown_4columns align_right">
+
+	    <div class="col_4">
+        <h2><span class="fa fa-lightbulb-o"></span> Suggestions</h2>
+      </div>
+
+      <div class="col_4">
+        <p>Can't find what you are looking for?  Have an idea on how to improve this site? Submit a suggestion using the box below.</p>
+        <p><b>The suggestions box should not be used to report problems 
+with your computer or applications.  If you are experiencing issues with
+ a production system please contact the CSC Help Desk.</b></p>
+        <form method="post" action="/php/inet/formmail/formmail.php" id="commentForm">
+  				<input type="hidden" name="recipients" value="ebitsrreviewteam@gdeb.com">
+  				<input type="hidden" name="subject" value="Computer Systems Support - Suggestion Submitted">
+  				<input type="hidden" name="good_url" value="/homepages/comp_sys_sup/index.html">
+  				<input type="hidden" name="bad_url" value="/homepages/comp_sys_sup/index.html">
+  				<input type="hidden" name="required" value="realname,Badge,Message,email">
+  				<input type="hidden" name="mail_options" id="mail_options" class="mail_options" value="FromLineStyle=QuotedNameRouteAddr,Exclude=email;realname">
+  				<input type="hidden" name="realname" id="realname" class="required">
+  				<input type="hidden" name="email" id="email" class="email">
+  				<input type="hidden" name="Badge" id="badge" class="badge">
+  					<center>
+  					<table class="styled">
+  					<tbody><tr>
+  					<td><textarea cols="50" rows="8" name="Message" id="message" class="resizable required"></textarea></td>
+  					</tr>
+  					</tbody></table>
+  					<button id="sugSubmit">Submit</button>
+  					</center>
+        </form>
+      </div>
+	   </div>
+  </li>
+
+ <li><a class="drop">Quick Links</a><!-- Begin 5 columns Item -->
+    <div class="dropdown_2columns align_right"><!-- Begin 5 columns container -->
+
+      <div class="col_2">
+        <h2><span class="fa fa-ellipsis-v"></span> Quick Links</h2>
+      </div>
+
+      <div class="col_2">
+  			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/groups/web/adobe_connect.html" target="_blank">Adobe Connect</a></p>
+			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/BroadbandCardUserAgreement.docx">Broadband Card Agreement</a></p>
+			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/BlackberryUserAgreement.docx">Blackberry Agreement</a></p>
+  			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/GENERAL_COMPUTER_USER_ACCESS_AGREEMENT.pdf">Computer Agreement</a></p>
+  			<p><a href="https://ora.ebnet.gdeb.com:4443/pls/APPL/!display.form?app_name=PRODUCT%20CATALOG" target="_blank">EB COTS Software Catalog</a></p>
+			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/GENERAL_COMPUTER_USER_ACCESS_AGREEMENT.pdf">General User Agreement</a></p>
+			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/groups/security/">Information Security</a></p>
+  			<p><a href="https://www.ebnet.gdeb.com/training/GDMarine_training/LMS_Course_Materials/(PS_45)_EB_Information_Security_Awareness/NOLMS/Information%20Security%20Awareness.htm" target="_blank">Information Security Awareness Training</a></p>
+			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/iOSUserAgreement.docx">iOS iPad/iPhone Agreement</a></p>
+  			<p><a href="https://wiki.ebnet.gdeb.com/EBIPG/NewHireSetupInstructions">New Hire Setup</a></p>
+  			<p><a href="https://wiki.ebnet.gdeb.com/MicrosoftOffice2010/TrainingAndSupport/WebHome">Office 2010</a></p>
+  			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/groups/oracle/">Oracle Documentation</a></p>
+			<p><a href="https://www.ebnet.gdeb.com/php/ebit/pwcheck/">Password Check Tool</a></p>
+			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/RemovableMediaUserAgreement.pdf">Removable Media Agreement</a></p>
+  			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/RSA_Token_Return_Form.doc">RSA Token Return Form</a></p>
+  			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/html/software/licenses/">Software Licenses</a></p>
+  			<p><a href="https://wiki.ebnet.gdeb.com/EBIPG/ActiveDirectorySearchUtility" target="_blank">Windows Group Management Tool</a></p>
+			<p><a href="https://bugzilla.ebnet.gdeb.com/buglist.cgi?bug_status=UNCONFIRMED&amp;bug_status=NEW&amp;bug_status=ASSIGNED&amp;bug_status=REOPENED&amp;columnlist=component%2Cversion%2Cassigned_to%2Cbug_status%2Cshort_desc&amp;content=&amp;product=Windows%20Patching&amp;query_format=specific&amp;query_based_on=" target="_blank">Windows Patching BugZilla</a></p>
+			<p><a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/include/documents/WindowsTabletAgreement.docx">Windows Tablet Agreement</a></p>
+			</div>
+
+  	</div><!-- End 2 columns container -->
+  </li><!-- End 2 columns Item -->
+
+	<!-- Error -->
+	<!-- Error -->
+
+</ul>
+
+<script>
+jQuery(document).ready(function(){
+
+		jQuery( '#sugSubmit' ).click(function(event){
+			event.preventDefault();
+
+			var fname = userInfo.firstName,
+                lname = userInfo.lastName,
+                badge = userInfo.badge,
+                email = userInfo.email,
+                realname = fname + ' ' + lname,
+                docLoc = document.location.href,
+                message = jQuery('#message').val();
+
+			jQuery('input[name="FromAddr"]').val(email);
+			jQuery('input[name="email"]').val(email);
+			jQuery('input[name="Badge"]').val(badge);
+			jQuery('input[name="realname"]').val(realname);
+			jQuery('input[name="redirect"]').val(docLoc);
+
+			if(message != '')
+			{
+				jQuery('#commentForm').submit();
+			}
+			else
+			{
+				alert('A message is required, please try again.');
+			}
+		});
+
+    document.getElementById('message').addEventListener('click', function(event) {
+      event.stopPropagation();
+    });
+});
+</script>
+
+<div class="pageheader">
+<h1 id="pagetitle" class="pagetitle">Internet Explorer 11 End of Life</h1>
+</div>
+<script>
+  document.getElementById('pagetitle').innerText = document.title;
+</script>
+   <section id="content" class="content">
+	   <h1>Internet Explorer 11 is set to retire on June 15th, 2022</h1>
+
+		<p>EBIT is currently developing and testing solutions to transition 
+off Internet Explorer 11. Please see the table below of applications 
+that we are currently working on.</p>
+
+		<table class="">
+			<tbody><tr>
+				<th>Application</th>
+				<th>Additional Information</th>
+			</tr>
+			<tr>
+				<td>ADSU</td>
+				<td>Active Directory Search Utility</td>
+			</tr>
+			<tr>
+				<td>ApplCore</td>
+				<td>All "ora.ebnet.gdeb.com" Applications</td>
+			</tr>
+			<tr>
+				<td>Arcmis</td>
+				<td>Automated Radiological Management Information System</td>
+			</tr>
+			<tr>
+				<td>BILaunchPad</td>
+				<td>Business Objects InfoView / SAP</td>
+			</tr>
+			<tr>
+				<td>CAIL</td>
+				<td>EB7G, EB7GQP, EB3G WIP</td>
+			</tr>
+			<tr>
+				<td>CPC</td>
+				<td>Common Parts Catalog</td>
+			</tr>
+			<tr>
+				<td>CMS</td>
+				<td>Credential Management System</td>
+			</tr>
+			<tr>
+				<td>CAES</td>
+				<td>Computer Aided Engineering System</td>
+			</tr>
+			<tr>
+				<td>ENAP</td>
+				<td>EB-NNS Addendum Program</td>
+			</tr>
+			<tr>
+				<td>Janus / PTR</td>
+				<td>Change Approvals, Configuration Items, Problem Trouble Reports</td>
+			</tr>
+			<tr>
+				<td>Passport</td>
+				<td>Quick ATA, Mainframe (Dynamic, mod5, BIW, Test Region)</td>
+			</tr>
+			<tr>
+				<td>SubALPS</td>
+				<td>Submarine Automated Label Plate System</td>
+			</tr>
+	   </tbody></table>
+		
+	   <p class="note-block">If you believe an application requires Internet Explorer to run and don't see the application listed in the above table, please <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/announcements/internetexplorer.html#ie11-mode">Test the Application in IE11 Mode</a> first, then fill out the <a href="https://www.ebnet.gdeb.com/survey/?SURVEY_ID=Internet%20Explorer%2011%20Retirement%20Survey" target="_blank">Internet Explorer 11 Retirement Survey</a>.</p>
+	 
+		<p>EBIT will be enabling IE11 Mode compatability within Edge for some 
+applications. There will be no difference in functionality for these 
+applications. Other Applications will work in Chrome or Firefox.</p> 
+		<p>EBIT is currently developing and testing solutions for a clean 
+migration off of Internet Explorer 11. EBIT strongly recommends using 
+Edge before the cutover to help ease the transition. Users should also 
+export their bookmarks or favorites from Internet Explorer and Import 
+them into Edge. </p>
+		<p>EBIT currently allows users to select their preffered default browser. Please see the Wiki article on <a href="https://wiki.ebnet.gdeb.com/EBIPG/DefaultWebBrowserSetting">Default Browser Settings</a> for instructions.</p>
+		<p>Some applications will work better in one browser versus another. Please be sure to check the <a href="https://homeport.ecms.gdeb.com/Lists/Online%20Applications/allonlineapplications.aspx" target="_blank">Online Applications</a> page to view the reccomended browser for a given application.</p>
+		 
+		<p class="note-block">Do you know what browser you are currently using? See the below <a href="https://www.ebnet.gdeb.com/homepages/comp_sys_sup/announcements/internetexplorer.html#browser-check">Button</a> to determine what Browser you are currently using.</p>
+
+	  
+	   <h2>Exporting Favorites / Bookmarks from Internet Explorer and Importing to a New Browser</h2>
+	  
+	   <div class="faq-accordion centered ui-accordion ui-widget ui-helper-reset" role="tablist">
+			<h3 href="#" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-1" aria-controls="ui-id-2" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Exporting from Internet Explorer</h3>
+				<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-2" aria-labelledby="ui-id-1" role="tabpanel" aria-hidden="true">
+					<ol>
+						<li>In the Internet Explorer browser, select <b>View favorites, feeds, and history </b>, or select <b>Alt + C</b> to open Favorites.</li>
+						<li>Under the <b>Add to favorites</b> menu, select <b>Import and export...</b>.</li>
+						<li>Select <b>Export to a file</b>, and then select <b>Next</b>.</li>
+						<li>On the checklist of options, select <b>Favorites</b>, and then select <b>Next</b>.</li>
+						<li>Select the folder that you'd like to export your Favorites from, and then select <b>Next</b>.</li>
+						<li>Type or browse to the location where you'd like your file exported.</li>
+						<li>Select <b>Export</b> and then <b>Finish</b>.</li>
+						<li>Your Favorites will now appear in an htm file in the location you've specified.</li>
+					</ol>
+				</div>
+		</div>
+		<div class="faq-accordion centered ui-accordion ui-widget ui-helper-reset" role="tablist">
+			<h3 href="#" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-3" aria-controls="ui-id-4" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Importing to Chrome</h3>
+				<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-4" aria-labelledby="ui-id-3" role="tabpanel" aria-hidden="true">
+					<ol>
+						<li>In the Chrome browser, at the top right, click on the <b>Menu</b> button <img src="Internet%20Explorer%2011%20End%20of%20Life_files/chrome_menu.png">.</li>
+						<li>Select <b>Bookmarks</b>, then <b>Import Bookmarks and Settings</b>.</li>
+						<li>Select the program you'd like to Import, the default should be <b>Microsoft Internet Explorer</b>.</li>
+						<li>Uncheck Browsing history and Search engines, leave Favorites/Bookmarks checked.</li>
+						<li>Click <b>Import</b>, then <b>Done</b>.</li>
+					</ol>
+				</div>
+		</div>
+		<div class="faq-accordion centered ui-accordion ui-widget ui-helper-reset" role="tablist">
+			<h3 href="#" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-5" aria-controls="ui-id-6" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Importing to Firefox</h3>
+				<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-6" aria-labelledby="ui-id-5" role="tabpanel" aria-hidden="true">
+					<ol>
+						<li>In the Firefox browser, at the top right, click on the <b>Menu</b> button <img src="Internet%20Explorer%2011%20End%20of%20Life_files/firefox_menu.png">.</li>
+						<li>Click <b>Bookmarks</b>, then click <b>Manage Bookmarks</b> bar at the bottom.</li>
+						<li>Within the Import Bookmarks File window that opens, navigate 
+to the bookmarks HTM/HTML file you are importing and select the file. 
+(This is the file you exported from Internet Explorer)</li>
+						<li>Click the <b>Open</b> button. The Import Bookmarks File window will close.</li>
+						<li>Close the Library window.</li>
+					</ol>
+				</div>
+		</div>
+		<div class="faq-accordion centered ui-accordion ui-widget ui-helper-reset" role="tablist">
+			<h3 href="#" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" id="ui-id-7" aria-controls="ui-id-8" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>Importing to Edge</h3>
+				<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-8" aria-labelledby="ui-id-7" role="tabpanel" aria-hidden="true">
+					<ol>
+						<li>In Microsoft Edge, select <b>Settings and more</b> then select <b>Settings</b>.</li>
+						<li>Under Profiles, select <b>Import browser data</b>.</li>
+						<li>Click <b>Choose what to import</b> then change the Import from selection to be <b>Microsoft Internet Explorer</b>.</li>
+						<li>Uncheck Browing History, Cookies, and Open Tabs, then click <b>Import</b>.</li>
+					</ol>
+				</div>
+		</div>
+
+		<h2>Testing an Application in IE11 Mode</h2>
+		<div class="faq-accordion centered ui-accordion ui-widget ui-helper-reset" role="tablist">
+			<h3 href="#" id="ie11-mode" class="ui-accordion-header ui-state-default ui-corner-all ui-accordion-icons" role="tab" aria-controls="ui-id-9" aria-selected="false" aria-expanded="false" tabindex="0"><span class="ui-accordion-header-icon ui-icon ui-icon-triangle-1-e"></span>How to Enable IE11 Mode in Edge</h3>
+				<div class="ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom" style="display: none;" id="ui-id-9" aria-labelledby="ie11-mode" role="tabpanel" aria-hidden="true">
+					<ol>
+						<li>In Microsoft Edge, select <b>Settings and more</b> then select <b>Settings</b>.</li>
+						<li>Click on the <b>Default Browser</b> tab.</li>
+						<li>Click the drop-down menu to the right of <b>Allow sites to be reloaded in Internet Explorer Mode</b> then change the setting from Default to <b>Allow</b>.</li>
+						<li>Restart Microsoft Edge.</li>
+						<li>Navigate to the site you wish to test.</li>
+						<li>In the top right, select <b>Settings and more</b>, then click on <b>Reload in Internet Explorer mode</b>.</li>
+					</ol>
+				</div>
+		</div>
+		
+		<h2>What Browser Am I Using?</h2>
+		<button id="browser-check" onclick="checkBrowser()">Click to Determine your Browser</button>
+
+		<p class="note-block">Should you have any questions or concerns, please reach out to <a href="mailto:EBITSRReviewTeam@gdeb.com">EBITSRReviewTeam@gdeb.com</a>.</p>
+   </section>
+<footer id="footer" class="footer">
+
+<p class="sitemessage" id="sitemessage"></p>
+<p class="pcontainer" id="pcontainer"></p>
+<a href="https://www.ebnet.gdeb.com/policy/">Copyright © General Dynamics Electric Boat 1996-2022.</a> |
+Send WWW server questions to:  <a href="mailto:webmaster@gdeb.com">webmaster@gdeb.com</a> |
+
+        Updated
+        on:
+        Friday, May 27, 2022
+</footer>
+
+
+</body></html>
