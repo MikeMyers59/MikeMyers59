@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+
+<HTML>
+
+<HEAD>
+
+<TITLE>TapsOnline</TITLE>
+
+</HEAD>
+
+<body>
+
+<!---BEGIN CALENDAR--->
+<table border=0 cellpadding=0 cellspacing=0 bgcolor="#3333ff" align=center><tr><td>
+
+<SCRIPT LANGUAGE="JavaScript">
+function fBuildCal(iYear,iMonth) {
+	var aMonth=new Array();
+	aMonth[0]=new Array('S','M','T','W','T','F','S');
+	aMonth[1]=new Array(7);
+	aMonth[2]=new Array(7);
+	aMonth[3]=new Array(7);
+	aMonth[4]=new Array(7);
+	aMonth[5]=new Array(7);
+	aMonth[6]=new Array(7);
+	var dCalDate=new Date(iYear,iMonth,1);
+	var iDayOfFirst=dCalDate.getDay();
+	var iDaysInMonth= 32 - new Date(iYear, iMonth, 32).getDate();
+	var iVarDate=1;
+	for(var d=iDayOfFirst;d<7;d++) {
+		aMonth[1][d]=iVarDate;
+		iVarDate++;
+	}
+	for(var w=2;w<7;w++) {
+		for(var d=0;d<7;d++) {
+			if(iVarDate<=iDaysInMonth) {
+				aMonth[w][d]=iVarDate;
+				iVarDate++;
+		      }
+		}
+	}
+	return aMonth;
+}
+
+function fDrawCal(iYear,iMonth) {
+	var myMonth;
+	var MonthName=new Array('January','February','March','April','May','June','July','August','September','October','November','December');
+	// get layout
+	myMonth=fBuildCal(iYear,iMonth);
+	// start table
+	document.write("<table border=0 cellpadding=0 cellspacing=0 bgcolor=\"#3333ff\" align=center><tr><td>");
+	document.write("<table border=0 width=185 bgcolor=\"#3333FF\" align=center>");
+	// headline row: month name with link
+	document.write("<tr bgcolor=\"#ffffff\"><td colspan=7 align=center>");
+	document.write("<font size=2 face=\"Arial\"><b>" + MonthName[iMonth] + "</b></font></td></tr>");
+	// day of week row
+	document.write("<tr>");
+	for(d = 0; d < 7; d++) {
+		document.write("<td align=center><font size=1 face=\"Arial\" color=#ffffff><b>" + myMonth[0][d] + "</b></font></td>");
+	}
+	document.write("</tr>");
+	// remaining rows
+	for(w = 1; w < 7; w++) {
+		document.write("<tr>")
+		for(d = 0; d < 7; d++) {
+			document.write("<td  align=center valign='top' id=calCell'>");
+			if(!isNaN(myMonth[w][d])) {
+				document.write("<font size=1 face=\"Arial\" color=#ffffff>" + myMonth[w][d] + "</font>");
+			} else {
+				document.write("<font size=1> </font>");
+			}
+			document.write("</td>")
+		}
+		document.write("</tr>");
+	}
+	document.write("</table></td></tr></table>")
+}
+var dDate=new Date();
+var dCurMonth=dDate.getMonth();
+var dCurYear=dDate.getFullYear();
+fDrawCal(dCurYear,dCurMonth);
+</script>
+
+</td></tr></table><br>
+ 
+<SCRIPT LANGUAGE="JavaScript">
+function y2k(number) { return (number < 1000) ? number + 1900 : number; }
+var today = new Date();
+var date = new Date(y2k(today.getYear()),today.getMonth() + 1, today.getDate());
+</script>
+
+</body>
+</html>
