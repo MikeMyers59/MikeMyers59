@@ -1,4 +1,0 @@
-# Error Object
-
-## Examples
-

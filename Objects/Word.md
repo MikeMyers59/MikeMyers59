@@ -1,3 +1,0 @@
-# MS OFfice Word Object
-
- 

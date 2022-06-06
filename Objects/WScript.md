@@ -1,4 +1,0 @@
-# WScript Object
-
-## Properties & Methods
-

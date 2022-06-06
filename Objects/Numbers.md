@@ -1,4 +1,0 @@
-# Numbers Object
-
-## Examples
-

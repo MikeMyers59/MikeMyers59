@@ -1,3 +1,0 @@
-# MIME & Media Types
-
-

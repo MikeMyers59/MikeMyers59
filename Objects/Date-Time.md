@@ -1,4 +1,0 @@
-# Date-Time Object
-
-## Examples
-

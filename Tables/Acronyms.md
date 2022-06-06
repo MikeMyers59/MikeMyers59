@@ -1,6 +1,0 @@
-# Acronyms
-
-| Acronym|Description |
-| --|-- |  
- 
-

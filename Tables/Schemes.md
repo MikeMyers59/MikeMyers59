@@ -1,7 +1,0 @@
-# Schemes
-
-| Schema | Description |  
-| --- | --- |  
-|  |  |  
-  
-

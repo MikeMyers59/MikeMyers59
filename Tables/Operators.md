@@ -1,6 +1,0 @@
-# Operators  
-
-| Operator | Description | JS |  
-| :--: | -- | :--: |  
-
-

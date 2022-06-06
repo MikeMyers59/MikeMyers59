@@ -10,11 +10,3 @@ You can click the Preview link to take a look at your changes. ✂
 
 - [Code Sandbox](https://codesandbox.io/) 
 
-## Clear a Drain
-1.	Pour salt and boiling water down your sink to unclog the drain.
-2.	Pour baking soda and hydrogen peroxide down your sink to clear out any gunk in the drain.
-
-## Cary Large Pieces of Wood  
-Use a rope to wrap around both corners for an extra hand.
-![Carry Wood with Rope](RopeCarryWood.png)
-

@@ -1,6 +1,0 @@
-# Common Properties
-
-| Property | Description |  
-| -- | -- |  
-
-
