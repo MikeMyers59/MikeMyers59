@@ -68,7 +68,7 @@ Now, let’s look at the following question: What is the minimum salary paid by 
 
 The resulting chart is shown in **Figure 17**. Note that it displays the data for the previous analysis. To find the minimum salaries, first click on the Count of Salary field button in the upper left corner of the chart. Then, click on the Field Settings button in the PivotTable toolbar to display the PivotTable Field dialogue box.
 
-|<p>**Figure 17**</p><p></p><p>A new analysis can be displayed in just a few steps.</p>|<p>**Figure 18**</p><p></p><p>The minimum salaries of employees will now be displayed.</p>|
+|<p>**Figure 17**</p>![Figure: 17](AAD_Figure17.png)<p>A new analysis can be displayed in just a few steps.</p>|<p>**Figure 18**</p>![Figure: 18](AAD_Figure18.png)<p>The minimum salaries of employees will now be displayed.</p>|
 | :- | :- |
 Next, select Min from the Summarize By scroll box (see **Figure 18**).
 
@@ -78,7 +78,7 @@ After this short lesson, your students should be ready to follow the step-by-ste
 
 What do you think of Mary Ann’s lesson on using pivot tables and pivot charts in Access? Will this information help you teach your users? Your feedback is important to us. [Post a comment](http://www.techrepublic.com/forumdiscuss/post.jhtml?parent_id=0) or [write to Mary Ann Richardson](mailto:support@techrepublic.com?subject=Write%20to:%20Mary%20Ann%20Richardson%20-%20Teaching%20Access%20Pivot%20Tables%20&%20Pivot%20Charts) and let us know what you think.
 
-|<p>**Figure 19**</p><p></p><p>This chart illustrates the minimum salary paid by gender.</p>|
+|<p>**Figure 19**</p>![Figure: 19](AAD_Figure19.png)<p>This chart illustrates the minimum salary paid by gender.</p>|
 | :- |
 
  
