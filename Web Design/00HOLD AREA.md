@@ -8,3 +8,22 @@
   a:hover {color:#ff0000}
 ```
 
+#### Namespace
+| Namespace ID | Description |  
+| --- | --- |  
+| -ms-|MS Internet Explorer <10|  
+| -moz-|FireFox <16|  
+| -o-|Opera <12|  
+| -webkit-|Chrome & Safari|  
+| sif-|Spreadsheet Icon Font|  
+
+#### Links & Shortcuts
+
+Open Web Page in Internet Explorer	
+```dos
+"C:\Program Files\Internet Explorer\iexplore.exe" <URL>
+```
+Start In: 
+```dos
+"C:\Program Files\Internet Explorer"
+```
