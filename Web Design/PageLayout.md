@@ -136,8 +136,10 @@ This is the primary container for the page. It can include any number of Page Co
   - Navigation Menu (Bar or Side Menu)
   - Main Content
   - Status Bar  
-  - Footer
- ![Page Layout 1](PageLayout1.png)
+  - Footer  
+  - 
+ ![Page Layout 1](PageLayout01.png)
+ 
 ```html
 <div id="page">
   <div id="full-height-container">
@@ -216,14 +218,15 @@ Controls to collapse or expand menu items.
 
 #### Side Menu
 
-
 ## Main Content Section
 This is the main content of the web page. It can contain any valid HTML. Typical items include:
   - Page Header
   - Breadcrumbs
   - Additional Navigation (to support the page)
-  - Sections of Content
+  - Sections of Content  
+  - 
 ![Main Section Example](MainSection01.png)
+
 ```html
 <main role="main" id="main" class="mainContent" style="margin-left: 285px;">
   [Content goes here!]
