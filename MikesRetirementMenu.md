@@ -1,5 +1,7 @@
 # Mike's Retirement Menu
 
+[Kitsap Transit Rider Alerts](http://www.kitsaptransit.com/blog/rider-alerts)
+
 ## Manufacturers
 | Manufacturer | Website & Phone Number |
 | --- | --- | 
