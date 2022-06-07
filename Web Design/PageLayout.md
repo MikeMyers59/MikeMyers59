@@ -138,7 +138,7 @@ This is the primary container for the page. It can include any number of Page Co
   - Status Bar  
   - Footer  
  
- ![Page Layout 1](#PageLayout01.PNG)
+ ![Page Layout 1](PageLayout01.PNG)
  
 ```html
 <div id="page">
@@ -225,7 +225,7 @@ This is the main content of the web page. It can contain any valid HTML. Typical
   - Additional Navigation (to support the page)
   - Sections of Content  
 
-![Main Section Example](#MainSection01.PNG)
+![Main Section Example](MainSection01.PNG)
 
 ```html
 <main role="main" id="main" class="mainContent" style="margin-left: 285px;">
