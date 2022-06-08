@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Tipsy Testing</title>
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery.tipsy/1.0.3/jquery.tipsy.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.2.min.js"></script> 
+  <script type="text/javascript" src="tipsy.js"></script>
+  <script type="text/javascript" src="d3.js"></script>
+
+</head>
+
+<body>
+
+  <div class="example_div"></div>
+  <script type="text/javascript">
+  
+    d3.csv("watch.csv", function(watch) {
+      
+      var sampleSVG = d3.select(".example_div")
+        .append("svg:svg")
+        .attr("class", "sample")
+        .attr("width", 300)
+        .attr("height", 300);
+
+      sampleSVG
+        .selectAll("circle")
+        .data(watch)
+        .enter()
+        .append("svg:circle")
+        .attr("stroke", "black")
+        .attr("fill", "aliceblue")
+        .attr("r", function(d) {
+          console.log(d)
+          return +d.size;
+        })
+        .attr("cx", function(d,i){ return 52 + (40*i)})
+        .attr("cy", 52)
+
+    $('svg circle').tipsy({ 
+        gravity: 'w', 
+        html: true, 
+        title: function() {
+          var d = this.__data__;
+          return 'Hi there! My color is <span style="color:' + d.circle + '">' + d.size + '</span>'; 
+        }
+      });
+
+    });
+  </script>
+</body>
+
+</html>

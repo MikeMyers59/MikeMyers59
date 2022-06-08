@@ -1,0 +1,218 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description" content="">
+    <base href="/">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@plnkrco">
+    <meta name="twitter:title" content="Tooltip help">
+    <meta name="twitter:description" content="Created on Plnkr: Helping developers build the web.">
+    
+    <meta name="twitter:image" content="https://shot.plnkr.co/QE3SqtnfJCsGSBXmSfvA.png?d=2016-04-24T00:58:15.697Z">
+    
+    <title>Tooltip help - Plunker</title>
+    <link rel="alternate" type="application/json+oembed" href="https://plnkr.co/api/oembed?url=https%3A%2F%2Fplnkr.co%2Fedit%2FQE3SqtnfJCsGSBXmSfvA%2F&format=json" title="Tooltip help" />
+    <script type="text/javascript">var abp;</script>
+    <script type="text/javascript" src="https://cdn2.codefund.app/assets/px.js?ch=1"></script>
+    <script type="text/javascript" src="https://cdn2.codefund.app/assets/px.js?ch=2"></script>
+    <link href="https://cdn.plnkr.co/build/v1.0.0-384-gb60d35d/3.4add21e245fef60abaa2.css" rel="stylesheet"><link href="https://cdn.plnkr.co/build/v1.0.0-384-gb60d35d/embed.4add21e245fef60abaa2.css" rel="stylesheet">
+</head>
+<body
+    plunker-embed-init="{
+        errors: [],
+        pathname: &#34;/QE3SqtnfJCsGSBXmSfvA/&#34;,
+    }"
+>
+    <plunker-embed
+        referrer="&#34;blank&#34;"
+        tags="[ &#34;d3&#34;, &#34;pie&#34; ]"
+        embed-title="&#34;Tooltip help&#34;"
+        source="{&#34;type&#34;:&#34;plunker&#34;,&#34;url&#34;:&#34;https://plnkr.co/edit/QE3SqtnfJCsGSBXmSfvA&#34;}"
+        user="{&#34;id&#34;:&#34;55f9062e52d68b1300c47feb&#34;,&#34;created_at&#34;:&#34;2017-10-03T14:43:04.368Z&#34;,&#34;updated_at&#34;:&#34;2017-10-03T14:43:04.368Z&#34;,&#34;username&#34;:&#34;cyrilcherian&#34;,&#34;name&#34;:&#34;cyrilcherian&#34;,&#34;description&#34;:&#34;&#34;,&#34;picture_url&#34;:&#34;https://www.gravatar.com/avatar/1259370?f=y&amp;d=retro&#34;,&#34;company&#34;:&#34;&#34;,&#34;website_url&#34;:&#34;&#34;,&#34;location&#34;:&#34;&#34;,&#34;email&#34;:&#34;&#34;}"
+        ad-free="false"
+    >
+        
+            
+                
+                    <pre class="plunker-preload-file"
+                        plunker-embed-preload="content"
+                        type="file"
+                        title="index.html"
+                        charset="utf-8"
+                        decode="html"
+
+                    ><code ng-non-bindable>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;link href=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery.tipsy/1.0.3/jquery.tipsy.css&#34; rel=&#34;stylesheet&#34; type=&#34;text/css&#34; /&gt;
+  &lt;script type=&#34;text/javascript&#34; src=&#34;http://code.jquery.com/jquery-1.6.2.min.js&#34;&gt;&lt;/script&gt; 
+    &lt;script type=&#34;text/javascript&#34; src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery.tipsy/1.0.3/jquery.tipsy.js&#34;&gt;&lt;/script&gt;
+  &lt;script type=&#34;text/javascript&#34; src=&#34;http://mbostock.github.com/d3/d3.js&#34;&gt;&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&#34;example_div&#34;&gt;&lt;/div&gt;
+  &lt;script type=&#34;text/javascript&#34;&gt;
+  
+    d3.csv(&#34;watch.csv&#34;, function(watch) {
+      
+
+
+      var sampleSVG = d3.select(&#34;.example_div&#34;)
+        .append(&#34;svg:svg&#34;)
+        .attr(&#34;class&#34;, &#34;sample&#34;)
+        .attr(&#34;width&#34;, 300)
+        .attr(&#34;height&#34;, 300);
+
+      sampleSVG
+        .selectAll(&#34;circle&#34;)
+        .data(watch)
+        .enter()
+        .append(&#34;svg:circle&#34;)
+        .attr(&#34;stroke&#34;, &#34;black&#34;)
+        .attr(&#34;fill&#34;, &#34;aliceblue&#34;)
+        .attr(&#34;r&#34;, function(d) {
+          console.log(d)
+          return +d.size;
+        })
+        .attr(&#34;cx&#34;, function(d,i){ return 52 + (40*i)})
+        .attr(&#34;cy&#34;, 52)
+
+    $(&#39;svg circle&#39;).tipsy({ 
+        gravity: &#39;w&#39;, 
+        html: true, 
+        title: function() {
+          var d = this.__data__;
+          return &#39;Hi there! My color is &lt;span style=&#34;color:&#39; + d.circle + &#39;&#34;&gt;&#39; + d.size + &#39;&lt;/span&gt;&#39;; 
+        }
+      });
+
+
+    });
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+                
+            
+        
+            
+                
+                    <pre class="plunker-preload-file"
+                        plunker-embed-preload="content"
+                        type="file"
+                        title="script.js"
+                        charset="utf-8"
+                        decode="html"
+
+                    ><code ng-non-bindable>// Code goes here
+
+</code></pre>
+                
+            
+        
+            
+                
+                    <pre class="plunker-preload-file"
+                        plunker-embed-preload="content"
+                        type="file"
+                        title="style.css"
+                        charset="utf-8"
+                        decode="html"
+
+                    ><code ng-non-bindable>/* Styles go here */
+
+</code></pre>
+                
+            
+        
+            
+                
+                    <pre class="plunker-preload-file"
+                        plunker-embed-preload="content"
+                        type="file"
+                        title="README.md"
+                        charset="utf-8"
+                        decode="html"
+
+                    ><code ng-non-bindable></code></pre>
+                
+            
+        
+            
+                
+                    <pre class="plunker-preload-file"
+                        plunker-embed-preload="content"
+                        type="file"
+                        title="watch.csv"
+                        charset="utf-8"
+                        decode="html"
+
+                    ><code ng-non-bindable>circle,size
+green,5
+yellow,10</code></pre>
+                
+            
+        
+            
+                
+                    <pre class="plunker-preload-file"
+                        plunker-embed-preload="content"
+                        type="file"
+                        title="tipsy.css"
+                        charset="utf-8"
+                        decode="html"
+
+                    ><code ng-non-bindable>.tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
+  .tipsy-inner { background-color: #000; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
+
+  /* Rounded corners */
+  .tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+  
+  /* Uncomment for shadow */
+  /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
+  
+  .tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
+  
+  /* Rules to colour arrows */
+  .tipsy-arrow-n { border-bottom-color: #000; }
+  .tipsy-arrow-s { border-top-color: #000; }
+  .tipsy-arrow-e { border-left-color: #000; }
+  .tipsy-arrow-w { border-right-color: #000; }
+  
+	.tipsy-n .tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-nw .tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
+    .tipsy-ne .tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
+  .tipsy-s .tipsy-arrow { bottom: 0; left: 50%; margin-left: -5px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-sw .tipsy-arrow { bottom: 0; left: 10px; border-top-style: solid; border-bottom: none;  border-left-color: transparent; border-right-color: transparent; }
+    .tipsy-se .tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
+  .tipsy-e .tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
+  .tipsy-w .tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
+</code></pre>
+                
+            
+        
+    </plunker-embed>
+    <script type="text/javascript" src="https://cdn.plnkr.co/build/v1.0.0-384-gb60d35d/047a1555e6e7bbddf65e.js"></script><script type="text/javascript" src="https://cdn.plnkr.co/build/v1.0.0-384-gb60d35d/embed.7c39e5691d40edee5728.js"></script>
+    
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+          ga('create', 'UA-28928507-5', 'auto');
+          ga('send', 'pageview');
+
+        </script>
+    
+    
+</body>
+
+</html>
