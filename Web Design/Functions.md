@@ -1,6 +1,7 @@
 # Functions
 
 ## CSS
+alpha(opacity=50)
 calc()
 hsl()
 linear-gradient()
