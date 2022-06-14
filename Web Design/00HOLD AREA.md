@@ -2,6 +2,7 @@
 
 [DynamicDrive](http://dynamicdrive.com) - samples of DHTML  
 [FullCalendar](http://fullcalendar.io/)   
+[Harvest](http://getharvest.com) - Select Box Enhancer for jQuery and Prototype  
 [jQuery TE](http://jqueryte.com/)   
 [jQueryUI](http://jqueryui.com)  
 [lightslider](https://github.com/sachinchoolur/lightslider)   
