@@ -11,6 +11,10 @@
 [StackTRaceJS](https://www.stacktracejs.com/)   
 [TextPad](http://www.textpad.com/)
 
+| Acronym | Description |  
+| --- | --- |  
+| HSTS | HTTP Strict Transport Security |  
+
 ```css
   a:link {color:#0000A0; text-decoration:underline}
   a:visited {color:#66097B; text-decoration:underline}
