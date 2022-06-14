@@ -1,5 +1,12 @@
 # HOLD AREA
 
+[FullCalendar](http://fullcalendar.io/) 
+[jQuery TE](http://jqueryte.com/) 
+[jQueryUI](http://jqueryui.com)
+[lightslider](https://github.com/sachinchoolur/lightslider) 
+[persian-datepicker](http://babakhani.github.io/PersianWebToolkit/docs/datepicker) 
+[SyntaxHighlighter](http://alexgorbatchev.com/SyntaxHighlighter)
+[StackTRaceJS](https://www.stacktracejs.com/) 
 
 ```css
   a:link {color:#0000A0; text-decoration:underline}
