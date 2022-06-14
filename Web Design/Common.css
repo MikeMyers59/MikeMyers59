@@ -1,9 +1,9 @@
 
 /* Common.css */
 
-.noCopy {
-  cursor: not-allowed;  /* does this prevent copy/cut? */
-}
+.empty {  content: ""; }
+
+.noCopy { cursor: not-allowed; }  /* does this prevent copy/cut? */
 
 /* ====================Align================= */
 /*
