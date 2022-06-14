@@ -1,0 +1,31 @@
+
+/* SpecialCharacters.css */
+
+.atMention:before { content:"@"; }  
+
+.comma:after{ content:", " }  
+
+.emDash:after { content:"—"; }  
+
+.equals:after { content: "="; }  
+
+/* =============Containers============== */  
+.doubleQuotes:before, .doublequotes:after { content'"'; }
+.singleQuotes:before, .singlequotes:after { content"'"; }
+
+/* Angle Brackets (for HTML) */  
+.leftAngleBracket:before { content:"<"; }  
+.rightAngleBracket:after { content:">"; }  
+
+/* Braces  */  
+.closeBrace:after { content:"}"; }  
+.openBrace:before { content:"{"; }  
+
+/* Bracket */
+.leftBracket:before { content:"["; }  
+.rightBracket:after { content:"]"; }  
+
+/* Parenthesis */  
+.closeParens:after { content:")"; }  
+.openParens:before { content:"("; }  
+
