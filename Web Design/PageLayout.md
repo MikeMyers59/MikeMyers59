@@ -1,32 +1,5 @@
 # Page Layout
 
-#### Background Color or Image
-```css
-background: linear-gradient(to bottom, #00529b 0%, #00529b 50%, #005daf 100%);
-background: linear-gradient(to bottom, #003f77 0%, #003f77 50%, #003f77 100%);
-background: linear-gradient(to bottom, #00529b 0%, #004a8c 50%, #003f77 100%);
-background: linear-gradient(to bottom, #00529b 0%, #00529b 50%, #005daf 100%)
-background: linear-gradient(#f1c40f,#A16D04 80%,#A16D04);
-background: linear-gradient(to bottom, #3cb0fd, #3498db);
-background: linear-gradient(to left, #34495e, #2c3e50);
-background: linear-gradient(top, #eee 0%, #fff 90%);
-background: linear-gradient( 
-  rgba(76,76,76,1) 0%, 
-  rgba(89,89,89,1) 12%, 
-  rgba(102,102,102,1) 25%, 
-  rgba(71,71,71,1) 39%, 
-  rgba(44,44,44,1) 50%, 
-  rgba(0,0,0,1) 51%, 
-  rgba(17,17,17,1) 60%, 
-  rgba(43,43,43,1) 76%, 
-  rgba(28,28,28,1) 91%, 
-  rgba(19,19,19,1) 100%
-);
-background-color: #a0ffff; 
-background-color: #ffa0ff;
-background-color: #ffffa0;  
-```
-
 #### Clear (Before & After!)
 ```html
 <div class="clear"></div>
@@ -63,6 +36,20 @@ background-color: #ffffa0;
 .pagetitle{
   /*padding-bottom: 50px;*/
 }
+```
+
+#### Secondary Container
+Contains a Navigation Menu in a left side bar
+```html
+<div class="ia-secondary-container tipsy-enabled" data-tree-type="page-tree">
+</div> <!-- End of ia-secondary-container -->
+```
+
+#### Space Bar (SharePoint)
+This is a Side Bar Popup Navigation Menu using a button at bottom of the sidebar, it contains a Navigation Menu. 
+```html
+<div class="space-tools-section">
+</div>  <!-- End of Space Tools Menu -->
 ```
 
 #### Stage
