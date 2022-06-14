@@ -180,6 +180,13 @@ Start In:
 .replace(" ","%20")
 ```
 
+### Selectors
+
+| Action | Selector |  
+| --- | --- |  
+| Using Not ID as a selector | `[id^="<IDSegment>"]` |  
+| Using role as a selector | `[role="<RoleID>"]` |  
+
 ### Strings
 
 #### Remove Leading Spaces from Form Element
