@@ -30,6 +30,7 @@
 | Recoton | https://recoton.com|  
 | Remington | http://www.remington-products.com/home.html <br> 800-736-4648 |  
 | Samsung  | https://samsung.com|  
+| Silver City 6   | https://www.silvercity6.com - Point No Point on the Patio – 3 July 2022|  
 | Sony Products | https://sony.com |  
 | Sears | https://sears.com|  
 | Toshiba Televisions | https://toshiba.com|  
