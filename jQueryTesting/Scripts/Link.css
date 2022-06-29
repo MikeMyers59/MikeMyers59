@@ -1,0 +1,70 @@
+body {
+  font: 16px sans-serif;
+}
+
+body#tmpDialogueExample div.tmpDialogueOn {
+  display: block;
+}
+
+a {
+  text-decoration: none;
+}
+
+div#tmpDialogue {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  height: 500px;
+  margin: -251px 0 0 -251px;
+  border: 1px solid blue;
+  background: lightblue;
+}
+
+h4 {
+  font-size: 16px;
+  margin: 0 0 5px 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul#tmpFavorites {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul#tmpFavorites li {
+  margin: 1px;
+  padding: 3px;
+}
+
+ul#tmpPlaces {
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+ul#tmpPlaces li {
+margin: 1px;
+padding: 3px;
+}
+
+li.tmpSiblings{
+background: khaki;
+}
+
+input#tmpDialogueClose {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 112px;
+}
+
+li.tmpFound {
+  background: yellowgreen;
+}

@@ -1,0 +1,15 @@
+body {
+font: 14px sans-serif;
+}
+p {
+  color: red;
+  border: 1px solid red;
+  padding: 5px;
+  margin: 5px;
+  width: 150px;
+  text-align: center;
+}
+p.tmpFrameworkLoaded {
+  color: green;
+  border: 1px solid green;
+}
